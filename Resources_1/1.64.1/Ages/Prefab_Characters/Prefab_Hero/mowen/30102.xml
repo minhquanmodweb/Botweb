@@ -1,0 +1,30 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.400" loop="false">
+    <Track trackName="HitTriggerTick2" eventType="HitTriggerTick" guid="b77d3072-c984-4b7c-93a5-12d58713c78f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="672ed69c-e17b-467f-b616-ac1649ea276b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88301025" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick0" eventType="RegisterEventTick" guid="1b3a91ab-98f2-4fd8-8b53-e52c5db324ad" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="-1" guid="" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="3f9ad8bb-008f-4881-9024-4d01719c34d5">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="15" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/30102E1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bSlowDown" value="false" refParamName="" useRefParam="false" />
+        <bool name="bSlient" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

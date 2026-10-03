@@ -1,0 +1,19 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="0.500" loop="false">
+    <Track trackName="TriggerHeroHudParticle0" eventType="TriggerHeroHudParticle" guid="0c5843de-f3e8-4cd0-b133-2c09c6883f6e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerHeroHudParticle" time="0.000" isDuration="false" guid="e655d893-4f92-489e-9fa8-92746caab7a9">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="open" value="true" refParamName="" useRefParam="false" />
+        <String name="path" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/UX_Evita_EnergyFore_Full" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

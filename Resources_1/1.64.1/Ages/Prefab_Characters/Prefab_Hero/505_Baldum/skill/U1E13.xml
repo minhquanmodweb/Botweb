@@ -1,0 +1,16 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.500" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="b9e4d55b-734a-45d7-b7a9-3e51276dcce8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.500" isDuration="true" guid="3c2a59b4-a656-44d9-a7a2-6e1264432108">
+        <Enum name="SkillFuncType" value="56" EnumValue="禁用技能" refParamName="" useRefParam="false" />
+        <bool name="bImmediateExec" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

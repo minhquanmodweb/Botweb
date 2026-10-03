@@ -1,0 +1,15 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.200" loop="false">
+    <Track trackName="SkillFuncInstant1" eventType="SkillFuncInstant" guid="30a03b11-9326-42db-9ef1-86346b27c7ef" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncInstant" time="0.000" isDuration="false" guid="eec13552-958e-4563-bee3-259b10855a23">
+        <Enum name="SkillFuncType" value="70" EnumValue="移除技能效果" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

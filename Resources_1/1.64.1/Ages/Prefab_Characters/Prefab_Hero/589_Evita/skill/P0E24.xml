@@ -1,0 +1,71 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="16.000" loop="false">
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="f438f55e-c8fc-48d2-8ccd-819c6801272c" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="12.000" isDuration="true" guid="b0a6deec-ebd4-47cc-9696-52afa690c80d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bForceClear" value="true" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Bianshen" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="45704fc3-7fad-4b54-aea7-76a82a070bd8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="16.000" isDuration="true" guid="c902870d-bc07-4024-aab0-5463c759be81">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bForceClear" value="true" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Spell3_Idle" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="44c033dd-cd25-404b-8fe9-e051cde52eda" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="11.300" isDuration="true" guid="b8e6206f-8fc0-441a-9bf7-6b00de11383d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bForceClear" value="true" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Action4" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="4280a368-fe52-4df5-b348-b81958bb8208" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="0.000" length="12.000" isDuration="true" guid="2674d3a5-9f41-4d92-9f78-b77016856597">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Spell3_Idle" refParamName="" useRefParam="false" />
+        <int name="layer" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="9ad0a12b-1b4d-4b65-bc24-3bc8a099ad31" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsTick" time="0.000" isDuration="false" guid="99493b2e-0722-44ff-b0a9-75263bbfb9c1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="floatNames" refParamName="" useRefParam="false" type="String">
+          <String value="" />
+        </Array>
+        <Array name="floatValues" refParamName="" useRefParam="false" type="float">
+          <float value="0.000" />
+        </Array>
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Bianshen" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

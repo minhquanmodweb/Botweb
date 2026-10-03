@@ -1,0 +1,41 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="10.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="3a96df80-2f45-4c96-aa53-69bc997679c6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="10.000" isDuration="true" guid="b80e1dd3-2f6d-4abb-ba70-97d74afb768f">
+        <Enum name="SkillFuncType" value="140" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckInAreaTick0" eventType="CheckInAreaTick" guid="a1544c5c-a655-491f-a15b-26972728b39a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true" stopAfterLastEvent="true">
+      <Event eventName="CheckInAreaTick" time="0.000" isDuration="false" guid="3be65fed-fdfe-4718-92a8-40a21fad25e1">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="AreaType" value="3" refParamName="" useRefParam="false" />
+        <String name="AreaTag" value="" refParamName="" useRefParam="false" />
+        <Array name="AreaOrder" refParamName="" useRefParam="false" type="String">
+          <String value="Obstacle" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration0" eventType="OldMoveActorDuration" guid="5553eab7-bd96-4b3f-88bd-8fdbb2cc4a2a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true" stopAfterLastEvent="true">
+      <Condition id="1" guid="a1544c5c-a655-491f-a15b-26972728b39a" status="true" />
+      <Event eventName="OldMoveActorDuration" time="0.000" length="0.200" isDuration="true" guid="53a0b269-d436-4d3c-af8b-5f8934642e43">
+        <Enum name="moveType" value="2" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="moveDistance" value="100" refParamName="" useRefParam="false" />
+        <int name="minMoveDistance" value="100" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="1000" refParamName="" useRefParam="false" />
+        <bool name="bIsTeleport2NearstValidPoint" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

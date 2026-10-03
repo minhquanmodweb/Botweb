@@ -1,0 +1,243 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="level" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffNum" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffMod2" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="0.250" loop="false">
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="f848abb7-6d21-4f5e-ae56-cdb23eced53a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="4151b248-9e51-4efe-af6c-f74bb13cf097">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" EnumValue="大等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="25" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="da4e6360-aa17-4f36-a979-fa758b7a44f8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="956ff473-d21a-4d88-a099-1401611cd928">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" EnumValue="等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="25" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="dd6759d9-e0b8-4571-af6c-6c349d85501d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="f848abb7-6d21-4f5e-ae56-cdb23eced53a" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="cf75b92b-573d-4a46-ae4e-614b36db07a6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="1" EnumValue="技能1" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14811" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14810" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="e4e6a39d-817c-4d36-a92b-d804e10ae0e5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="49f71e97-8b7a-408a-96ab-8a3139e1a441">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" EnumValue="大等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="75" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="ab330e95-e8a6-41b5-8a97-0a15cf79f478" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="23fb269c-22ba-49f1-b91b-1662e4316e29">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" EnumValue="等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="75" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="98c553f9-3549-4528-82b4-557f83449914" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="e4e6a39d-817c-4d36-a92b-d804e10ae0e5" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="c1246d04-ad18-40c6-a42d-e66baadbc5b4">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="2" EnumValue="技能2" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14821" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14820" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="b9bc18de-6f0b-4a40-bd58-b3e2c7ec4cc9" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="af8ddc8f-163d-4f6e-9bea-3a6f3977b405">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" EnumValue="大等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="145" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="d902f190-6336-4674-8866-59fcf5ebb70e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="e15c4921-42d9-45f4-aa71-c52abbb47400">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="148006" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" EnumValue="等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="145" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="6c8c6e40-488d-4f18-abea-ac957aa2fcaa" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="b9bc18de-6f0b-4a40-bd58-b3e2c7ec4cc9" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="3cf7437d-57cf-4910-94ea-207f3aa60bb4">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="3" EnumValue="技能3" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <int name="recoverSkillID" value="14835" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14835" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14830" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetHeroLevelTick0" eventType="GetHeroLevelTick" guid="f44149a1-6a5a-453c-81db-a3ebe738c809" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetHeroLevelTick" time="0.000" isDuration="false" guid="aa468984-9195-4522-9b12-328ff7ac780e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resultValueName" value="level" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCompareTick0" eventType="NewVariableIntCompareTick" guid="252dbf91-16c7-4451-b07c-f3a0d064c2d3" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCompareTick" time="0.003" isDuration="false" guid="2c0a0750-28a6-4116-a2b5-d5eb7ea1cc63">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionVariableName" value="levle" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="level" refParamName="" useRefParam="false" />
+        <Enum name="OperatorType" value="3" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="RightValue" value="5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="5c9f5a4b-0e15-42a0-a9b5-fdaf0543b3af" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="252dbf91-16c7-4451-b07c-f3a0d064c2d3" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="7e263e58-c8ef-498f-a704-c37522b2fb21">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="1" EnumValue="技能1" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14811" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14810" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCompareTick0" eventType="NewVariableIntCompareTick" guid="88a9d1e5-3950-4797-b7ff-ffe96ffc04e7" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCompareTick" time="0.003" isDuration="false" guid="c2a86207-d998-43bb-87b0-00a0112cbc30">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionVariableName" value="levle" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="level" refParamName="" useRefParam="false" />
+        <Enum name="OperatorType" value="3" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="RightValue" value="10" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="7f41ac0b-83b0-49cf-9248-af23368141b0" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="12" guid="88a9d1e5-3950-4797-b7ff-ffe96ffc04e7" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="bfe36c4e-e6ff-4c15-9bd2-04ca9938be57">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="2" EnumValue="技能2" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14821" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14820" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCompareTick0" eventType="NewVariableIntCompareTick" guid="adc87301-2804-40e5-b1bd-7c5910b58d9e" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCompareTick" time="0.000" isDuration="false" guid="e245294d-8d59-4d04-ab64-98925e472d06">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionVariableName" value="levle" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="level" refParamName="" useRefParam="false" />
+        <Enum name="OperatorType" value="3" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="RightValue" value="15" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerTick0" eventType="ChangeSkillTriggerTick" guid="3fb467ce-2a77-4846-a5e8-dd317990c75d" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="14" guid="adc87301-2804-40e5-b1bd-7c5910b58d9e" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="8a7257a3-6a13-4ac5-9841-bcdcf49cfad0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="3" EnumValue="技能3" refParamName="" useRefParam="false" />
+        <int name="effectTime" value="9999999" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="14835" refParamName="" useRefParam="false" />
+        <int name="curSkillID" value="14830" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="4d90263c-9a4b-4394-8993-57b385dbd0fb" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="50046796-3f6b-4d90-83d0-1d260ee7cdf3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/148_jiangziya/JiangZiYa_buff_01C" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="3.000" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 Spine" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToAnimation" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetBuffOverLayTick0" eventType="GetBuffOverLayTick" guid="f3a5703f-a0de-4b9a-974e-c1c8f0c0ec1e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetBuffOverLayTick" time="0.000" isDuration="false" guid="e4b27457-a53c-40d3-891b-b7e9214110a7">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="originId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="148006" refParamName="" useRefParam="false" />
+        <String name="outBuffIdOverLay" value="BuffNum" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCalTick0" eventType="NewVariableIntCalTick" guid="5162bc20-66fd-4767-b1cb-fee3d3df1ff7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCalTick" time="0.000" isDuration="false" guid="95cc186e-8ff3-4e0c-b86c-a39fcbc822c1">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionVariableName" value="BuffNum" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="BuffNum" refParamName="" useRefParam="false" />
+        <Enum name="OperatorType" value="4" EnumValue="取余" refParamName="" useRefParam="false" />
+        <int name="RightValue" value="2" refParamName="" useRefParam="false" />
+        <Enum name="OutOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="OutActionRefVariableName" value="BuffMod2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCompareTick0" eventType="NewVariableIntCompareTick" guid="27330d0c-463f-4cc0-b074-2b4b524ef059" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCompareTick" time="0.000" isDuration="false" guid="9ea98d95-9b5a-46b3-b6b6-260bdb329376">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="BuffNum" refParamName="" useRefParam="false" />
+        <Enum name="OperatorType" value="2" EnumValue="大于" refParamName="" useRefParam="false" />
+        <int name="RightValue" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewVariableIntCompareTick0" eventType="NewVariableIntCompareTick" guid="41758adc-b427-48cf-b918-981a7600c9a2" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewVariableIntCompareTick" time="0.000" isDuration="false" guid="c75b8092-9c49-4dca-a8b7-b56220778f94">
+        <Enum name="LeftOperandType" value="4" EnumValue="Action引用变量" refParamName="" useRefParam="false" />
+        <String name="LeftActionRefVariableName" value="BuffMod2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="d6081385-ef3f-47dc-8d5d-1444971e5691" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="20" guid="41758adc-b427-48cf-b918-981a7600c9a2" status="true" />
+      <Condition id="19" guid="27330d0c-463f-4cc0-b074-2b4b524ef059" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="8becf829-89f6-4d3b-9b19-ee2dad7b28e6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="148011" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="e032c9a1-436b-4a9c-b2ae-77bdd939ce8a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="da4e6360-aa17-4f36-a979-fa758b7a44f8" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="dabc220b-27f5-4482-aeb7-7237506c87ef">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="prefab_characters/prefab_hero/148_jiangziya/skill/S5B1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="916bdb38-6ee3-4294-a97b-774b79d8493f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="ab330e95-e8a6-41b5-8a97-0a15cf79f478" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="a9513056-d452-4f41-8d9d-7d807c1d8755">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="prefab_characters/prefab_hero/148_jiangziya/skill/S5B2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="83a4c413-30a9-4bc6-a33a-4d8ba0c24e46" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="d902f190-6336-4674-8866-59fcf5ebb70e" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="92e4031f-0132-4ba2-b6b2-03b694289072">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="prefab_characters/prefab_hero/148_jiangziya/skill/S5B3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,167 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="1dc82ab0-f14d-4fb4-8e6d-9fe7a88da476" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="38a35556-6706-4005-b05b-5ec5b4c69447">
+        <Enum name="SkillFuncType" value="31" EnumValue="免疫控制" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SyncActorModelPostionDuration0" eventType="SyncActorModelPostionDuration" guid="2ef33ef8-0a79-4851-bb3d-e85975589088" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SyncActorModelPostionDuration" time="0.000" length="0.500" isDuration="true" guid="bd7d4ceb-8997-413c-85a2-b7af0cd0600c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="时空特效" eventType="TriggerParticle" guid="1ecc807f-bfb4-44f3-98fe-74627c004a8f" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="2.000" isDuration="true" guid="482b2e8f-7f85-416c-91d5-0fb5b7d290f3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_common/JuShou_Common_SpaceTime" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="4dcffbc0-8fe0-4bff-974d-9aa6ee1ae54d" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="e233d6ab-8e48-4de0-ae51-69f638809109">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="触发初始buff和时空特效" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="CheckConditionDuration1" eventType="CheckConditionDuration" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckConditionDuration" time="0.000" length="0.500" isDuration="true" guid="54c7399b-06a5-4539-89f6-1ddf5b65d773">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bActorNotMoving" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="78cf7178-52c3-4827-b097-58d5c1e89bce" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="95c10537-79be-4fb6-a677-eac583a411f0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="3ca395cc-e11b-415f-ac35-25d16babbd29" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="1520437a-17e4-472a-8238-395152baefb2">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle_Bip001 L Hand" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 L Hand" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="e2be1083-5952-456d-be82-a52d6aa519ac" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="072ada71-db6a-4aca-8b22-75478b99eaa5">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle_Bip001 R Hand" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 R Hand" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="db3d3970-a426-458a-8653-643ae1ed0989" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="350f344e-1f0b-492c-affb-37c8d686226e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle_Bip001 Spine1" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 Spine1" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="91ff388d-ea5c-46e6-ac6a-328fcfabb2ae" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="66d635c0-c5cd-471f-910c-6eab11751ab6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle_Bone_Forearm_L_02" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bone_Forearm_L_02" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="2c8c481d-92a5-4ee2-9302-fb0f01eda3b4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="7324c0e7-590c-4a1d-a2a9-dbe912f3e1c6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="9238270f-fc2c-439a-ba8b-f686e8453d95">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Idle_Bone_Forearm_R_02" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bone_Forearm_R_02" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckConditionDuration1" eventType="CheckConditionDuration" guid="94172d1a-efbd-407e-a6d1-7eafec7affc0" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckConditionDuration" time="0.000" length="0.500" isDuration="true" guid="604e35b2-94cf-4b70-bcca-d42f3688718d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bActorMoving" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="e4454e55-5f8a-43f1-96a1-79f998e1ab8d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="94172d1a-efbd-407e-a6d1-7eafec7affc0" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="f4d16e2d-a8d3-4704-9a0d-059cb74135d0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Run" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="df15bc5a-d5bf-449e-ae7c-2bd713209671" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="94172d1a-efbd-407e-a6d1-7eafec7affc0" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="804c18be-8f6d-4c07-b760-68917fcd1a42">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Run_Bip001 Spine1" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 Spine1" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="bfdbdd27-f48d-4168-939f-08293215b8c2" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="94172d1a-efbd-407e-a6d1-7eafec7affc0" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="11504329-8277-44b6-aa33-7f49933d0495">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Run_Bone_Forearm_L_02" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bone_Forearm_L_02" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle1" eventType="TriggerParticle" guid="cc984c4e-1264-48f6-b875-b5064336c56f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="94172d1a-efbd-407e-a6d1-7eafec7affc0" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="0.500" isDuration="true" guid="ef832e28-995c-4f25-9610-40da014d65dc">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/Mst_ZhongJie_10_AbyssDragon/AbyssDragon_Run_Bone_Forearm_R_02" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bone_Forearm_R_02" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,16 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="LeaveTriggerDuration0" eventType="LeaveTriggerDuration" guid="6ae6f21d-3e7e-4989-b350-1ba0cc406c6c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="LeaveTriggerDuration" time="0.000" length="2.000" isDuration="true" guid="32a5d90e-2993-4fcc-8b1c-9db8d3e5f3d3">
+        <TemplateObject name="TargetID" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="137190" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

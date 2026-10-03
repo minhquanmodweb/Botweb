@@ -1,0 +1,477 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="pos0" id="3" isTemp="false" />
+    <TemplateObject objectName="pos1" id="4" isTemp="false" />
+    <TemplateObject objectName="pos2" id="5" isTemp="false" />
+    <TemplateObject objectName="pos3" id="6" isTemp="false" />
+    <TemplateObject objectName="pos4" id="7" isTemp="false" />
+    <TemplateObject objectName="pos5" id="8" isTemp="false" />
+    <TemplateObject objectName="pos6" id="9" isTemp="false" />
+    <TemplateObject objectName="pos7" id="10" isTemp="false" />
+    <TemplateObject objectName="pos8" id="11" isTemp="false" />
+    <TemplateObject objectName="pos9" id="12" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="10.100" loop="false">
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="e8997e8a-374b-4597-9ceb-9fb64dd8eae1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="10.000" isDuration="true" guid="66abe0e5-26a8-43a0-92bd-4f90f65452ae">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+        <Array name="leaveBoolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="leaveBoolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="508044bc-79cc-4fba-adf8-dd3b4e4f3f8e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsTick" time="0.000" isDuration="false" guid="d15455fd-f28c-4405-b482-6f6e68a2fc59">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="215380e0-8ba3-426d-8975-75593f0e7b3c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsTick" time="10.000" isDuration="false" guid="103eea77-ae59-4981-8e5a-e0347e4f82a1">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="fd44e821-41ff-4f4f-8914-2316b4d8bc30" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsTick" time="10.100" isDuration="false" guid="3485449e-33bc-4b1a-8723-f8e9fa1e63ad">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="b3e55383-7ab7-46f9-8adf-867350470d99" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="0.200" isDuration="true" guid="2a71edbc-3b7e-405d-85d5-ddc8b5c5a27e">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofengstart" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+        <Array name="leaveBoolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="leaveBoolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="6d35f123-d150-42db-848e-a1a15fcf2300" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAnimationParamsTick" time="0.200" isDuration="false" guid="87bb08a1-fa74-401d-acae-cfb5e2886ceb">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofengstart" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick0" eventType="PlayHeroSoundTick" guid="b86dacdf-fcf3-4b53-96b9-98ab36747b05" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="3b2530e0-95a6-4f5e-9173-9e1499598308">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick0" eventType="PlaySoundTick" guid="bce7cc71-515c-4204-bac2-e1be89543026" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="c62c1a4f-93af-4361-baf9-92e3ae9f3885">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick0" eventType="PlaySoundTick" guid="c838bcfb-8f14-4508-8344-eea8d63f219c" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="true">
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="0e66fe78-c3ac-4903-8aed-88b131072bdd">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="aaf18b0c-b559-4f17-a288-4d9a27819acb">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="f9eaaa84-29cd-4684-911e-4e99be06fed8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="7a94ed79-d3de-417c-be2d-8fe9740caefa">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor0" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="2cc93c1b-ac05-4373-9b17-89ae9ef80765" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="90eab945-c304-4aa5-a774-2c7f8acaa3e6">
+        <TemplateObject name="targetId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="aea979b0-480f-42b4-b8b2-8de046a59e96" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="cfe50589-d633-4a00-9826-a75c18f318f5">
+        <TemplateObject name="actorId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="7390d5a8-ea9f-4070-b597-1343adf54e02" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="12" guid="aea979b0-480f-42b4-b8b2-8de046a59e96" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="e80b9fbc-78c0-45d1-bb0e-ba2e10c6c543">
+        <TrackObject name="trackId" id="11" guid="2cc93c1b-ac05-4373-9b17-89ae9ef80765" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="e1c51279-5828-4a0b-98fc-bf2d5c0cf593">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="a75eac54-4d4d-408b-8d01-b977f30e4513" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="14" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="771cbfb0-b8e2-4314-87bb-d82e7f9762f5">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor1" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos1" id="4" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="5c8eb66c-118b-47b6-a180-c8434f619377" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="14" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="1c5b4f00-4549-47f1-ba64-6eadfa857217">
+        <TemplateObject name="targetId" objectName="pos1" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="33d33338-29ad-4996-b94e-d71d53ee60f6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="14" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="3cf9a12e-ccfe-4603-9b18-6068a9f15e91">
+        <TemplateObject name="actorId" objectName="pos1" id="4" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="13302d3b-e892-4861-8fba-6e0632ff37f3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="17" guid="33d33338-29ad-4996-b94e-d71d53ee60f6" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="e58d61e2-d6bb-4e46-9729-05bc536247ae">
+        <TrackObject name="trackId" id="16" guid="5c8eb66c-118b-47b6-a180-c8434f619377" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="c8addbd6-69b3-49bd-8d08-875f17e7946c">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="0b83c198-5690-4c7a-8d77-61bc6cc6d5e1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="19" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.022" isDuration="false" guid="409f411a-bf46-4b7e-82ab-b8f8297bbb9c">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor2" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos2" id="5" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="453c0a9f-cbc4-46ca-bdc1-31627262d56a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="19" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="50b7071f-478c-4379-87d8-04086d1e27b3">
+        <TemplateObject name="targetId" objectName="pos2" id="5" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="e5964177-8ba4-4bfc-9a25-f7ee037c6d00" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="19" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="d2342803-26cb-4abf-a84a-b75350ac5d89">
+        <TemplateObject name="actorId" objectName="pos2" id="5" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="8d2b3222-09c5-4913-964c-eea17de43495" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="22" guid="e5964177-8ba4-4bfc-9a25-f7ee037c6d00" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="0c8f7325-da08-42d9-ba62-e004603b842b">
+        <TrackObject name="trackId" id="21" guid="453c0a9f-cbc4-46ca-bdc1-31627262d56a" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.022" isDuration="false" guid="b6ac8a4c-9af8-46ab-b90d-978a3193d868">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="00edf4f2-946e-4464-8a08-ae4a2cb1c45f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="24" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="de5b740d-4e18-41d3-a985-340e2d249931">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor3" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos3" id="6" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="2a313506-66ca-4d08-ad85-c881c00a52a7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="24" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Event eventName="TriggerParticle" time="0.019" length="10.000" isDuration="true" guid="563b13de-9612-48ca-be60-5f6ff15e19af">
+        <TemplateObject name="targetId" objectName="pos3" id="6" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="ea667e8b-8c19-4c29-a2d9-b78ffa666605" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="24" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="77c8c8f3-ab36-4f69-9ea1-58ba34a4371b">
+        <TemplateObject name="actorId" objectName="pos3" id="6" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="bb52dd1f-6f20-4fcc-9c05-46ba3665a460" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="27" guid="ea667e8b-8c19-4c29-a2d9-b78ffa666605" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="c15befcb-41ec-4993-9bee-774bd3bb91ac">
+        <TrackObject name="trackId" id="26" guid="2a313506-66ca-4d08-ad85-c881c00a52a7" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="0309faad-37d3-4f34-8261-20170060d639">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="9f59f027-5520-4213-8d62-346959ca86dd" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="29" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="8856f1fe-2799-4efd-bad4-9936ee13633f">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor4" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos4" id="7" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="4c81062f-39da-40e5-a3d5-c07fca197014" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="29" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="3a6100f3-b730-440c-aa5e-764e60de6620">
+        <TemplateObject name="targetId" objectName="pos4" id="7" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="ce93fa64-179c-426d-a240-819b6e5879a6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="29" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="2ed70b4a-772c-4e07-9743-3bceb12e967b">
+        <TemplateObject name="actorId" objectName="pos4" id="7" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="828806d9-d66b-4911-b6c1-5287dab5da0c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="32" guid="ce93fa64-179c-426d-a240-819b6e5879a6" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="fe09c855-6fea-48a2-91af-31555027ee66">
+        <TrackObject name="trackId" id="31" guid="4c81062f-39da-40e5-a3d5-c07fca197014" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="6fc69cca-3956-4eec-bfc3-4a93de9679fb">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="6" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="a7cb4496-795b-4995-9eee-bf69da9048cb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="34" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="fff55796-1a7c-4798-81b5-b04bf37a6f54">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor5" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos5" id="8" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="42f30ec6-a24d-4bb0-810f-b48afa07ca58" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="34" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="b04d054f-ad54-415d-bb83-edbcaf415544">
+        <TemplateObject name="targetId" objectName="pos5" id="8" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="d492a9b6-7b1b-4034-a5af-c72ca9e7ad49" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="34" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="ee254354-e02b-414b-bb60-4680e53bef1a">
+        <TemplateObject name="actorId" objectName="pos5" id="8" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="5d1d3327-0748-42f0-889c-5296f42e17fe" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="37" guid="d492a9b6-7b1b-4034-a5af-c72ca9e7ad49" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="fa2686f7-0b0e-4041-8586-c39dd3802f89">
+        <TrackObject name="trackId" id="36" guid="42f30ec6-a24d-4bb0-810f-b48afa07ca58" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="85d513ae-4da7-4042-ba55-a5d689667dba">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="7" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="5bfcd3d9-39ea-4764-b611-814d0cba0ed0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="39" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="bc62a93b-1811-4894-a7a9-cd20e520e1a1">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor6" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos6" id="9" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="47555696-b143-4d42-bb2b-4c755f66e41b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="39" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="f5f7e84b-3dd0-4d6c-9676-eef8e2c242ea">
+        <TemplateObject name="targetId" objectName="pos6" id="9" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="f74ddcf4-9a5a-4632-bf54-25ea38bb5435" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="39" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="6f725662-d2db-4d92-b667-b91a0dc72286">
+        <TemplateObject name="actorId" objectName="pos6" id="9" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="016369ca-6f5f-4c98-9d17-861b579b3ef3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="42" guid="f74ddcf4-9a5a-4632-bf54-25ea38bb5435" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="90618c05-6e7d-43c7-8ca6-1615111a1285">
+        <TrackObject name="trackId" id="41" guid="47555696-b143-4d42-bb2b-4c755f66e41b" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="5074634b-af94-4ca2-9d1d-b04fc5b2aa01">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="8" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="08c9a5b5-83fd-42e2-bfee-4f9be9a48fde" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="44" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="a42e6011-53f1-405b-95c9-8898d7eabbd8">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor7" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos7" id="10" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="19145e1a-edd7-457f-99b9-918440a4a0bd" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="44" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="b01837c7-31f4-4c74-acb6-a4665485be97">
+        <TemplateObject name="targetId" objectName="pos7" id="10" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="9ad62e29-05c6-4132-a3fa-6d42e9e7f056" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="44" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="b7c8925b-e11e-48e7-87f1-b2e13bec54a1">
+        <TemplateObject name="actorId" objectName="pos7" id="10" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="1230f3b6-9957-4f2c-932f-e7cb3bd3d856" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="47" guid="9ad62e29-05c6-4132-a3fa-6d42e9e7f056" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="f0edb5c5-dc30-454c-8e6a-0f7984ca7169">
+        <TrackObject name="trackId" id="46" guid="19145e1a-edd7-457f-99b9-918440a4a0bd" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="c23dc92d-58e0-4dd4-b131-e549c15d8719">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="9" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="e97b9f6a-d0f7-447d-9c40-437abbd3f92c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="49" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="4f04b765-6316-4982-90ec-07f85bf55d2e">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor8" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos8" id="11" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="32703d26-c96a-4c6f-bf63-b60006fe77d9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="49" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="215aeeda-07a5-41d3-a3b2-6e0332824e7b">
+        <TemplateObject name="targetId" objectName="pos8" id="11" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="ca940226-acf8-4438-8319-34e1d0ab0d57" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="49" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="e571d4c2-3361-4c60-8fdb-59f0f52141ac">
+        <TemplateObject name="actorId" objectName="pos8" id="11" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="fadee101-2f3b-4d27-a427-f1b0d97b4cf6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="52" guid="ca940226-acf8-4438-8319-34e1d0ab0d57" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="331ddcaf-7140-4649-922b-d7ada2de5174">
+        <TrackObject name="trackId" id="51" guid="32703d26-c96a-4c6f-bf63-b60006fe77d9" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="8118484f-bac7-422a-8462-407c48e24195">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="10" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="9a85474e-1a6c-49a4-b42b-50babc235798" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="54" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="1cd471bc-5571-4ec0-a55b-574fde0e1584">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor9" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos9" id="12" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="203f9063-a994-4d69-ae9b-5a4b8003b2a6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="54" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="d3bd55cc-4869-41ee-8c04-35106ebf2f1a">
+        <TemplateObject name="targetId" objectName="pos9" id="12" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/528_DaMo/52809/52809_DaMo_chaofeng02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="a04c6fbf-be56-4e22-8d20-b1ec91c61dec" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="54" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="8b4d9716-3d84-428b-866f-b9c8d4ef938b">
+        <TemplateObject name="actorId" objectName="pos9" id="12" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="a069ea4b-1295-46f9-84d3-609f9ef2e5ea" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="57" guid="a04c6fbf-be56-4e22-8d20-b1ec91c61dec" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="adfef0b5-72e5-470c-b2f8-b7f170748b4b">
+        <TrackObject name="trackId" id="56" guid="203f9063-a994-4d69-ae9b-5a4b8003b2a6" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

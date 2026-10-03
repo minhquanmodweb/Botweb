@@ -1,0 +1,38 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="monster" isTemp="false" />
+    <TemplateObject id="3" objectName="bullet" isTemp="true" />
+    <TemplateObject id="4" objectName="bullet1" isTemp="true" />
+    <TemplateObject id="5" objectName="temp_obj_0" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <int name="shangjin" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="GetBuffOverLayTick2" eventType="GetBuffOverLayTick" guid="4b2cf5e8-02f3-486b-b7a6-4c7bb6c7e45c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetBuffOverLayTick" time="0.000" isDuration="false" guid="bc8f1373-fb51-43e4-8cc0-bd94d208612b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88102021" refParamName="" useRefParam="false" />
+        <String name="outBuffIdOverLay" value="shangjin" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="d18ca098-69e8-4ab8-b098-727af0cc7635" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="848522d0-c3fa-4c9b-81c1-db4114663659">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88102023" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBuffOverLayTick1" eventType="SetBuffOverLayTick" guid="50f35e06-74d0-4127-b11a-203f46611549" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetBuffOverLayTick" time="0.000" isDuration="false" guid="dda3945e-689d-4e43-968a-6483d3b402cf">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88102023" refParamName="" useRefParam="false" />
+        <int name="buffOverLayNum" value="44" refParamName="shangjin" useRefParam="true" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

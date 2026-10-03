@@ -1,0 +1,71 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="300.000" loop="false">
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="8935dae0-374f-492e-84eb-a92ede86973f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="04f92912-4114-4768-97c1-f7668183b5d1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMonter" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterBoss" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterOrgan" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterChest" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterEye" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterPet" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMajorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMinorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterSoldier" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterOtherMonster" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="普通暴露" eventType="PassiveExposedState" guid="d356d08b-7bd8-4542-8ccb-b91f02493ea3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PassiveExposedState" time="0.000" isDuration="false" guid="d7cba7f7-6ca6-4a4d-9540-9d4a634dc68c">
+        <Enum name="exposedType" value="2" EnumValue="非隐身暴露" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle" eventType="TriggerParticle" guid="00459a8c-ad06-415b-957a-a0ff5341d53e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="d356d08b-7bd8-4542-8ccb-b91f02493ea3" status="false" />
+      <Condition id="0" guid="8935dae0-374f-492e-84eb-a92ede86973f" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="300.000" isDuration="true" guid="0dd84c40-84c2-4c28-9262-b8be95516c96">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bChooseResourceNameByCamp" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/zb_supportItem_fumo_yan_mark" refParamName="" useRefParam="false" />
+        <String name="resourceName2" value="prefab_skill_effects/tongyong_effects/Zhuangbei/zb_supportItem_fumo_yan_mark" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bindOnHUD" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="SCI" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="隐身暴露" eventType="PassiveExposedState" guid="3f67bc4f-8335-4ef3-9d66-f72bd7806399" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="8935dae0-374f-492e-84eb-a92ede86973f" status="true" />
+      <Event eventName="PassiveExposedState" time="0.000" isDuration="false" guid="1e1c92af-c7ba-488e-ad7e-d2f0d3f65517">
+        <Enum name="exposedType" value="1" EnumValue="隐身暴露" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle" eventType="TriggerParticle" guid="91b2d4ba-a512-4995-9089-09edfb3eace8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="3f67bc4f-8335-4ef3-9d66-f72bd7806399" status="false" />
+      <Condition id="0" guid="8935dae0-374f-492e-84eb-a92ede86973f" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="300.000" isDuration="true" guid="9b549714-0d25-4dcb-884b-3d54ff591cfd">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bChooseResourceNameByCamp" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/zb_supportItem_fumo_yan_mark" refParamName="" useRefParam="false" />
+        <String name="resourceName2" value="prefab_skill_effects/tongyong_effects/Zhuangbei/zb_supportItem_fumo_yan_mark" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bindOnHUD" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="SCI" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

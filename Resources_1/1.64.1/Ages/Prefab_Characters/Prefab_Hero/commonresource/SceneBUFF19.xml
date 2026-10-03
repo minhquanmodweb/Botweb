@@ -1,0 +1,24 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="011a48b9-2ba1-4605-bbf7-f3599b308168" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true" lod="0">
+      <Event eventName="TriggerParticle" time="0.000" length="2.000" isDuration="true" guid="c0b2d46b-6149-4f92-8f74-7bc3483b1d31">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/tongyong_hurt/bluelong_buff_001" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncPerioidc0" eventType="SkillFuncPerioidc" guid="61b3af03-a966-49c0-86fd-aaca60be5e09" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true" lod="0">
+      <Event eventName="SkillFuncPerioidc" time="0.000" length="2.000" isDuration="true" guid="35593b40-c601-4d93-b120-b1f988351495">
+        <Enum name="SkillFuncType" value="58" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

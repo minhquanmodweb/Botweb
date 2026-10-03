@@ -1,0 +1,91 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="pos" id="3" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="13215sprint" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="7.000" loop="false">
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="cddf789f-fc21-4e41-b417-b0957932feb8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="7.000" isDuration="true" guid="a894707f-dd47-45b4-a324-bcae4ad640b6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="132800" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" EnumValue="大等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="afaef63a-b8ea-45e1-8067-20bcd50d21a9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="cddf789f-fc21-4e41-b417-b0957932feb8" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="7.000" isDuration="true" guid="50e883b0-7729-4841-8da4-5c5f5451f766">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/132_makeboluo/13215/EF_13215_rest_fire_1" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <int name="iDelayDisappearTime" value="500" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <bool name="bApplySpecialEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySetAlpha" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAutoSynchroActorAnimatorParams" value="true" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+        <bool name="bSaveSeqNum" value="true" refParamName="" useRefParam="false" />
+        <String name="seqName" value="13215sprint" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="0468f20c-570a-4b0b-b476-e41d11e8f032" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="cddf789f-fc21-4e41-b417-b0957932feb8" status="false" />
+      <Event eventName="TriggerParticle" time="0.000" length="7.000" isDuration="true" guid="628336f6-e4da-413b-8eaf-dda29e50ea4a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/132_makeboluo/13215/EF_13215_rest" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <bool name="bApplySpecialEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySetAlpha" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAutoSynchroActorAnimatorParams" value="true" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+        <bool name="bSaveSeqNum" value="true" refParamName="" useRefParam="false" />
+        <String name="seqName" value="13215sprint" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="9f5b37ab-fed2-4277-98eb-63c58b06d8fe" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="cddf789f-fc21-4e41-b417-b0957932feb8" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="7.000" isDuration="true" guid="4faebf76-a0d2-479c-ae83-58a2024f3aec">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/132_makeboluo/13215/EF_13215_rest_fire" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <bool name="bApplySpecialEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySetAlpha" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAutoSynchroActorAnimatorParams" value="true" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+        <bool name="bSaveSeqNum" value="true" refParamName="" useRefParam="false" />
+        <String name="seqName" value="13215sprint" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTracks0" eventType="StopTracks" guid="269a845c-c38e-4c4e-8268-7bfc9da7c021" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true">
+      <Event eventName="StopTracks" time="0.000" isDuration="false" guid="ebf558f0-bc3d-4024-899b-3148bf9cea32">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="1" guid="afaef63a-b8ea-45e1-8067-20bcd50d21a9" />
+          <TrackObject id="2" guid="0468f20c-570a-4b0b-b476-e41d11e8f032" />
+          <TrackObject id="3" guid="9f5b37ab-fed2-4277-98eb-63c58b06d8fe" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

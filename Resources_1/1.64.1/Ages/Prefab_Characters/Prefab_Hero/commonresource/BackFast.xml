@@ -1,0 +1,231 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="strReturnCityEffectPath" value="" refParamName="" useRefParam="false" />
+    <String name="strReturnCityFall" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="9.000" loop="false">
+    <Track trackName="PlaySkinAction0" eventType="PlaySkinAction" guid="2bdd14c4-cec1-4c03-907f-be0201c3d36a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySkinAction" time="0.000" length="9.000" isDuration="true" guid="74245143-3618-46aa-bed2-829cdb0823ae">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="actionName" value="Back" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="3fcc5b3f-3a9c-495c-bddd-5e3b03e5c01b" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="7f4747c5-20ca-4a0c-93fb-fee277215768">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="90000" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetResource[huijidi]" eventType="GetHolidayResourcePathTick" guid="95cf43e1-a94a-4b6d-a10e-079af17b888c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetHolidayResourcePathTick" time="0.000" isDuration="false" guid="6b41bc99-e6cf-4da1-87cc-9bf5950a1321">
+        <String name="holidayResourcePathPrefix" value="Prefab_Skill_Effects/Inner_Game_Effect/returncity_holidays/Holiday0/huijidi" refParamName="" useRefParam="false" />
+        <String name="outPathParamName" value="strReturnCityFall" refParamName="" useRefParam="false" />
+        <String name="outSoundEventParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetResource[huicheng]" eventType="GetHolidayResourcePathTick" guid="cb944be3-2bf1-4b56-a5da-6676a85f329c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetHolidayResourcePathTick" time="0.000" isDuration="false" guid="97464259-7025-43f6-b34c-30cddfb2c1de">
+        <int name="battleEffectCfgID" value="11000" refParamName="" useRefParam="false" />
+        <String name="holidayResourcePathPrefix" value="Prefab_Skill_Effects/Inner_Game_Effect/returncity_holidays/Holiday0/huicheng_tongyong" refParamName="" useRefParam="false" />
+        <String name="outPathParamName" value="strReturnCityEffectPath" refParamName="" useRefParam="false" />
+        <String name="outSoundEventParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBehaviourModeTick0" eventType="SetBehaviourModeTick" guid="de661ae3-4d58-4c8d-8a40-6506462d7337" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetBehaviourModeTick" time="0.000" isDuration="false" guid="59f359f6-7fb4-4545-af65-70e108612c47">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="clearMove" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="ef67059b-1136-4e7e-93da-474d455e8826" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="4.200" isDuration="true" guid="54ea0998-70a5-4387-81a2-aaf05459f3e0">
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill0" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill1" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill2" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill3" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill4" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill5" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill9" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterSkill11" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterMove" value="true" refParamName="" useRefParam="false" />
+        <bool name="abortFilterDamage" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveCityDuration0" eventType="MoveCityDuration" guid="c7106037-35ac-4cd8-aa4d-d68a602ccace" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MoveCityDuration" time="4.133" length="0.500" isDuration="true" guid="3fb5e2cb-e2bf-4d85-9309-5da9585e91db">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RefreshActorVisibleTick0" eventType="RefreshActorVisibleTick" guid="abef09cb-5ae7-4795-8432-6c692e1a4e25" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RefreshActorVisibleTick" time="4.133" isDuration="false" guid="983194cf-6447-49ee-a278-31df7efdc7c6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick0" eventType="PlayHeroSoundTick" guid="636802c1-ff96-4a63-a935-0fe06431265e" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="79c8ab7c-6574-44ec-8e2d-85a981ee5b70">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Skill_Heal" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="b9729512-4050-459e-9644-dc609c2a3a1f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="4.200" isDuration="false" guid="fd89a2bd-7b05-4aa6-a92a-41b1c4bf26e1">
+        <TemplateObject name="targetId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="parentResourceName" value="born_back_reborn/huijidi_01" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="" refParamName="strReturnCityFall" useRefParam="true" />
+        <float name="lifeTime" value="5.000" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseHeroLocalForward" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementSubUsage" value="1" EnumValue="回城落地特效" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="28dbc769-e471-407e-8108-9012ecf910d8" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="4.200" isDuration="true" guid="cb78bc5b-3485-41b9-8a74-5592d88827c5">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="parentResourceName" value="prefab_skill_effects/tongyong_effects/tongyong_hurt/born_back_reborn/huicheng_tongyong_01" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="" refParamName="strReturnCityEffectPath" useRefParam="true" />
+        <Vector3 name="bindPosOffset" x="0.000" y="-0.300" z="0.000" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="664523ad-bc5e-4796-94a7-003b758fb8c4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="0.000" length="4.200" isDuration="true" guid="f4f72dfc-acbc-45c0-b34c-abd2fb84b1b3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Home" refParamName="" useRefParam="false" />
+        <int name="layer" value="2" refParamName="" useRefParam="false" />
+        <bool name="bLoop" value="true" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="alwaysAnimate" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="4ac8f5e2-8798-4ec2-b12e-428d08583fb1" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="0.000" length="4.200" isDuration="true" guid="a7d72d3a-f6c4-4bbb-8f7b-978af71addae">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Idle" refParamName="" useRefParam="false" />
+        <int name="layer" value="0" refParamName="" useRefParam="false" />
+        <bool name="bLoop" value="true" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="alwaysAnimate" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveCityProcessBarDuration0" eventType="MoveCityProcessBarDuration" guid="00c4e0cd-601b-4cc1-85e0-5fc8f9a9d55d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MoveCityProcessBarDuration" time="0.000" length="4.200" isDuration="true" guid="af5fef02-8c8a-4adc-a426-a26f3ed2ae92">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick2" eventType="PlayHeroSoundTick" guid="973be899-2ab5-420c-b6ad-d88bce93d1f6" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="true" execOnActionCompleted="true">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="1c845480-c96b-4804-a32f-7d9444b25640">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Stop_Portal" refParamName="" useRefParam="false" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayActionSoundTick0" eventType="PlayActionSoundTick" guid="91f49296-8c45-4201-9485-4063f274f145" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayActionSoundTick" time="0.012" isDuration="false" guid="10f0a33f-1c73-4e99-9587-f12a6de0b9e8">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="eventCfg" value="8" EnumValue="回城声音" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayActionSoundTick1" eventType="PlayActionSoundTick" guid="20761e89-611b-4941-870b-89b5e998d50a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayActionSoundTick" time="4.183" isDuration="false" guid="4e99bd89-d249-409a-b70b-774cb639d258">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="eventCfg" value="9" EnumValue="落地声音" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="0a5ea76b-8844-4f3a-aeeb-89586231d820" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="11">
+      <Event eventName="PlayAnimDuration" time="0.000" length="4.200" isDuration="true" guid="09ef781a-b09a-40e6-9eae-169f5709e3ce">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Home" refParamName="" useRefParam="false" />
+        <int name="layer" value="2" refParamName="" useRefParam="false" />
+        <bool name="bLoop" value="true" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="alwaysAnimate" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="12912" />
+      <SkinOrAvatarList id="13118" />
+      <SkinOrAvatarList id="52710" />
+      <SkinOrAvatarList id="51015" />
+      <SkinOrAvatarList id="15013" />
+      <SkinOrAvatarList id="15216" />
+      <SkinOrAvatarList id="15902" />
+      <SkinOrAvatarList id="11620" />
+      <SkinOrAvatarList id="59802" />
+      <SkinOrAvatarList id="59901" />
+      <SkinOrAvatarList id="17408" />
+      <SkinOrAvatarList id="14214" />
+      <SkinOrAvatarList id="54309" />
+      <SkinOrAvatarList id="15905" />
+      <SkinOrAvatarList id="58200" />
+      <SkinOrAvatarList id="13707" />
+      <SkinOrAvatarList id="19016" />
+      <SkinOrAvatarList id="15016" />
+      <SkinOrAvatarList id="53612" />
+      <SkinOrAvatarList id="13707" />
+      <SkinOrAvatarList id="15900" />
+      <SkinOrAvatarList id="12313" />
+    </Track>
+    <Track trackName="PlayAnimDuration2" eventType="PlayAnimDuration" guid="0962f185-789d-43c2-9d45-175a4495c232" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="11">
+      <Event eventName="PlayAnimDuration" time="4.189" length="1.500" isDuration="true" guid="bd6b9651-ec57-446f-a642-f12b576aea2c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Gohome" refParamName="" useRefParam="false" />
+        <int name="layer" value="2" refParamName="" useRefParam="false" />
+        <bool name="alwaysAnimate" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="12912" />
+      <SkinOrAvatarList id="13118" />
+      <SkinOrAvatarList id="52710" />
+      <SkinOrAvatarList id="51015" />
+      <SkinOrAvatarList id="15013" />
+      <SkinOrAvatarList id="15216" />
+      <SkinOrAvatarList id="15902" />
+      <SkinOrAvatarList id="11620" />
+      <SkinOrAvatarList id="59802" />
+      <SkinOrAvatarList id="59901" />
+      <SkinOrAvatarList id="17408" />
+      <SkinOrAvatarList id="14214" />
+      <SkinOrAvatarList id="54309" />
+      <SkinOrAvatarList id="15905" />
+      <SkinOrAvatarList id="58200" />
+      <SkinOrAvatarList id="13707" />
+      <SkinOrAvatarList id="19016" />
+      <SkinOrAvatarList id="15016" />
+      <SkinOrAvatarList id="53612" />
+      <SkinOrAvatarList id="13707" />
+      <SkinOrAvatarList id="15900" />
+      <SkinOrAvatarList id="12313" />
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="53f94452-26fb-4046-9fb7-336a405da954" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="11">
+      <Event eventName="TriggerParticle" time="0.000" length="4.200" isDuration="true" guid="8bc0a522-2b8e-4517-8fe9-66b9fca8c145">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="parentResourceName" value="prefab_skill_effects/tongyong_effects/tongyong_hurt/born_back_reborn/huicheng_tongyong_01" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="" refParamName="strReturnCityEffectPath" useRefParam="true" />
+        <Vector3 name="bindPosOffset" x="0.000" y="-0.300" z="0.000" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="12313" />
+    </Track>
+  </Action>
+</Project> />

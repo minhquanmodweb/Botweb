@@ -1,0 +1,36 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <int name="int_0" value="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="25.000" loop="false">
+    <Track trackName="GetBuffOverLayTick0" eventType="GetBuffOverLayTick" guid="03442859-915d-48e5-acef-589a98fabadf" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetBuffOverLayTick" time="0.000" isDuration="false" guid="947793ad-6510-4697-b9c5-41b583e10eff">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88102013" refParamName="" useRefParam="false" />
+        <String name="outBuffIdOverLay" value="int_0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBuffOverLayTick0" eventType="SetBuffOverLayTick" guid="8d3c3f11-211d-4cd5-b2ab-b83f397bb9b2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetBuffOverLayTick" time="0.000" isDuration="false" guid="8b7c66a6-3ca6-47e6-92a2-c9c7c14f62ea">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88102015" refParamName="" useRefParam="false" />
+        <int name="buffOverLayNum" value="2" refParamName="int_0" useRefParam="true" />
+        <bool name="calZero" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="86cf0272-d11b-4a48-a360-130cf32b063d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="true" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="afc82e2a-5b6d-4fe6-b8e4-65ea94fc3dc4">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="8810201" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

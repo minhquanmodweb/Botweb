@@ -1,0 +1,24 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="killer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="CreateSkillContextDuration0" eventType="CreateSkillContextDuration" guid="2b39b93e-32da-45b2-8bd5-bd1e694fe75f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CreateSkillContextDuration" time="0.000" length="2.000" isDuration="true" guid="cdccf0c1-198d-4195-ab95-bf4d68ae6518">
+        <TemplateObject name="attackerId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="064b320f-7f34-4597-a512-7e876a1537b0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="a32e4512-299f-4754-a942-d3bd9991ce8a">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="7760021" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

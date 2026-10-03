@@ -1,0 +1,38 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="selfplayer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="846e304f-899d-4c22-ada6-cfb5c71d98ae" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="1.000" isDuration="true" guid="e086754e-8ac1-4a02-85ab-b3a90702f708">
+        <Enum name="SkillFuncType" value="17" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="29f5d03d-efd1-4bbb-ba24-42a8adafea05" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="bc44a9df-5b0f-432a-902f-80e5091799ff">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/New_Common_Effects/EnhancedDragon_Buff" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="842b366f-3807-42e4-8715-647798616cfc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="1.000" isDuration="true" guid="fec24109-87ad-4483-a7f1-2c793459b79b">
+        <Enum name="SkillFuncType" value="62" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MaterialSwitchDuration0" eventType="MaterialSwitchDuration" guid="009fa03f-fcfe-4d1a-b86e-d3687e5da6ef" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="MaterialSwitchDuration" time="0.000" length="1.000" isDuration="true" guid="00270096-547c-4066-84b6-7cd152ef5e5f">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="Prefab_Skill_Effects/New_Common_Effects/EnhancedDragon_Buff_Freasnel" refParamName="" useRefParam="false" />
+        <bool name="bAddMaterial" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

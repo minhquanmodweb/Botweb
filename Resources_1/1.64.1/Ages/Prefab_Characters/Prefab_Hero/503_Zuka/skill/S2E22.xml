@@ -1,0 +1,12 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList />
+  <RefParamList />
+  <Action tag="" length="3.000" loop="false">
+    <Track trackName="SkillFuncPerioidc0" eventType="SkillFuncPerioidc" guid="254a30ca-5ec1-4944-a80b-e0415a04855c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncPerioidc" time="0.000" length="3.000" isDuration="true" guid="a163de6a-8f68-4a41-9ede-3b4a9e881a5d">
+        <Enum name="SkillFuncType" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

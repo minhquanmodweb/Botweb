@@ -1,0 +1,70 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="32f6ba05-d55d-4603-8ffc-8b667b9e1ac9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="4.000" isDuration="true" guid="8875d99c-4987-406f-b1d9-f4bee60bef45">
+        <Enum name="SkillFuncType" value="40" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle2" eventType="TriggerParticle" guid="8e6e2501-01bc-4b44-93a7-2e3b54b8e408" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="4.000" isDuration="true" guid="684092fe-d5b0-4379-acae-f9cb332e4e05">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/huanling_effect/EF_Weak02_buff" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckDistanceDuration0" eventType="CheckDistanceDuration" guid="6c51266b-a3f5-4255-90fb-753f6858bbd9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckDistanceDuration" time="0.000" length="4.000" isDuration="true" guid="8853a909-dbe6-4bde-bc9b-0dc3f90a50f6">
+        <TemplateObject name="srcId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="distance" value="4500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="d4e466df-944f-4015-a2b8-c70751dfb54f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="6c51266b-a3f5-4255-90fb-753f6858bbd9" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="d24e4917-2c4e-4bae-892d-c12a5d39d88b">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="801221" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="cbca76c0-8525-4c20-9a20-26ce0b4280bc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="4.000" isDuration="true" guid="63231a1e-6b92-45d7-a9d9-659228dc74ed">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801220" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="dfef9dec-b635-42cc-96d5-16cb8047fe2c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="cbca76c0-8525-4c20-9a20-26ce0b4280bc" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="412ef0ac-6de6-4d65-9d2e-b4f5428238b7">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="801221" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffHudTriggerDuration0" eventType="BuffHudTriggerDuration" guid="1a0155d5-ef3c-4ccd-a6c5-af53064255bb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BuffHudTriggerDuration" time="0.000" length="4.000" isDuration="true" guid="613987be-d391-4333-8a55-b7a5160a8fec">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID" value="801221" refParamName="" useRefParam="false" />
+        <Enum name="iconType" value="6" refParamName="" useRefParam="false" />
+        <bool name="bVvisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOriginVisble" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerVisible" value="true" refParamName="" useRefParam="false" />
+        <Enum name="priority1" value="1" refParamName="" useRefParam="false" />
+        <int name="priority2" value="2000" refParamName="" useRefParam="false" />
+        <bool name="bDelay" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,35 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="3.000" loop="false">
+    <Track trackName="RegisterEventTick0" eventType="RegisterEventTick" guid="4c8c9119-3020-464c-abf2-ab337e2041f2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="4d101dd1-b848-489d-8c91-e12bd1233c2b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="5" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/40306E1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TriggerInterval" value="1000" refParamName="" useRefParam="false" />
+        <bool name="bExtraBuff" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventDuration0" eventType="RegisterEventDuration" guid="face075b-3e5f-4d3c-8c7d-2ea6e50f1627" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RegisterEventDuration" time="0.000" length="0.500" isDuration="true" guid="d9c00277-fa05-4993-a804-c04a9e4bbd12">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="5" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/40306E1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeSourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TriggerInterval" value="200" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

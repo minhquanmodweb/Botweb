@@ -1,0 +1,39 @@
+BẢN SỬA ĐÓNG GÓI RESOURCE — CẦN KIỂM TRA TRÊN GAME
+
+KẾT QUẢ ĐỐI CHIẾU
+Resources.zip bạn gửi và source bot cùng bản 1.64.1.8|1770202.
+KernelLua.pkg.bytes, StableSystems_3.pkg.bytes, resourcepackerinfosetall.assetbundle và resourceverificationinfosetall.assetbundle trùng nhau từng byte.
+Các file heroSkin, HeroSkinShop và AssetRefs gốc dùng lớp nén bên ngoài; sau giải nén, dữ liệu trùng với source.
+Bộ tạo mod trước đó xuất các file đã sửa ở dạng thô. File bên trong gói Actions và Infos cũng có khác biệt về lớp nén/mã hoá so với bản trên điện thoại.
+
+THAY ĐỔI
+Thêm resource_encoding.py và resource_formats.json, tích hợp vào web_engine.py trước khi tạo bản Android/iOS.
+Lưu đúng lớp Zstd hoặc AES theo định dạng từng file từ Resources.zip.
+Kiểm tra giải mã/giải nén lại phải thu được đúng toàn bộ dữ liệu vừa sửa và đúng kích thước khai báo.
+Giữ nội dung mod; không thay danh sách tướng/skin và không bật hàm xoá xác minh cũ.
+Chỉ áp dụng cho bản web trong gói này. bot.py Telegram giữ nguyên.
+
+GIỚI HẠN
+Đây là sửa sai khác định dạng đã xác minh trong source, KHÔNG phải xác nhận game đã ngừng reset.
+Ảnh tải lại 3,48 MB chưa xác định được tên các file game đã ghi đè.
+Các kiểm tra trên máy chủ không mô phỏng được kiểm tra cập nhật khi khởi động game.
+Không dùng tên file này để suy ra đã có bản chống reset được kiểm chứng.
+
+CẬP NHẬT WEB
+1. Dùng gói TD_MOD_WEB_RAILWAY.zip mới này thay source trong repository WEB RIÊNG.
+2. Nếu đã cài bản trước, những file cần thêm/thay là: web_engine.py, resource_encoding.py, resource_formats.json.
+3. Deploy lại service web. Không sửa hoặc deploy lại service bot Telegram.
+4. Tạo lại file mod mới; ZIP mod đã tải từ bản web trước sẽ không tự thay đổi.
+
+THỬ TRÊN ANDROID
+1. Mở game, để hoàn thành tải tài nguyên rồi thoát hẳn game.
+2. Trên web chọn thử 1 tướng/skin, chọn Android rồi tạo ZIP mới.
+3. Giải nén. Gói Android có thư mục com.garena.game.kgvn/files/Resources/1.64.1/.
+4. Bằng công cụ quản lý file bạn đang dùng để cài mod, chép nội dung vào thư mục game tương ứng dưới Android/data/. Giữ đúng cấu trúc thư mục; không chép cả thư mục Resources lồng thêm một tầng.
+5. Mở game và kiểm tra skin trong nơi thử nghiệm bạn thường dùng.
+6. Thoát hẳn ứng dụng rồi mở lại 2–3 lần. Ghi nhận có xuất hiện tải tài nguyên, số MB và skin còn hay mất.
+7. Nếu còn reset, báo kết quả của lượt thử này. Cần so sánh file mod mới với tài nguyên sau khi game tải lại để xác định file bị ghi đè, thay vì tiếp tục dùng FixReset cũ.
+
+THỬ IOS
+Chọn iOS trên web và tải ZIP. Dùng công cụ cài mod iOS bạn đang dùng để chép thư mục Resources vào vùng dữ liệu game tương ứng.
+Các bước thao tác cụ thể phụ thuộc công cụ iOS; không coi quyền truy cập thư mục Android là áp dụng được cho iOS.

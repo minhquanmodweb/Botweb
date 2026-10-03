@@ -1,0 +1,97 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="bullet2" id="3" isTemp="true" />
+    <TemplateObject objectName="攻击者" id="4" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="6.000" loop="false">
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="3.000" isDuration="true" guid="bd16e5bd-caad-4fa4-9ed4-7632451d28ab">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="159801" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" EnumValue="大等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="2e80f2ea-70e6-4ece-99f6-091e86eaa679" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="false" />
+      <Event eventName="TriggerParticle" time="0.000" length="6.000" isDuration="true" guid="1ce8d3ff-b46f-4c39-bddd-1a55ef8f8f07">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_girl_02" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <bool name="bApplySpecialEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySetAlpha" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAutoSynchroActorAnimatorParams" value="true" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+        <bool name="bSaveSeqNum" value="true" refParamName="" useRefParam="false" />
+        <String name="seqName" value="13215sprint" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="854fd939-4eb4-4063-ac40-eb29260ffa50" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="false" />
+      <Event eventName="TriggerParticle" time="0.000" length="6.000" isDuration="true" guid="eb077fa2-a3ef-42cd-98f8-c517f3770fab">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_girl_01" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bTrailProtect" value="true" refParamName="" useRefParam="false" />
+        <Enum name="ReplacementUsage" value="1" EnumValue="回城特效" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <bool name="bApplySpecialEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySetAlpha" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAutoSynchroActorAnimatorParams" value="true" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+        <bool name="bSaveSeqNum" value="true" refParamName="" useRefParam="false" />
+        <String name="seqName" value="13215sprint" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="9efd78fb-d78f-4aa7-8787-aa8032aa5670" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="true" />
+      <Event eventName="TriggerParticle" time="0.470" length="5.530" isDuration="true" guid="9c38719b-d05b-445f-9e4f-8080afacab2a">
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_yu_01" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="07fa78f7-151f-432c-8e04-71aac8f9ef8e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="true" />
+      <Event eventName="TriggerParticle" time="0.930" length="5.070" isDuration="true" guid="9a0d86e1-7997-40de-8de9-b3c9f6c59dce">
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_yu_02" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="0cc839a4-9099-4cd6-adf4-9c258b7bdeaf" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="6.000" isDuration="true" guid="15d1fd2b-6bee-4124-8837-5c2cb2a1f108">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_yu_03" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Bip001 Pelvis" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="1e92af1b-528f-4305-b52e-b6184b9169e6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="true" />
+      <Event eventName="TriggerParticle" time="1.900" length="4.100" isDuration="true" guid="f931dd9d-e734-41a1-a7ab-56924d1ee0df">
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_yu_04" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="0086c07a-6568-4edb-ba19-b7ac1ad816cc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="771ec715-946f-44ee-98a1-3b9695fff8a2" status="true" />
+      <Event eventName="TriggerParticle" time="2.570" length="3.430" isDuration="true" guid="2bb1da9f-40d6-46ac-95c1-00dbfd5b3735">
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/159_Dolia/Dolia_run1_yu_05" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

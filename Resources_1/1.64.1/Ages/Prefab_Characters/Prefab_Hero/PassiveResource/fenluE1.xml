@@ -1,0 +1,65 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="string" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="CheckPlayerOnCorrectRouteDuration0" eventType="CheckPlayerOnCorrectRouteDuration" guid="d5db3f75-9352-4b9c-99d7-d484207d7b93" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckPlayerOnCorrectRouteDuration" time="0.000" length="1.000" isDuration="true" guid="ade4bef8-2f4a-482b-94cc-764a378cb3f8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bNotMovingTowardCorrectRoute" value="true" refParamName="" useRefParam="false" />
+        <uint name="offsetAngle" value="20" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="734776cc-39f7-4c37-975e-430f51b6dcb0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="d5db3f75-9352-4b9c-99d7-d484207d7b93" status="true" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="2d56ea23-7c54-45c1-8c2a-164d11b4e122">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyHostHero" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetActorLaneEffectPathTick0" eventType="GetActorLaneEffectPathTick" guid="20be5d79-58ae-405d-9870-fb90f604e13d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="734776cc-39f7-4c37-975e-430f51b6dcb0" status="true" />
+      <Event eventName="GetActorLaneEffectPathTick" time="0.000" isDuration="false" guid="f02d587c-3c25-4e7b-88f8-4a960ca5932a">
+        <TemplateObject name="actorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="towerID" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="31bd92b6-0d58-4415-9dd8-792c1bd789ad" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="734776cc-39f7-4c37-975e-430f51b6dcb0" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="10d56edf-99a2-4aa7-a8e0-1fc4485f3a5a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Indicator/EF_Battlefield_Arrow001" refParamName="" useRefParam="false" />
+        <bool name="bBindPosOffsetInWorldSpace" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" id="2" objectName="bullet" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bAlwaysLookTarget" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bRotateFollowCamera" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckPlayerOnCorrectRouteDuration0" eventType="CheckPlayerOnCorrectRouteDuration" guid="499edef5-ccdc-4ee9-9b83-731ea2ce9dad" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckPlayerOnCorrectRouteDuration" time="0.000" length="1.000" isDuration="true" guid="2fe0124f-7641-479c-ade2-4f9bf8a568d2">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <uint name="offsetAngle" value="20" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="dac1cf86-2de2-47cd-968a-4b311a1b1588" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="499edef5-ccdc-4ee9-9b83-731ea2ce9dad" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.006" isDuration="false" guid="264640c3-cedb-4c0d-a93e-864a93705caf">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9162016" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

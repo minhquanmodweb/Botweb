@@ -1,0 +1,94 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="Findbullet" id="3" isTemp="true" />
+    <TemplateObject objectName="bullet7" id="4" isTemp="true" />
+    <TemplateObject objectName="攻击者" id="5" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="698ac5c6-7949-498d-9dbf-6e6db210bd90" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="6872122f-ff07-4b63-a5b6-ac861bb7a613">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58933045" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="15541003-bb2a-4896-a08f-8c7ff7c49256" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="fedede30-0dc4-4334-8fc3-8bb7ab1c9fe6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58938" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="4b207bb5-974d-4050-ba6a-ee58f4470262" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="60a52bfb-bff4-43d4-be0c-b142ef1d6772">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="5893018" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="bImmeStop" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RotateActorDuration1" eventType="RotateActorDuration" guid="bd9da0d4-76b8-48e5-9e06-d051300988cf" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RotateActorDuration" time="0.000" length="0.500" isDuration="true" guid="db5e91a6-6401-4f66-a461-08c424cd18d6">
+        <TemplateObject name="targetId" objectName="Findbullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <Enum name="RotateType" value="2" EnumValue="指定目标转向" refParamName="" useRefParam="false" />
+        <TemplateObject name="RotateForwardTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="IsImmediatelyRotate" value="true" refParamName="" useRefParam="false" />
+        <int name="rotateSpeed" value="720" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="0762c061-7537-4043-a5d9-e78a8ed85c95" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="1.000" isDuration="true" guid="4e53627d-5469-4e7c-a5fe-6c4837f9a223">
+        <TemplateObject name="targetId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="parentId" objectName="Findbullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="Findbullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick2" eventType="HitTriggerTick" guid="df62d09e-9703-40c9-b13e-1c5d7d7fa676" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.500" isDuration="false" guid="3e0c6cd7-e1b7-4937-853c-23a54237747a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893018" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="3a1b5a73-a924-495a-9bd5-2e271e1cad25" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.300" isDuration="false" guid="751df799-c294-4ae2-95d4-61724fa0356a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="5899307" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="米莱迪普攻特效" eventType="MoveBeamDuration" guid="19dd6244-d0b6-41f8-a00a-867cef5e4a7a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MoveBeamDuration" time="0.300" length="0.200" isDuration="true" guid="c542d5e5-cc46-4a04-acaf-6a48d5a4d890">
+        <TemplateObject name="sourceId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/Evita_attack_03_3" refParamName="" useRefParam="false" />
+        <float name="textureScale" value="1.000" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreLength" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="米莱迪普攻特效" eventType="MoveBeamDuration" guid="c298a0e7-69ca-495a-a407-dadcec9ec7ce" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MoveBeamDuration" time="0.350" length="0.600" isDuration="true" guid="0422f248-7a18-4ec0-9e51-40a931a72031">
+        <TemplateObject name="sourceId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/598_DaSiKong/DaSiKong_attack01C_02" refParamName="" useRefParam="false" />
+        <float name="textureScale" value="1.000" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreLength" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="米莱迪普攻特效" eventType="MoveBeamDuration" guid="df38ad31-9f4c-45ea-a0e6-63dfbd46f023" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MoveBeamDuration" time="0.400" length="0.600" isDuration="true" guid="03765f30-7774-4512-93a4-9e72a4e4e5ce">
+        <TemplateObject name="sourceId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/598_DaSiKong/DaSiKong_attack01C_02" refParamName="" useRefParam="false" />
+        <float name="textureScale" value="1.000" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreLength" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

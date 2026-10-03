@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>TD MOD SKIN</title>
+<!-- build: 2026-10-01-v17-moren-stable -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://dl.ops.kgvn.garenanow.com" crossorigin>
+<link rel="dns-prefetch" href="https://dl.ops.kgvn.garenanow.com">
+<style>
+:root{
+  --bg:#030814; --bg2:#07101f; --panel:#0b172a; --panel2:#10213a;
+  --line:rgba(91,162,255,.18); --line2:rgba(45,221,255,.48);
+  --cyan:#31dcff; --blue:#5d8fff; --pink:#ff4f9a; --green:#4de6a0;
+  --text:#f5f9ff; --muted:#91a4c3; --muted2:#617796;
+  --shadow:0 16px 42px rgba(0,0,0,.30); --r:20px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body:before,body:after{display:none!important;content:none!important}
+body{
+  background:
+    radial-gradient(circle at 18% 0%,rgba(49,220,255,.075),transparent 30%),
+    radial-gradient(circle at 88% 38%,rgba(93,143,255,.07),transparent 31%),
+    linear-gradient(180deg,#030814 0%,#050b18 100%);
+}
+#scrollArea{position:relative}
+#scrollArea:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(rgba(65,140,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(65,140,255,.05) 1px,transparent 1px);
+  background-size:36px 36px;mask-image:linear-gradient(to bottom,black,transparent 70%);
+}
+#app{position:relative;z-index:1;animation:pageIn .22s cubic-bezier(.2,.8,.2,1)}
+@keyframes pageIn{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes navPop{0%{transform:scale(.88)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes sheen{0%{transform:translateX(-140%) skewX(-20deg)}100%{transform:translateX(260%) skewX(-20deg)}}
+@keyframes softPulse{0%,100%{box-shadow:0 0 0 0 rgba(49,220,255,.08)}50%{box-shadow:0 0 0 7px rgba(49,220,255,0)}}
+.metric{animation:softPulse 3.2s ease-in-out infinite}
+.metric:nth-child(2){animation-delay:.45s}.metric:nth-child(3){animation-delay:.9s}
+.navbtn.on svg{animation:navPop .24s ease}
+.run{position:relative;overflow:hidden}
+.run:after{content:"";position:absolute;top:-40%;bottom:-40%;width:38%;left:-45%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);animation:sheen 2.8s ease-in-out infinite}
+.skin.sel{animation:softPulse 1.9s ease-in-out infinite}
+.row,.hero-card,.platform,.progress-card,.metric,.skin{will-change:transform}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+button,input{font:inherit}
+button{border:0;color:inherit}
+#scrollArea{height:calc(var(--tg-vh,100vh));overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;padding-bottom:calc(var(--nav-h,104px) + env(safe-area-inset-bottom) + 34px);scroll-padding-bottom:calc(var(--nav-h,104px) + env(safe-area-inset-bottom) + 34px)}
+.wrap{max-width:540px;margin:auto;padding:10px 11px 3px}
+
+/* hero/status */
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 0 8px}
+.metric{position:relative;overflow:hidden;padding:8px 7px;background:linear-gradient(145deg,rgba(17,31,55,.96),rgba(10,19,35,.96));border:1px solid var(--line);border-radius:17px;box-shadow:inset 0 1px rgba(255,255,255,.025)}
+.metric:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;background:var(--glow,var(--cyan));filter:blur(30px);opacity:.08;right:-25px;top:-25px}
+.metric .top{display:flex;align-items:center;justify-content:center;gap:7px}
+.metric .ico{width:18px;height:18px;color:var(--cyan);opacity:.95}
+.metric strong{font-size:19px;line-height:1;color:var(--cyan);letter-spacing:-.04em}
+.metric.sel strong,.metric.sel .ico{color:var(--pink)}
+.metric span{display:block;text-align:center;margin-top:5px;color:var(--muted);font-weight:800;font-size:9px;letter-spacing:.08em}
+/* distinct summary colors */
+.metric:nth-child(1){
+  --metric:#2ed8ff;--metric-rgb:46,216,255;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(14,43,66,.98),rgba(8,20,36,.98));
+}
+.metric:nth-child(1) .ico,.metric:nth-child(1) strong{color:var(--metric)}
+.metric:nth-child(1):after{background:var(--metric)}
+
+.metric:nth-child(2){
+  --metric:#8b7cff;--metric-rgb:139,124,255;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(34,31,72,.98),rgba(15,20,42,.98));
+}
+.metric:nth-child(2) .ico,.metric:nth-child(2) strong{color:var(--metric)}
+.metric:nth-child(2):after{background:var(--metric)}
+
+.metric:nth-child(3){
+  --metric:#ff4f9a;--metric-rgb:255,79,154;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(62,24,55,.98),rgba(28,16,38,.98));
+}
+.metric:nth-child(3) .ico,.metric:nth-child(3) strong{color:var(--metric)}
+.metric:nth-child(3):after{background:var(--metric)}
+
+.progress-card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:8px 11px;margin-bottom:11px}
+.progress-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800}.progress-row b{color:var(--cyan)}.progress-row span{color:var(--muted)}
+.track{height:6px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));box-shadow:0 0 18px rgba(46,216,255,.42);transition:width .22s ease}
+
+/* typography */
+.section-kicker{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase;margin-bottom:5px}
+h1{font-size:23px;line-height:1.05;margin:0 0 5px;letter-spacing:-.04em}.hl{color:var(--cyan)}
+.sub{font-size:12px;color:var(--muted);margin:0 0 14px}
+
+/* search */
+.search{display:flex;align-items:center;gap:10px;background:rgba(15,28,49,.92);border:1px solid var(--line);border-radius:17px;padding:10px 12px;margin-bottom:12px;box-shadow:inset 0 1px rgba(255,255,255,.02)}
+.search svg{width:18px;color:var(--muted)}.search input{min-width:0;flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:15px}.search input::placeholder{color:var(--muted2)}
+
+/* alphabet */
+.az-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.az{position:relative;aspect-ratio:1;border-radius:17px;background:linear-gradient(145deg,#11213a,#09162a);border:1px solid var(--line);font-size:20px;font-weight:900;box-shadow:0 7px 20px rgba(0,0,0,.1)}
+.az .cnt{position:absolute;top:7px;right:8px;color:var(--muted);font-size:10px;font-weight:800}.az.empty{opacity:.24}.az:active,.row:active,.skin:active{transform:scale(.985)}
+
+/* rows */
+.row{display:flex;align-items:center;gap:12px;background:linear-gradient(145deg,rgba(17,34,59,.98),rgba(8,20,37,.98));border:1px solid var(--line);border-radius:18px;padding:9px 10px;margin-bottom:8px;box-shadow:0 8px 24px rgba(0,0,0,.10);transition:transform .12s}
+.row img,.avatar{width:50px;height:50px;border-radius:15px;object-fit:cover;background:#111d31;flex:none}
+.hero-mono{display:grid;place-items:center;font-size:22px;font-weight:950;color:var(--cyan);background:#0b1930;border:1px solid rgba(46,216,255,.18)}
+.row .txt{min-width:0;flex:1}.row b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row small{display:block;margin-top:4px;color:var(--muted);font-size:12px}.chev{color:var(--muted2)}
+.back{display:inline-flex;align-items:center;gap:7px;background:rgba(16,29,51,.72);border:1px solid var(--line);border-radius:999px;color:var(--cyan);padding:6px 10px;font-size:10.5px;font-weight:850;margin-bottom:13px}
+.hero-card{display:flex;gap:9px;align-items:center;background:linear-gradient(135deg,rgba(17,36,62,.99),rgba(8,19,36,.99));border:1px solid var(--line);border-radius:16px;padding:9px 10px;margin-bottom:10px;box-shadow:var(--shadow)}
+.hero-card .avatar{width:68px;height:68px}.hero-card b{font-size:20px}.hero-card span{display:block;color:var(--muted);margin-top:4px;font-size:12px}
+
+.row.chosen{border-color:rgba(67,245,173,.62);box-shadow:inset 0 0 0 1px rgba(67,245,173,.10)}
+.row.chosen .avatar{box-shadow:0 0 0 2px rgba(67,245,173,.78)}
+.row .chosen-skin{color:#5ff1b1!important;font-weight:800}
+/* skins */
+.skin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 12px;width:100%;margin:0}
+.skin{position:relative;display:flex;flex-direction:column;gap:7px;min-width:0;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;text-align:center;overflow:visible;transition:.14s transform}
+.skin:active{transform:scale(.985)}
+.skin-pic{position:relative;display:block;width:100%;aspect-ratio:1;border-radius:15px;overflow:hidden;background:#101b2e;box-shadow:none}
+.skin-pic img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .18s}
+.skin-pic img.ready{opacity:1}
+.skin .shade{position:static;display:block;padding:0 2px;background:none!important;color:#eef4ff;font-size:11px;line-height:1.18;font-weight:850;text-align:center;min-height:26px}
+.skin.sel .skin-pic{outline:3px solid #43f5ad;outline-offset:0;box-shadow:0 0 0 1px rgba(67,245,173,.22),0 8px 26px rgba(36,233,157,.16)}
+.skin.sel .skin-pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(65,255,180,.14),rgba(53,229,151,.34));pointer-events:none;z-index:2}
+.skin.sel .shade{color:#63f4b5;text-shadow:none}
+.check{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:none;place-items:center;background:rgba(44,238,157,.18);border:3px solid rgba(255,255,255,.88);color:#fff;font-size:26px;font-weight:900;z-index:4;box-shadow:0 5px 18px rgba(0,0,0,.24)}
+.skin.sel .check{display:grid}.skin.sel .shade{color:#78ffca;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+
+/* cart / platform */
+.cart-row{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:10px;margin-bottom:9px}.cart-row img{width:44px;height:44px;border-radius:13px;object-fit:cover;background:#111c30}.cart-row .txt{flex:1;min-width:0}.cart-row b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cart-row small{display:block;margin-top:3px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.remove{width:32px;height:32px;border-radius:10px;background:rgba(255,75,145,.10);border:1px solid rgba(255,75,145,.24);color:var(--pink)}
+.platform{margin:11px 0;background:linear-gradient(145deg,#101d33,#0b1628);border:1px solid var(--line);border-radius:19px;padding:12px}.platform-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}.platform-head svg{color:var(--cyan)}.platform-head b{font-size:14px}.platform-head small{display:block;color:var(--muted);font-weight:500;margin-top:2px}
+.segment{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;background:#081221;border-radius:14px;padding:5px}.seg{display:flex;justify-content:center;align-items:center;gap:6px;padding:9px 4px;border-radius:11px;color:var(--muted);background:transparent;font-size:11px;font-weight:850;transition:.16s transform,.16s background,.16s color,.16s box-shadow}.seg svg{width:16px}
+.seg:nth-child(1){color:#70d99b}.seg:nth-child(1).on{background:linear-gradient(135deg,rgba(61,224,139,.19),rgba(28,124,86,.13));color:#52e49b;box-shadow:inset 0 0 0 1px rgba(82,228,155,.42),0 0 18px rgba(82,228,155,.07)}
+.seg:nth-child(2){color:#7ebcff}.seg:nth-child(2).on{background:linear-gradient(135deg,rgba(73,160,255,.20),rgba(59,97,210,.13));color:#70b7ff;box-shadow:inset 0 0 0 1px rgba(112,183,255,.42),0 0 18px rgba(112,183,255,.07)}
+.seg:nth-child(3){color:#c59cff}.seg:nth-child(3).on{background:linear-gradient(135deg,rgba(166,105,255,.20),rgba(103,66,204,.13));color:#c49aff;box-shadow:inset 0 0 0 1px rgba(196,154,255,.42),0 0 18px rgba(196,154,255,.07)}
+.seg.on{transform:translateY(-1px)}
+.tip{display:flex;align-items:flex-start;gap:8px;margin-top:10px;color:var(--muted);font-size:11px;line-height:1.4}.tip svg{width:16px;flex:none;color:var(--green)}
+.run{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 10px;border-radius:16px;background:linear-gradient(115deg,#43d8ff,#4f8fff);color:#03101b;font-size:14px;font-weight:950;box-shadow:0 10px 30px rgba(46,216,255,.22)}.run:disabled{opacity:.4;box-shadow:none}.run svg{width:19px}
+.empty{text-align:center;padding:58px 20px;color:var(--muted)}
+
+/* bottom nav */
+.bottom{position:fixed;z-index:10;left:0;right:0;bottom:0;padding:6px 11px calc(6px + env(safe-area-inset-bottom));background:linear-gradient(0deg,var(--bg) 72%,rgba(5,9,20,.88) 88%,transparent);pointer-events:none}.bottom .nav{pointer-events:auto}
+.nav{max-width:540px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;background:rgba(13,23,41,.94);border:1px solid var(--line);border-radius:20px;backdrop-filter:none;box-shadow:0 -8px 35px rgba(0,0,0,.20)}
+.navbtn{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 3px;border-radius:14px;background:transparent;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.035em}.navbtn svg{width:19px;height:19px}.navbtn.on{color:var(--cyan);background:rgba(46,216,255,.08);box-shadow:inset 0 0 0 1px rgba(46,216,255,.22)}
+.badge{position:absolute;top:3px;left:calc(50% + 10px);min-width:17px;height:17px;padding:0 4px;border-radius:9px;display:grid;place-items:center;background:var(--pink);color:white;font-size:9px}.hidden{display:none!important}
+
+/* loading */
+.skeleton{position:relative;overflow:hidden;background:#101b2e!important;color:transparent!important}.skeleton:after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.055),transparent);animation:sh 1.45s infinite}@keyframes sh{to{transform:translateX(100%)}}
+.fade{animation:fade .17s ease}@keyframes fade{from{opacity:.35;transform:translateY(3px)}to{opacity:1;transform:none}}
+.toast{position:fixed;z-index:30;left:50%;top:14px;bottom:auto;transform:translateX(-50%);width:min(590px,calc(100% - 28px));background:rgba(6,15,29,.97);border:1px solid rgba(67,245,173,.55);border-radius:18px;padding:13px 18px;font-size:13px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.34);white-space:normal;color:#eef4ff}
+@media(max-width:380px){.wrap{padding-left:10px;padding-right:10px}.az-grid{gap:7px}.skin-grid{gap:12px 9px}.metric strong{font-size:19px}.skin .shade{font-size:10.5px}}.az-grid,.skin-grid{gap:7px}.metric strong{font-size:19px}.skin .shade{font-size:10px}}
+</style>
+</head>
+<body>
+<div id="scrollArea"><main class="wrap fade" id="app"></main></div>
+<nav class="bottom"><div class="nav">
+  <button class="navbtn" id="navHeroes" onclick="setTab('heroes')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6.8 4.7 19.3 17.2M17.2 4.7 4.7 17.2"/><path d="m4 3 4.5 1.2L5.2 7.5 4 3Zm16 0-4.5 1.2 3.3 3.3L20 3ZM3 20l4.2-4.2M21 20l-4.2-4.2"/></svg>
+    TƯỚNG
+  </button>
+  <button class="navbtn" id="navCart" onclick="setTab('cart')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="m8 12 2.4 2.4L16.5 8.5"/></svg>
+    ĐÃ CHỌN <span class="badge hidden" id="cartBadge">0</span>
+  </button>
+  <button class="navbtn" id="navOther" onclick="setTab('other')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M8 4v6M16 14v6"/></svg>
+    CÀI ĐẶT
+  </button>
+</div></nav>
+<div id="toast" class="toast hidden"></div>
+<script>
+const tg=window.Telegram?.WebApp||null;
+if(tg){tg.ready();tg.expand();try{tg.setHeaderColor('#050914');tg.setBackgroundColor('#050914')}catch(e){};if(tg.disableVerticalSwipes)tg.disableVerticalSwipes()}
+function syncVH(){const vh=(tg&&tg.viewportStableHeight)||window.visualViewport?.height||innerHeight;document.documentElement.style.setProperty('--tg-vh',vh+'px');requestAnimationFrame(syncBottomSpace)}
+syncVH();addEventListener('resize',syncVH);window.visualViewport?.addEventListener('resize',syncVH);if(tg?.onEvent)tg.onEvent('viewportChanged',syncVH);
+
+const MAX_SLOTS=15;
+let DATA={heroes:[],totalHeroes:0,totalSkins:0};
+let selections=[];
+let stack=[{screen:'az'}];
+let tab='heroes';
+let loaded=false;
+let searchTimer=null;
+let platformMode=(tg?.platform==='ios'?'ios':tg?.platform==='android'?'android':'both');
+const CACHE_NS='tdmod1641_v17_moren_stable_';
+function cacheGet(k){try{const v=sessionStorage.getItem(CACHE_NS+k);return v?JSON.parse(v):null}catch(e){return null}}
+function cacheSet(k,v){try{sessionStorage.setItem(CACHE_NS+k,JSON.stringify(v))}catch(e){}}
+const SELECT_STORE_KEY='tdmod_selected_skins_v1';
+function loadSavedSelections(){
+  try{
+    const v=localStorage.getItem(SELECT_STORE_KEY);
+    const a=v?JSON.parse(v):[];
+    if(Array.isArray(a)) selections=a.filter(x=>x&&x.tuong&&x.skin&&x.id).slice(0,MAX_SLOTS);
+  }catch(e){}
+}
+function saveSelections(){try{localStorage.setItem(SELECT_STORE_KEY,JSON.stringify(selections))}catch(e){}}
+function clearSavedSelections(){try{localStorage.removeItem(SELECT_STORE_KEY)}catch(e){}}
+
+
+const ICON={
+  android:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 8h10a2 2 0 0 1 2 2v7H5v-7a2 2 0 0 1 2-2Z"/><path d="M8 8 6.7 5.8M16 8l1.3-2.2M8 12h.01M16 12h.01M8 17v3M16 17v3M3 10v5M21 10v5"/></svg>`,
+  ios:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.7 7.2c-.9-1-2.2-1.1-2.8-1.1-.9 0-1.8.5-2.3.5-.5 0-1.4-.5-2.3-.5-1.2 0-2.4.7-3 1.8-1.3 2.2-.3 5.5.9 7.3.6.9 1.3 1.9 2.2 1.9.9 0 1.2-.6 2.3-.6s1.4.6 2.3.6c1 0 1.6-.9 2.2-1.8.7-1 1-2.1 1-2.2-2-.8-2.3-3.6-.5-4.8Z"/><path d="M14.6 3c.1 1-.3 1.9-.9 2.5-.6.7-1.6 1.1-2.5 1 .0-.9.4-1.8 1-2.4.6-.6 1.6-1.1 2.4-1.1Z"/></svg>`,
+  both:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="11" height="14" rx="2"/><rect x="15" y="8" width="6" height="11" rx="1.7"/><path d="M7 16h3M17.5 16.5h1"/></svg>`
+};
+
+function haptic(type='selection'){try{type==='success'?tg?.HapticFeedback.notificationOccurred('success'):tg?.HapticFeedback.selectionChanged()}catch(e){}}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(toast._t);toast._t=setTimeout(()=>e.classList.add('hidden'),1800)}
+function imgFallback(el,opacity=.15){
+  if(!el.dataset.fb){
+    el.dataset.fb='1';
+    const explicit=el.dataset.fallback;
+    const alt=explicit||el.src.replace(/head\.jpg(\?.*)?$/,'.jpg$1');
+    if(alt&&alt!==el.src){el.src=alt;return}
+  }
+  el.style.opacity=opacity
+}
+function imgReady(el){el.classList.add('ready')}
+let lazyObserver=null;
+function syncBottomSpace(){const b=document.querySelector('.bottom');if(!b)return;const h=Math.ceil(b.getBoundingClientRect().height);document.documentElement.style.setProperty('--nav-h',Math.max(98,h)+'px')}
+function initLazyImages(){
+  lazyObserver?.disconnect();
+  const root=document.getElementById('scrollArea');
+  lazyObserver=new IntersectionObserver(entries=>{
+    for(const e of entries){
+      if(!e.isIntersecting)continue;
+      const img=e.target; lazyObserver.unobserve(img);
+      const src=img.dataset.src; if(!src)continue;
+      img.removeAttribute('data-src');
+      img.src=src;
+    }
+  },{root,rootMargin:'120px 0px',threshold:.01});
+  document.querySelectorAll('img[data-src]').forEach(img=>lazyObserver.observe(img));
+}
+function postRender(){syncBottomSpace();initLazyImages()}
+function lazyImg(url,extra=''){return `<img ${extra} data-src="${url}" loading="lazy" decoding="async" fetchpriority="low" onload="imgReady(this)" onerror="imgFallback(this,0)">`}
+
+function letterOf(name){const c=(name||'').trim().charAt(0).toUpperCase();return c==='Đ'?'Đ':c}
+const ALPHABET='ABCD'.split('').concat(['Đ']).concat('EFGHIJKLMNOPQRSTVWXYZ'.split(''));
+
+function loadingHome(){return `<div class="summary">${[1,2,3].map(()=>`<div class="metric skeleton" style="height:78px"></div>`).join('')}</div><div class="progress-card skeleton" style="height:59px"></div><div class="skeleton" style="height:34px;width:48%;border-radius:10px;margin:20px 0 8px"></div><div class="skeleton" style="height:50px;border-radius:16px;margin-bottom:16px"></div><div class="az-grid">${Array(20).fill('<div class="az skeleton"></div>').join('')}</div>`}
+function heroCount(h){return h.skinCount??h.skins?.length??0}
+function summary(){const pct=Math.min(100,selections.length/MAX_SLOTS*100);return `<div class="summary">
+<div class="metric"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18c-2.2 0-4-1.8-4-4 0-1.7 1-3.1 2.5-3.7A6.5 6.5 0 0 1 18 8.5c1.7.5 3 2.1 3 4 0 2.2-1.8 4-4 4H7Z"/><circle cx="9" cy="11" r="1"/><circle cx="15" cy="11" r="1"/></svg><strong>${DATA.totalHeroes}</strong></div><span>TƯỚNG</span></div>
+<div class="metric"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 7 4v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V7l7-4Z"/><path d="m9 12 2 2 4-4"/></svg><strong>${DATA.totalSkins}</strong></div><span>SKIN</span></div>
+<div class="metric sel"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="4"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><strong>${selections.length}</strong></div><span>ĐÃ CHỌN</span></div></div>
+<div class="progress-card"><div class="progress-row"><b>${selections.length} / ${MAX_SLOTS} SLOT</b><span>${selections.length>=MAX_SLOTS?'ĐÃ ĐẦY':'SẴN SÀNG'}</span></div><div class="track"><div class="fill" style="width:${pct}%"></div></div></div>`}
+
+async function loadData(){
+  const cached=cacheGet('heroes');
+  if(cached){DATA=cached;loaded=true;render()}
+  try{
+    const r=await fetch('api/heroes?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw Error(r.status);
+    const fresh=await r.json();
+    DATA=fresh;
+    cacheSet('heroes',fresh);
+    if(!loaded){loaded=true}
+    render();
+  }catch(e){
+    if(!loaded)document.getElementById('app').innerHTML=`<div class="empty">Không tải được dữ liệu WebApp.<br>Hãy đóng và mở lại.</div>`;
+  }
+
+  // Reconcile counts in background from the full source.
+  // Keeps first paint fast, then fixes totals/per-hero counts when full data arrives.
+  try{
+    const rf=await fetch('api/skins?ts='+Date.now(),{cache:'no-store'});
+    if(rf.ok){
+      const full=await rf.json();
+      const heroes=Array.isArray(full.heroes)?full.heroes:[];
+      const countMap=new Map();
+      let total=0;
+      for(const h of heroes){
+        const c=Array.isArray(h.skins)?h.skins.length:0;
+        countMap.set(h.name,c);
+        total+=c;
+      }
+      if(DATA&&Array.isArray(DATA.heroes)){
+        DATA.heroes=DATA.heroes.map(h=>({
+          ...h,
+          skinCount:countMap.has(h.name)?countMap.get(h.name):h.skinCount
+        }));
+        DATA.totalSkins=total||DATA.totalSkins;
+        DATA.totalHeroes=heroes.length||DATA.totalHeroes;
+        cacheSet('heroes',DATA);
+        render();
+      }
+    }
+  }catch(e){}
+}
+async function ensureSkins(h){
+  if(h.skins||h._loading)return;
+  const ck='skins_'+h.name;
+  const cached=cacheGet(ck);
+  if(Array.isArray(cached)&&cached.length){
+    h.skins=cached;
+    render();
+    return;
+  }
+
+  h._loading=true;
+  render();
+
+  try{
+    // Fast path: load only this hero.
+    const r=await fetch('api/hero-skins?hero='+encodeURIComponent(h.name),{
+      cache:'no-store'
+    });
+    if(!r.ok)throw new Error('lazy '+r.status);
+    const d=await r.json();
+    h.skins=Array.isArray(d.skins)?d.skins:[];
+    if(!h.skins.length)throw new Error('lazy empty');
+  }catch(e){
+    // Safe fallback for older/current bot.py builds:
+    // use the original full API and extract this hero locally.
+    try{
+      const r2=await fetch('api/skins?ts='+Date.now(),{cache:'no-store'});
+      if(!r2.ok)throw new Error('full '+r2.status);
+      const full=await r2.json();
+      const hero=(full.heroes||[]).find(x=>x.name===h.name);
+      h.skins=hero&&Array.isArray(hero.skins)?hero.skins:[];
+    }catch(e2){
+      h.skins=[];
+    }
+  }finally{
+    h._loading=false;
+    if(h.skins&&h.skins.length)cacheSet(ck,h.skins);
+    render();
+    if(!h.skins||!h.skins.length)toast('Chưa tải được skin • đóng/mở lại tướng');
+  }
+}
+
+function push(x){stack.push(x);render();updateBack()}
+function pop(){if(stack.length>1){stack.pop();render();updateBack()}}
+function updateBack(){if(!tg)return;(tab==='heroes'&&stack.length>1)?tg.BackButton.show():tg.BackButton.hide()}
+if(tg)tg.BackButton.onClick(pop);
+function setTab(t){tab=t;['Heroes','Cart','Other'].forEach(x=>document.getElementById('nav'+x)?.classList.remove('on'));document.getElementById('nav'+(t==='heroes'?'Heroes':t==='cart'?'Cart':'Other'))?.classList.add('on');render();updateBack()}
+
+function isSel(hero,skin){return selections.some(x=>x.tuong===hero&&x.skin===skin)}
+function selectedHero(hero){return selections.find(x=>x.tuong===hero)}
+function resolvedSelection(h){
+  const sel=selectedHero(h.name); if(!sel)return null;
+  const skin=h.skins?.find(s=>String(s.id)===String(sel.id)||s.name===sel.skin);
+  if(skin&&!sel.icon){sel.icon=skin.icon;saveSelections()}
+  return {...sel,icon:sel.icon||skin?.icon||h.icon};
+}
+function toggleSkin(hero,skin,id,icon=''){
+  const old=selectedHero(hero);
+  if(old?.skin===skin){
+    selections=selections.filter(x=>x.tuong!==hero);
+    saveSelections();
+    haptic();toast('✓ Đã bỏ '+skin);render();return;
+  }
+  selections=selections.filter(x=>x.tuong!==hero);
+  if(selections.length>=MAX_SLOTS){haptic();toast('Đã đủ 15 slot');return}
+  selections.push({tuong:hero,skin,id,icon});
+  saveSelections();
+  haptic('success');
+  toast('✓ Đã thêm '+skin);
+  render();
+}
+function removeSelection(hero){selections=selections.filter(x=>x.tuong!==hero);saveSelections();haptic();render()}
+function removeSelectionAt(i){selections.splice(i,1);saveSelections();haptic();render()}
+function toggleSkinAt(heroIdx,skinIdx){const h=DATA.heroes[heroIdx],s=h?.skins?.[skinIdx];if(h&&s)toggleSkin(h.name,s.name,s.id,s.icon)}
+function setPlatform(p){platformMode=p;haptic();render()}
+function runMod(){
+  if(!selections.length)return;
+  const payload={action:'run',selections:[...selections],platform:platformMode};
+  haptic('success');
+  clearSavedSelections();
+  selections=[];
+  tg?.sendData(JSON.stringify(payload));
+}
+
+function heroInitial(name){const t=(name||'?').trim();return (t[0]||'?').toUpperCase()}
+function heroRow(h){
+  const idx=DATA.heroes.indexOf(h),sel=resolvedSelection(h);
+  const icon=sel?.icon||h.icon;
+  const sub=sel?`<small class="chosen-skin">▸ ${sel.skin}</small>`:`<small>${heroCount(h)} skin · chạm để xem</small>`;
+  return `<button class="row ${sel?'chosen':''}" style="width:100%;text-align:left" onclick="push({screen:'detail',idx:${idx}})">${lazyImg(icon,'class="avatar"')}<div class="txt"><b>${h.name}</b>${sub}</div><svg class="chev" width="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`
+}
+function azHTML(){const c={};DATA.heroes.forEach(h=>c[letterOf(h.name)]=(c[letterOf(h.name)]||0)+1);return `<div class="az-grid">${ALPHABET.map(l=>`<button class="az ${c[l]?'':'empty'}" ${c[l]?`onclick="push({screen:'list',letter:'${l}'})"`:''}>${c[l]?`<span class="cnt">${c[l]}</span>`:''}${l}</button>`).join('')}</div>`}
+function screenAZ(){return `${summary()}<div class="section-kicker">Thư viện</div><h1>CHỌN <span class="hl">TƯỚNG</span></h1><p class="sub">Chạm chọn nhanh • tìm tướng hoặc skin tức thì</p><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input placeholder="Tìm tướng hoặc skin..." oninput="onSearch(this.value)"></div><div id="results">${azHTML()}</div>`}
+function onSearch(v){clearTimeout(searchTimer);const q=v.trim();const box=document.getElementById('results');if(!q){box.innerHTML=azHTML();return}box.innerHTML='<div class="empty" style="padding:25px">Đang tìm...</div>';searchTimer=setTimeout(async()=>{try{const r=await fetch('api/search?q='+encodeURIComponent(q),{cache:'no-store'});const d=await r.json();box.innerHTML=d.heroes?.length?d.heroes.map(x=>{let h=DATA.heroes.find(k=>k.name===x.name);return h?heroRow(h):''}).join(''):'<div class="empty">Không tìm thấy kết quả.</div>'}catch(e){box.innerHTML='<div class="empty">Không thể tìm kiếm.</div>'}},130)}
+function screenList(l){const hs=DATA.heroes.filter(h=>letterOf(h.name)===l);return `${summary()}<button class="back" onclick="stack=[{screen:'az'}];render();updateBack()"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 6-6 6 6 6"/></svg> ĐỔI CHỮ CÁI</button><div class="section-kicker">Danh sách</div><h1>CHỮ <span class="hl">${l}</span></h1><p class="sub">${hs.length} tướng</p>${hs.map(heroRow).join('')}`}
+function skinSkeleton(){return `<div class="skin-grid">${Array(9).fill('<div class="skin"><span class="skin-pic skeleton"></span><span class="shade">&nbsp;</span></div>').join('')}</div>`}
+function screenDetail(idx){
+  const h=DATA.heroes[idx];
+  if(!h.skins&&!h._loading)setTimeout(()=>ensureSkins(h),0);
+  const sel=resolvedSelection(h);
+  const heroImg=sel?.icon||h.icon;
+  const status=sel?`<span class="chosen-skin">▸ ĐANG CHỌN: ${sel.skin}</span>`:`<span>${heroCount(h)} skin • mỗi tướng chọn 1 skin</span>`;
+  return `${summary()}<button class="back" onclick="stack=[{screen:'az'}];render();updateBack()"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 6-6 6 6 6"/></svg> ĐỔI TƯỚNG</button><div class="hero-card ${sel?'chosen':''}"><img class="avatar" src="${heroImg}" decoding="async" fetchpriority="high" onload="imgReady(this)" onerror="imgFallback(this,0)"><div><b>${h.name}</b>${status}</div></div>${h._loading||!h.skins?skinSkeleton():`<div class="skin-grid">${h.skins.map((s,si)=>`<button class="skin ${sel?.skin===s.name?'sel':''}" onclick="toggleSkinAt(${idx},${si})"><span class="skin-pic">${lazyImg(s.icon,`data-fallback="${s.icon_fallback||''}" onerror="imgFallback(this,.15)"`)}<span class="check">✓</span></span><span class="shade">${s.name}</span></button>`).join('')}</div>`}`}
+
+function platformCard(){return `<div class="platform"><div class="platform-head"><svg width="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 3h10a2 2 0 0 1 2 2v14H5V5a2 2 0 0 1 2-2Z"/><path d="M9 18h6"/></svg><div><b>Gói thiết bị</b><small>Chọn đúng máy để file nhẹ hơn</small></div></div><div class="segment"><button class="seg ${platformMode==='android'?'on':''}" onclick="setPlatform('android')">${ICON.android} Android</button><button class="seg ${platformMode==='ios'?'on':''}" onclick="setPlatform('ios')">${ICON.ios} iOS</button><button class="seg ${platformMode==='both'?'on':''}" onclick="setPlatform('both')">${ICON.both} Cả 2</button></div><div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><span>Android hoặc iOS riêng sẽ bỏ bản còn lại khỏi file ZIP — giảm dung lượng mạnh mà vẫn giữ nguyên resource/hiệu ứng của nền tảng đã chọn.</span></div></div>`}
+function cart(){if(!selections.length)return `${summary()}<div class="empty"><b style="color:var(--text)">Chưa chọn skin</b><br><br>Vào tab TƯỚNG để bắt đầu.</div>`;return `${summary()}<div class="section-kicker">Xác nhận</div><h1>ĐÃ <span class="hl">CHỌN</span></h1><p class="sub">Kiểm tra skin và chọn đúng nền tảng trước khi tạo file</p>${selections.map((x,i)=>{const h=DATA.heroes.find(k=>k.name===x.tuong);const sk=h?.skins?.find(k=>k.name===x.skin);return `<div class="cart-row">${lazyImg(sk?.icon||h?.icon||'')}<div class="txt"><b>${x.tuong}</b><small>${x.skin}</small></div><button class="remove" onclick="removeSelectionAt(${i})">✕</button></div>`}).join('')}${platformCard()}<button class="run" onclick="runMod()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 5 11 7-11 7V5Z"/></svg>TẠO MOD • ${selections.length} SKIN</button>`}
+function other(){return `${summary()}<div class="section-kicker">Thiết lập</div><h1>TÙY <span class="hl">CHỌN</span></h1><p class="sub">Thiết bị mặc định được nhận diện từ Telegram</p>${platformCard()}<div class="row" style="align-items:flex-start"><svg width="24" style="color:var(--cyan);flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><div class="txt"><b>Cách sử dụng</b><small style="line-height:1.6">Chọn tướng → chọn skin → tab ĐÃ CHỌN → chọn Android/iOS → TẠO MOD. Bot sẽ trả tiến độ tạo file và tiến độ upload ngay trong chat.</small></div></div>`}
+function render(){const a=document.getElementById('app');const b=document.getElementById('cartBadge');if(b){b.textContent=selections.length;b.classList.toggle('hidden',!selections.length)}let html;if(!loaded)html=loadingHome();else if(tab==='cart')html=cart();else if(tab==='other')html=other();else{const top=stack.at(-1);html=top.screen==='az'?screenAZ():top.screen==='list'?screenList(top.letter):screenDetail(top.idx)}a.innerHTML=html;requestAnimationFrame(postRender)}
+loadSavedSelections();setTab('heroes');loadData();
+</script>
+</body>
+</html>

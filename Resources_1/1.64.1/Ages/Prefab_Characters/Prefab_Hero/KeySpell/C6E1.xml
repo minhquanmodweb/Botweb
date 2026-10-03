@@ -1,0 +1,63 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="32f6ba05-d55d-4603-8ffc-8b667b9e1ac9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="4.000" isDuration="true" guid="3748675b-79bf-4147-823b-09471ae6caf6">
+        <Enum name="SkillFuncType" value="37" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="9342238c-cdce-4d10-a969-fb48e1c5f9c8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="4.000" isDuration="true" guid="3fd5d8cd-4587-49fa-9cd4-4802e9791f76">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/huanling_effect/EF_Weak01_ruohua" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bLayOnNavMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="1075d579-f776-4bc9-ad92-4b4ce6b88f4f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="3.650" length="0.350" isDuration="true" guid="4d2e4deb-5dc6-4c9b-955a-34c5e2faded7">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/huanling_effect/EF_Weak01_ruohua_end" refParamName="" useRefParam="false" />
+        <bool name="dontShowIfNoBindPoint" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bLayOnNavMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffHudTriggerDuration0" eventType="BuffHudTriggerDuration" guid="a157ea41-8a14-4ff1-8342-72eea1c46f20" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BuffHudTriggerDuration" time="0.000" length="4.000" isDuration="true" guid="2281e6e9-9396-487a-8afd-461a8e582281">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID" value="801220" refParamName="" useRefParam="false" />
+        <Enum name="iconType" value="14" refParamName="" useRefParam="false" />
+        <bool name="bVvisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOriginVisble" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerVisible" value="true" refParamName="" useRefParam="false" />
+        <Enum name="priority1" value="1" refParamName="" useRefParam="false" />
+        <int name="priority2" value="2000" refParamName="" useRefParam="false" />
+        <bool name="bDelay" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SimpleSpawnPassiveDuration0" eventType="SimpleSpawnPassiveDuration" guid="b205b63a-c704-46ff-a0ba-b6631d6af891" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SimpleSpawnPassiveDuration" time="0.000" length="4.000" isDuration="true" guid="f527fb5d-bb0f-46e7-945e-59f90db1b6e6">
+        <TemplateObject name="sourceActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bRemoveBuffWhenLeave" value="true" refParamName="" useRefParam="false" />
+        <int name="passiveSkillId" value="50600" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

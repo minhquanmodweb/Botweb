@@ -1,0 +1,149 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="animName" value="" refParamName="" useRefParam="false" />
+    <String name="soundEvent" value="" refParamName="" useRefParam="false" />
+    <String name="effectPath" value="" refParamName="" useRefParam="false" />
+    <String name="soundEndEvent" value="" refParamName="" useRefParam="false" />
+    <String name="beginAnimName" value="" refParamName="" useRefParam="false" />
+    <String name="endAnimName" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="GetMotionResourcePathTick0" eventType="GetMotionResourcePathTick" guid="1e57b468-feeb-46c1-8e04-62754311b82b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetMotionResourcePathTick" time="0.000" isDuration="false" guid="261629d7-baea-4627-82f5-1f520edffe03">
+        <TemplateObject name="srcId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="2" refParamName="" useRefParam="false" />
+        <String name="outAnimName" value="animName" refParamName="" useRefParam="false" />
+        <String name="outSoundEventName" value="soundEvent" refParamName="" useRefParam="false" />
+        <String name="outStopSoundEventName" value="soundEndEvent" refParamName="" useRefParam="false" />
+        <String name="outEffectPathName" value="effectPath" refParamName="" useRefParam="false" />
+        <String name="outBeginAnimName" value="beginAnimName" refParamName="" useRefParam="false" />
+        <String name="outEndAnimName" value="endAnimName" refParamName="" useRefParam="false" />
+        <String name="outMovableName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="非移动动作" eventType="PlayAnimDuration" guid="7a103fed-68a8-40af-8343-70c776e9ca7c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="1e57b468-feeb-46c1-8e04-62754311b82b" status="true" />
+      <Event eventName="PlayAnimDuration" time="0.000" length="1.000" isDuration="true" guid="2772cb11-6afe-42cf-a2d9-560752bd142a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="" refParamName="animName" useRefParam="true" />
+        <int name="layer" value="0" refParamName="" useRefParam="false" />
+        <int name="subLayer" value="5" refParamName="" useRefParam="false" />
+        <bool name="bLoop" value="true" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <String name="beginClipName" value="" refParamName="beginAnimName" useRefParam="true" />
+        <bool name="bPlayBeginClipName" value="true" refParamName="" useRefParam="false" />
+        <String name="endClipName" value="" refParamName="endAnimName" useRefParam="true" />
+        <bool name="bPlayEndClipName" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckAnimationDuration0" eventType="CheckAnimationDuration" guid="7e581d1b-4023-4980-a4d8-0e1cd992be6b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="7a103fed-68a8-40af-8343-70c776e9ca7c" status="true" />
+      <Event eventName="CheckAnimationDuration" time="0.000" length="1.000" isDuration="true" guid="c99b7edf-b099-4346-a1ac-6027ef8bb3ac">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="animName" value="" refParamName="animName" useRefParam="true" />
+        <Enum name="checkType" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="动画被打断时停止音频" eventType="PlayHeroSoundTick" guid="10136799-91b2-4e36-910a-42c7cb774189" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="7e581d1b-4023-4980-a4d8-0e1cd992be6b" status="true" />
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="a7d6fcc3-1e4a-46d5-8848-410f30947b0f">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="" refParamName="soundEndEvent" useRefParam="true" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="VStopAction0" eventType="VStopAction" guid="1f3e6081-a655-46ca-b50b-e5957db5d76f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="7e581d1b-4023-4980-a4d8-0e1cd992be6b" status="true" />
+      <Event eventName="VStopAction" time="0.000" isDuration="false" guid="aad0b10e-5c26-4392-a16d-d1ababd120e0" />
+    </Track>
+    <Track trackName="移动监测" eventType="CheckConditionDuration" guid="79188be1-0286-45e5-ad6c-a99fb20bc503" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="10" guid="b8cbcb31-ac6f-4125-9048-13dcb8c75252" status="false" />
+      <Event eventName="CheckConditionDuration" time="0.000" length="1.000" isDuration="true" guid="57643030-679e-4824-9cb9-67bd0493a78a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="operatorMethod" value="0" refParamName="" useRefParam="false" />
+        <bool name="bActorMoving" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="动画被打断时停止音频" eventType="PlayHeroSoundTick" guid="367d6468-6aa1-4f7a-b1a2-9f332b69667e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="5" guid="79188be1-0286-45e5-ad6c-a99fb20bc503" status="true" />
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="b010b97b-d3a5-4fc4-bbda-4d0c38af80a5">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="" refParamName="soundEndEvent" useRefParam="true" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="VStopAction0" eventType="VStopAction" guid="2db619a0-4489-4589-ae27-0029ccdf4e3e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="1e57b468-feeb-46c1-8e04-62754311b82b" status="true" />
+      <Condition id="5" guid="79188be1-0286-45e5-ad6c-a99fb20bc503" status="true" />
+      <Event eventName="VStopAction" time="0.000" isDuration="false" guid="a5fc56cf-2b28-4df1-a962-4bdeb37d06e7" />
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="2af22c9d-4b87-4054-bf01-199ed96008e1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="8a83a19a-556a-4830-bec5-9d9e5dbd5479">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="" refParamName="effectPath" useRefParam="true" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="animName" useRefParam="true" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="移动动作" eventType="PlayAnimDuration" guid="de9c815a-10f3-4f61-9f0c-0600bc609cd3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="1e57b468-feeb-46c1-8e04-62754311b82b" status="false" />
+      <Event eventName="PlayAnimDuration" time="0.000" length="1.000" isDuration="true" guid="a8c2baad-6602-4945-b196-0f37db64fa8e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="" refParamName="animName" useRefParam="true" />
+        <int name="animatorOverrideLayer" value="5" refParamName="" useRefParam="false" />
+        <bool name="bLoop" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseFadeOutTime" value="true" refParamName="" useRefParam="false" />
+        <String name="beginClipName" value="" refParamName="beginAnimName" useRefParam="true" />
+        <String name="endClipName" value="" refParamName="endAnimName" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="CheckIsMovableMotion0" eventType="CheckIsMovableMotion" guid="b8cbcb31-ac6f-4125-9048-13dcb8c75252" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckIsMovableMotion" time="0.000" isDuration="false" guid="d22e7ea7-1c91-49bb-98e8-6c2f36b2ecce">
+        <TemplateObject name="srcId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckUseSkillDuration0" eventType="CheckUseSkillDuration" guid="f397e770-b0f4-4327-ac3d-d8f3e2b280cf" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckUseSkillDuration" time="0.000" length="1.000" isDuration="true" guid="766a5fed-d627-493c-9732-53e63a53c43c">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="commonAttack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopAction0" eventType="StopAction" guid="a2ce6adc-cff3-4941-a5b6-eb3405d05768" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="11" guid="f397e770-b0f4-4327-ac3d-d8f3e2b280cf" status="true" />
+      <Event eventName="StopAction" time="0.000" isDuration="false" guid="cb2f7602-c12e-40ee-a33e-0dc34feb74f8" />
+    </Track>
+    <Track trackName="动画被打断时停止音频" eventType="PlayHeroSoundTick" guid="82cbe35f-6b9e-4f23-a4a2-95c11df114f3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="11" guid="f397e770-b0f4-4327-ac3d-d8f3e2b280cf" status="true" />
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="8f58aa72-1f39-4688-b56b-4edd2a5ac799">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="" refParamName="soundEndEvent" useRefParam="true" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="结束停止音频" eventType="PlayHeroSoundTick" guid="6a6fddd6-58ed-4578-a517-fb9fafff7de4" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true" stopAfterLastEvent="true">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="1ca7685a-3e6a-42ea-90a6-9cc00a0b80ec">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="" refParamName="soundEndEvent" useRefParam="true" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillEffectDuration0" eventType="SkillEffectDuration" guid="7b8a5bd7-1c77-4fce-983c-7ccbf616a2ef" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillEffectDuration" time="0.000" length="1.000" isDuration="true" guid="2a60419f-f370-4d3a-b063-34018d1baa9e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombine_1" value="90056" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

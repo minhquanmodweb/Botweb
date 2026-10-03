@@ -1,0 +1,29 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="SetActorVisibilityTick0" eventType="SetActorVisibilityTick" guid="fe2bddd4-de89-4d4d-8775-c4adbd67a817" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetActorVisibilityTick" time="0.000" isDuration="false" guid="617b2b7e-3f80-4b9d-bc7d-7fbe258fc392">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="visible" value="false" refParamName="" useRefParam="false" />
+        <String name="node" value="" refParamName="" useRefParam="false" />
+        <bool name="bIncludeAllNode" value="true" refParamName="" useRefParam="false" />
+        <bool name="bLogicVisible" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HideActorModelTick0" eventType="HideActorModelTick" guid="c67f6eb0-283d-4d00-8d38-9deb1bfd33c0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HideActorModelTick" time="0.000" isDuration="false" guid="676a916f-607c-4546-b586-7084a7f529eb">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bHideModel" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHPBar" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHead" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

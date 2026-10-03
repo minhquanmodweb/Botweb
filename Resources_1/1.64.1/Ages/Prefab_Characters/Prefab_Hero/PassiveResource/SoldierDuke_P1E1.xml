@@ -1,0 +1,26 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="selfplayer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="317a9f3a-972f-49d8-8278-16c066e531ff" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="786a8219-4d2c-4945-9222-c777706d63a2">
+        <Enum name="SkillFuncType" value="8" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="ccfc6dae-9ddb-4d48-abe8-453c4c9a61df" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="b7fc8446-abc1-4d2f-ba2b-18cef4004077">
+        <Enum name="SkillFuncType" value="6" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ScaleMeshDuration0" eventType="ScaleMeshDuration" guid="15c2b26e-7bd1-4199-b577-9c20f6b17d21" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ScaleMeshDuration" time="0.000" length="2.000" isDuration="true" guid="175c5011-4231-4bf8-bc2b-8e7dc2a4c226">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="scaleRate" value="12000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

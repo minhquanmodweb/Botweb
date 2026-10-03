@@ -1,0 +1,26 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <int name="makeup" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.400" loop="false">
+    <Track trackName="变身计时已结束则在此处变回人" eventType="CheckSkillCombineConditionTick" guid="a38db9fe-0f67-48f2-8c62-467d6158fe38" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="1.350" isDuration="false" guid="bba5c68f-f05a-40e9-a7dd-a2a62f4f176a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="9000313" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="de1184b4-9432-4179-b5c6-392cc39e15f2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="a38db9fe-0f67-48f2-8c62-467d6158fe38" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3469e32b-3a6c-47d3-aa88-d291dc14d021">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9000311" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

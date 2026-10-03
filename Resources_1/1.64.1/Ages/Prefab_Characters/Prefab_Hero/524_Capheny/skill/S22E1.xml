@@ -1,0 +1,15 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.500" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="db188b4a-f6ec-46fe-a0f9-7e298de5290e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="0.500" isDuration="true" guid="6860ee6c-106c-4755-b18c-3a026d05de22">
+        <Enum name="SkillFuncType" value="110" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

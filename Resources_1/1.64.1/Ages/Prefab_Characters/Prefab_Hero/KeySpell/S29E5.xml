@@ -1,0 +1,62 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="chuansongzhen1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="ShowSkillSlotDuration0" eventType="ShowSkillSlotDuration" guid="317c2225-8d42-4266-a27b-d71a4cd2c8bc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ShowSkillSlotDuration" time="0.000" length="2.000" isDuration="true" guid="d262b8b9-7121-430c-9337-493244ce66b9">
+        <TemplateObject name="opActorId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="8" EnumValue="技能8" refParamName="" useRefParam="false" />
+        <bool name="forTeleport" value="true" refParamName="" useRefParam="false" />
+        <int name="campMutualSkillId" value="80001" refParamName="" useRefParam="false" />
+        <int name="globalMutualSkillId" value="80002" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="UseMutualSkillDuration0" eventType="UseMutualSkillDuration" guid="0dd3d6ed-ef9b-4b4c-a740-7a393f16b3a4" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="UseMutualSkillDuration" time="0.000" length="2.000" isDuration="true" guid="73cc3660-be85-43a9-832f-e54e843b1282">
+        <TemplateObject name="srcId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="mutualSkillId" value="80001" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ShowSelectTargetMinimapTick0" eventType="ShowSelectTargetMinimapTick" guid="560f1bc8-5cf7-442a-b9aa-6e045395475e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true" stopAfterLastEvent="true">
+      <Event eventName="ShowSelectTargetMinimapTick" time="0.033" isDuration="false" guid="487ad417-94bb-4ef5-8c75-a660988fa868">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="selfTower" value="false" refParamName="" useRefParam="false" />
+        <bool name="selfSolider" value="false" refParamName="" useRefParam="false" />
+        <bool name="selfHero" value="false" refParamName="" useRefParam="false" />
+        <bool name="showOrHide" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetSkillUseCachedCDTick0" eventType="SetSkillUseCachedCDTick" guid="4dff557b-529b-4d8e-881f-c10c6c6b780e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetSkillUseCachedCDTick" time="0.000" isDuration="false" guid="5f81e3f7-5376-4c71-94f2-927c64649e02">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="skillIds" refParamName="" useRefParam="false" type="int">
+          <int value="80129" />
+        </Array>
+        <bool name="bEnable" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeSkillTriggerDuration0" eventType="ChangeSkillTriggerDuration" guid="c03ed049-1463-4200-b62d-5daf172b086a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ChangeSkillTriggerDuration" time="0.000" length="2.000" isDuration="true" guid="31518305-b174-463f-a16d-661db7be7f58">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="8" EnumValue="召唤Boss槽位" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="80129" refParamName="" useRefParam="false" />
+        <bool name="unIntiSkillSlotIfSkillIDNULL" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseCombo" value="false" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ClearMinimapTargetTick0" eventType="ClearMinimapTargetTick" guid="6ddb0f08-2dbc-47ac-9b25-041d510860e9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ClearMinimapTargetTick" time="0.000" isDuration="false" guid="80acfd1d-b16a-4770-a32b-ae442b3eca86">
+        <TemplateObject name="opActorId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

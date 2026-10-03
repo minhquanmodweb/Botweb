@@ -1,0 +1,249 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="boss" id="2" isTemp="false" />
+    <TemplateObject objectName="int_rand" id="3" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <int name="scale" value="0" refParamName="" useRefParam="false" />
+    <int name="int_rand" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="7.000" loop="false">
+    <Track trackName="7000码内寻敌逻辑" eventType="CreateRandomNumTick" guid="f1edcff3-7072-4b5f-873f-bafe617ae301" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CreateRandomNumTick" time="0.000" isDuration="false" guid="7cc1e3a7-6cf3-47ae-96cb-26adb8bd164c">
+        <int name="randomRangeEnd" value="50" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="bee3a2be-9432-45c6-a11b-6f11f7168f54" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="7.000" isDuration="true" guid="1bdf4c8a-caa1-4c7a-b721-79531cd838a7">
+        <TemplateObject name="targetId" objectName="boss" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="parentId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bTargetPosition" value="true" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="prefab_characters/commonempty" refParamName="" useRefParam="false" />
+        <bool name="bVisibleByFow" value="false" refParamName="" useRefParam="false" />
+        <int name="bExtraSightRadius" value="200000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionDuration0" eventType="SetCollisionDuration" guid="fbb2da5d-875b-492f-bd78-3628e69b8b9f" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetCollisionDuration" time="0.000" length="7.000" isDuration="true" guid="42794b3e-e528-422f-a151-bfe56f51022a">
+        <TemplateObject name="targetId" objectName="boss" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="type" value="1" EnumValue="SPHERE" refParamName="" useRefParam="false" />
+        <int name="Radius" value="6000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="afb2ba4c-71ab-448a-b6bd-b54c834a6716" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="83009bdd-e3fd-4e19-b89a-d4525f415546">
+        <TemplateObject name="targetId" objectName="boss" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="type" value="1" EnumValue="SPHERE" refParamName="" useRefParam="false" />
+        <int name="Radius" value="4500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="b8df7713-cde9-49ee-b389-6c4adb07924b" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerDuration" time="0.000" length="7.000" isDuration="true" guid="34ffc2dd-5e63-479d-8872-08e5b7b4f288">
+        <TemplateObject name="triggerId" objectName="boss" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="specifiedActorId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bRecordHitTarget" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterFriend" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="CollideMaxCount" value="8" refParamName="" useRefParam="false" />
+        <bool name="bTriggerMode" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMajorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMinorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterOtherMonster" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CreateRandomNumTick0" eventType="CreateRandomNumTick" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="b8df7713-cde9-49ee-b389-6c4adb07924b" status="true" />
+      <Event eventName="CreateRandomNumTick" time="0.000" isDuration="false" guid="52ef47b2-a48b-4289-a0a2-ad7d70a9a900">
+        <int name="randomRangeEnd" value="100" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="int_rand" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="时空龙·凯撒" eventType="FilterTargetType" guid="4e5d6d33-9669-4561-943f-508d7b6939ea" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="95638688-9d6d-49c5-860a-08d4730648fb">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterConfigID" value="true" refParamName="" useRefParam="false" />
+        <Array name="configIds" refParamName="" useRefParam="false" type="int">
+          <int value="70094" />
+          <int value="0" />
+          <int value="0" />
+        </Array>
+        <bool name="bAnd" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="时空龙·魔龙" eventType="FilterTargetType" guid="8cc87587-18fe-436a-8811-1995f87f2ce7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="6c5847d6-4252-44bc-8de9-a5e9ebcc3b63">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterConfigID" value="true" refParamName="" useRefParam="false" />
+        <Array name="configIds" refParamName="" useRefParam="false" type="int">
+          <int value="0" />
+          <int value="70504" />
+          <int value="0" />
+        </Array>
+        <bool name="bAnd" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="时空龙·巨猿" eventType="FilterTargetType" guid="2da70cd4-9591-4aaa-a395-851fbe548b79" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="f0e46a7c-9981-4922-97b3-b8519dda3f7e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterConfigID" value="true" refParamName="" useRefParam="false" />
+        <Array name="configIds" refParamName="" useRefParam="false" type="int">
+          <int value="0" />
+          <int value="0" />
+          <int value="70514" />
+        </Array>
+        <bool name="bAnd" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CampareIntTick0" eventType="CampareIntTick" guid="ab920767-990c-491c-bb80-e0a49112ff05" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="CampareIntTick" time="0.000" isDuration="false" guid="cd9915f2-27ea-4f45-aecb-e045e7efcdb8">
+        <int name="srcValue" value="0" refParamName="int_rand" useRefParam="true" />
+        <int name="targetValue" value="50" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="4" EnumValue="大于" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CampareIntTick0" eventType="CampareIntTick" guid="f3dd1806-1230-4d56-a927-9e877601377e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="CampareIntTick" time="0.000" isDuration="false" guid="0f64976d-30f9-4a0a-847f-eaeb24be0e96">
+        <int name="srcValue" value="0" refParamName="int_rand" useRefParam="true" />
+        <int name="targetValue" value="50" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="2" EnumValue="小等于" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凯撒2" eventType="SpawnBulletTick" guid="9cb4d093-9393-48ae-9d98-e126e08d6edb" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="4e5d6d33-9669-4561-943f-508d7b6939ea" status="true" />
+      <Condition id="9" guid="ab920767-990c-491c-bb80-e0a49112ff05" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="27ae7c1e-6a1b-49ff-80fa-e50f777869ec">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_902_AwakendCaesar/skill/S1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凯撒3" eventType="SpawnBulletTick" guid="00b70163-a50f-4fdf-a7cd-1ce58509c4ab" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="4e5d6d33-9669-4561-943f-508d7b6939ea" status="true" />
+      <Condition id="10" guid="f3dd1806-1230-4d56-a927-9e877601377e" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="287bd128-0f4a-4101-a208-b8f159b4a19b">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_902_AwakendCaesar/skill/S2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="魔龙2" eventType="SpawnBulletTick" guid="73e1e97c-4eee-4a98-8dfe-8ea6af1f82ae" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="8cc87587-18fe-436a-8811-1995f87f2ce7" status="true" />
+      <Condition id="9" guid="ab920767-990c-491c-bb80-e0a49112ff05" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="190d38d3-593f-4e9e-ab37-4d0b3f5ad554">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_903_AbyssSlayer/skill/M1S1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="魔龙3" eventType="SpawnBulletTick" guid="9ae7a377-046c-46f0-861c-968cf5fd1b17" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="8cc87587-18fe-436a-8811-1995f87f2ce7" status="true" />
+      <Condition id="10" guid="f3dd1806-1230-4d56-a927-9e877601377e" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="14f24383-af45-4471-a4d9-3a59d3c08437">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_903_AbyssSlayer/skill/M1S2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="巨猿2" eventType="SpawnBulletTick" guid="735eb96e-bae9-495a-961b-066239b6804f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="ab920767-990c-491c-bb80-e0a49112ff05" status="true" />
+      <Condition id="8" guid="2da70cd4-9591-4aaa-a395-851fbe548b79" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="61c7fa83-77e6-4509-9cd1-93f3a1749186">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_904_ApeSlayer/skill/M1S1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="巨猿3" eventType="SpawnBulletTick" guid="26798b5e-dc0a-4b97-9428-749bee1d1854" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="f3dd1806-1230-4d56-a927-9e877601377e" status="true" />
+      <Condition id="8" guid="2da70cd4-9591-4aaa-a395-851fbe548b79" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="32d92f2e-e5a4-4a53-a109-7f548b66ebd8">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetPosActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Monster/Mst_904_ApeSlayer/skill/M1S2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SimpleSpawnBuffTick0" eventType="SimpleSpawnBuffTick" guid="9d412b52-7967-47b1-a3cd-0e2aaf723635" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="11" guid="9cb4d093-9393-48ae-9d98-e126e08d6edb" status="true" />
+      <Condition id="12" guid="00b70163-a50f-4fdf-a7cd-1ce58509c4ab" status="true" />
+      <Condition id="13" guid="73e1e97c-4eee-4a98-8dfe-8ea6af1f82ae" status="true" />
+      <Condition id="14" guid="9ae7a377-046c-46f0-861c-968cf5fd1b17" status="true" />
+      <Condition id="15" guid="735eb96e-bae9-495a-961b-066239b6804f" status="true" />
+      <Condition id="16" guid="26798b5e-dc0a-4b97-9428-749bee1d1854" status="true" />
+      <Event eventName="SimpleSpawnBuffTick" time="1.000" isDuration="false" guid="203547df-5d1a-4d1f-aa86-f66a24cd2c33">
+        <TemplateObject name="originatorId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="buffIds" refParamName="" useRefParam="false" type="int">
+          <int value="70500461" />
+        </Array>
+        <int name="buffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="c8f9e29e-699c-45a1-976f-133e480da8de" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="b8df7713-cde9-49ee-b389-6c4adb07924b" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="95cfacbc-0f83-4423-ba98-a78475e3b266">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="检测到敌人" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="fd3a078e-2e4c-4579-95ba-e5508488675e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="d6f1c910-2bfe-471d-96a4-16bffd2a8d90" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="19a8b978-75b4-4dcf-b548-f30fd1c39145">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="生成随机数" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="d058b930-8b89-4f5a-8145-ff53a700d805" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="ab920767-990c-491c-bb80-e0a49112ff05" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="a3fdf91d-cc47-443a-84b1-3b388610be91">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="随机数大于50" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="0e94f7cf-9636-4b28-8ab2-bc88cc8899ac" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="f3dd1806-1230-4d56-a927-9e877601377e" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="617ed8aa-ae5a-48f7-8295-d80615d53443">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="随机数小于等于50" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="c18f42ea-9460-4820-8797-ccacc7eec4fe" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="17" guid="9d412b52-7967-47b1-a3cd-0e2aaf723635" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="cc235d3f-5ef1-40bd-9b5e-cbaf6b090161">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="对自己造成伤害" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="8d11cc70-bbb6-4030-b809-0d7268715461" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="9e64869c-c713-45d5-959b-28357ba11f5f">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="触发20分钟怪物狂暴行为" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="CheckConditionDuration0" eventType="CheckConditionDuration" guid="23443d7d-560a-467a-9707-d1f1cf9600bb" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckConditionDuration" time="0.000" length="0.500" isDuration="true" guid="0b28489f-b03c-4f01-89bd-6b6d252f25a5" />
+    </Track>
+  </Action>
+</Project> />

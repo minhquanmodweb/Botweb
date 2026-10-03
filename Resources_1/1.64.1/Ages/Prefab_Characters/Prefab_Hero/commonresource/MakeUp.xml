@@ -1,0 +1,428 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.300" loop="false">
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="bb0c41ae-7dc7-45c7-997d-25bc278315ec" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="f4336983-af9f-412b-b14f-4ec4dfef2ac7">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="523150" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBehaviourModeTick0" eventType="SetBehaviourModeTick" guid="079f34b8-244b-450e-96b7-21879a5413b1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetBehaviourModeTick" time="0.000" isDuration="false" guid="1b10d322-5b0a-46b0-940e-0ee8c3cec66a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="3fcc5b3f-3a9c-495c-bddd-5e3b03e5c01b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="2adc2643-94c3-4432-8369-3f69581db0ac">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="9000311" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="9997001" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="变身计时器BUFF" eventType="HitTriggerTick" guid="668b49cc-2388-49b7-b560-750ee6f25959" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="5dd3758d-9f76-4a5e-a930-bfa1b85a4729">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="9000313" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillCDTriggerTick0" eventType="SkillCDTriggerTick" guid="9ff0ea02-3167-4a3e-a30d-0fad2d604d5a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillCDTriggerTick" time="0.000" isDuration="false" guid="cc716334-ad05-4cbe-94d5-0b076c6b1a18">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="隐藏计数" eventType="SkillCustomCountingTick" guid="4edfec2a-824b-4801-8381-88cd50707612" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillCustomCountingTick" time="0.000" isDuration="false" guid="20a7355a-7171-4f35-a53e-ba9aeb08db38">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="skillSlot" value="4" refParamName="" useRefParam="false" />
+        <Enum name="curDataSourceProxy" value="1" refParamName="" useRefParam="false" />
+        <int name="curDataSourceParam" value="9997002" refParamName="" useRefParam="false" />
+        <Enum name="maxDataSourceProxy" value="1" refParamName="" useRefParam="false" />
+        <int name="maxDataSourceParam" value="9997003" refParamName="reqBuff_layer" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="b091e5a5-90dc-41bc-b557-7e1502d6067a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="PlayAnimDuration" time="0.100" length="0.500" isDuration="true" guid="ae156019-0c06-475f-99f3-8135df1866a6">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Idle" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="当前层数=0" eventType="RemoveBuffTick" guid="9647e327-bb75-446b-a7fe-0bd6656e1124" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="12d28cd8-f412-43c0-afd1-32c415ac67a9">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9997002" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration2" eventType="ForbidAbilityDuration" guid="26089146-2ae3-4afd-ac50-78efe6f87ef7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ForbidAbilityDuration" time="-0.193" length="0.326" isDuration="true" guid="363e7364-2270-46a8-8c73-c4adbd9ffce5">
+        <TemplateObject name="attackerId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="ImmuneNegative" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleUIControllerTick0" eventType="BattleUIControllerTick" guid="abea902e-4994-4857-bdb6-9170c8ade38c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BattleUIControllerTick" time="0.000" isDuration="false" guid="315ac884-4c6a-43cd-b4be-f908d467a60e" />
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="eb7d9144-2e4d-4781-93f3-5c4bb2ef9ee0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="676d66eb-803b-48fa-ad17-4876f5e3d6dc">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="187210" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="187220" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_3" value="187230" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBulletTick0" eventType="RemoveBulletTick" guid="4391dfe5-9b49-4b1a-bd70-ef020bc831f1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBulletTick" time="0.000" isDuration="false" guid="7af505fd-6017-41e8-a5bb-a860d79144c1">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBehaviourModeTick0" eventType="SetBehaviourModeTick" guid="80f8c6d2-862c-49bf-a0e2-00af282a8f1a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetBehaviourModeTick" time="0.000" isDuration="false" guid="263d9070-5631-4c13-9607-930e592f23ae">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="stopMove" value="false" refParamName="" useRefParam="false" />
+        <bool name="stopCurSkill" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBulletTick0" eventType="RemoveBulletTick" guid="78d6b31e-84ac-4cdf-8bd2-93e80aaec148" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBulletTick" time="0.000" isDuration="false" guid="f6379dab-53b5-42a6-b0f9-2de7f03acd51">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bAllBullets" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick0" eventType="PlaySoundTick" guid="8f7daaae-92f3-407a-bdbb-3bdb135f20d1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="387302db-0dbf-4b5e-bced-021554e7673d">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_Transform_Start" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="1dbef059-e8ec-466e-8cd6-320cbd3a8ac0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="34e5e281-53c4-4486-aa04-978e7faa2986">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="171900" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="d5a159c2-55ae-4a03-baa5-714c0b1337c0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="72fff517-115a-427b-96ed-e15fcb5cc993">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="171930" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="9881325c-dc3b-4a9e-9b6f-df25292f809a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="d5311ee0-fcb4-4b6a-909c-4b38a3b989ee">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="171940" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="0785a2d4-35c3-4776-a7a0-d8e2ea5598c5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="b118ce9b-4d59-4fa7-9208-394b97fb9068">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="171360" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="31001a19-8e27-406e-8c15-2333cb1b0253" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="30fa87a1-0f92-462d-9487-aaf657754c7b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115310" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="c929ff9e-8a97-4005-9712-f619cb38f6f6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="1739ffe8-dc3d-480a-a22f-07f97044ccb4">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115320" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="6a77c262-75c7-4a01-8e5b-2571bcd11bab" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="1d57a983-acbe-492a-affd-ac7590b5d2fa">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115340" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="020ae15d-7f54-4ae6-bba4-a503bf302497" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="839f73fb-2d08-4393-b221-919a85233658">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115900" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="5b2166cd-c7a1-43b3-9256-9948b39003e1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="7d0b03eb-bee7-4132-b0b7-6a0db75c1b6e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115910" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="e95d90a3-55c5-47e2-94e7-44e82824ea48" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="17a676a8-492b-4d42-b0d2-7f60c32cf1cf">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="153360" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="c023d23a-f751-4111-8563-451eeee18349" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="89d4a8f7-973a-4dbd-a8b7-0f29b6a06131">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="518310" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="6255ce2c-c3ad-44a3-9f5f-b43e88db55dc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="2a4a83b9-2e06-4633-9e25-8ee587ff8f47">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="518320" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="3edf8b21-ff72-407d-a1fb-7bb18a4bc145" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="04a5fafb-c0a5-408d-81ff-6db183480436">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="520990" refParamName="" useRefParam="false" />
+      </Event>
+      <Event eventName="RemoveBuffTick" time="0.240" isDuration="false" guid="12c5bb88-0103-42bf-919f-bd73f819bf15">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="520990" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="2650c037-f39b-4acd-bda3-888cfadf0b69" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="7b9c47b5-e8b4-43a6-bcbf-35a82ce55307">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="193350" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="7e28e0e8-26d3-4884-a1f9-09562c90ff39" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3df3e7bb-cbf8-4106-8361-1e9d98ed9243">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="193900" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="维罗bug修复" eventType="RemoveBuffTick" guid="2b931ecd-c596-4c9c-83ed-1f1ae3189537" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3c5262cd-a0d3-4908-870a-ef49c75367ba">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="194310" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="维罗bug修复" eventType="RemoveBuffTick" guid="c9d53f6c-ddad-459d-a62a-bc2667346718" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="1d6001bb-cc84-4a71-bd9a-bb8f7a4d6f4a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="194100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="维罗bug修复" eventType="RemoveBuffTick" guid="b48b891e-5b32-4d84-8d19-f73ef9eb784c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="453d43cf-d8c2-4245-a3db-feea783fe293">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="194103" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="莉莉安bug修复" eventType="RemoveBuffTick" guid="2ded78fa-cfa1-46ad-99f9-af48974f967a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="b1f7c956-1d17-4330-ba18-1023fb209973">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="510924" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="莉莉安bug修复" eventType="RemoveBuffTick" guid="20d9ff09-14f1-4aab-892e-e80c15a865be" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3a47cea4-3c1e-40e6-b01a-d9e3581a9e1e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="510903" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="艾瑞bug修复" eventType="RemoveBuffTick" guid="4331c8ff-3f06-4ff5-a95e-7fda7e548be1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="411a9f73-7de0-48af-ab36-294a533bd43b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="187960" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="哪吒bug修复" eventType="RemoveBuffTick" guid="a29adbde-de95-4bed-98bd-b951ac848af6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="e925801b-ae70-4938-99f1-9a89ce4a055e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="180260" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="提米bug修复" eventType="RemoveBuffTick" guid="cc41c06d-797d-4de7-abf1-23d01ddf36a3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="281fc927-f211-4d13-ba33-d683fae644c8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="186120" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="提米bug修复" eventType="RemoveBuffTick" guid="a7fef3df-8b11-47ec-bcbd-bf94f9b12e07" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="38f8311a-6fbc-41d3-9561-bde2c68e7f2e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="186122" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="赞尼尔bug修复" eventType="RemoveBuffTick" guid="69ccb3a5-4f57-48af-b79a-f675d6dd00d9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="152a8f96-eb15-4e0c-9cd6-15bd31bd33ae">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="149105" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="赞尼尔bug修复" eventType="RemoveBuffTick" guid="192d4b56-1675-4a30-9ca8-1b364f808822" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="403d5c1c-f8cf-4a7d-8989-12f2fdb5902e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="149108" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="塔拉bug修复" eventType="RemoveBuffTick" guid="b96d05d9-8679-442d-b5ff-af23f9fa844e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="deb4937f-b1fc-4e57-a8ab-a77a1dea0837">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="144300" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="塔拉bug修复" eventType="RemoveBuffTick" guid="899be0cc-be83-49fb-a1e4-01aa6809fa19" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="37a5750d-6f8b-4626-9cc7-2e5ba82f9146">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="144310" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="科里纳卡bug修复" eventType="RemoveBuffTick" guid="cc548f0c-1c71-44a8-9e9e-08e7610675c8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="886c5dac-c151-41d3-b3a9-91447941bad3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="162300" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="科里纳卡bug修复" eventType="RemoveBuffTick" guid="39e3499e-fc88-4939-a52c-cd05d3fd45ae" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3e7861ce-3aa7-4a55-82c8-522a6a36ad8b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="162301" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="科里纳卡bug修复" eventType="RemoveBuffTick" guid="413cda25-1400-4d24-93ef-ccaba17ba6b9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="508ee874-4f6d-4fb0-8581-42fcb9c6e65e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="162302" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="科里纳卡bug修复" eventType="RemoveBuffTick" guid="cee3f2e5-d49c-40b2-ae48-4fa062e48ce3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="8eeac4e8-51b5-4a67-af75-156e1e267383">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="162303" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="闪电侠bug修复" eventType="RemoveBuffTick" guid="0dd09e25-5819-4d62-8090-94cd552790ad" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="6ab9bf90-7d85-4870-9ff4-c58b0c30314c">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="507111" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="闪电侠bug修复" eventType="RemoveBuffTick" guid="5af31473-85aa-4c9c-85c9-0ce9d5224717" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="289cfab3-ebf2-4aae-96ac-2362c30008c0">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="2507290" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="是莱姆斯bug修复" eventType="RemoveBuffTick" guid="2c7b797b-9adf-4078-a372-4d811ab5d965" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="2dc6b9f1-b8e4-4c49-90d3-1315635b9345">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="169301" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="莫托斯bug修复" eventType="RemoveBuffTick" guid="4f574f0a-2b4b-4f6a-94e4-47d0b4584616" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="83592801-a725-4b81-bedd-13c284a17a38">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="166250" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="金娜bug修复" eventType="RemoveBuffTick" guid="f62b3861-99d4-47d8-a249-277bb51521e8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="b66103a6-9779-462e-af7c-cd0963f472c8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115910" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="金娜bug修复" eventType="RemoveBuffTick" guid="79cc7857-536d-41d4-b871-cd5bffe0d8dd" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="edd4fedb-4c68-49ce-8e03-6f16d70da29c">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="115900" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="娜塔雅bug修复" eventType="RemoveBuffTick" guid="221f1599-1860-407a-b120-149a67dd401e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="996d66e8-c0a2-451b-9170-c809cec72fd3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="142310" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="莫拉bug修复" eventType="RemoveBuffTick" guid="61b2e4fa-d1a8-49a2-b1c9-96ea26bb06a8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="3ac68650-2a05-489c-9fc7-ce89eee5b3eb">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="131960" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="克里希bug修复" eventType="RemoveBuffTick" guid="d7d9c431-8ef7-45e8-a566-d92550fc8fe0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="d929beea-0476-4e1c-93d7-fd96fd88b6c9">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="106390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="疾跑bug修复" eventType="RemoveBuffTick" guid="72e95de8-63b4-4098-945f-1a8e5783c7e7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="b8072628-1440-4198-973c-7f08543f2eed">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="801090" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="疾跑bug修复" eventType="RemoveBuffTick" guid="f7370ab3-4122-4707-9612-8f20bf600780" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="06ef0bb7-a06b-4d79-b944-8ba61da219df">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="801091" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="疾跑bug修复" eventType="RemoveBuffTick" guid="7cac0bf1-c31c-4b70-8a54-14dacb467b77" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="b7c7a40b-0e38-4c69-9ac3-6725060a0966">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="801092" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="卡莉bug修复" eventType="RemoveBuffTick" guid="14c656c7-9a4d-4699-8a55-6b190ec281b5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="83149d8c-c9e7-4272-a323-b42d8106618b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="110350" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="赵云bug修复" eventType="RemoveBuffTick" guid="7dd4fb9c-cf2d-4c5d-9248-1d3253f7d6aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="78b344aa-a65c-4c9b-9c9f-31c988cfd71f">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="129100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="赵云bug修复" eventType="RemoveBuffTick" guid="26c66e81-2e9f-4c0c-aee2-b6949de6918a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="01d561ca-6256-4c14-9a0e-64cc47134cc3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="129111" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凡恩bug修复" eventType="RemoveBuffTick" guid="cb36a087-d6ff-4608-bf8f-522ff9c379e7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="686b2c7e-9206-4acb-b1d2-836fc54bb492">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="133046" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凡恩bug修复" eventType="RemoveBuffTick" guid="b677e323-6449-4f3d-b708-2946b2b86cd8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="1a5c19b6-4cd9-4425-a61e-15a91f7eed41">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="133045" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凡恩bug修复" eventType="RemoveBuffTick" guid="9775f9fd-704f-4a5c-99d5-95d42277f719" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="82227442-c318-42e4-bc60-555f037a090b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="133047" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="凡恩bug修复" eventType="RemoveBuffTick" guid="9a44d097-52b5-425d-8577-858006cd132b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="a474f0d7-827c-4326-893f-cfc272f76b40">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="133910" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="瑾bug修复" eventType="RemoveBuffTick" guid="6f73ac2d-84fc-4c91-b19a-365f80736164" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="5b08be84-8a49-4c15-8817-c5848a424609">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="111110" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="瑾bug修复" eventType="RemoveBuffTick" guid="2ac71a9a-dc34-4209-bad2-58589f118196" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="c98962d6-59c4-4dca-aac5-46a1098fef44">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="111120" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

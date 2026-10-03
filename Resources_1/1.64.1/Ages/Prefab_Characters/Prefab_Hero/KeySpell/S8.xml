@@ -1,0 +1,195 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="monster" id="3" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="71980674-f08a-427f-9cb9-a29e370f30e1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="0733ef4d-ec32-48dd-9453-4ef46023246c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="prefab_characters/prefab_hero/keyspell/s8b1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillCDTriggerTick0" eventType="SkillCDTriggerTick" guid="d38627ca-b24a-4fb1-8b2d-c2a7d0f04756" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillCDTriggerTick" time="0.000" isDuration="false" guid="c681717f-e2e5-46ae-b65c-93482b14b7ca">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick6" eventType="PlayHeroSoundTick" guid="8813fa04-7527-479a-ac5d-beaf2a30cd99" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="a7498907-972d-4ace-9ec6-2f023294d678">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="S8_zhansha" refParamName="" useRefParam="false" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CallMonsterTick1" eventType="CallMonsterTick" guid="61e793c1-a06b-44fb-9bd6-e84e83c37246" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CallMonsterTick" time="0.000" isDuration="false" guid="63387e34-5703-4570-8154-e0bc9276ed0b">
+        <TemplateObject name="TargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="MonserId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="ConfigID" value="8506" refParamName="" useRefParam="false" />
+        <bool name="Invincible" value="true" refParamName="" useRefParam="false" />
+        <bool name="Moveable" value="true" refParamName="" useRefParam="false" />
+        <int name="LifeTime" value="1800" refParamName="" useRefParam="false" />
+        <bool name="bDrageToHostWhenTooFarAway" value="false" refParamName="" useRefParam="false" />
+        <String name="DragToHostWhenTooFarAwayEventName" value="BackToHero" refParamName="" useRefParam="false" />
+        <int name="monsterReturnDistance" value="12000" refParamName="" useRefParam="false" />
+        <bool name="bUseHostMoveSpeed" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseHostVisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreLevel" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="targetPosition" x="0" y="0" z="2000" refParamName="" useRefParam="false" />
+        <Vector3i name="translation" x="0" y="0" z="-7500" refParamName="" useRefParam="false" />
+        <bool name="bSyncToHostExposeMark" value="true" refParamName="" useRefParam="false" />
+        <bool name="bGrassDeathHide" value="true" refParamName="" useRefParam="false" />
+        <bool name="bCopyRuleVisible" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetActorVisibilityTick0" eventType="SetActorVisibilityTick" guid="e8df1c08-1c62-4766-95ce-9ce8f91e7bc7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetActorVisibilityTick" time="0.000" isDuration="false" guid="66912032-4d9c-43db-8ce4-e972bf3ee0da">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorCampTick0" eventType="CheckActorCampTick" guid="39e1fedb-a9d8-4854-abc5-8bca15e6c93b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorCampTick" time="0.000" isDuration="false" guid="ec807384-957e-4fee-b7d5-60bb8bd32de3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="camp" value="1" EnumValue="阵营1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SyncRelativeLocationDuration0" eventType="SyncRelativeLocationDuration" guid="9ec2ffc1-ec48-42fc-9761-e1e6511094c1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="39e1fedb-a9d8-4854-abc5-8bca15e6c93b" status="true" />
+      <Event eventName="SyncRelativeLocationDuration" time="0.000" length="4.000" isDuration="true" guid="431648fa-3daa-433f-bb4b-b9199b28f6e5">
+        <TemplateObject name="carId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="passengerId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="relativeLocation" x="1000" y="0" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SyncRelativeLocationDuration0" eventType="SyncRelativeLocationDuration" guid="0ad01b58-c24e-4bb0-b651-fbdaa0f43d55" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="39e1fedb-a9d8-4854-abc5-8bca15e6c93b" status="false" />
+      <Event eventName="SyncRelativeLocationDuration" time="0.000" length="4.000" isDuration="true" guid="f14b8e6d-b222-4a05-a50a-f15c28cd23e0">
+        <TemplateObject name="carId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="passengerId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="relativeLocation" x="-1000" y="0" z="-500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SaveActorDuration0" eventType="SaveActorDuration" guid="edf00d3e-8525-4a48-b07a-185c3a3fd362" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SaveActorDuration" time="0.000" length="4.000" isDuration="true" guid="b8c47d3b-33cf-4b39-8e20-ce81f21d1f86">
+        <String name="actorName" value="lingbao" refParamName="" useRefParam="false" />
+        <TemplateObject name="SetActorId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="strValue" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BindActorBluePrintInstTick1" eventType="BindActorBluePrintInstTick" guid="6cdeced5-22a6-488f-a0b7-46dbc07c341d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="BindActorBluePrintInstTick" time="0.010" isDuration="false" guid="ef1efbcd-4b34-4303-bfb6-1b47b5fc52f2">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="common/LingBaoSkill/LingBaoSkill_BubbleText.gl" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SendBluePrintCommonEventTick0" eventType="SendBluePrintCommonEventTick" guid="bf54a34e-32f6-4b70-820b-1595883a8915" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SendBluePrintCommonEventTick" time="0.100" isDuration="false" guid="07dac479-a470-4750-921a-1a1b5b255ccc">
+        <String name="evtName" value="SkillBubble" refParamName="" useRefParam="false" />
+        <int name="intParam1" value="1600" refParamName="" useRefParam="false" />
+        <bool name="bparam1" value="false" refParamName="" useRefParam="false" />
+        <bool name="bparam2" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId2" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SendScaleEvent_LINKUN004" eventType="SendBluePrintCommonEventTick" guid="cc500008-0001-0001-0001-000000000001" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SendBluePrintCommonEventTick" time="0.150" isDuration="false" guid="cc500008-0001-0001-0001-000000000002">
+        <String name="evtName" value="ScaleLingBao" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId2" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="解决跟随灵宝共存" eventType="SimpleSpawnBuffTick" guid="838a6b97-140e-403e-8a81-b520e30cd6fa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SimpleSpawnBuffTick" time="0.000" isDuration="false" guid="a7f67631-2f4f-4555-a176-9057e2c90153">
+        <TemplateObject name="originatorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="buffIds" refParamName="" useRefParam="false" type="int">
+          <int value="805001" />
+        </Array>
+        <int name="buffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="f4c5cf64-6de8-4f05-9015-f94bb554fb30" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.010" isDuration="false" guid="aaef522b-d6be-43a6-ade1-76fbdc28ff32">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/lingbao_skillborn" refParamName="" useRefParam="false" />
+        <Vector3 name="bindPosOffset" x="0.000" y="1.250" z="0.000" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick0" eventType="PlaySoundTick" guid="3620f23d-2321-4230-a056-2b0ca47fbb82" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="0.010" isDuration="false" guid="da1d1de9-a50b-4a5d-a8c7-febc19dfe1ce">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_B52_lingbaocj_Skill_Appear" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetBehaviourModeTick0" eventType="SetBehaviourModeTick" guid="f7799a00-0ed1-4f02-be9b-7c16be0f7179" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetBehaviourModeTick" time="0.100" isDuration="false" guid="3343c61f-4eb7-4d80-858d-981999148594">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="stopMove" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetAttackDirDuration0" eventType="SetAttackDirDuration" guid="463db8d2-3725-4609-96fa-8ce11ca1395a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetAttackDirDuration" time="0.100" length="0.066" isDuration="true" guid="61896d6b-142f-4fce-adb5-dedaf1df506f">
+        <TemplateObject name="attackerId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="ee5e8262-0d41-4c74-939d-ea53a9ece3dc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="4.000" isDuration="true" guid="cc6f5aa1-586a-4cd2-adf2-cc97eb6c7fe7">
+        <TemplateObject name="attackerId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="abortFilterMove" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidCollisionDetection" value="true" refParamName="" useRefParam="false" />
+        <bool name="ImmuneSkillSelect" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="bc286a81-8fb4-4d00-86a7-9db549e7d17f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="0.100" length="1.800" isDuration="true" guid="72799b39-60a8-42cb-98de-d6dddd355530">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Skill2" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="bUseFadeOutTime" value="true" refParamName="" useRefParam="false" />
+        <float name="fadeOutTime" value="0.200" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="cc9f5efc-def9-48f7-b5fb-3e39b22ebbcc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="1.800" length="0.100" isDuration="true" guid="d971df57-711f-4a67-a6f1-1641c3b27374">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Idle" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="bUseFadeOutTime" value="true" refParamName="" useRefParam="false" />
+        <float name="fadeOutTime" value="0.200" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="af6f0414-f8c0-4218-9f51-8d7d4d0ed072" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.100" isDuration="false" guid="8a25a654-3988-4a68-ae41-776214e3b6d5">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/lingbao_skill_B" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Doll_Hand_L" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="8a2e412c-e1e3-4222-8978-5f069003e765" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.100" isDuration="false" guid="637fe0a5-2cb8-4637-9632-0230716ee9af">
+        <TemplateObject name="targetId" objectName="monster" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/lingbao_skill_B" refParamName="" useRefParam="false" />
+        <String name="bindPointName" value="Doll_Hand_R" refParamName="" useRefParam="false" />
+        <bool name="bOpenLodLevelCull" value="true" refParamName="" useRefParam="false" />
+        <Enum name="particleRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

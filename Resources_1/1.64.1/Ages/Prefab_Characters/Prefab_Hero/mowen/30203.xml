@@ -1,0 +1,54 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="CheckActorCampTick0" eventType="CheckActorCampTick" guid="c35693e1-47fb-4595-8391-db789e7e295c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorCampTick" time="0.000" isDuration="false" guid="5b484549-f8d1-42ff-9198-c3f45e948fca">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="camp" value="1" EnumValue="阵营1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorCampTick0" eventType="CheckActorCampTick" guid="c7669d58-a288-419a-b97d-b26169641256" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorCampTick" time="0.000" isDuration="false" guid="f3f31094-2de7-488f-ac62-2fa44348b34d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="camp" value="2" EnumValue="阵营2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick0" eventType="RegisterEventTick" guid="89c06024-c9fa-4c4b-83f3-50fefd0f2b33" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="c35693e1-47fb-4595-8391-db789e7e295c" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="9734cc47-8714-47a9-b3b0-e7b7abf887f6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/30203p1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Ditoushe_Blue" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick0" eventType="RegisterEventTick" guid="db0b7211-b86c-4712-a5ab-8f9e40603cfc" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="c7669d58-a288-419a-b97d-b26169641256" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="b10bdd66-56e3-4413-94e4-b92f97a41394">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/30203p1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Ditoushe_Red" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

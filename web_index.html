@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<link rel="preconnect" href="https://dl.ops.kgvn.garenanow.com">
+<link rel="dns-prefetch" href="https://dl.ops.kgvn.garenanow.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TD MOD SKIN AOV · Skin Studio</title><link rel="icon" href="/assets/td-avatar.png?v=nunito1">
+<!-- build: 2026-10-02-batch-error-details -->
+
+<link rel="preconnect" href="https://dl.ops.kgvn.garenanow.com" crossorigin>
+<link rel="dns-prefetch" href="https://dl.ops.kgvn.garenanow.com">
+<style>
+:root{
+  --bg:#030814; --bg2:#07101f; --panel:#0b172a; --panel2:#10213a;
+  --line:rgba(91,162,255,.18); --line2:rgba(45,221,255,.48);
+  --cyan:#31dcff; --blue:#5d8fff; --pink:#ff4f9a; --green:#4de6a0;
+  --text:#f5f9ff; --muted:#91a4c3; --muted2:#617796;
+  --shadow:0 16px 42px rgba(0,0,0,.30); --r:20px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body:before,body:after{display:none!important;content:none!important}
+body{
+  background:
+    radial-gradient(circle at 18% 0%,rgba(49,220,255,.075),transparent 30%),
+    radial-gradient(circle at 88% 38%,rgba(93,143,255,.07),transparent 31%),
+    linear-gradient(180deg,#030814 0%,#050b18 100%);
+}
+#scrollArea{position:relative}
+#scrollArea:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(rgba(65,140,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(65,140,255,.05) 1px,transparent 1px);
+  background-size:36px 36px;mask-image:linear-gradient(to bottom,black,transparent 70%);
+}
+#app{position:relative;z-index:1;animation:pageIn .22s cubic-bezier(.2,.8,.2,1)}
+@keyframes pageIn{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes navPop{0%{transform:scale(.88)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes sheen{0%{transform:translateX(-140%) skewX(-20deg)}100%{transform:translateX(260%) skewX(-20deg)}}
+@keyframes softPulse{0%,100%{box-shadow:0 0 0 0 rgba(49,220,255,.08)}50%{box-shadow:0 0 0 7px rgba(49,220,255,0)}}
+.metric{animation:softPulse 3.2s ease-in-out infinite}
+.metric:nth-child(2){animation-delay:.45s}.metric:nth-child(3){animation-delay:.9s}
+.navbtn.on svg{animation:navPop .24s ease}
+.run{position:relative;overflow:hidden}
+.run:after{content:"";position:absolute;top:-40%;bottom:-40%;width:38%;left:-45%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);animation:sheen 2.8s ease-in-out infinite}
+.skin.sel{animation:softPulse 1.9s ease-in-out infinite}
+.row,.hero-card,.platform,.progress-card,.metric,.skin{will-change:transform}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+button,input{font:inherit}
+button{border:0;color:inherit}
+#scrollArea{height:calc(var(--tg-vh,100vh));overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;padding-bottom:calc(var(--nav-h,104px) + env(safe-area-inset-bottom) + 34px);scroll-padding-bottom:calc(var(--nav-h,104px) + env(safe-area-inset-bottom) + 34px)}
+.wrap{max-width:540px;margin:auto;padding:10px 11px 3px}
+
+/* hero/status */
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 0 8px}
+.metric{position:relative;overflow:hidden;padding:8px 7px;background:linear-gradient(145deg,rgba(17,31,55,.96),rgba(10,19,35,.96));border:1px solid var(--line);border-radius:17px;box-shadow:inset 0 1px rgba(255,255,255,.025)}
+.metric:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;background:var(--glow,var(--cyan));filter:blur(30px);opacity:.08;right:-25px;top:-25px}
+.metric .top{display:flex;align-items:center;justify-content:center;gap:7px}
+.metric .ico{width:18px;height:18px;color:var(--cyan);opacity:.95}
+.metric strong{font-size:19px;line-height:1;color:var(--cyan);letter-spacing:-.04em}
+.metric.sel strong,.metric.sel .ico{color:var(--pink)}
+.metric span{display:block;text-align:center;margin-top:5px;color:var(--muted);font-weight:800;font-size:9px;letter-spacing:.08em}
+/* distinct summary colors */
+.metric:nth-child(1){
+  --metric:#2ed8ff;--metric-rgb:46,216,255;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(14,43,66,.98),rgba(8,20,36,.98));
+}
+.metric:nth-child(1) .ico,.metric:nth-child(1) strong{color:var(--metric)}
+.metric:nth-child(1):after{background:var(--metric)}
+
+.metric:nth-child(2){
+  --metric:#8b7cff;--metric-rgb:139,124,255;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(34,31,72,.98),rgba(15,20,42,.98));
+}
+.metric:nth-child(2) .ico,.metric:nth-child(2) strong{color:var(--metric)}
+.metric:nth-child(2):after{background:var(--metric)}
+
+.metric:nth-child(3){
+  --metric:#ff4f9a;--metric-rgb:255,79,154;
+  border-color:rgba(var(--metric-rgb),.28);
+  background:linear-gradient(145deg,rgba(62,24,55,.98),rgba(28,16,38,.98));
+}
+.metric:nth-child(3) .ico,.metric:nth-child(3) strong{color:var(--metric)}
+.metric:nth-child(3):after{background:var(--metric)}
+
+.progress-card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:8px 11px;margin-bottom:11px}
+.progress-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800}.progress-row b{color:var(--cyan)}.progress-row span{color:var(--muted)}
+.track{height:6px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));box-shadow:0 0 18px rgba(46,216,255,.42);transition:width .22s ease}
+
+/* typography */
+.section-kicker{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase;margin-bottom:5px}
+h1{font-size:23px;line-height:1.05;margin:0 0 5px;letter-spacing:-.04em}.hl{color:var(--cyan)}
+.sub{font-size:12px;color:var(--muted);margin:0 0 14px}
+
+/* search */
+.search{display:flex;align-items:center;gap:10px;background:rgba(15,28,49,.92);border:1px solid var(--line);border-radius:17px;padding:10px 12px;margin-bottom:12px;box-shadow:inset 0 1px rgba(255,255,255,.02)}
+.search svg{width:18px;color:var(--muted)}.search input{min-width:0;flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:15px}.search input::placeholder{color:var(--muted2)}
+
+/* alphabet */
+.az-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.az{position:relative;aspect-ratio:1;border-radius:17px;background:linear-gradient(145deg,#11213a,#09162a);border:1px solid var(--line);font-size:20px;font-weight:900;box-shadow:0 7px 20px rgba(0,0,0,.1)}
+.az .cnt{position:absolute;top:7px;right:8px;color:var(--muted);font-size:10px;font-weight:800}.az.empty{opacity:.24}.az:active,.row:active,.skin:active{transform:scale(.985)}
+
+/* rows */
+.row{display:flex;align-items:center;gap:12px;background:linear-gradient(145deg,rgba(17,34,59,.98),rgba(8,20,37,.98));border:1px solid var(--line);border-radius:18px;padding:9px 10px;margin-bottom:8px;box-shadow:0 8px 24px rgba(0,0,0,.10);transition:transform .12s}
+.row img,.avatar{width:50px;height:50px;border-radius:15px;object-fit:cover;background:#111d31;flex:none}
+.hero-mono{display:grid;place-items:center;font-size:22px;font-weight:950;color:var(--cyan);background:#0b1930;border:1px solid rgba(46,216,255,.18)}
+.row .txt{min-width:0;flex:1}.row b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row small{display:block;margin-top:4px;color:var(--muted);font-size:12px}.chev{color:var(--muted2)}
+.back{display:inline-flex;align-items:center;gap:7px;background:rgba(16,29,51,.72);border:1px solid var(--line);border-radius:999px;color:var(--cyan);padding:6px 10px;font-size:10.5px;font-weight:850;margin-bottom:13px}
+.hero-card{display:flex;gap:9px;align-items:center;background:linear-gradient(135deg,rgba(17,36,62,.99),rgba(8,19,36,.99));border:1px solid var(--line);border-radius:16px;padding:9px 10px;margin-bottom:10px;box-shadow:var(--shadow)}
+.hero-card .avatar{width:68px;height:68px}.hero-card b{font-size:20px}.hero-card span{display:block;color:var(--muted);margin-top:4px;font-size:12px}
+
+.row.chosen{border-color:rgba(67,245,173,.62);box-shadow:inset 0 0 0 1px rgba(67,245,173,.10)}
+.row.chosen .avatar{box-shadow:0 0 0 2px rgba(67,245,173,.78)}
+.row .chosen-skin{color:#5ff1b1!important;font-weight:800}
+/* skins */
+.skin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 12px;width:100%;margin:0}
+.skin{position:relative;display:flex;flex-direction:column;gap:7px;min-width:0;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;text-align:center;overflow:visible;transition:.14s transform}
+.skin:active{transform:scale(.985)}
+.skin-pic{position:relative;display:block;width:100%;aspect-ratio:1;border-radius:15px;overflow:hidden;background:#101b2e;box-shadow:none}
+.skin-pic img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .18s}
+.skin-pic img.ready{opacity:1}
+.skin .shade{position:static;display:block;padding:0 2px;background:none!important;color:#eef4ff;font-size:11px;line-height:1.18;font-weight:850;text-align:center;min-height:26px}
+.skin.sel .skin-pic{outline:3px solid #43f5ad;outline-offset:0;box-shadow:0 0 0 1px rgba(67,245,173,.22),0 8px 26px rgba(36,233,157,.16)}
+.skin.sel .skin-pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(65,255,180,.14),rgba(53,229,151,.34));pointer-events:none;z-index:2}
+.skin.sel .shade{color:#63f4b5;text-shadow:none}
+.check{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:none;place-items:center;background:rgba(44,238,157,.18);border:3px solid rgba(255,255,255,.88);color:#fff;font-size:26px;font-weight:900;z-index:4;box-shadow:0 5px 18px rgba(0,0,0,.24)}
+.skin.sel .check{display:grid}.skin.sel .shade{color:#78ffca;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+
+/* crystal blue studio */
+:root{--bg:#050b1b;--panel:#0c1830;--panel2:#152441;--cyan:#63e5ff;--blue:#7e9aff;--pink:#bc91ff;--line:#8aaaff24;--muted:#a0b1cc}
+body{background:radial-gradient(ellipse at 0 0,#12395570,transparent 55%),radial-gradient(ellipse at 100% 45%,#4b238347,transparent 50%),#050b1b}
+.brand b{background:linear-gradient(105deg,#fff,#90eaff 65%,#bdadff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.metric .ico{width:27px;height:27px;stroke-linecap:round;stroke-linejoin:round;padding:4px;border-radius:9px;background:#ffffff08}
+.metric{animation:none;border-radius:20px}.metric strong{font-variant-numeric:tabular-nums}.metric:nth-child(3){--metric:#ba9cff;--metric-rgb:186,156,255}
+.metric .top{gap:8px}.metric span{letter-spacing:.16em}
+.az{background:linear-gradient(145deg,#193654b3,#0b1530);box-shadow:inset 0 1px 0 #ffffff0a;transition:transform .15s ease,border-color .15s ease}
+.row,.hero-card,.platform,.progress-card,.metric,.skin{will-change:auto}
+.row,.skin,.platform,.clear-cart,.history-card{transition:transform .16s ease,border-color .16s ease,background-color .16s ease}
+.row img,.avatar,.cart-row img{border:1px solid #a9c7ff30;box-shadow:0 3px 12px #0003}
+.skin{position:relative}.skin-pic{border:1px solid #aacbff26;background:linear-gradient(135deg,#183048,#211638);overflow:hidden}.skin-pic img{transition:opacity .2s ease,transform .22s ease;object-fit:cover}
+.skin.sel .skin-pic{border-color:#7bebff;box-shadow:0 0 0 2px #63e5ff18}.skin.sel .shade{color:#a6f3ff}.skin.sel{animation:none}
+.extra-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin-top:6px}.cart-row .extra-tags{justify-content:flex-start}.extra-tag{font-size:9px;font-weight:650;line-height:1.5;color:#b9a4ff;background:#9b80ff12;border:1px solid #aa8cff28;border-radius:5px;padding:2px 5px}
+.run{background:linear-gradient(110deg,#65e9ff,#95a1ff 70%,#b291ff);box-shadow:0 8px 22px #6b9fff24}.run:after{animation-duration:4s}
+.navbtn svg{stroke-linecap:round;stroke-linejoin:round}.navbtn.on{background:linear-gradient(145deg,#14364e,#1f244b);border-color:#76ddff55}
+@media(hover:hover){.skin:hover .skin-pic img{transform:scale(1.045)}.row:hover,.az:hover,.platform:hover{border-color:#63e5ff60;transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.run:after{display:none}}
+/* cart / platform */
+.clear-cart{display:flex;align-items:center;gap:10px;width:100%;padding:13px 16px;margin:0 0 16px;border:1px solid #ff75b04d;border-radius:16px;background:#ff75b00b;color:#ffa3c9;font:inherit;font-weight:600;cursor:pointer}.clear-cart svg{width:20px;height:20px}.clear-cart span{margin-left:auto;font-size:12px;opacity:.8}.clear-cart:active{transform:scale(.98)}
+.cart-row{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:10px;margin-bottom:9px}.cart-row img{width:44px;height:44px;border-radius:13px;object-fit:cover;background:#111c30}.cart-row .txt{flex:1;min-width:0}.cart-row b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cart-row small{display:block;margin-top:3px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.remove{width:32px;height:32px;border-radius:10px;background:rgba(255,75,145,.10);border:1px solid rgba(255,75,145,.24);color:var(--pink)}
+.platform{margin:11px 0;background:linear-gradient(145deg,#101d33,#0b1628);border:1px solid var(--line);border-radius:19px;padding:12px}.platform-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}.platform-head svg{color:var(--cyan)}.platform-head b{font-size:14px}.platform-head small{display:block;color:var(--muted);font-weight:500;margin-top:2px}
+.segment{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;background:#081221;border-radius:14px;padding:5px}.seg{display:flex;justify-content:center;align-items:center;gap:6px;padding:9px 4px;border-radius:11px;color:var(--muted);background:transparent;font-size:11px;font-weight:850;transition:.16s transform,.16s background,.16s color,.16s box-shadow}.seg svg{width:16px}
+.seg:nth-child(1){color:#70d99b}.seg:nth-child(1).on{background:linear-gradient(135deg,rgba(61,224,139,.19),rgba(28,124,86,.13));color:#52e49b;box-shadow:inset 0 0 0 1px rgba(82,228,155,.42),0 0 18px rgba(82,228,155,.07)}
+.seg:nth-child(2){color:#7ebcff}.seg:nth-child(2).on{background:linear-gradient(135deg,rgba(73,160,255,.20),rgba(59,97,210,.13));color:#70b7ff;box-shadow:inset 0 0 0 1px rgba(112,183,255,.42),0 0 18px rgba(112,183,255,.07)}
+.seg:nth-child(3){color:#c59cff}.seg:nth-child(3).on{background:linear-gradient(135deg,rgba(166,105,255,.20),rgba(103,66,204,.13));color:#c49aff;box-shadow:inset 0 0 0 1px rgba(196,154,255,.42),0 0 18px rgba(196,154,255,.07)}
+.seg.on{transform:translateY(-1px)}
+.tip{display:flex;align-items:flex-start;gap:8px;margin-top:10px;color:var(--muted);font-size:11px;line-height:1.4}.tip svg{width:16px;flex:none;color:var(--green)}
+.run{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 10px;border-radius:16px;background:linear-gradient(115deg,#43d8ff,#4f8fff);color:#03101b;font-size:14px;font-weight:950;box-shadow:0 10px 30px rgba(46,216,255,.22)}.run:disabled{opacity:.4;box-shadow:none}.run svg{width:19px}
+.empty{text-align:center;padding:58px 20px;color:var(--muted)}
+
+/* bottom nav */
+.bottom{position:fixed;z-index:10;left:0;right:0;bottom:0;padding:6px 11px calc(6px + env(safe-area-inset-bottom));background:linear-gradient(0deg,var(--bg) 72%,rgba(5,9,20,.88) 88%,transparent);pointer-events:none}.bottom .nav{pointer-events:auto}
+.nav{max-width:540px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;background:rgba(13,23,41,.94);border:1px solid var(--line);border-radius:20px;backdrop-filter:none;box-shadow:0 -8px 35px rgba(0,0,0,.20)}
+.navbtn{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 3px;border-radius:14px;background:transparent;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.035em}.navbtn svg{width:19px;height:19px}.navbtn.on{color:var(--cyan);background:rgba(46,216,255,.08);box-shadow:inset 0 0 0 1px rgba(46,216,255,.22)}
+.badge{position:absolute;top:3px;left:calc(50% + 10px);min-width:17px;height:17px;padding:0 4px;border-radius:9px;display:grid;place-items:center;background:var(--pink);color:white;font-size:9px}.hidden{display:none!important}
+
+/* loading */
+.skeleton{position:relative;overflow:hidden;background:#101b2e!important;color:transparent!important}.skeleton:after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.055),transparent);animation:sh 1.45s infinite}@keyframes sh{to{transform:translateX(100%)}}
+.fade{animation:fade .17s ease}@keyframes fade{from{opacity:.35;transform:translateY(3px)}to{opacity:1;transform:none}}
+.toast{position:fixed;z-index:30;left:50%;top:14px;bottom:auto;transform:translateX(-50%);width:min(590px,calc(100% - 28px));background:rgba(6,15,29,.97);border:1px solid rgba(67,245,173,.55);border-radius:18px;padding:13px 18px;font-size:13px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.34);white-space:normal;color:#eef4ff}
+@media(max-width:380px){.wrap{padding-left:10px;padding-right:10px}.az-grid{gap:7px}.skin-grid{gap:12px 9px}.metric strong{font-size:19px}.skin .shade{font-size:10.5px}}
+
+:root{--bg:#090713;--cyan:#c8a4ff;--blue:#9476ff;--pink:#ff92cb;--line:rgba(181,148,255,.2)}
+body{background:radial-gradient(ellipse at top left,#25143b,transparent 65%),#090713}
+.wrap{max-width:800px;padding:18px 16px}.brand{display:flex;align-items:center;gap:12px;padding:10px 0 25px}.brandmark{background:linear-gradient(135deg,#d0abff,#724de3);border-radius:16px;padding:13px;color:#171022;font-weight:950}.brand b{font-size:21px;letter-spacing:.04em}.brand em{font-style:normal;color:#bd9bff}.brand small{display:block;font-size:9px;color:#a095b7;margin-top:5px}.live{margin-left:auto;font-size:10px;color:#8af5c1}
+#jobPanel{padding:20px;border:1px solid #9068e2;background:#201435;border-radius:20px;margin-bottom:20px}#jobPanel[hidden]{display:none}progress{display:block;width:100%;height:10px;margin:16px 0;accent-color:#bb91ff}#downloadFile{display:inline-block;padding:12px 18px;border-radius:12px;background:#bf9bff;color:#190d30;text-decoration:none;font-weight:800}#downloadFile[hidden]{display:none}#jobPanel button{background:transparent;padding:12px;color:#b8a2d9}#taskButton{display:inline-flex;padding:13px 18px;background:#bf9bff;color:#190d30;border-radius:12px;font-weight:800}#taskButton[hidden]{display:none}.metric,.run:after,.skin.sel{animation:none}.row,.hero-card,.platform,.progress-card,.metric,.skin{will-change:auto}
+@media(min-width:700px){.skin-grid{grid-template-columns:repeat(4,1fr)}.bottom{max-width:800px;left:50%;transform:translateX(-50%);width:100%}}
+
+/* TD MOD SKIN AOV — mobile studio */
+.job-skins{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}.job-skins span{padding:7px 10px;border:1px solid #a0b4ff24;border-radius:9px;font-size:10px;color:#c5d6ed;background:#ffffff04}#app[hidden]{display:none!important}
+:root{--bg:#070b16;--panel:#101a2d;--panel2:#12203a;--cyan:#59e4ff;--blue:#8a8bff;--pink:#ed8bd4;--line:rgba(128,174,224,.18);--muted:#9aaac4}
+body{background:radial-gradient(ellipse at 5% 0%,#153248 0,transparent 50%),radial-gradient(ellipse at 100% 60%,#261940 0,transparent 55%),#070b16}
+.wrap{max-width:760px;margin:auto;padding:20px 18px 30px}.brand{gap:12px;padding:5px 0 24px}.brand-avatar{width:54px;height:54px;border-radius:18px;object-fit:cover;border:2px solid #83dcf6;box-shadow:0 0 0 5px #59e4ff0b}.brand b{font-size:clamp(15px,4.1vw,23px);letter-spacing:-.02em}.brand small{font-size:9px;color:#92acc4;letter-spacing:.13em}.brand .live{width:8px;height:8px;border-radius:50%;background:#67f3bc;box-shadow:0 0 12px #67f3bc;flex:none}
+.summary{gap:9px}.metric{border-radius:20px;padding:16px 6px;background:linear-gradient(150deg,#14283b,#10172a)!important}.metric strong{font-size:25px;letter-spacing:-.035em}.metric span{font-size:10px}.metric:nth-child(2){background:linear-gradient(150deg,#222641,#10172a)!important}.metric:nth-child(3){background:linear-gradient(150deg,#35243e,#161728)!important}
+.progress-card{padding:14px;border-radius:18px;margin-bottom:26px}.progress-row{font-size:10px;letter-spacing:.05em}h1{font-size:28px;margin-bottom:10px}.sub{line-height:1.6;font-size:13px;margin-bottom:20px}.search{padding:16px;border-radius:20px}.search input{font-size:14px}.az-grid{gap:10px}.az{border-radius:20px;font-size:25px;background:linear-gradient(145deg,#172c40,#10192c);transition:transform .16s,border-color .16s}.az:hover{border-color:#59e4ff88}.az .cnt{font-size:10px}.section-kicker{letter-spacing:.16em;margin-top:5px;margin-bottom:9px}
+.row,.cart-row,.platform,.hero-card{border-radius:20px;padding:14px}.skin-grid{gap:17px 12px}.skin-pic{border-radius:18px}.skin .shade{font-size:12px;line-height:1.4}.run{padding:18px;border-radius:20px;background:linear-gradient(110deg,#66e8fb,#91a1ff);font-size:14px;box-shadow:0 10px 26px #59e4ff20}.run:disabled{opacity:.55}.run:active{transform:scale(.98)}
+.nav{grid-template-columns:repeat(4,1fr);max-width:720px;background:#0e1728f5;padding:8px;border-radius:24px}.navbtn{font-size:9px;padding:12px 2px;gap:6px}.navbtn svg{width:21px;height:21px}.navbtn.on{background:linear-gradient(130deg,#193c4c,#1d2745);box-shadow:inset 0 0 0 1px #59e4ff44}.navbtn.on svg{animation:navPop .25s}.bottom{padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+#jobPanel{position:relative;overflow:hidden;border:1px solid #59e4ff45;background:linear-gradient(140deg,#132b3b,#171b32 70%);border-radius:28px;padding:24px;margin-bottom:26px;box-shadow:0 18px 50px #0003;animation:arrive .35s ease}#jobPanel:before{content:'';position:absolute;top:0;left:22px;right:22px;height:2px;background:linear-gradient(90deg,transparent,#59e4ff,#a98bff,transparent)}
+.job-top{display:flex;justify-content:space-between;align-items:center}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;color:#8faac4}.job-status{padding:6px 9px;border-radius:9px;background:#59e4ff12;color:#79e6f7;font-size:10px;font-weight:750}.job-center{display:flex;align-items:center;gap:20px;margin:23px 0}.job-orbit{width:84px;height:84px;position:relative;flex:none}.job-orbit svg{width:84px;height:84px;transform:rotate(-90deg)}.job-orbit circle{fill:none;stroke:#ffffff0c;stroke-width:5}.job-orbit circle:last-child{stroke:#59e4ff;stroke-dasharray:226;stroke-dashoffset:226;stroke-linecap:round;transition:stroke-dashoffset .5s}.job-orbit span{position:absolute;inset:0;display:grid;place-items:center;font-weight:850;font-size:21px}.job-copy{min-width:0}.job-copy h2{font-size:22px;letter-spacing:-.03em;margin:0 0 7px}.job-copy p{font-size:12px;line-height:1.6;color:#9dafca;margin:0}#jobText{display:block;font-size:13px;line-height:1.55;color:#c8d9e9}#jobProgress{appearance:none;height:5px;border:0;background:#ffffff0c;border-radius:10px;overflow:hidden;margin:15px 0 24px}#jobProgress::-webkit-progress-bar{background:#ffffff0c}#jobProgress::-webkit-progress-value{background:linear-gradient(90deg,#59e4ff,#aa8cff)}#jobProgress::-moz-progress-bar{background:#59e4ff}
+.job-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.job-step{border-top:2px solid #ffffff12;padding-top:12px;font-size:10px;color:#7186a4;line-height:1.6}.job-step b{display:block;font-size:11px;font-weight:700}.job-step.on{color:#80e9fb;border-color:#59e4ff}.job-step.complete{color:#82efbb;border-color:#82efbb}.job-note{font-size:11px;color:#9bacca;line-height:1.6;margin:15px 0 0}
+#jobPanel #taskButton,#downloadFile{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;border-radius:16px;background:linear-gradient(110deg,#66e6f6,#9b9dff);color:#0c1626;font-weight:850;font-size:13px;border:0;text-decoration:none;box-shadow:0 8px 24px #59e4ff15}#jobPanel #taskButton:disabled{opacity:.55}#jobPanel .quiet{padding:9px 0;color:#93acc6;font-size:11px;display:flex;gap:7px;align-items:center;margin:12px auto 0}#taskButton[hidden],#downloadFile[hidden]{display:none!important}
+.icon{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.history-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.history-head h1{margin:6px 0 0}.iconbtn{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#59e4ff0b;border:1px solid var(--line);color:var(--cyan)}.history-card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#152335,#111a2c);padding:18px;margin-bottom:12px;animation:arrive .25s ease}.history-meta{display:flex;gap:8px;align-items:center;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:13px}.history-card h3{font-size:16px;line-height:1.4;margin:0 0 6px}.history-card p{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 14px}.history-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:13px}.history-footer span{font-size:10px;color:var(--muted)}.history-footer button{display:flex;align-items:center;gap:7px;background:#59e4ff14;color:#83e8ff;border:1px solid #59e4ff28;border-radius:11px;padding:10px 12px;font-size:11px;font-weight:750}.history-footer button:disabled{color:#73839c;background:#ffffff05;border-color:#ffffff08}.empty-icon{width:65px;height:65px;margin:0 auto 18px;display:grid;place-items:center;border-radius:22px;background:#59e4ff0b;color:#59e4ff}.empty-icon svg{width:28px;height:28px}.history-info{padding:14px 16px;border:1px solid var(--line);border-radius:16px;font-size:11px;line-height:1.7;color:var(--muted);margin-bottom:18px}
+@keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}button,a,input{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #59e4ff;outline-offset:3px}
+@media(max-width:380px){.wrap{padding:16px 12px}.brand-avatar{width:46px;height:46px}.brand{gap:10px}.brand small{font-size:8px}.az-grid{gap:8px}.az{font-size:23px;border-radius:16px}.job-center{gap:13px}#jobPanel{padding:20px}.job-copy h2{font-size:19px}.navbtn{font-size:8px}.skin .shade{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Studio design: compact gallery, crisp controls, cyan / violet accents. */
+:root{--bg:#070b18;--panel:#101c30;--cyan:#55eafa;--blue:#a590ff;--pink:#ff96c9;--line:#95bcf322;--muted:#94a5c2}
+body{background:radial-gradient(ellipse at 0% 0%,#143749 0,transparent 48%),radial-gradient(ellipse at 100% 65%,#271949 0,transparent 55%),#070b18}
+.brand{border-bottom:1px solid #7eabed18;margin-bottom:22px;padding-bottom:20px}.brand-avatar{border-radius:17px;border-color:#86edfa;box-shadow:0 0 0 5px #51d9ed0b,0 0 25px #51d9ed14}.brand b{letter-spacing:-.025em}.brand small{color:#99a9d0;font-size:8px;letter-spacing:.17em}
+.summary{gap:9px}.metric{position:relative;overflow:hidden;border-radius:17px;padding:14px 7px;background:linear-gradient(150deg,#173146,#101a2d)!important;border-color:#69cde42e}.metric:nth-child(2){background:linear-gradient(150deg,#2a2648,#111a30)!important;border-color:#ab8dff35}.metric:nth-child(3){background:linear-gradient(150deg,#39243e,#171a32)!important;border-color:#f295cb35}.metric strong{font-size:25px}.metric .ico{width:20px;height:20px;opacity:.8}.metric:after{content:'';position:absolute;left:20%;right:20%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:.45}
+h1{font-size:27px;letter-spacing:-.035em}.hl{color:#67edf9;text-shadow:0 0 25px #48d6eb15}.section-kicker{color:#a2a5ff;font-size:9px}.hero-card{padding:14px;border-radius:20px;background:linear-gradient(120deg,#172f42,#171c36);border-color:#7fb8ed2b}.hero-card .avatar{border-radius:15px}.search{background:#101c32;border-color:#8faff334}
+.skin-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 12px;align-items:start}
+.skin-grid .skin{display:grid;grid-template-rows:auto 34px;align-content:start;gap:7px;font-size:12px;min-width:0;padding:0!important;border:0!important;border-radius:0;background:transparent!important;box-shadow:none!important;overflow:visible;text-align:center;transition:transform .18s}
+.skin-grid .skin-pic{position:relative;display:block;box-sizing:border-box;width:100%;aspect-ratio:1;align-self:start;border-radius:19px;overflow:hidden;border:1px solid #8eafe535;background:#14223a;box-shadow:0 8px 20px #0002;transition:border-color .2s,box-shadow .2s,transform .2s}
+.skin-grid .skin-pic img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.skin-grid .skin .shade{position:static;font-size:11px;line-height:17px;height:34px;min-height:0;margin:0;padding:0 1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#dce6f7;font-weight:650;background:none}
+.skin-grid .skin.sel .skin-pic{outline:none;border:2px solid #65edf4;box-shadow:0 0 0 3px #54deed12,0 8px 25px #56c8ed20;animation:selectCard .26s ease-out}
+.skin-grid .skin.sel .skin-pic:after{background:linear-gradient(160deg,#58edfa06,#8f94ff0f)}.skin-grid .skin.sel .shade{color:#77edf5}.skin-grid .skin .check{left:auto;transform:none;width:24px;height:24px;right:6px;top:6px;border-radius:8px;background:linear-gradient(130deg,#59eff5,#a39aff);color:#071626;border:1px solid #c0f8ff88;font-size:13px;box-shadow:0 3px 12px #0005;z-index:4}
+.skin-grid .extra-tags{margin:0;padding:0;justify-content:center;align-items:flex-start;align-content:flex-start;flex-wrap:wrap;min-width:0;height:32px;gap:3px}
+.extra-tag{display:inline-flex;align-items:center;gap:3px;padding:2px 4px;border-radius:5px;font-size:8px;line-height:11px;white-space:nowrap;color:#afbff0;background:#8590ff10;border:1px solid #8c9fff25}
+.extra-tag svg{width:10px;height:10px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none;flex:none}.cart-row .extra-tags{margin-top:7px}
+.nav{border-radius:23px;background:linear-gradient(140deg,#142238f5,#12172cf5);border-color:#91b8ef28;padding:7px;box-shadow:0 -8px 30px #060a1433}.navbtn{border-radius:17px;color:#9aaac4;font-size:9px;padding:11px 2px;gap:7px;transition:color .18s,background .18s,transform .18s}.navbtn svg{width:22px;height:22px;stroke-width:1.7}.navbtn.on{color:#75edf6;background:linear-gradient(140deg,#21465a,#282846);box-shadow:inset 0 0 0 1px #85ddef4a,0 3px 15px #54dbea0b}.badge{background:linear-gradient(145deg,#d293ff,#fa9bca);box-shadow:0 0 0 3px #142236;font-weight:800}
+#jobPanel{background:linear-gradient(140deg,#153046,#1d213d 70%,#231f3e);border-color:#80cfe63b;border-radius:27px}.job-copy h2{font-size:23px}.job-status{border:1px solid #71d7ed25;border-radius:8px}.job-skins span{background:#9ab9ff08;border-color:#a3c4ff22;line-height:1.5}.job-steps{gap:10px}.job-step{padding-top:10px}.job-note{margin-top:17px!important;line-height:1.65}
+.job-actions{display:grid;gap:9px;margin-top:20px;padding-top:18px;border-top:1px solid #aac7ff15}
+#jobPanel .job-action{display:flex;align-items:center;gap:11px;width:100%;min-height:48px;padding:13px 15px;border-radius:14px;font:inherit;font-size:12px;font-weight:700;text-align:left;border:1px solid #93beef35;transition:transform .16s,background .16s,border-color .16s}
+#jobPanel .picker-action{color:#a0f3fa;background:linear-gradient(120deg,#23617433,#4478ad22);border-color:#68e0f252}
+#jobPanel .history-action{color:#c3b8ec;background:linear-gradient(120deg,#8c83d514,#8375c41c);border-color:#ab9be733}.job-action .action-arrow{margin-left:auto;opacity:.6}.job-action .icon{width:19px;height:19px}
+#jobPanel .job-action:active,.navbtn:active{transform:scale(.98)}.run{position:relative;overflow:hidden;background:linear-gradient(110deg,#5eeef1,#88b6ff,#b099ff);box-shadow:0 8px 25px #59ddee20}.run:after{animation:sheen 5s ease-in-out infinite;pointer-events:none}
+.brand .live{animation:onlineGlow 3s ease-in-out infinite}.history-card,.platform,.cart-row{background:linear-gradient(145deg,#14253a,#151b31);border-color:#94b8ed25}.back{font-weight:700;letter-spacing:.03em}
+@keyframes selectCard{0%{transform:scale(.96)}65%{transform:scale(1.025)}100%{transform:scale(1)}}
+@keyframes onlineGlow{50%{box-shadow:0 0 18px #65efbdaa;opacity:.65}}
+@media(min-width:700px){.skin-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 16px}.skin-grid .skin .shade{font-size:12px}}
+@media(max-width:360px){.skin-grid{gap:17px 7px}.skin-grid .skin-pic{border-radius:15px}.skin-grid .skin .shade{font-size:10px}.extra-tag{font-size:7px;padding:2px 3px}.wrap{padding-left:12px;padding-right:12px}}
+@media(hover:hover){.skin-grid .skin:hover .skin-pic{transform:translateY(-3px);border-color:#84d4f4aa;box-shadow:0 10px 24px #59ddef18}.skin-grid .skin:hover img{transform:scale(1.045)}#jobPanel .job-action:hover{border-color:#9cdbf3aa;background:#83bbff18}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+/* Clean three-column gallery inspired by the supplied screenshots. */
+body{background:repeating-linear-gradient(0deg,#7c9ae905 0px,#7c9ae905 1px,transparent 1px,transparent 4px),linear-gradient(90deg,#76a7ff04 1px,transparent 1px),radial-gradient(ellipse at 100% 0%,#12313d 0,transparent 48%),radial-gradient(ellipse at 0% 65%,#201735 0,transparent 60%),#090f20;background-size:auto,48px 48px,auto,auto,auto}
+.studio-overview{position:relative;border:1px solid #62d9e438;border-radius:23px;padding:15px;background:linear-gradient(140deg,#10233aeb,#111b31eb);margin-bottom:25px;box-shadow:inset 0 0 0 1px #9bcdff08,0 8px 30px #030a1718}
+.studio-overview:before,.studio-overview:after{content:'';position:absolute;width:25px;height:25px;border-color:#55d7e5;pointer-events:none}.studio-overview:before{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid;border-top-left-radius:23px;color:#55d7e5}.studio-overview:after{bottom:-1px;right:-1px;border-bottom:2px solid;border-right:2px solid;border-bottom-right-radius:23px;color:#55d7e5}
+.overview-head{display:flex;justify-content:space-between;align-items:center;margin:0 2px 14px;font-size:8px;font-weight:700;letter-spacing:.14em;color:#8da6c7}.overview-state{color:#73e7bc;letter-spacing:.07em}
+.studio-overview .summary{margin-bottom:14px;gap:8px}.studio-overview .metric{padding:14px 4px;border-radius:15px;background:linear-gradient(140deg,#152c42,#111c32)!important;border:1px solid #56cce133}.studio-overview .metric .top{justify-content:center}.studio-overview .metric .ico{display:none}.studio-overview .metric strong{font-family:ui-monospace,monospace;font-size:25px;letter-spacing:-.06em;text-shadow:0 0 16px #58dfea20}.studio-overview .metric span{font-size:9px;letter-spacing:.12em}.studio-overview .metric:nth-child(3){border-color:#ef79b83d}.studio-overview .progress-card{border:0;background:none;padding:0;margin:0;border-radius:0}.studio-overview .track{height:5px;background:#8197c11a}.studio-overview .fill{background:linear-gradient(90deg,#39dfec,#956aff)}
+.skin-grid .skin-pic{border-radius:17px;border-color:#67d5e530;box-shadow:0 5px 16px #050a1622}.skin-grid .skin .shade{font-size:11px;font-weight:650;line-height:17px;color:#c7d2e7}.skin-grid .skin{gap:7px}.skin-grid .skin.sel .shade{color:#68e4eb}.skin-grid .skin.sel .skin-pic{box-shadow:0 0 0 2px #57e0eb13,0 0 20px #56bfea18}
+.az{border-color:#57c5db30;background:linear-gradient(150deg,#193047b0,#111b31);box-shadow:inset 0 1px 0 #d4eafa08;font-family:ui-monospace,monospace;font-weight:750}.az.sel{border-color:#62f2b866}.search{background:linear-gradient(130deg,#111d33,#10172b);border-color:#60cbd32e}.brand{border-bottom:0;padding-bottom:16px;margin-bottom:0}
+@media(max-width:360px){.studio-overview{padding:12px}.overview-head{font-size:7px}.skin-grid .skin .shade{font-size:10px}}
+
+@font-face{font-family:'Nunito';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/nunito-500.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/nunito-600.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/nunito-700.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/nunito-800.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/nunito-900.woff2') format('woff2')}
+html,body,button,input,select,textarea,.az,.studio-overview .metric strong,.job-orbit span{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.brand-picture{display:block;flex:none;width:58px;height:58px}.brand .brand-avatar{display:block;width:58px;height:58px;border:0;background:none;border-radius:0;object-fit:contain;box-shadow:none;filter:drop-shadow(0 4px 7px #0004)}
+#app .skin-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:12px;row-gap:10px}
+#app .skin-grid .skin{grid-template-rows:auto auto;row-gap:6px;align-self:start}
+#app .skin-grid .skin-pic{aspect-ratio:1;height:auto;min-height:0}
+#app .skin-grid .skin-pic img{position:absolute;inset:0;width:100%;height:100%}
+#app .skin-grid .skin .shade{height:auto;min-height:0;max-height:32px;line-height:16px;font-size:11px;font-weight:800;margin:0;padding:0;letter-spacing:0}
+#app .skin-grid .skin.sel .skin-pic{border:3px solid #48f4a9;outline:none;box-shadow:0 0 0 1px #43e9a63a,0 6px 22px #43e9a626}
+#app .skin-grid .skin.sel .skin-pic:after{background:linear-gradient(160deg,#25dd8455,#24af786e);z-index:2}
+#app .skin-grid .skin.sel .shade{color:#58eeb0;text-shadow:none}
+#app .skin-grid .skin .check{left:50%;top:50%;right:auto;transform:translate(-50%,-50%);width:36px;height:36px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:white;z-index:4}
+#app .skin-grid .check svg{width:31px;height:31px;filter:drop-shadow(0 2px 3px #05442c44)}
+@media(min-width:700px){#app .skin-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 16px}#app .skin-grid .skin .shade{font-size:12px;line-height:17px;max-height:34px}}
+@media(max-width:360px){#app .skin-grid{column-gap:10px;row-gap:9px}#app .skin-grid .skin .shade{font-size:10.5px}.brand-picture,.brand .brand-avatar{width:52px;height:52px}}
+
+
+/* Lightweight motion and section accents: animate opacity/transform only. */
+#app.scene-enter{animation:sceneEnter .26s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sceneEnter{from{opacity:.2;transform:translateY(10px)}to{opacity:1;transform:none}}
+#jobPanel:not([hidden]){animation:sceneEnter .28s ease both}
+.studio-overview,.hero-card,.platform,.progress-card,.history-card,#jobPanel,.bottom{border-color:#48dcea66;box-shadow:inset 0 1px 0 #a2f6ff0d,0 8px 30px #00000016}
+.metric{border-color:#42d8f270}.metric:nth-child(2){border-color:#9d83ff77}.metric.sel{border-color:#ee84c877}
+.cart-row{border-color:#8d8bff66}.history-card{border-color:#5cebb566}.platform{border-color:#a48aff66}
+.az{border-color:#4fcfe94d}.skin-pic{border-color:#55ddef66}.skin.sel .skin-pic{border-color:#44efac}
+.navbtn.on{border-color:#68e8ff99;box-shadow:inset 0 0 18px #51ddff0c,0 0 16px #52dfff0c}
+button,a{touch-action:manipulation}button{transition:transform .14s ease,border-color .18s ease,background-color .18s ease}
+button:active{transform:scale(.97)}button:focus-visible,a:focus-visible{outline:2px solid #67e8f9;outline-offset:3px}
+.skin-pic.pending:before{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(110deg,transparent 20%,#6fe6ff16 48%,transparent 75%);animation:imageShimmer 1.4s ease-in-out infinite}
+@keyframes imageShimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.skin-pic{overflow:hidden}.skin-pic.image-failed:before{content:'↻';position:absolute;inset:0;display:grid;place-items:center;color:#74dbe5;font-size:24px;animation:none}
+#bootProgress{position:fixed;z-index:100;top:0;left:0;right:0;height:3px;overflow:hidden;pointer-events:none;background:#112235}
+#bootProgress:after{content:'';display:block;width:40%;height:100%;background:linear-gradient(90deg,#46e8cf,#64deff,#aa8bff);animation:bootSweep 1s ease-in-out infinite}
+#bootProgress.done{opacity:0;transition:opacity .2s ease}
+@keyframes bootSweep{from{transform:translateX(-100%)}to{transform:translateX(350%)}}
+@media(prefers-reduced-motion:reduce){#app.scene-enter,#jobPanel:not([hidden]),.skin-pic.pending:before,#bootProgress:after{animation:none}button,#bootProgress.done{transition:none}}
+
+/* Clear outlines inspired by the supplied colored frames. */
+.brand{padding:14px 12px;margin-bottom:18px;border:1.5px solid #65e8ff;border-radius:22px;background:linear-gradient(120deg,#0e2131cc,#151b32cc);box-sizing:border-box}
+.brand b{font-weight:900;letter-spacing:-.025em;text-shadow:0 0 16px #7bdfff25}
+.studio-overview{border:2px solid #48eca8;box-shadow:0 0 18px #48eca80b,inset 0 1px 0 #ffffff0c}
+.overview-head{color:#64f1b4}.overview-head>span:first-child{font-weight:900}
+.metric{border:1.5px solid #5bdcf2}.metric:nth-child(2){border-color:#ad8dff}.metric.sel{border-color:#f091ce}
+.row,.hero-card,.cart-row,.history-card,.history-info,.platform,.search,.empty,#jobPanel,.bottom,.tip{border:1.5px solid #71dcf2;box-sizing:border-box}
+.row{border-color:#62e8b0}.row:nth-of-type(2n){border-color:#ac91f7}.row:nth-of-type(3n){border-color:#edab6f}
+.hero-card{border-color:#65e5fb}.cart-row{border-color:#b298fc}.history-card,.history-info{border-color:#6de9b2}
+.platform{border-color:#f1a569}.platform-head{color:#ffc189}.tip{border-color:#f1a56966;border-radius:12px}
+#jobPanel{border:2px solid #b097ff}.bottom{border-color:#70d8f2;box-shadow:0 0 22px #58dfff0b,0 8px 24px #00000033}
+.az{border:1.5px solid #6bdaed}.az.active{border-color:#50efab}.skin-pic{border:1.5px solid #66ddec}.skin.sel .skin-pic{border-width:3px;border-color:#44efac}
+.back,.seg,.job-action,.clear-cart,.iconbtn,.remove,.job-skins span,.chip,.navbtn{border:1px solid #65dbee88}
+.seg.on,.navbtn.on{border-color:#67efff;background:linear-gradient(130deg,#1e566a77,#34345c77)}
+.remove,.clear-cart{border-color:#ed92bc}.picker-action{border-color:#6de6c1}.history-action{border-color:#ba9df9}
+.run,#taskButton,#downloadFile{border:1.5px solid #b4faff}.search:focus-within{border-color:#5ff4cc;box-shadow:0 0 0 3px #5ff4cc12}
+.section-kicker{display:table;padding:4px 10px;border:1px solid #b397ff88;border-radius:8px;font-weight:900;background:#171b33}
+.sound-row{gap:12px}.sound-row input{margin-left:auto;flex:none;accent-color:#50ebaf;width:20px;height:20px}.sound-icon{color:#69efb7;flex:none;width:24px;height:24px}
+@keyframes sceneEnter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#app.scene-enter{animation-duration:.3s}
+@media(hover:hover){.row:hover,.az:hover,.skin:hover .skin-pic{border-color:#a0f6ff;box-shadow:0 0 14px #69e9ff18}}
+@media(max-width:360px){.brand{gap:8px;padding:12px 8px}.brand b{font-size:14px}}
+
+/* Scope matches the existing skin selectors so the border cannot be overridden. */
+#app .skin-grid .skin .skin-pic{border:2px solid var(--skin-accent,#65deef);box-shadow:0 0 0 1px color-mix(in srgb,var(--skin-accent,#65deef) 18%,transparent),0 4px 14px #0003}
+#app .skin-grid .skin .skin-pic img{inset:0;width:100%;height:100%}
+#app .skin-grid .skin.sel .skin-pic{border:3px solid #48f4a9;box-shadow:0 0 0 1px #43e9a63a,0 6px 22px #43e9a626}
+@media(hover:hover){#app .skin-grid .skin:not(.sel):hover .skin-pic{border-color:var(--skin-accent,#65deef);box-shadow:0 0 15px color-mix(in srgb,var(--skin-accent,#65deef) 22%,transparent)}}
+.bottom{border:0;outline:0;box-shadow:none}
+.bottom .nav{border:1.5px solid #70d8f2;box-shadow:0 0 18px #58dfff0b,0 -8px 24px #00000033}
+
+/* Balanced home accents, with portrait-specific hero cards. */
+.brand{border-color:#aa9bdf}.studio-overview{border-color:#67c7af}
+.studio-overview:before,.studio-overview:after{border-color:#67c7af}
+.studio-overview .summary .metric{border-color:#6eaecc}.studio-overview .summary .metric:nth-child(2){border-color:#a38bd7}.studio-overview .summary .metric.sel{border-color:#d69aac}
+.search{border-color:#7e9bcf}.bottom .nav{border-color:#8c95c5}
+.az{border:1.5px solid var(--letter-accent,#7faccf)}
+#app .row.hero-row{border:1.5px solid var(--hero-accent,#7eafcb)}
+#app .hero-card{border-color:var(--hero-accent,#7eafcb)}
+#app .hero-row .avatar,#app .hero-card .avatar{border:1px solid var(--hero-accent,#7eafcb);box-sizing:border-box}
+#navHeroes{border-color:#73c7db88}#navCart{border-color:#6ed2a888}#navHistory{border-color:#d5b47988}#navOther{border-color:#ae96d188}
+#navHeroes.on{border-color:#73dff5}#navCart.on{border-color:#74e5b7;color:#74e5b7}#navHistory.on{border-color:#e7c286;color:#e7c286}#navOther.on{border-color:#c0a6f2;color:#c0a6f2}
+@media(hover:hover){#app .row.hero-row:hover{border-color:var(--hero-accent,#7eafcb)}}
+
+.brand{border:0;outline:0;background:none;box-shadow:none;border-radius:0;padding:5px 0 22px;margin-bottom:16px}
+.brand-avatar,.brand-picture{border:0;outline:0;box-shadow:none;background:none}
+#app .empty:not(.az){border-radius:24px;background:linear-gradient(135deg,#10253777,#151b3177);padding:40px 20px}
+
+/* Semantic progress and distinct neighboring accents. */
+#jobPanel{--job-accent:#ff7885}
+#jobPanel[data-status="complete"]{--job-accent:#58e7a6}
+#jobPanel #jobRing{stroke:var(--job-accent);transition:stroke-dashoffset .5s,stroke .25s}
+#jobPanel #jobPercent{color:var(--job-accent)}
+#jobPanel[data-status="complete"] #jobPercent{font-size:38px}
+#jobPanel #jobState,.job-status[data-status="pending"]{color:var(--job-accent,#ff7885);border-color:var(--job-accent,#ff7885);background:#ff78850b}
+#jobPanel[data-status="complete"] #jobState,.job-status[data-status="complete"]{color:#58e7a6;border-color:#58e7a680;background:#58e7a60d}
+#jobPanel #jobProgress::-webkit-progress-value{background:var(--job-accent)}
+#jobPanel #jobProgress::-moz-progress-bar{background:var(--job-accent)}
+#app .bright-row{display:flex;align-items:center;gap:14px;border-color:#b29aeb;padding:17px;background:linear-gradient(135deg,#25214088,#14283b88)}
+.bright-icon{color:#c5adff;font-size:27px}.bright-row .txt{flex:1}.bright-row small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.theme-check,#soundToggle{appearance:none;-webkit-appearance:none;width:25px;height:25px;flex:none;border:1.5px solid #a98bd9;border-radius:8px;background:#091726;display:grid;place-items:center;cursor:pointer;transition:background .16s,border-color .16s;margin:0}
+.theme-check:checked,#soundToggle:checked{background:#66e3ad;border-color:#66e3ad}
+.theme-check:checked:after,#soundToggle:checked:after{content:'✓';font-weight:900;font-size:19px;color:#0c2b24}
+.theme-check:focus-visible,#soundToggle:focus-visible{outline:2px solid #96eaff;outline-offset:3px}
+#app .cart-row{border-color:var(--card-accent,#b298fc)}
+#app .usage-row{border-color:#a994dc}
+#app .history-info{border-color:#80b6de}
+#app .history-card:nth-of-type(3n+1){border-color:#79d6b4}
+#app .history-card:nth-of-type(3n+2){border-color:#b19be7}
+#app .history-card:nth-of-type(3n){border-color:#e1b578}
+#jobSkins span:nth-child(5n+1){border-color:#7cc7e2}
+#jobSkins span:nth-child(5n+2){border-color:#b19be7}
+#jobSkins span:nth-child(5n+3){border-color:#79d6b4}
+#jobSkins span:nth-child(5n+4){border-color:#e1b578}
+#jobSkins span:nth-child(5n){border-color:#dd98b6}
+#app .segment .seg:nth-child(1){border-color:#66cbad80}
+#app .segment .seg:nth-child(2){border-color:#88baff80}
+#app .segment .seg:nth-child(3){border-color:#ba9af480}
+#navHeroes{white-space:nowrap}
+
+
+#jobPercent .completion-check{width:38px;height:38px;transform:none;fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+.theme-check:checked:after,#soundToggle:checked:after{content:'';width:12px;height:7px;border-left:2.5px solid #0c2b24;border-bottom:2.5px solid #0c2b24;transform:translateY(-2px) rotate(-45deg)}
+#app .segment .seg{position:relative;border-width:1px;min-height:46px;transition:background .18s,color .18s,border-color .18s}
+#app .segment .seg{min-height:0;padding:9px 4px;border-width:1px}
+#app .segment .seg:nth-child(1).on{background:linear-gradient(135deg,rgba(61,224,139,.19),rgba(28,124,86,.13));color:#52e49b;border:1px solid #66cbad80;box-shadow:inset 0 0 0 1px rgba(82,228,155,.42),0 0 18px rgba(82,228,155,.07)}
+#app .segment .seg:nth-child(2).on{background:linear-gradient(135deg,rgba(73,160,255,.20),rgba(59,97,210,.13));color:#70b7ff;border:1px solid #88baff80;box-shadow:inset 0 0 0 1px rgba(112,183,255,.42),0 0 18px rgba(112,183,255,.07)}
+#app .segment .seg:nth-child(3).on{background:linear-gradient(135deg,rgba(166,105,255,.20),rgba(103,66,204,.13));color:#c49aff;border:1px solid #ba9af480;box-shadow:inset 0 0 0 1px rgba(196,154,255,.42),0 0 18px rgba(196,154,255,.07)}
+#app .segment .seg.on{transform:translateY(-1px);font-weight:850}
+#app .segment .seg.on svg{color:inherit}
+#app .segment .seg.on:after{content:none}
+#stepBuild{--step-color:#ff7885}#stepTask{--step-color:#70b7ff}#stepDownload{--step-color:#58e7a6}
+#jobPanel .job-step{color:var(--step-color);border-color:var(--step-color);opacity:.48}
+#jobPanel .job-step.on,#jobPanel .job-step.complete{color:var(--step-color);border-color:var(--step-color);opacity:1}
+
+
+#siteNotice{width:min(92vw,540px);max-height:82dvh;padding:24px;border:1.5px solid #8c95c5;border-radius:24px;background:linear-gradient(140deg,#10213a,#0b172a);color:#f5f9ff;box-shadow:0 18px 70px #0008;animation:sceneEnter .22s ease}
+#siteNotice::backdrop{background:#020713bf}#siteNotice h2{margin:0 0 16px;font-size:22px;color:#70d8f2;overflow-wrap:anywhere}#siteNoticeText{white-space:normal;overflow-wrap:anywhere;line-height:1.7;font-size:15px}#siteNotice button{display:block;margin:22px 0 0 auto;padding:12px 24px;border:1px solid #70d8f2;border-radius:12px;background:#67c7af;color:#07101f;font:700 15px inherit;cursor:pointer}@media(prefers-reduced-motion:reduce){#siteNotice{animation:none}}
+.cosmetic-options .segment{grid-template-columns:1fr 1fr}.cosmetic-options .seg{font-size:12px;min-height:54px;white-space:normal}.cosmetic-symbol{font-size:26px;color:#b89afb}.cosmetic-options{border-color:#a38bd7}
+#siteNoticeText p{margin:0 0 14px}#siteNoticeText a{color:#70d8f2;text-decoration:underline}#siteNoticeText img,#siteNoticeText video{display:block;width:100%;height:auto;max-height:48dvh;object-fit:contain;border-radius:14px;margin:14px 0}#siteNoticeText blockquote{border-left:3px solid #a38bd7;padding-left:14px;margin-left:0;color:#aab9d1}
+#modChoiceDialog{box-sizing:border-box;width:min(calc(100vw - 32px),360px);max-height:80dvh;overflow:auto;padding:16px;border:1px solid #a38bd7;border-radius:18px;background:linear-gradient(140deg,#10213a,#0b172a);color:#f5f9ff;box-shadow:0 18px 70px #0008}#modChoiceDialog::backdrop{background:#020713bf}.mod-choice-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.mod-choice-head h2{margin:0;font-size:18px;color:#70d8f2}.mod-choice-head button{display:grid;place-items:center;width:32px;height:32px;padding:0;background:#14223b;color:#b8a4e9;border:1px solid #766794;border-radius:9px;font-size:20px}#modChoiceSummary{color:#aab9d1;font-size:12px;margin:6px 0 14px}.mod-choice{box-sizing:border-box;display:flex;width:100%;align-items:center;text-align:left;gap:10px;border:1px solid #485873;background:#14233a;color:#f5f9ff;border-radius:12px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}.mod-choice b{display:block;font-size:14px;line-height:1.4}.mod-choice small{display:block;color:#aab9d1;font-size:11px;line-height:1.5;margin-top:3px}.mod-choice[data-cosmetics="true"][aria-pressed="true"]{border-color:#79d6b4;background:#163b3e;box-shadow:0 0 0 1px #79d6b433}.mod-choice[data-cosmetics="false"][aria-pressed="true"]{border-color:#ff8596;background:#482331;box-shadow:0 0 0 1px #ff859633}.mod-choice-tip{color:#aab9d1;font-size:11px;line-height:1.5;margin:12px 0}.mod-choice:hover{filter:brightness(1.1)}#modChoiceCreate{box-sizing:border-box;width:100%;min-height:44px;margin:4px 0 0;padding:12px 16px;border:0;border-radius:12px;background:linear-gradient(110deg,#ae91ef,#8484e8);color:#10162d;font:inherit;font-size:14px;font-weight:800;cursor:pointer}#modChoiceCreate:disabled{opacity:.4;cursor:default}
+
+#app .color-toggle{position:relative;cursor:pointer;transition:background .16s,border-color .16s;min-height:68px}
+#app .color-toggle[data-enabled="true"]{border-color:#79d6b4;background:#163b3e}
+#app .color-toggle[data-enabled="false"]{border-color:#ff8596;background:#482331}
+#app .color-toggle[data-enabled="true"] .toggle-state{color:#79d6b4}
+#app .color-toggle[data-enabled="false"] .toggle-state{color:#ff8596}
+#app .color-toggle .txt{flex:1;min-width:0}
+#app .color-toggle .toggle-state{flex:none;font-size:12px;font-weight:800}
+#app .color-toggle input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;clip-path:inset(50%);overflow:hidden;border:0;opacity:0}
+#app .color-toggle input:after{display:none;content:none}
+#app .color-toggle:focus-within{outline:2px solid #96eaff;outline-offset:3px}
+
+#app .segment .seg:nth-child(1).on{background:#164f3e;color:#9bf7ce;border-color:#79d6b4;box-shadow:inset 0 0 0 1px #79d6b4}
+#app .segment .seg:nth-child(2).on{background:#214775;color:#c4e3ff;border-color:#86bfff;box-shadow:inset 0 0 0 1px #86bfff}
+#app .segment .seg:nth-child(3).on{background:#493474;color:#e6d4ff;border-color:#c4a2ff;box-shadow:inset 0 0 0 1px #c4a2ff}
+#app .music-row{width:100%;text-align:left;font:inherit;color:var(--text);display:flex;align-items:center;gap:12px}
+#app .music-row small{display:block;font-size:11px;line-height:1.6;color:var(--muted);margin-top:4px}
+.usage-body{font-size:11px;line-height:1.7;color:var(--muted);margin-top:6px}.usage-steps{padding-left:18px;margin:8px 0 14px}.usage-steps li{margin-bottom:8px}.usage-row p{margin:12px 0 0}
+
+#app .usage-guide{padding:14px;border:1px solid #8979bb;border-radius:18px;background:linear-gradient(140deg,#11233a,#0c182b);color:#d1def0;margin-bottom:12px}
+#app .usage-heading{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+#app .usage-heading h2{font-size:15px;line-height:1.4;margin:0;color:#f4f8ff;letter-spacing:0}
+#app .usage-book{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#21394c;color:#83dfef;flex:none}
+#app .usage-book svg{width:20px;height:20px}
+#app .usage-guide .usage-body{font-size:12px;line-height:1.6;margin:0;color:#b5c5da}
+#app .usage-guide .usage-body strong{display:inline;font-size:inherit;line-height:inherit;font-weight:800;white-space:normal;color:#e1eafa}
+#app .usage-guide .usage-steps{list-style:none;counter-reset:guide;margin:0;padding:0;display:grid;gap:9px}
+#app .usage-guide .usage-steps li{counter-increment:guide;display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;margin:0}
+#app .usage-guide .usage-steps li:before{content:counter(guide);display:grid;place-items:center;align-self:start;width:22px;height:22px;border-radius:7px;background:#29364f;color:#bca8eb;font-size:11px;font-weight:800}
+#app .usage-guide .usage-download{margin-top:12px;padding:10px;border-radius:10px;background:#143438;border:1px solid #588b8166}
+#app .usage-guide .usage-download>strong{color:#88d6bd}
+#app .usage-guide .usage-download p{margin:4px 0 0}
+#app .usage-guide .usage-footnote{font-size:11px;line-height:1.6;margin:10px 0 0;color:#98adc6}
+</style>
+</head>
+<body>
+<div id="bootProgress" role="status" aria-label="Đang tải web"></div>
+<div id="scrollArea"><div class="wrap"><header class="brand"><picture class="brand-picture"><source media="(prefers-reduced-motion: reduce)" srcset="/assets/td-avatar.png?v=nunito1"><img class="brand-avatar" src="/assets/td-avatar.webp?v=nunito1" alt="Avatar TD MOD" width="58" height="58"></picture><div><b>TD MOD SKIN AOV</b><small>YOUR SKIN. YOUR STYLE.</small></div><span class="live" aria-label="Web trực tuyến"></span></header>
+<section id="jobPanel" hidden aria-live="polite"><div class="job-top"><span class="eyebrow">SKIN STUDIO / FILE CỦA BẠN</span><span id="jobState" class="job-status">ĐANG TẠO</span></div><div class="job-center"><div class="job-orbit"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="36"/><circle id="jobRing" cx="42" cy="42" r="36"/></svg><span id="jobPercent">0%</span></div><div class="job-copy"><h2 id="jobTitle">Đang tạo bản mod</h2><p id="jobDetails">Chuẩn bị skin bạn đã chọn</p></div></div><div id="jobSkins" class="job-skins"></div><span id="jobText"></span><progress id="jobProgress" max="100" value="0" aria-label="Tiến độ tạo file"></progress><div class="job-steps"><div id="stepBuild" class="job-step on">01<b>Tạo file mod</b></div><div id="stepTask" class="job-step">02<b>Làm nhiệm vụ</b></div><div id="stepDownload" class="job-step">03<b>Tải & sử dụng</b></div></div><button id="taskButton" hidden onclick="beginTask()">Nhận nhiệm vụ & mở tải</button><a id="downloadFile" hidden>Tải file mod ZIP</a><p id="jobNote" class="job-note">Bạn có thể rời trang và xem lại tiến độ trong Lịch sử.</p><div class="job-actions"><button id="backToPicker" class="job-action picker-action" onclick="returnToPicker()"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5-7 7 7 7M3 12h13a5 5 0 0 1 5 5"/></svg><span>Quay lại chọn mod</span><span class="action-arrow">→</span></button><button id="collapseJob" class="job-action history-action" onclick="closeJob()"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 3 7M3 4v7h7M12 7v5l3 2"/></svg><span>Thu gọn · Xem lịch sử</span><span class="action-arrow">→</span></button></div></section><main class="fade" id="app"></main></div></div>
+<nav class="bottom"><div class="nav">
+  <button class="navbtn" id="navHeroes" onclick="setTab('heroes')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6l8-3Z"/><path d="m8 13 4-6 4 6-4 4-4-4ZM12 7v10"/></svg>
+    CHỌN SKIN
+  </button>
+  <button class="navbtn" id="navCart" onclick="setTab('cart')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="m8 12 2.4 2.4L16.5 8.5"/></svg>
+    ĐÃ CHỌN <span class="badge hidden" id="cartBadge">0</span>
+  </button>
+  <button class="navbtn" id="navHistory" onclick="setTab('history')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 11a9 9 0 1 1 2.8 7M3 4v7h7M12 7v5l3 2"/></svg>LỊCH SỬ</button>
+  <button class="navbtn" id="navOther" onclick="setTab('other')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M8 4v6M16 14v6"/></svg>
+    CÀI ĐẶT
+  </button>
+</div></nav>
+<div id="toast" class="toast hidden"></div>
+<script>
+const tg=null;
+if(tg){tg.ready();tg.expand();try{tg.setHeaderColor('#050914');tg.setBackgroundColor('#050914')}catch(e){};if(tg.disableVerticalSwipes)tg.disableVerticalSwipes()}
+function syncVH(){const vh=(tg&&tg.viewportStableHeight)||window.visualViewport?.height||innerHeight;document.documentElement.style.setProperty('--tg-vh',vh+'px');requestAnimationFrame(syncBottomSpace)}
+syncVH();addEventListener('resize',syncVH);window.visualViewport?.addEventListener('resize',syncVH);if(tg?.onEvent)tg.onEvent('viewportChanged',syncVH);
+
+const MAX_SLOTS=15;
+const BOOT_CATALOG={"Toro":{"Đặc cảnh NYPD":"10501","Trung phong cắm":"10502","Thần thoại Hy Lạp":"10503","Ngưu hải vương":"10504","Bạch mao ngưu":"10505","Tử Lôi Thần Ngưu":"10506","Hiểm họa hỗn mang":"10507","Trâu siêu tốc":"10508"},"Krixi":{"Công chúa bướm":"10601","Xứ sở thần tiên":"10602","Tiệc bãi biển":"10603","Cô tiên thỏ":"10604","Phó văn nghệ":"10605","Tiểu yêu nữ":"10606","Hồ thiên nga":"10607","Thần thoại Hy Lạp":"10608","Thủy thủ":"10609","Lốc xoáy kinh hoàng Tatsumaki":"10611","Nàng tiên nổi loạn":"10613","Tiểu hồng mai":"10615","Quán quân":"10617","Kimono":"10618","Phù thủy thời không":"10620","Uyên Ương mộng điệp":"10621"},"Zephys":{"Oán linh":"10701","Hiệp sĩ bí ngô":"10703","Dung nham":"10704","Siêu việt":"10705","Phi thương":"10706","Tư lệnh viễn chinh":"10707","Hắc vô thường":"10708","Inosuke Hashibira":"10709","Đầu bếp Sashimi":"10711","Nghệ nhân đồ chơi":"10712","Kỷ Nguyên Hổ Phách":"10714","Đại ca đường phố":"10715"},"Gildur":{"Tiệc bãi biển":"10801","Phượt thủ":"10802","Đại gia học viện":"10803","Đại võ sư":"10804","Thuyền trưởng râu bạc":"10805","Bác học thiên tài":"10806","Phù thủy Ba Tư":"10807","Xích Long":"10809","PASULOL":"10811","Jiji":"10812"},"Veera":{"Cô giáo hắc ám":"10901","Góa phụ giả kim":"10902","Nàng dơi tuyết":"10903","Y tá bạo loạn":"10904","Thiên nga đen":"10905","Vũ hội bóng đêm":"10906","Kimono":"10907","Vũ điệu samba":"10908","Đánh cắp trái tim":"10910","Dơi hắc ám":"10911","A.I love you":"10912","Bách hoa tiên nữ":"10913","Phù thủy Hội họa":"10914","Thất Sát - Thượng Sinh":"10915","My Melody‘s Love":"10916","Momo":"10917"},"Kahlii":{"Cô dâu hắc ám":"11001","Quàng khăn đỏ":"11003","Kim cô giáo chủ":"11004","Siêu đầu bếp":"11005","Vũ hội bóng đêm":"11006","Tử Điệp":"11007","Robot hộ lý":"11008","Rối nước Thủy đình":"11009","Linh Hoa thần nữ":"11010","Oán nữ tai ương":"11011"},"Violet":{"Nữ hoàng pháo hoa":"11101","Nữ đặc cảnh":"11102","Phi công trẻ":"11103","Mèo siêu quậy":"11104","Tiệc bãi biển":"11105","Phó học tập":"11106","Thứ nguyên vệ thần":"11107","Pháo hoa Neon":"11108","Đặc dị":"11109","Vợ người ta":"11110","Tay súng siêu phàm":"11111","Huy chương vàng":"11112","Huyết ma thần":"11113","Lam tước":"11114","Thần Long tỷ tỷ":"11115","DJ Câu hồn":"11116","Hoa thủy tiên":"11117","Vọng nguyệt Long Cơ":"11119","Nobara Kugisaki":"11120","Nữ quản thú":"11121"},"Yorn":{"Cung thủ bóng đêm":"11201","Thế tử nguyệt tộc":"11202","Đặc nhiệm SWAT":"11203","Phá Vân tiễn":"11204","Long thần soái":"11205","Nam thần giáng sinh":"11206","Soái ca học đường":"11207","Thần thoại Hy Lạp":"11208","Lục nguyệt cung":"11209","Soái ca bãi biển":"11211","Vệ Binh ngân hà":"11212","Ký giả diệu kỳ":"11214","Conan Edogawa":"11215","Thương nhân sa mạc":"11216"},"Chaugnar":{"Ác mộng sinh hóa":"11301","Quang vinh":"11303","Quân cảnh":"11304","Ác mộng Arcade":"11307","Siêu cấp Pizza":"11308"},"Omega":{"Người máy xanh":"11402","Cỗ máy siêu tốc":"11403","Hộ vệ ba bích":"11404","Hộ vệ Carano":"11405","Sứ Thanh Hoa":"11406","Samurai Cơ Hóa":"11407","Khởi Nguyên":"11408"},"Jinna":{"Đại tư tế":"11501","Dạ xoa vương":"11502","Hỏa nhãn ma vương":"11503","Kim quang thánh đồ":"11504","Kim giác":"11506","Ma thuật sĩ":"11507","Mafia":"11508"},"Butterfly":{"Xuân nữ ngổ ngáo":"11601","Thủy thủ":"11602","Teen nữ công nghệ":"11603","Nữ quái nổi loạn":"11604","Quận chúa đế chế":"11605","Đông êm đềm":"11606","Phượng cửu thiên":"11607","Cẩm y vệ: Chu tước":"11608","Asuna Tia Chớp":"11610","Stacia":"11611","Gánh anh đến cùng":"11613","Kim Ngư thần nữ":"11614","Nữ thần Khởi nguyên":"11616","Tình yêu nổi loạn":"11618","Rockgirl Siêu Đẳng":"11619","Bình Minh Tận Thế":"11620","Ninh Tần":"11621","Thỏ may mắn":"11622"},"Ormarr":{"Cựu chiến binh":"11701","Thông thỏa thích":"11703","Giáo viên thể hình":"11704","Ông chủ KFC":"11705","CĐV Cuồng nhiệt":"11706","Quỷ vệ":"11707","Chuyện của nhà nông":"11708"},"Alice":{"Nhà chiêm tinh":"11801","Phi hành gia":"11802","Bé gấu tuyết":"11803","Xứ sở thần tiên":"11804","Dạ hội":"11805","Tiểu quỷ bí ngô":"11806","Bé du xuân":"11807","Quân nhạc Athanor":"11808","Tiểu tiên tử":"11809","The Butterfly Mansion Girl":"11810","Eternal Sailor Chibi Moon":"11812","Xứ sở diệu kỳ":"11816","Ốc quế tinh nghịch":"11817","Tiên Nữ Mộng Giới":"11818"},"Mganga":{"Hề cung đình":"11901","Tiệc bánh kẹo":"11902","Pháp sư mèo":"11903","Nhà hóa học":"11904","Độc toàn thân":"11905","Quái tặc không gian":"11906","Đèn Thần Hậu Đậu":"11907","Doombot Huỷ diệt":"11908"},"Mina":{"Tiểu thư đoạt hồn":"12001","Chị đại lắm chiêu":"12002","Tiệc bánh kẹo":"12003","Kẹo hay ghẹo":"12004","Lưỡi hái hoàng kim":"12005","Đào tạo siêu sao":"12006","Nữ thần Ai Cập":"12007","Linh xà Yêu vũ":"12008","Xích Huyết Diễm Quỷ":"12011","Cẩm y vệ - Kim Ô":"12012","Tiệc bãi biển":"12013"},"Marja":{"Lam Hải yêu hậu":"12101","Linh xà tư tế":"12102","Hỏa ngọc nữ vương":"12103","Yêu nữ săn mồi":"12104","Chủ hôn":"12105","Phù Quang Mạc Ảnh":"12106","Hi Phi":"12107","Huyết Mẫu Tà Linh":"12108"},"Maloch":{"Ác ma địa ngục":"12301","Tiệc hóa trang":"12302","Samurai tử sĩ":"12303","Đại tướng Rô bốt":"12304","Ông kẹ bí ngô":"12305","Ác nhân vô tuyến":"12306","Vũ hội bóng đêm":"12307","Đại ca Mukbang":"12308","Quỷ nhãn ma thể":"12309","Đao phủ Dạ Ưng":"12310","Đại Thiên Tu La":"12311","Đấu Sĩ Đoạt Thẻ":"12312","Bách Tướng Ma Nhân":"12313"},"Ignis":{"Hỏa thuật sư":"12401","Quang vinh":"12402","Bắc băng vương":"12403","Thầy tế mặt trời":"12404","Thần mặt trời":"12405","Nguyệt lão":"12406","Vì sao con khóc":"12407"},"Arduin":{"Cận vệ hoàng gia":"12601","Quang vinh":"12602","Tà linh hiệp sỹ":"12603","Chiến binh cổ đại":"12604","Đường vào tim em":"12605","Bạch vệ chiến giáp":"12606","Organ cổ quái":"12607","Ngạo Hổ Hàn Đao":"12608","Nhà vô địch":"12609","Cự thần Biển Mây":"12610"},"Azzen'Ka":{"Linh hồn lữ khách":"12702","Ghẹo hay Kẹo":"12703","Quỷ diện lãng khách":"12704","Quang vinh 2.0":"12705","Giáng sinh \"An lành\"":"12706","Azzen'Ka U hồn sa mạc":"12707","Tông đồ thần miếu":"12708"},"Lữ Bố":{"Tiệc bãi biển":"12801","Nam vương":"12802","Long kỵ sĩ":"12803","Kỵ sĩ âm phủ":"12804","Đặc nhiệm SWAT":"12805","Tư lệnh Robot":"12806","Hỏa long chiến thần":"12807","Ichigo Kurosaki":"12808","Thần ngọc":"12809","Vũ điệu samba":"12810","Cửu Thiên Lôi Thần":"12812"},"Triệu Vân":{"Tiến sĩ thiên tài":"12901","Đoạt mệnh thương":"12902","Quý công tử":"12903","Dũng sĩ đồ long":"12904","Quang vinh":"12905","Chiến tướng mùa đông":"12906","Kỵ sĩ tận thế":"12907","Cẩm y vệ: Hỏa long":"12908","Thần tài":"12910","Minh Chung Long Đế":"12912","Chiến Thần Vô Song":"12913","Đấu Sĩ Võ Đài":"12914","Phá ma thương":"12915"},"Airi":{"Thích khách":"13001","Ninja xanh lá":"13002","Quái xế công nghệ":"13003","Cấm vệ nguyệt tộc":"13004","Kiemono":"13005","Bạch Kiemono":"13006","Phó kiếm đạo":"13007","Tiệc bãi biển":"13008","Mỵ hồ":"13009","Đặc công tử điệp":"13010","Bích Hải thánh nữ":"13011","Lễ hội mùa xuân":"13012","Thánh nữ Xiêm La":"13013","Thứ nguyên Vệ thần":"13015","Ninja ẩm thực":"13017","Búp bê Mộng mị":"13018","Quản lý tài năng":"13019"},"Murad":{"Thợ săn tiền thưởng":"13101","M-TP Thần tượng học đường":"13102","Đồ thần đao":"13103","Siêu việt":"13104","Thiên tài sân cỏ":"13105","Điệp viên Anubis":"13106","Đặc dị":"13107","Siêu việt 2.0":"13108","Chí tôn thần kiếm":"13109","Dược sĩ tình yêu":"13110","Byakuya Kuchiki":"13111","Zenitsu Agatsuma":"13112","Thích khách sa mạc":"13113","S - Quang vinh":"13114","Huyết hỏa cuồng đồ":"13115","Tuyệt thế thần binh":"13116","Chiến binh đồ chơi":"13117","Thiên Luân Kiếm Thánh":"13118","Thần Pháo Hoa":"13119"},"Hayate":{"Bạch ảnh":"13201","Chiến binh trăng khuyết":"13202","Ngân lang":"13203","Tử thần vũ trụ":"13204","Quỷ diện":"13205","Kim ưng sát thủ":"13206","Bạch lang":"13207","Bạch vô thường":"13208","Bóng người dưới trăng":"13209","Tu Di thánh đế":"13210","Mãnh hổ kim cang":"13211","Thống soái Dạ Ưng":"13212","Siêu đạo chích Kid":"13213","Đầu bếp Yakitori":"13214","Thứ nguyên vệ thần":"13215"},"Valhein":{"Hoàng tử quạ":"13301","Vũ khí tối thượng":"13302","Đại công tước":"13304","Quang vinh":"13305","Số 7 thần sầu":"13306","Khiêu chiến":"13307","Cá mập \"nghiêm túc\"":"13308","Hoàng tử Băng":"13309","Thần tài":"13310","Xạ thần Kagutsuchi":"13311","S - Quang vinh":"13312","Đệ nhất thần thám":"13313","Thứ nguyên vệ thần":"13314","Mã Hành Vạn Lý":"13316"},"Skud":{"Sơn tặc":"13402","Quang vinh":"13403","Tà linh ma tướng":"13404","Mafia":"13405","Cứu hộ":"13408","VĐV trượt ván":"13409","Quái thần thủy vực":"13410","Nhà thám hiểm":"13411"},"Thane":{"Kẻ hủy diệt":"13501","Quang vinh":"13503","Mật vụ":"13504","Bác ong bay vừa":"13505","Khoảnh khắc vinh quang":"13506","Dũng sĩ diệt yêu":"13507"},"Ilumia":{"Nữ chúa tuyết":"13601","Thần mặt trời":"13602","Hồng hoa hậu":"13603","Thiên nữ Áo dài":"13604","Nữ hoàng khí giới":"13605","Diva nổi loạn":"13606","Ngược dòng thời gian":"13607","Quý cô nhà hát":"13608","Khải Huyền Thiên Hậu":"13609","Trọng tài":"13610","Thụy Mộc liên hoa":"13611","Nộ hải Thiên ngư":"13612","Lưỡng Nghi Long Hậu":"13613","Hải nữ Oán linh":"13614"},"Paine":{"Khúc nhạc tử vong":"13701","Phi vụ thế kỷ":"13702","Công tước máu":"13703","Ô Thước đại hiệp":"13704","Tử xà bá tước":"13705","Megumi Fushiguro":"13706","Cửu Sơn Tương Liễu":"13707"},"Kil'Groth":{"Cảnh vệ biển":"13901","Quang vinh":"13902","Chú lính chì":"13903","Càn Nguyên thủ vệ":"13904","Hung thần biển sâu":"13905"},"Superman":{"Chúa tể công lý":"14001","Bất công lý":"14002"},"Lauriel":{"Đọa lạc thiên sứ":"14101","Hỏa phượng hoàng":"14102","Phù thủy bí ngô":"14103","Thánh quang sứ":"14104","Hoa khôi giáng sinh":"14105","Lạc thần":"14106","Tinh vân sứ":"14107","Tiệc bãi biển":"14108","Thiên sứ công nghệ":"14109","Phi Thiên":"14110","Thứ nguyên vệ thần":"14111","Nữ vương học đường":"14114","Đôi cánh Nguyệt thực":"14115","Vũ khúc miêu ảnh":"14117","Thiên nữ Dạ Ưng":"14118","Mã Đằng Cửu Thế":"14120"},"Natalya":{"Mị muốn đi chơi":"14201","Nghệ nhân lân":"14202","Quý cô thủy tề":"14203","Phó nháy nhí nhảnh":"14204","Quà quái quỷ":"14205","Nghiệp hỏa yêu hậu":"14206","Băng tâm thần nữ":"14207","Nữ quái công nghệ":"14208","Nghệ sĩ ma mị":"14209","Thần phú quý":"14210","Băng lam nữ soái":"14212","Nguyệt Ảnh Kiếm Tiên":"14213","Kuromi's Heart":"14214","Phù Thủy Bóng Đêm":"14215"},"Taara":{"Đại tù trưởng":"14401","Lam Hải chiến nữ":"14402","Hỏa ngọc nữ đế":"14403","Tiệc bãi biển":"14404","Hồng môn đường chủ":"14405","Tư lệnh hải âu":"14406","Nữ chiến binh":"14407","Thần chiến tranh":"14411","Shion":"14412","Huyết Nộ Cấm Vệ":"14413"},"Zill":{"Lốc địa ngục":"14601","Dung nham":"14602","Cựu thần thiên hà":"14603","Diệt nguyệt tử sĩ":"14604","Thần Mộng Mị":"14605","Phong thần Tu La":"14606","Quái xế":"14610","Con quay gió":"14611","Siêu việt":"14612","Bậc Thầy Sushi":"14613"},"Preyta":{"Không tặc":"14801","Băng hỏa long sư":"14802","Phi cơ F1":"14803","Ma độc huyết long":"14804","Bù nhìn xứ Athanor":"14805"},"Xeniel":{"Thiên sứ hủy diệt":"14901","Trung vệ thép":"14902","Kim sí điểu":"14903","Ma sứ tận thế":"14904","Tổng lãnh tinh hệ":"14905","Thần thoại Hy Lạp":"14906","Shipper bánh mỳ":"14908","Hóa thân Tengu":"14909","Tay trống ngang tàng":"14910","Cấm vệ":"14911"},"Nakroth":{"Chiến binh hỏa ngục":"15001","Quân đoàn địa ngục":"15002","Bboy công nghệ":"15003","Siêu việt":"15004","Khiêu chiến":"15005","Quán quân":"15006","Lôi quang sứ":"15007","Tiệc bãi biển":"15008","Thứ nguyên vệ thần":"15009","Killua":"15012","Quỷ thương Liệp đế":"15013","Producer Tia chớp":"15014","Bạch Diện chiến thương":"15015","Levi":"15016","Đô Thị Truyền Kỳ":"15017"},"Điêu Thuyền":{"Nữ vương anh đào":"15201","Tiệc bãi biển":"15202","Nữ y tá":"15203","WaVe":"15204","Hoa hậu":"15205","Phù thủy bí ngô":"15206","Vũ điệu Nghê Thường":"15207","Tà linh pháp trượng":"15208","Mèo công nghệ":"15209","Thần ngọc":"15210","Thất Tịch tiên tử":"15211","Eternal Sailor Moon":"15212","Mối tình đầu":"15213","Tuế Hàn Đỗ Quyên":"15216","Nhật Nguyệt Thánh Linh":"15217","Nữ hoàng âm nhạc":"15218"},"Kaine":{"Đôi cánh đại dương":"15301","Dơi địa ngục":"15302","Người dơi":"15303","Chiến binh kim quang":"15304","Thiếu chủ bóng đêm":"15305","Thợ săn chính nghĩa":"15306"},"Yena":{"Khuyên bạc":"15401","Thỏ may mắn":"15402","Chiến binh nguyệt tộc":"15403","Hoạt náo viên":"15404","Nữ hoàng thể thao":"15405","Dạ nguyệt thánh nữ":"15406","Giảng viên tình ái":"15407","Nữ cướp biển":"15408","WaVe":"15409","Vũ điệu Giáng Sinh":"15410","Huyền Cửu Thiên":"15412","Trấn Yêu Thần Lộc":"15413","Thần Sứ kiều diễm":"15414","Hoa tiêu Mộng giới":"15415"},"Aleister":{"Thiếu niên hắc ám":"15601","Quang vinh":"15602","Quỷ soái nguyệt tộc":"15603","Siêu sao bóng rổ":"15604","Xứ sở thần tiên":"15605","Tư lệnh viễn chinh":"15606","Âm dương sư":"15607","Ảo thuật gia":"15608","Thống lĩnh hỗn mang":"15609","Mật vụ thần thám":"15610","HLV bất bại":"15611","Ác nhân đồ chơi":"15612","S - Quang vinh":"15614"},"Raz":{"Đại tù trưởng":"15702","Băng quyền quán quân":"15703","Chiến thần Muay Thái":"15704","Siêu việt":"15705","Siêu cấp tin tặc":"15706","Saitama Cosplay":"15707","Mãnh lôi thần quyền":"15708","MC võ đài":"15709","Bão vũ Cuồng lôi":"15710","Gon":"15711","Lễ hội té nước":"15712","Đại chiến bùng nổ":"15714"},"Dolia":{"Hoa tiêu đại dương":"15901","Môn đồ tập sự":"15902","Nhật Ký Tình Yêu":"15903","Huyễn Ngọc Nhân Ngư":"15904","Mã Khởi Thiên Ca":"15905"},"Kriknak":{"Bọ cánh bạc":"16201","Yêu trùng cổ mộ":"16202","ST.L-162":"16203","Bọ cánh cam":"16204","Tử trùng DDos":"16205","Bọ hoàng kim":"16206"},"Ryoma":{"Thợ săn tiền thưởng":"16301","Đại tướng nguyệt tộc":"16302","Thanh long bang chủ":"16303","Samurai huyền thoại":"16304","Dạ hội":"16305","Chiến binh Cyborg":"16306","Ultraman":"16307","Đặc nhiệm Giáng sinh":"16308","Khiêu chiến":"16309","Ailing Samurai":"16310","Maple Frost":"16311","Thống lãnh quỷ binh":"16313","Bá Tước Rừng Đen":"16314"},"Arthur":{"Hoàng kim cốt":"16601","Lãnh chúa xương":"16602","Si tình kiếm":"16603","Siêu sao Cricket":"16604","Đặc cảnh băng lôi":"16605","Hiệp sĩ trăng khuyết":"16606","Siêu việt":"16607","Crescent General":"16608","Tôn Hổ vô song":"16609","Hoàng tử Okka":"16610","Băng lam kiếm vệ":"16611","Pompompurin‘s Oath":"16612","Thần Tướng Tróc Quỷ":"16613"},"Ngộ Không":{"Đạo tặc":"16701","Hỏa nhãn kim tinh":"16702","Siêu việt":"16703","Ngộ khá trẩu":"16704","Siêu việt 2.0":"16705","Đặc vụ băng hầu":"16706","Nhóc tì bá đạo":"16707","Tề Thiên ma hầu":"16708","Cổ thần Ai Cập":"16709","Tân niên Võ thần":"16710","Thần Giáp Xích Diễm":"16711","Tề Thiên Võ Thánh":"16712","Đại náo văn phòng":"16713"},"Lumburr":{"Dung nham":"16802","Cự thần viễn cổ":"16803","Máy đào khoáng":"16804","Vệ binh hỏa diệm":"16805","Golem thảo nguyên":"16806","Tóm được ngươi rồi":"16807"},"Slimz":{"Thỏ thợ mỏ":"16901","Chú thỏ ngọc":"16902","Xứ sở thần tiên":"16903","Thỏ nhồi bông":"16904","Giấc mơ trưa":"16905","Lẩu chua cay":"16906","Sứ giả thiên giới":"16907","\"Siêu Cấp Tối Thượng\"":"16909","Linh Hoa đạo sĩ":"16910","Thỏ săn Ác mộng":"16911","Cam siêu quậy":"16912","Chuyên Gia Đổi Thẻ":"16913"},"Moren":{"Anh thợ điện":"17001","Lính cứu hỏa":"17002","Binh nhì":"17003","Thợ cắt cáp":"17005"},"Cresht":{"Thợ sửa cáp":"17101","Cá cắn cáp":"17102","Đại sư sushi":"17103","Tiệc bãi biển":"17104","Bách tướng Lão tam":"17106","Caesar bão tố":"17107","Eren Jaegar":"17108"},"Fennik":{"Nhà thám hiểm":"17301","Đội đặc nhiệm":"17302","Tiệc bánh kẹo":"17303","Tuần lộc láu lỉnh":"17304","Phi hành gia":"17305","Tay đua F1":"17306","Shipper Siêu thanh":"17307","Phi hồ ẩn sĩ":"17308","Phong tranh thám xuân":"17309","Rối Gỗ Tinh Quái":"17310","Cáo chiêu tài":"17311","Sứ giả may mắn":"17312"},"Stuart":{"Trò đùa tử vong":"17401","Vua hề":"17402","Gã hề":"17403","Đêm kinh hoàng":"17404","Đạo tặc tử quang":"17405","Streamer bí ẩn":"17406","Dạ Xoa thiếu chủ":"17407","Siêu trùm phản diện":"17408"},"Grakk":{"Thuyền trưởng râu đỏ":"17501","Khô lâu đại tướng":"17502","Chàng gấu tuyết":"17503","Đi vào lòng đất":"17504","Mèo \"Thần tài\"":"17505","Sumo":"17506","Tiệc bãi biển":"17507","Màu cờ sắc áo":"17508","Vũ điệu Samba":"17509","Cỗ xe tăng":"17510","Cận vệ Mafia":"17512","Thần ẩm thực":"17517","Thủ vệ Dạ Ưng":"17518","Ngũ Cốc Phong Đăng":"17519"},"Lindis":{"Thám tử tư":"17701","Quang thánh tiễn":"17702","Quang vinh":"17703","Nữ vương pháo hoa":"17704","Dạ tiệc":"17705","Đồng phục Shihakusho":"17706","Đặc vụ thần thám":"17708","Linh Hoa tiễn":"17709"},"Max":{"Hiệp sĩ nhí":"18001","Găng tay vàng":"18002","Quang vinh":"18003","Thần đồng sinh hóa":"18004","Thần thoại Hy Lạp":"18005","Tiểu King Kong":"18006","Chuyên gia đập hộp":"18007","\"Không trêu bạn\"":"18008","Trà chanh":"18009","Người đưa thư":"18010"},"Helen":{"Ngủ trong rừng":"18403","Hotgirl Trà sữa":"18404","Hồng liên tiên tử":"18405","Xứ sở diệu kỳ":"18406","Cổ tích Biển xanh":"18407","Bé hoa xuân":"18408","Trợ lý nghệ sĩ":"18409"},"TeeMee":{"Xiếc cung đình":"18601","Tay đua Siêu Tốc":"18603","Thần thoại Hy Lạp":"18604","Thịt xiên nướng":"18605","Tanuki chiêu tài":"18606","Lẩu nấm":"18609","Giấc mơ ngọt ngào":"18610","Fan cuồng Esports":"18611"},"Arum":{"Thú vệ cổ mộ":"18701","Vũ khúc long hổ":"18702","Linh tượng vu nữ":"18703","Vũ khúc thần sứ":"18704","Thỏ may mắn":"18705","Nữ hoàng gấu xám":"18706","Quản lý tài năng":"18708","Bạn muốn hẹn hò?":"18709","Thần phong Thống lĩnh":"18712","Thần tượng nhạc rock":"18713","Ký Ức Đại Dương":"18714","Chị đại Gangster":"18715"},"Krizzix":{"Cún siêu quậy":"18901","Đội đặc nhiệm":"18902","Nghệ sĩ đường phố":"18903","Trưởng lão":"18905","Cursed Corpse":"18906","Thám tử tư":"18907","Tiến sĩ tắc kè":"18908"},"Tulen":{"Nhà thám hiểm":"19001","Tân thần thiên hà":"19002","Phù thủy kiến tạo":"19003","Đông êm đềm":"19004","Phó kỷ luật":"19005","Tân thần hoàng kim":"19006","Chí tôn kiếm tiên":"19007","Dạ hội":"19008","Thần sứ STL-79":"19009","Hỏa thần long tộc":"19010","Đại úy Athanor":"19011","Tân niên vệ thần":"19012","Tiêu Dao Vũ Thần":"19013","Giám thị sấm sét":"19014","Satoru Gojo":"19015","Thiên Cơ Bạch Trạch":"19016"},"Rouie":{"Sứ giả vũ trụ":"19101","Công chúa hỏa long":"19102","Tuần lộc đáng yêu":"19103","Vẹt cầu vồng":"19104","Sứ giả quang minh":"19105","Quang vinh":"19106","Thụy mộc Thanh long":"19108","Linh Sứ Thời không":"19109","Mèo hầu gái":"19110","Hẹn Ước Tình Yêu":"19111"},"Celica":{"Nữ cao bồi":"19201","Đếm cừu":"19202","S - Quang vinh":"19203","Tâm hồn trà sữa":"19204","Băng lam pháo thủ":"19205","Vịt lướt bọt biển":"19206","Ảo thuật gia":"19207"},"Amily":{"Đặc cảnh NYPD":"19301","Đặc công Nhện đỏ":"19302","Thư ký":"19303","Thỏ may mắn":"19304","Võ thần thiên hà":"19305","Hội ám hoàng":"19306","Nữ đội trưởng":"19307","Khủng long xanh":"19310","Thám tử trung học":"19312"},"Enzo":{"Phẩm chất quý tộc":"19501","Chiến binh trăng khuyết":"19502","Thần thoại Hy Lạp":"19503","Nhà leo núi":"19504","Hồng hạc thị vệ":"19505","Sát quỷ đoàn":"19506","Kurapika":"19508","Sát thần Bạch Hổ":"19509","Cá heo bảnh chọe":"19510","Shinobi Đoạt mệnh":"19511"},"Elsu":{"Cảnh vệ thảo nguyên":"19601","Mafia":"19602","Guitar tình ái":"19603","Chiến binh bóng tối":"19604","Sứ giả tận thế":"19605","Tuyết ưng":"19606","Xạ thủ tinh linh":"19607","Trấn Thiên phi hồ":"19609","Hỏa diệm Chu Tước":"19611","Tuyệt ảnh":"19612","DJ <Siêu Đẳng>":"19613","Xạ Thần Mộng Giới":"19614"},"Eland'orr":{"Soái tặc":"19901","Phi vụ thế kỷ":"19902","Học viện Carano":"19903","Siêu thám tử":"19904","Chú ong bay cao":"19905","Tuxedo Mask":"19906","Uyên Ương mộng điệp":"19907","Mộng Giới Thần Chủ":"19908","S - Quang vinh":"19909"},"Charlotte":{"Hexsword":"20601"},"Tel'Annas":{"Cảnh vệ rừng":"50101","Giám thị thân thiện":"50102","Chung tình tiễn":"50103","Thánh nữ mật hội":"50104","Thần sứ F.E.E-X1":"50105","Cẩm y vệ: Phi ưng":"50106","Dạ hội":"50107","Thứ nguyên vệ thần":"50108","Công chúa mộng mơ":"50110","Vũ khúc yêu hồ":"50111","Tân niên vệ thần":"50112","Nghìn lẻ một đêm":"50113","Quang vinh":"50114","Bách hoa tiên nữ":"50115","Ô Thước tiên nữ":"50116","Thiên Vũ Thần Long":"50117","Jujutsu Socerer":"50118","Lân Quang Thánh Điệu":"50119","Kỷ Nguyên Hổ Phách":"50120","Tiệc bãi biển":"50121","S - Quang Vinh":"50122"},"Astrid":{"Bạch kiếm tiểu thư":"50201","Siêu sao bóng chày":"50202","Tổ trưởng học đường":"50203","Thần thoại Hy Lạp":"50204","Nữ tổng tài":"50205","Thần trí tuệ":"50206","Xứ sở diệu kỳ":"50207","Hoa anh đào":"50208","Nữ thuyền trưởng":"50209","Tiệc bãi biển":"50210"},"Zuka":{"Đại phú ông":"50302","Giáo sư sừng sỏ":"50303","Phát tài":"50304","Gấu nhồi bông":"50305","Diệt nguyệt nguyên soái":"50306","Đầu bếp hoàng cung":"50307","Mãnh hổ":"50308","Rapper Big Panda":"50309","Ngư ông đắc lợi":"50310","Xích Hùng Chiến Giáp":"50311","Mafia":"50313"},"Wonder Woman":{"Thế chiến":"50401"},"Baldum":{"Chú thợ ống nước":"50501","Liệt hỏa dung nham":"50502","Thần thoại Hy Lạp":"50503","Thế giới kẹo ngọt":"50504","Đồ chơi":"50505","Sói Quàng Khăn Đỏ":"50506","Thẩm Phán Lời Thề":"50507"},"Omen":{"Sĩ quan viễn chinh":"50601","Ám tử đao":"50602","Quỷ nguyệt tướng":"50603","Đao phủ tận thế":"50604","Chiến binh trăng khuyết":"50605","Thuyền trưởng hải tặc":"50606","Nhạc sĩ huyền thoại":"50607","Quái Kiệt Guitar":"50608","Huyết ảnh Tà thần":"50610","Chiến xa hắc ám":"50611","Chiến xa quang minh":"50612","Liệt Hỏa Thiên Cang":"50613"},"The Flash":{"Tia chớp tương lai":"50701"},"Wisp":{"Hải tặc nhí":"50801","Thỏ siêu quậy":"50802","Ếch nhồi bông":"50803","Máy phát quà":"50805","Rồng đi bộ":"50806","Cô bé bút chì":"50807","Bé hề":"50808","Tiểu Ronin":"50809","Hành trình kỳ ảo":"50810","Te Tò He":"50811"},"Y'bneth":{"Hạt trưởng kiểm lâm":"50901","Chiến binh lục bảo":"50902","Động cơ vĩnh cửu":"50903","Mộc quỷ":"50904","Titan Băng giá":"50905","Candy Bear":"50906","Đại Thụ Âm Nhạc":"50907"},"Liliana":{"Hồ quý phi":"51001","Thần tượng âm nhạc":"51002","Nguyệt mị ly":"51003","Tiểu thơ anh đào":"51004","Tân nguyệt mị ly":"51005","Nữ thần F1":"51006","Tiệc bãi biển":"51007","Thủy thủ hồ ly":"51008","WaVe":"51009","Lưu thủy Thần long":"51013","Thần hổ Xiêm La":"51014","Ma Pháp Tối Thượng":"51015"},"Ata":{"Tân thủy thủ":"51101","Cao bồi":"51102","Quang vinh":"51103","Mèo đi mưa":"51104","Chiến binh hải tộc":"51105","Gà mờ":"51108","Giao long":"51109","Sushi Master":"51110"},"Rourke":{"Pháo thủ tuộc neo":"51201","Biệt đội siêu hùng":"51202","Cuồng tặc":"51203","Thợ cơ khí":"51204","Cảnh sát trưởng":"51207","Bách tướng Lão đại":"51208","Thánh Vệ":"51209"},"Zata":{"Tư lệnh viễn chinh":"51301","Sứ giả tinh hệ":"51302","Thần mặt trời":"51303","Khiêu chiến":"51304","Tác gia đương đại":"51305","Chí tôn Tà phượng":"51306","Xích Huyết Bá Tước":"51307","Idol Giáng Sinh":"51308"},"Roxie":{"Thám tử tập sự":"51401","Kèn ái tình":"51402","Hầu gái":"51403","Tiệc bánh kẹo":"51404","Cháy phố":"51405","Lễ hội hoa":"51406","Hỏa thuật sư":"51408","\"Bạch Tuyết\" Kỳ Lạ":"51409"},"Richter":{"Bá tước":"51501","Thống soái kháng chiến":"51502","Dạ hội":"51503","Thần kiếm Susanoo":"51504","Quang vinh 2.0":"51505","Nguyệt loan đao":"51506","Cứu hộ":"51508","Tổng Lãnh thiên thần":"51509"},"Quillen":{"Trưởng ngoại khoa":"51801","Đặc công mãng xà":"51802","Thống soái đế chế":"51803","Huyết thủ nguyệt tộc":"51804","Sao đỏ học đường":"51805","Tà linh ma đao":"51806","Hoàng kim soái vương":"51807","Nghịch Thiên long đế":"51808","Người gác đền":"51809","Giám đốc âm nhạc":"51810","Huyết phong":"51812","Đảo thiên đường":"51813","Thẩm phán Trăng khuyết":"51814"},"Annette":{"Nữ quản ga":"51901","Xứ sở thần tiên":"51902","Thần tượng âm nhạc":"51903","Tiệc bãi biển":"51904","Phi hành gia":"51905","Vân Mộng tiên tử":"51906","Nữ sinh Trung học":"51907","Chị ong bay thấp":"51908","Tiên tri tập sự":"51909","Băng kỳ lâm":"51911","Doombot Thơ ngây":"51912","Thiên sứ may mắn":"51913"},"Veres":{"Đạo tặc":"52001","Gián điệp tinh hệ":"52002","Thần thoại Hy Lạp":"52003","Chị đại học đường":"52004","Thuỷ thần kiều diễm":"52006","Kimono":"52007","Phù thủy trang điểm":"52008","Tiệc bãi biển":"52009","Men Lam Hồn Gốm":"52010","Lưu Ly Long Mẫu":"52011","Vũ điệu dân gian":"52012","Thỏ may mắn":"52013","Idol Giáng Sinh":"52014","Hoa Khôi Khán Đài":"52015"},"Florentino":{"Vũ kiếm sư":"52101","Giám sát tinh Hệ":"52102","Kiếm sĩ Olympic":"52103","Thần thoại Hy Lạp":"52104","Seven":"52105","Tà long kiếm sĩ":"52106","Xứ sở thần tiên":"52107","Bá vương Âm nhạc":"52108","Hisoka":"52110","Hỏa diệm Thần long":"52111","S - Quang vinh":"52112","Kỷ Nguyên Hổ Phách":"52113","Quán Quân":"52114"},"Errol":{"Vượt ngục":"52201","Diệt nguyệt tiên phong":"52202","Đêm ác mộng":"52203","Genos":"52204","Huyết thủ Tu La":"52205","Stream đến bao giờ":"52207","Sát thủ Mafia":"52208","Dị nhân tinh hệ":"52209","Dũng Sĩ Pixel":"52210"},"D'Arcy":{"Nam tước":"52301","Đô đốc tinh Hệ":"52302","Pháp sư hỏa long":"52303","Tiến sĩ thiên tài":"52304","Chân nhân":"52305","Tông đồ Chân lý":"52306","Bác sĩ thú y":"52307"},"Capheny":{"Hầu gái":"52401","Thần tượng âm nhạc":"52402","Toán Hóa Sinh":"52403","Kimono":"52404","Siêu cấp tin tặc":"52405","Phi hành gia":"52406","Harley Quinn":"52407","Quân nhạc Mildar":"52408","Tử đinh hương":"52410","Vua trò chơi":"52411","S - Quang vinh":"52412","Huyết phong":"52413","Càn Nguyên Điện Chủ":"52414","Bugcat Assemble":"52415","Hoa Linh Lan":"52416"},"Zip":{"Gà siêu quậy":"52501","Tiểu đệ hổ báo":"52502","Cá siêu quậy":"52503","Gà siêu cấp":"52504","Vua sân cỏ":"52505","Ông trùm Giáng sinh":"52506","Duyên tơ hồng":"52507","Tiểu quái gánh xiếc":"52508"},"Ishar":{"Giấc mơ ngọt ngào":"52601","Tiểu thư kẹo ngọt":"52602","Tiểu thư gấu trúc":"52603","Lễ hội ma quái":"52604","Gián điệp hacker":"52605","Tiểu thư":"52607","Rồng bé bự":"52608","Quận chúa sông Nile":"52609","Capoo Boom":"52610","Đoàn trưởng tạp kỹ":"52611","Thuật Sư Săn Thẻ":"52612"},"Sephera":{"Quý tiểu thư":"52701","Chiêm tinh gia":"52702","Thần tượng âm nhạc":"52703","Phi vụ thế kỷ":"52704","Thần thoại Hy Lạp":"52705","Lam Hải phu nhân":"52706","Thủy liên hoa":"52707","Cô thủ thư":"52708","Bách nhạn Ngân linh":"52709","Nova Stardust":"52710","Tây Vực phong tình":"52711","S - Quang Vinh":"52712"},"Qi":{"Tiểu long":"52801","Đặc vụ cáo tuyết":"52802","Quán quân":"52803","Thiếu nữ pháo hoa":"52804","Blogger Ẩm thực":"52805","Búp bê Daruma":"52806","Thần phong Hiệp nữ":"52808","Milim Nava":"52809","Annie Leonhart":"52810"},"Volkath":{"Dạ huyết tộc":"52901","Ma kỵ tử sĩ":"52902","Xung thiên thần tướng":"52903","Tư lệnh viễn chinh":"52904","Chiến thần Ai Cập":"52905","Hắc kỵ thời không":"52906","S - Quang vinh":"52907","Ma Ảnh Thần Đao":"52908"},"Dirak":{"Cảnh vệ bầu trời":"53001","Pháp sư trăng khuyết":"53002","Quý tộc Norman":"53003","Ông bầu Showbiz":"53005","Đường chủ yêu giới":"53007","Snack giòn tan":"53008","Lốp trưởng":"53009"},"Keera":{"Y tá lạ":"53101","Học viện Carano":"53102","Sát thủ bí ngô":"53103","Thủy thủ":"53104","Tiệc bãi biển":"53105","Nezuko Kamado":"53107","Nghệ sĩ Graffiti":"53109","Hồ điệp":"53110","Môn đồ Xảo quyệt":"53111","Quán quân":"53112","Yêu Thần Nekomata":"53113"},"Thorne":{"Cận vệ hoàng gia":"53201","Giả kim thuật sư":"53202","Quán quân":"53203","Tiệc bãi biển":"53204","Ước nguyện Giáng sinh":"53205","Thủy thủ":"53206","Thám tử trung học":"53207"},"Laville":{"Tay đua đường phố":"53301","Tay súng diệt thần":"53302","Tay súng vô địch":"53303","Xạ thần Tinh Vệ":"53304","Kim Quy thần vương":"53305","Tiệc bãi biển":"53306","Sắc màu Holi":"53307","Chiến thần MOBA":"53308","Vệ binh Giáng sinh":"53309","Thám tử học đường":"53310","Thợ Săn Truy Ảnh":"53311","S - Quang vinh":"53312","Cơn Lốc Đường Biên":"53313"},"Dextra":{"Chiến binh quyến rũ":"53401","Quận chúa Tuyết":"53402","Quý cô tuổi Dần":"53404","Băng Sa công chúa":"53405","Lữ khách cao nguyên":"53406","Đảo thiên đường":"53407","Nữ hoàng tốc độ":"53408","Địa ngục chiến nữ":"53409"},"Sinestrea":{"Giấc mơ trưa":"53501","Tiểu thư Băng giá":"53502","WaVe":"53503","Điệp viên cánh cụt":"53504","Đại tiểu thư":"53507","Tiểu thư bóng đêm":"53508","Lữ khách sa mạc":"53509","Giấc mộng biển xanh":"53510","S - Quang vinh":"53511","Nữ quỷ say ngủ":"53512","Định Vị Tuyệt Đối":"53513"},"Aoi":{"Sát thủ đô thị":"53601","Hoàng kim công chúa":"53602","Tiệc bãi biển":"53604","Lam Hải quận chúa":"53605","Tiểu thư Mafia":"53606","Sát thủ Dạ Ưng":"53608","Quán Quân":"53609","Bách thú triều Long":"53611","Mikasa Ackermann":"53612"},"Allain":{"Hắc kiếm sĩ Kirito":"53701","Kirito":"53702","Tuyết sơn song kiếm":"53703","Thần mặt trời":"53704","Bạch kiếm sĩ":"53705","Hạo Thiên Khuyển":"53706","Tình yêu nổi loạn":"53707","Lân sư Vũ thần":"53708","Cẩm y vệ - Xích Hổ":"53709"},"Iggy":{"Tiểu hoàng đế":"53801","Thần Miêu thiếu chủ":"53802","Bạch hồ ly":"53803","Yêu nhân học viện":"53804","Tiếng thét Hỗn mang":"53805","Rimuru Tempest":"53806","Đại chiến bùng nổ":"53807"},"Lorion":{"Chiến giáp hắc ám":"53901","Hỏa vân tà thần":"53902","Quân vương bóng tối":"53903","Quân vương ánh sáng":"53904","Giáo chủ tinh hệ":"53905"},"Bright":{"Soái ca thánh điện":"54001","Toshiro Hitsugaya":"54002","Khiêu chiến":"54003","Mật vụ hacker":"54004","Nhà thám hiểm":"54005","Kỳ Lân soái":"54006","Vua về nhì":"54007"},"Bonnie":{"Thỏ ma quái":"54101","Cô bé sợ ma":"54102","Hoa hướng dương":"54103","S - Quang vinh":"54104","Tân Binh Pixel":"54105"},"Tachi":{"Lãng khách":"54201","Đao khách vô tình":"54202","Xích long hỏa diệm":"54203","S - Quang vinh":"54204","Thần phong Hộ vệ":"54205","Hỗn mang đao":"54206","Thần thoại Hy Lạp":"54208","Cần Thủ Cyborg":"54209","Đao khách trừ yêu":"54210"},"Aya":{"Hoạt náo viên":"54301","Điệp viên ký ức":"54302","MC Sóc nhỏ":"54303","Thủy thủ":"54304","Công chúa Cầu Vồng":"54307","Hỏa Hồ Tiên Ngư":"54308","Cinnamoroll's Dream":"54309"},"Yan":{"Nhà chế tác":"54401","Tanjiro Kamado":"54402","Công tước Norman":"54403","Giấc mơ sao":"54404","Bích Hạc Phiên Vân":"54405","Nghệ nhân Trung Thu":"54406"},"Yue":{"Tiểu công chúa":"54501","Chiêm tinh gia":"54503","Vũ phiến hỏa diệm":"54504","Nữ hoàng Băng giá":"54505","Nàng tiên Gạo":"54506","Hỗn Độn Thần Ma":"54507"},"Teeri":{"Tiểu kỳ lân":"54601","Minh tinh ảo thuật":"54602","Thuyền trưởng song luân":"54603","Ốc quế ngọt ngào":"54605","Lễ hội té nước":"54606","Vân Y Cẩm Tú":"54607","Kỳ ngộ sắc màu":"54608"},"Bijan":{"Chiến binh sa mạc":"54801","Hoàng Kim cơ giáp":"54802","Đập vỡ Cây đàn":"54803","Kình thiên Long Kỵ":"54804","Lữ Hành Thời Không":"54805","Giai điệu Giáng Sinh":"54806","Hẹn Ước Tình Yêu":"54807"},"Heino":{"Nhật Ký Tình Yêu":"56301","Scout Regiment":"56302"},"Erin":{"Mộc tinh linh":"56701","Tình yêu cổ tích":"56703","Huyễn Ảnh Mị Điệp":"56704","Nhạc Công Phiêu Du":"56705"},"Ming":{"Thầy tướng":"56801"},"Goverra":{"Kỳ Nghỉ Hoàn Mỹ":"59601","Swampseer":"59602"},"Biron":{"Võ sĩ Giác đấu":"59701","Yuji Itadori":"59702","Deathmerc":"59703"},"Bolt Baron":{"Lôi vệ":"59801","Thiên Phủ - Tư Mệnh":"59802","Thống lĩnh tinh hệ":"59803"},"Billow":{"Thiên Tướng - Độ Ách":"59901","T-Rex Bất Bại":"59902","Okarun":"59903"}};
+function portraitURL(id){const sid=String(id),code=sid.length===5&&sid[3]==='0'?sid.slice(0,3)+sid[4]:sid;return 'https://dl.ops.kgvn.garenanow.com/hok/VN/HeroHeadPath/30'+code+'head.jpg'}
+const initialHeroes=Object.entries(BOOT_CATALOG).map(([name,skins])=>{const entries=Object.entries(skins);return {name,icon:portraitURL(entries[0][1].slice(0,3)+'00'),skinCount:entries.length,skins:entries.map(([name,id])=>{const icon=portraitURL(id);return {name,id,icon,icon_fallback:icon.replace('head.jpg','.jpg')}})}}).sort((a,b)=>a.name.localeCompare(b.name,'vi'));
+let DATA={heroes:initialHeroes,totalHeroes:initialHeroes.length,totalSkins:initialHeroes.reduce((n,h)=>n+h.skinCount,0)};
+let selections=[];
+let stack=[{screen:'az'}];
+let tab='heroes';
+let loaded=true;
+let searchTimer=null;
+let platformMode=(tg?.platform==='ios'?'ios':tg?.platform==='android'?'android':'both');
+const CACHE_NS='tdmod_web_20261002_motion_';
+function cacheGet(k){try{const v=sessionStorage.getItem(CACHE_NS+k);return v?JSON.parse(v):null}catch(e){return null}}
+function cacheSet(k,v){try{sessionStorage.setItem(CACHE_NS+k,JSON.stringify(v))}catch(e){}}
+const SELECT_STORE_KEY='tdmod_web_selected_v1';
+function loadSavedSelections(){
+  try{
+    const v=localStorage.getItem(SELECT_STORE_KEY);
+    const a=v?JSON.parse(v):[];
+    if(Array.isArray(a)) selections=a.filter(x=>x&&x.tuong&&x.skin&&x.id).slice(0,MAX_SLOTS);
+  }catch(e){}
+}
+function saveSelections(){try{localStorage.setItem(SELECT_STORE_KEY,JSON.stringify(selections))}catch(e){}}
+function clearSavedSelections(){try{localStorage.removeItem(SELECT_STORE_KEY)}catch(e){}}
+
+
+const ICON={
+  android:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 8h10a2 2 0 0 1 2 2v7H5v-7a2 2 0 0 1 2-2Z"/><path d="M8 8 6.7 5.8M16 8l1.3-2.2M8 12h.01M16 12h.01M8 17v3M16 17v3M3 10v5M21 10v5"/></svg>`,
+  ios:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.7 7.2c-.9-1-2.2-1.1-2.8-1.1-.9 0-1.8.5-2.3.5-.5 0-1.4-.5-2.3-.5-1.2 0-2.4.7-3 1.8-1.3 2.2-.3 5.5.9 7.3.6.9 1.3 1.9 2.2 1.9.9 0 1.2-.6 2.3-.6s1.4.6 2.3.6c1 0 1.6-.9 2.2-1.8.7-1 1-2.1 1-2.2-2-.8-2.3-3.6-.5-4.8Z"/><path d="M14.6 3c.1 1-.3 1.9-.9 2.5-.6.7-1.6 1.1-2.5 1 .0-.9.4-1.8 1-2.4.6-.6 1.6-1.1 2.4-1.1Z"/></svg>`,
+  both:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="11" height="14" rx="2"/><rect x="15" y="8" width="6" height="11" rx="1.7"/><path d="M7 16h3M17.5 16.5h1"/></svg>`
+};
+
+function haptic(type='selection'){try{type==='success'?tg?.HapticFeedback.notificationOccurred('success'):tg?.HapticFeedback.selectionChanged()}catch(e){}}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(toast._t);toast._t=setTimeout(()=>e.classList.add('hidden'),1800)}
+function imgFallback(el,opacity=.15){
+  if(!el.dataset.fb){
+    el.dataset.fb='1';
+    const explicit=el.dataset.fallback;
+    const alt=explicit||el.src.replace(/head\.jpg(\?.*)?$/,'.jpg$1');
+    if(alt&&alt!==el.src){el.src=alt;return}
+  }
+  el.dataset.failed='1';el.style.opacity=opacity;el.closest('.skin-pic')?.classList.remove('pending');el.closest('.skin-pic')?.classList.add('image-failed');el.title='Ảnh chưa tải được — mở lại tướng để thử lại'
+}
+function imgReady(el){delete el.dataset.failed;el.classList.add('ready');el.closest('.skin-pic')?.classList.remove('pending','image-failed')}
+let lazyObserver=null;
+function syncBottomSpace(){const b=document.querySelector('.bottom');if(!b)return;const h=Math.ceil(b.getBoundingClientRect().height);document.documentElement.style.setProperty('--nav-h',Math.max(98,h)+'px')}
+function initLazyImages(){
+  lazyObserver?.disconnect();
+  const root=document.getElementById('scrollArea');
+  const start=img=>{const src=img.dataset.src;if(!src)return;img.removeAttribute('data-src');img.closest('.skin-pic')?.classList.add('pending');img.loading='eager';img.fetchPriority='auto';img.src=src};
+  if('IntersectionObserver' in window){
+    lazyObserver=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){lazyObserver.unobserve(e.target);start(e.target)}}},{root,rootMargin:'280px 0px',threshold:.01});
+  }else lazyObserver=null;
+  const bounds=root.getBoundingClientRect();
+  document.querySelectorAll('#app img').forEach(img=>{
+    if(img.complete&&img.naturalWidth){imgReady(img);return}
+    if(img.dataset.failed){img.closest('.skin-pic')?.classList.add('image-failed');return}
+    if(!img.dataset.src){if(!img.classList.contains('ready'))img.closest('.skin-pic')?.classList.add('pending');return}
+    const rect=img.getBoundingClientRect();
+    if(!lazyObserver||(rect.bottom>=bounds.top&&rect.top<=bounds.bottom+120))start(img);else lazyObserver.observe(img);
+  });
+}
+let lastScene='';
+
+let brightEnabled=false;
+function paintToggle(input){const label=input.closest('.color-toggle');label.dataset.enabled=String(input.checked);label.querySelector('.toggle-state').textContent=input.checked?'Đã bật':'Đã tắt'}
+function setBrightEnabled(input){brightEnabled=input.checked;paintToggle(input)}
+let soundEnabled=true;
+// Interaction sounds are always enabled.
+let soundContext=null;
+function setSoundEnabled(enabled){soundEnabled=!!enabled;try{localStorage.setItem('tdmod_sound_v1',enabled?'on':'off')}catch(e){}}
+function clickSound(){
+  if(!soundEnabled||document.hidden)return;
+  try{
+    const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;
+    if(!soundContext)soundContext=new Audio();
+    if(soundContext.state==='suspended')soundContext.resume().catch(()=>{});
+    const now=soundContext.currentTime;
+    // Quiet, short UI tone; no downloaded audio and no persistent playback.
+    const tone=soundContext.createOscillator(),gain=soundContext.createGain();
+    tone.type='sine';tone.frequency.setValueAtTime(720,now);tone.frequency.exponentialRampToValueAtTime(480,now+.055);
+    gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.035,now+.006);gain.gain.exponentialRampToValueAtTime(.0001,now+.065);
+    tone.connect(gain);gain.connect(soundContext.destination);tone.start(now);tone.stop(now+.07);
+    tone.onended=()=>{tone.disconnect();gain.disconnect()};
+  }catch(e){}
+}
+document.addEventListener('click',e=>{const target=e.target.closest('button,a,input[type="checkbox"]');if(!target||target.disabled||target.id==='soundToggle')return;clickSound()});
+let musicConfig={enabled:false,title:'Nhạc nền',url:null},musicPlaying=false,musicBusy=false;
+const backgroundMusic=new Audio();backgroundMusic.loop=true;backgroundMusic.preload='none';backgroundMusic.volume=.35;
+function paintMusic(){const button=document.getElementById('musicToggle');if(!button)return;button.dataset.enabled=String(musicPlaying);button.setAttribute('aria-pressed',String(musicPlaying));button.disabled=musicBusy;button.querySelector('.toggle-state').textContent=musicBusy?'Đang tải…':musicPlaying?'Đã bật':'Đã tắt';button.querySelector('small').textContent=musicConfig.enabled&&musicConfig.url?musicConfig.title:'Chưa có nhạc nền. Admin có thể tải nhạc lên.'}
+function stopMusic(){backgroundMusic.pause();musicPlaying=false;paintMusic()}
+async function loadMusicConfig(){try{const r=await fetch('/api/music',{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();musicConfig=d;if(!d.enabled||!d.url)stopMusic();else if(backgroundMusic.getAttribute('src')!==d.url){stopMusic();backgroundMusic.src=d.url}paintMusic();return !!(d.enabled&&d.url)}catch(e){return false}}
+async function toggleMusic(){if(musicBusy)return;if(musicPlaying){stopMusic();return}musicBusy=true;paintMusic();try{if(!(musicConfig.enabled&&musicConfig.url)&&!await loadMusicConfig())throw Error('Chưa có nhạc nền. Thử lại sau khi admin tải nhạc lên.');await backgroundMusic.play();musicPlaying=true}catch(e){musicPlaying=false;toast(e.message||'Không phát được nhạc. Bấm bật để thử lại.')}finally{musicBusy=false;paintMusic()}}
+backgroundMusic.addEventListener('error',()=>{stopMusic();toast('Không tải được nhạc nền. Bấm bật để thử lại.')});
+function soundSettings(){return `<button id="musicToggle" type="button" class="row sound-row color-toggle music-row" data-enabled="${musicPlaying}" aria-pressed="${musicPlaying}" onclick="toggleMusic()"><svg class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg><div class="txt"><b>Phát nhạc nền</b><small>${safe(musicConfig.enabled&&musicConfig.url?musicConfig.title:'Nhạc do admin tải lên · Bấm để nghe')}</small></div><span class="toggle-state">${musicPlaying?'Đã bật':'Đã tắt'}</span></button>`}
+loadMusicConfig();
+let animateScene=false;
+function postRender(){syncBottomSpace();initLazyImages();if(!animateScene)return;animateScene=false;if(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches)return;document.querySelectorAll('#app .row,#app .az,#app .skin,#app .history-card').forEach((el,i)=>{if(i<6&&el.animate)el.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,delay:i*22,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'})})}
+function lazyImg(url,extra=''){return `<img ${extra} data-image-key="${url}" data-src="${url}" decoding="async" onload="imgReady(this)" onerror="imgFallback(this,0)">`}
+function finishBoot(){const el=document.getElementById('bootProgress');if(el){el.classList.add('done');setTimeout(()=>el.remove(),220)}}
+
+function letterOf(name){const c=(name||'').trim().charAt(0).toUpperCase();return c==='Đ'?'Đ':c}
+const ALPHABET='ABCD'.split('').concat(['Đ']).concat('EFGHIJKLMNOPQRSTVWXYZ'.split(''));
+
+function loadingHome(){return `<div class="summary">${[1,2,3].map(()=>`<div class="metric skeleton" style="height:78px"></div>`).join('')}</div><div class="progress-card skeleton" style="height:59px"></div><div class="skeleton" style="height:34px;width:48%;border-radius:10px;margin:20px 0 8px"></div><div class="skeleton" style="height:50px;border-radius:16px;margin-bottom:16px"></div><div class="az-grid">${Array(20).fill('<div class="az skeleton"></div>').join('')}</div>`}
+function heroCount(h){return h.skinCount??h.skins?.length??0}
+function summary(){const pct=Math.min(100,selections.length/MAX_SLOTS*100);return `<section class="studio-overview"><div class="overview-head"><span>SKIN WORKSPACE</span><span class="overview-state">● SẴN SÀNG</span></div><div class="summary">
+<div class="metric"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12V9a7 7 0 0 1 14 0v3l-2 7-5 3-5-3-2-7Z"/><path d="M5 10l7 3 7-3M12 13v9M8 6l4-3 4 3"/></svg><strong>${DATA.totalHeroes}</strong></div><span>TƯỚNG</span></div>
+<div class="metric"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 8 4-5h10l4 5-9 13L3 8ZM3 8h18M7 3l5 18L17 3M7 3l5 5 5-5"/></svg><strong>${DATA.totalSkins}</strong></div><span>SKIN</span></div>
+<div class="metric sel"><div class="top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="4"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><strong>${selections.length}</strong></div><span>ĐÃ CHỌN</span></div></div>
+<div class="progress-card"><div class="progress-row"><b>${selections.length} / ${MAX_SLOTS} SLOT</b><span>${selections.length>=MAX_SLOTS?'ĐÃ ĐẦY':'SẴN SÀNG'}</span></div><div class="track"><div class="fill" style="width:${pct}%"></div></div></div></section>`}
+
+async function loadData(){
+  const cached=cacheGet('heroes');
+  if(cached){for(const h of DATA.heroes){const old=cached.heroes?.find(x=>x.name===h.name);if(old?.skins?.length)h.skins=old.skins}render()}
+  finishBoot();
+  try{
+    const r=await fetch('api/heroes',{cache:'no-cache'});
+    if(!r.ok)throw Error(r.status);
+    const fresh=await r.json();
+    const oldHeroes=new Map(DATA.heroes.map(h=>[h.name,h]));
+    const order=new Map(DATA.heroes.map((h,i)=>[h.name,i]));
+    fresh.heroes.sort((a,b)=>(order.get(a.name)??1e6)-(order.get(b.name)??1e6));
+    for(const h of fresh.heroes){const old=oldHeroes.get(h.name);if(old?.skins)h.skins=old.skins}
+    DATA=fresh;
+    cacheSet('heroes',fresh);
+    if(!loaded){loaded=true}
+    render();
+  }catch(e){
+    if(!loaded)document.getElementById('app').innerHTML=`<div class="empty">Không tải được danh sách tướng.<br>Hãy đóng và mở lại.</div>`;
+  }finally{finishBoot()}
+
+}
+
+async function ensureSkins(h){
+  if(h.skins||h._loading)return;
+  const ck='skins_'+h.name;
+  const cached=cacheGet(ck);
+  if(Array.isArray(cached)&&cached.length){
+    h.skins=cached;
+    render();
+    return;
+  }
+
+  h._loading=true;
+  render();
+
+  try{
+    // Fast path: load only this hero.
+    const r=await fetch('api/hero-skins?hero='+encodeURIComponent(h.name),{
+      cache:'no-cache'
+    });
+    if(!r.ok)throw new Error('lazy '+r.status);
+    const d=await r.json();
+    h.skins=Array.isArray(d.skins)?d.skins:[];
+    if(!h.skins.length)throw new Error('lazy empty');
+  }catch(e){
+    // Safe fallback for older/current bot.py builds:
+    // use the original full API and extract this hero locally.
+    try{
+      const r2=await fetch('api/skins?ts='+Date.now(),{cache:'no-store'});
+      if(!r2.ok)throw new Error('full '+r2.status);
+      const full=await r2.json();
+      const hero=(full.heroes||[]).find(x=>x.name===h.name);
+      h.skins=hero&&Array.isArray(hero.skins)?hero.skins:[];
+    }catch(e2){
+      h.skins=[];
+    }
+  }finally{
+    h._loading=false;
+    if(h.skins&&h.skins.length)cacheSet(ck,h.skins);
+    render();
+    if(!h.skins||!h.skins.length)toast('Chưa tải được skin • đóng/mở lại tướng');
+  }
+}
+
+function push(x){stack.push(x);render();updateBack()}
+function pop(){if(stack.length>1){stack.pop();render();updateBack()}}
+function updateBack(){if(!tg)return;(tab==='heroes'&&stack.length>1)?tg.BackButton.show():tg.BackButton.hide()}
+if(tg)tg.BackButton.onClick(pop);
+function setTab(t){document.getElementById('jobPanel').hidden=true;document.getElementById('app').hidden=false;tab=t;['Heroes','Cart','History','Other'].forEach(x=>document.getElementById('nav'+x)?.classList.toggle('on',x===(t==='heroes'?'Heroes':t==='cart'?'Cart':t==='history'?'History':'Other')));render();updateBack();if(t==='history')loadHistory()}
+
+
+function isSel(hero,skin){return selections.some(x=>x.tuong===hero&&x.skin===skin)}
+function selectedHero(hero){return selections.find(x=>x.tuong===hero)}
+function resolvedSelection(h){
+  const sel=selectedHero(h.name); if(!sel)return null;
+  const skin=h.skins?.find(s=>String(s.id)===String(sel.id)||s.name===sel.skin);
+  if(skin&&!sel.icon){sel.icon=skin.icon;saveSelections()}
+  return {...sel,icon:sel.icon||skin?.icon||h.icon};
+}
+function toggleSkin(hero,skin,id,icon=''){
+  const old=selectedHero(hero);
+  if(old?.skin===skin){
+    selections=selections.filter(x=>x.tuong!==hero);
+    saveSelections();
+    haptic();toast('✓ Đã bỏ '+skin);render();return;
+  }
+  selections=selections.filter(x=>x.tuong!==hero);
+  if(selections.length>=MAX_SLOTS){haptic();toast('Đã đủ 15 slot');return}
+  selections.push({tuong:hero,skin,id,icon});
+  saveSelections();
+  haptic('success');
+  toast('✓ Đã thêm '+skin);
+  render();
+}
+function removeSelection(hero){selections=selections.filter(x=>x.tuong!==hero);saveSelections();haptic();render()}
+function clearAllSelections(){if(!selections.length)return;selections=[];saveSelections();haptic();render();toast('Đã xóa tất cả skin đã chọn')}
+function removeSelectionAt(i){selections.splice(i,1);saveSelections();haptic();render()}
+function toggleSkinAt(heroIdx,skinIdx){const h=DATA.heroes[heroIdx],s=h?.skins?.[skinIdx];if(h&&s)toggleSkin(h.name,s.name,s.id,s.icon)}
+function setPlatform(p){platformMode=p;haptic();render()}
+const ICONS={file:'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M8 13h8 M8 17h5',arrow:'M7 17 17 7 M7 7h10v10',download:'M12 3v12 M7 10l5 5 5-5 M4 16v5h16v-5',refresh:'M20 7v5h-5 M4 17v-5h5 M6 6a8 8 0 0 1 13 2 M18 18A8 8 0 0 1 5 16',history:'M3 11a9 9 0 1 1 3 7 M3 4v7h7 M12 7v5l3 2'};
+function ic(name){return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[name]||ICONS.file}"/></svg>`}
+function safe(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeJob=null,creating=false,pollTimer=null,historyLoading=false,historyError='';
+let historyJobs=[];try{historyJobs=JSON.parse(localStorage.getItem('tdmod_history_v2')||'[]');if(!Array.isArray(historyJobs))historyJobs=[]}catch(e){}
+function rememberJob(d){historyJobs=[d,...historyJobs.filter(j=>j.id!==d.id)].sort((a,b)=>(b.created||0)-(a.created||0)).slice(0,50);try{localStorage.setItem('tdmod_history_v2',JSON.stringify(historyJobs))}catch(e){}}
+function dateLabel(t){return t?new Date(t*1000).toLocaleString('vi-VN',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):''}
+function jobExpired(j){return j.state==='expired'||j.expires&&j.expires*1000<Date.now()}
+function stateLabel(j){return jobExpired(j)?'HẾT HẠN':j.state==='done'?(j.task_complete?'ĐÃ MỞ TẢI':'CHỜ NHIỆM VỤ'):j.state==='error'?'TẠO THẤT BẠI':j.state==='running'?'ĐANG TẠO':'ĐANG CHỜ'}
+async function loadHistory(){
+ if(historyLoading)return;historyLoading=true;historyError='';
+ try{const r=await fetch('/api/jobs',{cache:'no-store'});const d=await r.json();if(!r.ok||!Array.isArray(d.jobs))throw Error('Không tải được lịch sử.');
+ const ids=new Set(d.jobs.map(j=>j.id));historyJobs=historyJobs.map(j=>ids.has(j.id)?j:{...j,state:'expired'});d.jobs.forEach(rememberJob);
+ try{localStorage.setItem('tdmod_history_v2',JSON.stringify(historyJobs))}catch(e){}
+ }catch(e){historyError='Chưa kết nối được máy chủ. Bấm làm mới để thử lại.'}
+ finally{historyLoading=false;if(tab==='history')render()}
+}
+function historyScreen(){return `<div class="history-head"><div><div class="section-kicker">FILE CỦA BẠN</div><h1>Lịch <span class="hl">sử</span></h1></div><button class="iconbtn" aria-label="Làm mới lịch sử" onclick="loadHistory()">${ic('refresh')}</button></div><div class="history-info">File được giữ mặc định 24 giờ. Mở lại bằng cùng trình duyệt để tiếp tục nhiệm vụ hoặc tải file đã mở khóa.</div>${historyError?`<p class="sub" role="alert">${safe(historyError)}</p>`:''}${historyJobs.length?historyJobs.map(j=>`<article class="history-card"><div class="history-meta"><span>${safe(dateLabel(j.created))} · ${safe(j.platform==='both'?'Android + iOS':j.platform==='ios'?'iOS':'Android')}</span><span class="job-status" data-status="${j.state==='done'&&!jobExpired(j)?'complete':'pending'}">${stateLabel(j)}</span></div><h3>${safe((j.selections||[]).map(x=>x.tuong).join(' · ')||'Bản mod của bạn')}</h3><p>${safe((j.selections||[]).map(x=>x.skin).join(' / ')||j.message)}</p><div class="history-footer"><span>${j.size? (j.size/1048576).toFixed(2)+' MB · ':''}${jobExpired(j)?'Tạo lại để có file mới':j.expires?'Giữ đến '+safe(dateLabel(j.expires)):'Đang xử lý'}</span><button ${jobExpired(j)||j.state==='error'?'disabled':''} onclick="openJob('${safe(j.id)}')">${ic(j.task_complete?'download':'arrow')}${j.task_complete?'Tải file':j.state==='done'?'Nhận nhiệm vụ':'Xem tiến độ'}</button></div></article>`).join(''):`<div class="empty"><div class="empty-icon">${ic('history')}</div><b>${historyLoading?'Đang tải lịch sử…':'Chưa có bản mod nào'}</b><p>Tạo file đầu tiên để lưu vào đây.</p><button class="back" onclick="setTab('heroes')">Chọn skin ngay</button></div>`}`}
+function returnToPicker(){stack=[{screen:'az'}];setTab('heroes');document.getElementById('scrollArea').scrollTo({top:0,behavior:'smooth'})}
+function closeJob(){document.getElementById('jobPanel').hidden=true;setTab('history')}
+function openJob(id){clearTimeout(pollTimer);activeJob=id;try{localStorage.setItem('tdmod_web_job',id)}catch(e){}showJob();document.getElementById('scrollArea').scrollTo({top:0,behavior:'smooth'});pollJob()}
+let pendingModRequest=null;
+let pendingModChoice=null;
+function runMod(){
+ if(creating||!selections.length)return;
+ pendingModRequest={selections:selections.map(x=>({...x})),platform:platformMode,bright:document.getElementById('bright')?.checked||false};
+ pendingModChoice=null;
+ document.querySelectorAll('#modChoiceDialog .mod-choice').forEach(button=>{button.setAttribute('aria-pressed','false')});
+ document.getElementById('modChoiceCreate').disabled=true;
+ const dialog=document.getElementById('modChoiceDialog');
+ document.getElementById('modChoiceSummary').textContent=pendingModRequest.selections.length+' skin · '+(platformMode==='both'?'Android + iOS':platformMode==='ios'?'iOS':'Android');
+ if(!dialog.open)dialog.showModal();
+}
+function cancelModChoice(){pendingModRequest=null;pendingModChoice=null;document.getElementById('modChoiceDialog').close()}
+function selectModChoice(cosmetics){
+ if(!pendingModRequest||creating)return;
+ pendingModChoice=cosmetics;
+ document.querySelectorAll('#modChoiceDialog .mod-choice').forEach(button=>{const selected=button.dataset.cosmetics===String(cosmetics);button.setAttribute('aria-pressed',String(selected))});
+ document.getElementById('modChoiceCreate').disabled=false;
+}
+async function confirmModChoice(){
+ if(creating||!pendingModRequest||pendingModChoice===null)return;
+ const cosmetics=pendingModChoice;pendingModChoice=null;
+ const request={...pendingModRequest,cosmetics};pendingModRequest=null;
+ cosmeticsEnabled=cosmetics;try{localStorage.setItem('tdmod-cosmetics',cosmetics?'on':'off')}catch(e){}
+ document.getElementById('modChoiceDialog').close();
+ creating=true;const button=document.querySelector('.run');if(button){button.disabled=true;button.textContent='Đang gửi yêu cầu…'}
+ try{const check=await fetch('/health',{cache:'no-store'});const version=await check.json();if(!check.ok||version.features?.cosmetics!==true||version.features?.notice_admin!==true)throw Error('Máy chủ chưa chạy bản cập nhật. Vui lòng đợi admin deploy lại web.');const r=await fetch('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)});const d=await r.json();if(!r.ok)throw Error(d.error||'Không thể tạo file');rememberJob({id:d.id,created:Date.now()/1000,state:'queued',platform:request.platform,cosmetics:request.cosmetics,selections:request.selections,percent:0});openJob(d.id)}catch(e){toast(e.message)}finally{creating=false;if(tab==='cart')render()}
+}
+function showJob(){document.getElementById('app').hidden=true;document.getElementById('jobPanel').hidden=false;paintJob({state:'queued',percent:0,message:'Đang kết nối với máy chủ…'})}
+function paintJob(d){
+ const done=d.state==='done',unlocked=done&&d.task_complete,expired=jobExpired(d),failed=d.state==='error'||expired;
+ const pct=Math.max(0,Math.min(100,Number(d.percent)||0));
+ const complete=done&&!failed;document.getElementById('jobPanel').dataset.status=complete?'complete':'pending';
+ document.getElementById('jobProgress').value=complete?100:pct;document.getElementById('jobPercent').innerHTML=complete?'<svg class="completion-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>':pct+'%';document.getElementById('jobPercent').setAttribute('aria-label',complete?'Tạo file hoàn thành':pct+' phần trăm');document.getElementById('jobRing').style.strokeDashoffset=226*(1-(complete?100:pct)/100);
+ document.getElementById('jobSkins').innerHTML=(d.selections||[]).map(x=>'<span>'+safe(x.tuong)+' · '+safe(x.skin)+'</span>').join('');
+ document.getElementById('jobState').textContent=stateLabel(d);document.getElementById('jobText').textContent=d.message||'';
+ document.getElementById('jobTitle').textContent=failed?'Cần tạo lại file':unlocked?'Sẵn sàng tải xuống':done?'Bản mod đã sẵn sàng':'Đang tạo bản mod';
+ document.getElementById('jobDetails').textContent=d.selections?.length?d.selections.length+' skin · '+(d.platform==='both'?'Android + iOS':d.platform==='ios'?'iOS':'Android'):'Chuẩn bị file mod của bạn';
+ document.getElementById('stepBuild').className='job-step '+(done?'complete':'on');document.getElementById('stepTask').className='job-step '+(unlocked?'complete':done?'on':'');document.getElementById('stepDownload').className='job-step '+(unlocked?'on':'');
+ const a=document.getElementById('downloadFile');a.href='/api/jobs/'+activeJob+'/download';a.hidden=!unlocked||expired;a.innerHTML=ic('download')+'Tải file mod ZIP'+(d.size?' · '+(d.size/1048576).toFixed(2)+' MB':'');
+ const b=document.getElementById('taskButton');b.hidden=!done||unlocked||expired;b.innerHTML=ic('arrow')+'Nhận nhiệm vụ & mở tải';
+ document.getElementById('jobNote').textContent=failed?'Chọn skin và tạo file mới để tiếp tục.':unlocked?'Đóng hẳn game trước khi cài. Giải nén đúng thư mục và chọn Ghi đè tất cả. File cũ trong Lịch sử giữ nội dung cũ.':done?'Hoàn thành link rút gọn và mở trang đích để nhận file.':'Bạn có thể rời trang và xem lại tiến độ trong Lịch sử.';
+}
+async function beginTask(){
+ const jid=activeJob,b=document.getElementById('taskButton');b.disabled=true;b.textContent='Đang kết nối nhiệm vụ…';
+ try{const r=await fetch('/api/jobs/'+jid+'/task',{method:'POST'});const d=await r.json();if(!r.ok)throw Error(d.error||'Không lấy được link nhiệm vụ');if(d.complete){pollJob();return}location.assign(d.url)}catch(e){document.getElementById('jobText').textContent=e.message;toast(e.message)}finally{b.disabled=false;b.innerHTML=ic('arrow')+'Nhận nhiệm vụ & mở tải'}
+}
+async function pollJob(){
+ clearTimeout(pollTimer);if(!activeJob)return;const jid=activeJob;
+ try{const r=await fetch('/api/jobs/'+jid,{cache:'no-store'});const d=await r.json();if(activeJob!==jid)return;
+ if(r.status===404||r.status===410){paintJob({state:'expired',message:'File đã hết hạn hoặc không còn trên máy chủ.'});const old=historyJobs.find(j=>j.id===jid);if(old)rememberJob({...old,state:'expired'});return}if(!r.ok)throw Error(d.error);
+ const old=historyJobs.find(j=>j.id===jid)||{};const current={...old,...d,id:jid};rememberJob(current);paintJob(current);if(tab==='history')render();if(['done','error','expired'].includes(d.state))return;
+ }catch(e){if(activeJob!==jid)return;document.getElementById('jobText').textContent='Đang kết nối lại. Tiến độ của bạn vẫn được lưu.'}
+ pollTimer=setTimeout(pollJob,1500);
+}
+
+function heroInitial(name){const t=(name||'?').trim();return (t[0]||'?').toUpperCase()}
+
+function heroAccent(h){
+  const selected=resolvedSelection(h);
+  if(selected)return skinAccent({id:selected.id,name:selected.skin});
+  const tones={
+    'Nakroth':'#d58296','Natalya':'#a78bdc','Ngộ Không':'#e4bd75',
+    'Billow':'#7bc6df','Hayate':'#b594d5','Biron':'#e7ba85','Violet':'#ca8bb4',
+    'Maloch':'#d69a72','Murad':'#c8ab7d','Butterfly':'#d8ac95','Qi':'#d6bd7e','Teeri':'#81cfdf',
+    'Liliana':'#99c5e9','Sinestrea':'#c993ce','Volkath':'#d48285','Keera':'#b4a1e6',
+    'Zephys':'#ac9ae0','Yena':'#d9ad8a','Gildur':'#dbbf7a','Lorion':'#7da9df',
+    'Krixi':'#c9a5d9','Alice':'#b7addf','Diao Chan':'#9dcbdc','Điêu Thuyền':'#9dcbdc',
+    'Valhein':'#bb91a0','Tel’Annas':'#91c4b2',"Tel'Annas":'#91c4b2','Airi':'#c298b6',
+    'Arthur':'#b5b8d2','Thane':'#d8b981','Raz':'#daae7b','Tulen':'#9ba8e3','Zata':'#83c3bf',
+    'Quillen':'#bc8eaa','Florentino':'#b299cc','Veres':'#d78b99','Errol':'#c9959b',
+    'Annette':'#a9d5ce','Capheny':'#c4a5ce','Elsu':'#a1b7cb','Laville':'#85c6c9',
+    'Omen':'#b5879a','Allain':'#b9aed5','Ishar':'#d6b0cf','Helen':'#a3ceb3',
+    'Fennik':'#d0b592','Slimz':'#dcc288','Zill':'#97bfce','Preyta':'#b0ba91',
+    'Lữ Bố':'#d29b8c','Triệu Vân':'#8caed7','Kaine':'#a4a5c5','Rourke':'#d2a485'
+  };
+  return tones[h.name]||skinAccent(h.skins?.[0]||{name:h.name});
+}
+
+function heroRow(h){
+  const idx=DATA.heroes.indexOf(h),sel=resolvedSelection(h);
+  const icon=sel?.icon||h.icon;
+  const sub=sel?`<small class="chosen-skin">▸ ${sel.skin}</small>`:`<small>${heroCount(h)} skin · chạm để xem</small>`;
+  return `<button class="row hero-row ${sel?'chosen':''}" style="width:100%;text-align:left;--hero-accent:${heroAccent(h)}" onclick="push({screen:'detail',idx:${idx}})">${lazyImg(icon,'class="avatar"')}<div class="txt"><b>${h.name}</b>${sub}</div><svg class="chev" width="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`
+}
+function azHTML(){const c={};DATA.heroes.forEach(h=>c[letterOf(h.name)]=(c[letterOf(h.name)]||0)+1);return `<div class="az-grid">${ALPHABET.map((l,i)=>`<button class="az ${c[l]?'':'empty'}" style="--letter-accent:${['#7caed7','#b299da','#79c6b1','#d1ae82','#c892ac','#8bbdc9','#ada7d8'][i%7]}" ${c[l]?`onclick="push({screen:'list',letter:'${l}'})"`:''}>${c[l]?`<span class="cnt">${c[l]}</span>`:''}${l}</button>`).join('')}</div>`}
+function screenAZ(){return `${summary()}<div class="section-kicker">Thư viện</div><h1>CHỌN <span class="hl">TƯỚNG</span></h1><p class="sub">Chạm chọn nhanh • tìm tướng hoặc skin tức thì</p><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input placeholder="Tìm tướng hoặc skin..." oninput="onSearch(this.value)"></div><div id="results">${azHTML()}</div>`}
+function onSearch(v){clearTimeout(searchTimer);const q=v.trim();const box=document.getElementById('results');if(!q){box.innerHTML=azHTML();return}box.innerHTML='<div class="empty" style="padding:25px">Đang tìm...</div>';searchTimer=setTimeout(async()=>{try{const r=await fetch('api/search?q='+encodeURIComponent(q),{cache:'no-store'});const d=await r.json();box.innerHTML=d.heroes?.length?d.heroes.map(x=>{let h=DATA.heroes.find(k=>k.name===x.name);return h?heroRow(h):''}).join(''):'<div class="empty">Không tìm thấy kết quả.</div>';requestAnimationFrame(postRender)}catch(e){box.innerHTML='<div class="empty">Không thể tìm kiếm.</div>'}},130)}
+function screenList(l){const hs=DATA.heroes.filter(h=>letterOf(h.name)===l);return `${summary()}<button class="back" onclick="stack=[{screen:'az'}];render();updateBack()"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 6-6 6 6 6"/></svg> ĐỔI CHỮ CÁI</button><div class="section-kicker">Danh sách</div><h1>CHỮ <span class="hl">${l}</span></h1><p class="sub">${hs.length} tướng</p>${hs.map(heroRow).join('')}`}
+function skinSkeleton(){return `<div class="skin-grid">${Array(9).fill('<div class="skin"><span class="skin-pic skeleton"></span><span class="shade">&nbsp;</span></div>').join('')}</div>`}
+
+
+function skinAccent(s){
+  // Individually matched to the portraits in the supplied Nakroth screenshot.
+  const portraits={'15001':'#f47c55','15002':'#f2a65e','15003':'#a493f8','15004':'#9bdbdc','15005':'#57caff','15006':'#efbb69','15007':'#ffd477','15008':'#efb2ac','15009':'#8ab8ff','15012':'#d8bcec','15013':'#8cbbf9','15014':'#92d6a8','15015':'#d9b9ee','15016':'#c4b477','15017':'#87a4ff'};
+  if(portraits[String(s.id)])return portraits[String(s.id)];
+  const n=(s.name||s.skin||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const themes=[[/hoa nguc|dia nguc|lua|hoa than|phuong|t-rex|okarun/,'#f48a65'],[/bang|tuyet|dong gia|thuy|bien|hai vuong|dai duong/,'#67d7f3'],[/loi|set|tia chop|quang|kim|quan quan/,'#f3cb70'],[/tu linh|bong dem|huyen|quy|ma vuong|hon mang/,'#b296f4'],[/bach|thien su|tinh he|thu nguyen|vu tru/,'#a1c9fa'],[/rung|moc|la|luc|levi/,'#8ddb9d'],[/hong|dao|anh dao|tinh yeu|hoa hau|idol/,'#ef9bc6'],[/cong nghe|sieu viet|cyber|robot|mecha/,'#74dfdb']];
+  return themes.find(([pattern])=>pattern.test(n))?.[1]||'#78d8e9';
+}
+
+function screenDetail(idx){
+  const h=DATA.heroes[idx];
+  if(!h.skins&&!h._loading)setTimeout(()=>ensureSkins(h),0);
+  const sel=resolvedSelection(h);
+  const heroImg=sel?.icon||h.icon;
+  const status=sel?`<span class="chosen-skin">▸ ĐANG CHỌN: ${sel.skin}</span>`:`<span>${heroCount(h)} skin • mỗi tướng chọn 1 skin</span>`;
+  return `${summary()}<button class="back" onclick="stack=[{screen:'az'}];render();updateBack()"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 6-6 6 6 6"/></svg> ĐỔI TƯỚNG</button><div class="hero-card ${sel?'chosen':''}" style="--hero-accent:${heroAccent(h)}"><img class="avatar" src="${heroImg}" decoding="async" fetchpriority="high" onload="imgReady(this)" onerror="imgFallback(this,0)"><div><b>${h.name}</b>${status}</div></div>${h._loading||!h.skins?skinSkeleton():`<div class="skin-grid">${h.skins.map((s,si)=>`<button class="skin ${sel?.skin===s.name?'sel':''}" style="--skin-accent:${skinAccent(s)}" onclick="toggleSkinAt(${idx},${si})"><span class="skin-pic">${lazyImg(s.icon,`data-fallback="${s.icon_fallback||''}" onerror="imgFallback(this,.15)"`)}<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span></span><span class="shade">${s.name}</span></button>`).join('')}</div>`}`}
+
+function platformCard(){return `<div class="platform"><div class="platform-head"><svg width="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 3h10a2 2 0 0 1 2 2v14H5V5a2 2 0 0 1 2-2Z"/><path d="M9 18h6"/></svg><div><b>Gói thiết bị</b><small>Chọn đúng máy để file nhẹ hơn</small></div></div><div class="segment"><button class="seg ${platformMode==='android'?'on':''}" aria-pressed="${platformMode==='android'}" onclick="setPlatform('android')">${ICON.android} Android</button><button class="seg ${platformMode==='ios'?'on':''}" aria-pressed="${platformMode==='ios'}" onclick="setPlatform('ios')">${ICON.ios} iOS</button><button class="seg ${platformMode==='both'?'on':''}" aria-pressed="${platformMode==='both'}" onclick="setPlatform('both')">${ICON.both} Cả 2</button></div><div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><span>Android hoặc iOS riêng sẽ bỏ bản còn lại khỏi file ZIP — giảm dung lượng mạnh mà vẫn giữ nguyên resource/hiệu ứng của nền tảng đã chọn.</span></div></div>`}
+let cosmeticsEnabled=true;
+function setCosmetics(value){cosmeticsEnabled=value;try{localStorage.setItem('tdmod-cosmetics',value?'on':'off')}catch(e){};render()}
+try{cosmeticsEnabled=localStorage.getItem('tdmod-cosmetics')!=='off'}catch(e){}
+function cosmeticsCard(){return `<section class="platform cosmetic-options"><div class="platform-head"><span class="cosmetic-symbol" aria-hidden="true">✦</span><div><b>Nút bấm & thông báo hạ</b><small>Áp dụng cho skin có hiệu ứng tương ứng</small></div></div><div class="segment"><button class="seg ${cosmeticsEnabled?'on':''}" aria-pressed="${cosmeticsEnabled}" onclick="setCosmetics(true)">✦ Có nút + hạ địch</button><button class="seg ${!cosmeticsEnabled?'on':''}" aria-pressed="${!cosmeticsEnabled}" onclick="setCosmetics(false)">Không nút • không hạ</button></div><div class="tip"><span>${cosmeticsEnabled?'Tải đầy đủ Bối cảnh ngoại vi trong game để hiện hiệu ứng. Skin không có bộ nút hoặc thông báo hạ sẽ giữ giao diện thường.':'Tạo mod skin với giao diện nút và thông báo hạ thông thường.'}</span></div></section>`}
+function cart(){if(!selections.length)return `${summary()}<div class="empty"><b style="color:var(--text)">Chưa chọn skin</b><br><br>Vào tab CHỌN SKIN để bắt đầu.</div>`;return `${summary()}<div class="section-kicker">Xác nhận</div><h1>ĐÃ <span class="hl">CHỌN</span></h1><p class="sub">Kiểm tra skin và chọn đúng nền tảng trước khi tạo file</p><button class="clear-cart" onclick="clearAllSelections()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M9 6V4h6v2M5 6l1 14h12l1-14M10 10v6m4-6v6"/></svg>Xóa tất cả <span>${selections.length} skin</span></button>${selections.map((x,i)=>{const h=DATA.heroes.find(k=>k.name===x.tuong);const sk=h?.skins?.find(k=>k.name===x.skin);return `<div class="cart-row" style="--card-accent:${['#7cc7e2','#b19be7','#79d6b4','#e1b578','#dd98b6'][i%5]}">${lazyImg(sk?.icon||h?.icon||'')}<div class="txt"><b>${x.tuong}</b><small>${x.skin}</small></div><button class="remove" onclick="removeSelectionAt(${i})">✕</button></div>`}).join('')}${platformCard()}<label class="row bright-row color-toggle" data-enabled="${brightEnabled}" for="bright"><span class="bright-icon">✦</span><div class="txt"><b>Hiệu ứng sáng đậm</b><small>Tăng độ sáng cho hiệu ứng kỹ năng</small></div><span class="toggle-state">${brightEnabled?'Đã bật':'Đã tắt'}</span><input id="bright" class="theme-check" type="checkbox" ${brightEnabled?'checked':''} onchange="setBrightEnabled(this)"></label><button class="run" onclick="runMod()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 5 11 7-11 7V5Z"/></svg>TẠO MOD • ${selections.length} SKIN</button>`}
+function other(){return `${summary()}${soundSettings()}<div class="section-kicker">Thiết lập</div><h1>TÙY <span class="hl">CHỌN</span></h1><p class="sub">Chọn nền tảng bạn đang sử dụng</p>${platformCard()}<section class="usage-guide" aria-labelledby="usageTitle"><div class="usage-heading"><span class="usage-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Z"/><path d="M12 6v14M6 9h3M6 12h3M15 9h3M15 12h3"/></svg></span><h2 id="usageTitle">Cách sử dụng</h2></div><div class="usage-body"><ol class="usage-steps"><li><span>Vào <strong>CHỌN SKIN</strong>, chọn tướng và skin.</span></li><li><span>Mở <strong>ĐÃ CHỌN</strong>, kiểm tra skin và chọn <strong>Android / iOS / Cả 2</strong>.</span></li><li><span>Bấm <strong>TẠO MOD</strong> → chọn có hoặc không có nút bấm + hạ địch → bấm <strong>TẠO MOD</strong> bên dưới.</span></li><li><span>Đợi tạo xong, làm nhiệm vụ để mở tải ZIP. Xem lại file trong <strong>LỊCH SỬ</strong>.</span></li></ol><div class="usage-download"><strong>Tải đủ tài nguyên trong game</strong><p>Danh sách tải → <strong>Cần thiết trong trận (100%)</strong> và <strong>Trải nghiệm đa dạng → Bối cảnh ngoại vi (100%)</strong>.</p></div><p class="usage-footnote">Thoát hẳn game, giải nén đúng thư mục và ghi đè. Skin không hỗ trợ hiệu ứng riêng dùng giao diện thường. File trên web giữ mặc định 24 giờ.</p></div></section>`}
+function render(){const a=document.getElementById('app');const b=document.getElementById('cartBadge');if(b){b.textContent=selections.length;b.classList.toggle('hidden',!selections.length)}let html;if(!loaded)html=loadingHome();else if(tab==='cart')html=cart();else if(tab==='other')html=other();else if(tab==='history')html=historyScreen();else{const top=stack.at(-1);html=top.screen==='az'?screenAZ():top.screen==='list'?screenList(top.letter):screenDetail(top.idx)}const kept=new Map();a.querySelectorAll('img').forEach(img=>{const key=img.dataset.imageKey?'lazy:'+img.dataset.imageKey:'direct:'+img.getAttribute('src');if(key)kept.set(key,img)});a.innerHTML=html;a.querySelectorAll('img').forEach(img=>{const key=img.dataset.imageKey?'lazy:'+img.dataset.imageKey:'direct:'+img.getAttribute('src');const old=kept.get(key);if(old){img.replaceWith(old);kept.delete(key)}});const top=stack.at(-1);const scene=loaded?tab+':'+(tab==='heroes'?top.screen+':'+(top.idx??top.letter??''):''):'loading';if(scene!==lastScene){animateScene=true;lastScene=scene;a.classList.remove('scene-enter');requestAnimationFrame(()=>a.classList.add('scene-enter'))}requestAnimationFrame(postRender)}
+loadSavedSelections();setTab('heroes');loadData();loadHistory();
+// Reopening the web starts at home; previous files remain available in History.
+addEventListener('pageshow',e=>{if(e.persisted){clearTimeout(pollTimer);stack=[{screen:'az'}];setTab('heroes');document.getElementById('scrollArea').scrollTo({top:0,behavior:'instant'})}});
+try{const url=new URL(location.href);const returned=url.searchParams.get('from_task')==='1';const job=url.searchParams.get('job');if(url.searchParams.has('job')||url.searchParams.has('from_task')){url.searchParams.delete('job');url.searchParams.delete('from_task');history.replaceState(null,'',url.pathname+url.search+url.hash)}if(returned&&job&&/^[A-Za-z0-9_-]{1,80}$/.test(job)){openJob(job)}}catch(e){}
+
+</script>
+<dialog id="modChoiceDialog" aria-labelledby="modChoiceTitle" oncancel="pendingModRequest=null;pendingModChoice=null"><div class="mod-choice-head"><h2 id="modChoiceTitle">Chọn kiểu mod</h2><button type="button" onclick="cancelModChoice()" aria-label="Hủy tạo mod">×</button></div><p id="modChoiceSummary"></p><div role="group" aria-label="Kiểu mod"><button type="button" class="mod-choice" data-cosmetics="true" aria-pressed="false" onclick="selectModChoice(true)"><span><b>Có nút bấm + hạ địch</b><small>Hiệu ứng riêng cho skin có hỗ trợ.</small></span></button><button type="button" class="mod-choice" data-cosmetics="false" aria-pressed="false" onclick="selectModChoice(false)"><span><b>Không có nút bấm + hạ địch</b><small>Dùng nút và thông báo hạ mặc định.</small></span></button></div><p class="mod-choice-tip">Trong game, tải đầy đủ <b>Cần thiết trong trận (100%)</b> và <b>Trải nghiệm đa dạng → Bối cảnh ngoại vi (100%)</b> để hiện đầy đủ hiệu ứng.</p><button id="modChoiceCreate" type="button" disabled onclick="confirmModChoice()">TẠO MOD</button></dialog>
+<dialog id="siteNotice" aria-labelledby="siteNoticeTitle"><h2 id="siteNoticeTitle"></h2><div id="siteNoticeText"></div><form method="dialog"><button autofocus>Đã hiểu</button></form></dialog>
+<script>
+async function showWelcomeNotice(){try{const r=await fetch('/api/notice',{cache:'no-store'});if(!r.ok)return;const n=await r.json();const dialog=document.getElementById('siteNotice');if(!n.enabled||typeof n.title!=='string'||typeof (n.html??n.content)!=='string'||!dialog.showModal)return;document.getElementById('siteNoticeTitle').textContent=n.title;const body=document.getElementById('siteNoticeText');if(typeof n.html==='string'){body.innerHTML=n.html}else{body.textContent=n.content;}if(dialog.open)dialog.close();dialog.showModal()}catch(e){}}
+showWelcomeNotice();addEventListener('pageshow',e=>{if(e.persisted)showWelcomeNotice()});
+</script>
+</body>
+</html>

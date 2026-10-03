@@ -1,0 +1,24 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="temp_obj_0" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="ChangeSkillTriggerDuration0" eventType="ChangeSkillTriggerDuration" guid="d27f1a57-c464-42b8-a6af-da3ceceacb42" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ChangeSkillTriggerDuration" time="0.000" length="2.000" isDuration="true" guid="66f26e35-2f25-4ad2-a37c-0a29b1ff884a">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="8" EnumValue="召唤Boss槽位" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="80129" refParamName="" useRefParam="false" />
+        <bool name="unIntiSkillSlotIfSkillIDNULL" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseCombo" value="false" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,629 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="pos0" id="3" isTemp="false" />
+    <TemplateObject objectName="pos1" id="4" isTemp="false" />
+    <TemplateObject objectName="pos2" id="5" isTemp="false" />
+    <TemplateObject objectName="pos3" id="6" isTemp="false" />
+    <TemplateObject objectName="pos4" id="7" isTemp="false" />
+    <TemplateObject objectName="pos5" id="8" isTemp="false" />
+    <TemplateObject objectName="pos6" id="9" isTemp="false" />
+    <TemplateObject objectName="pos7" id="10" isTemp="false" />
+    <TemplateObject objectName="pos8" id="11" isTemp="false" />
+    <TemplateObject objectName="pos9" id="12" isTemp="false" />
+    <TemplateObject objectName="Bullet" id="13" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="10.100" loop="false">
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="f99cf267-a646-4a1a-88ce-fecabc99404d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="10.000" isDuration="true" guid="d55eb3ef-ab24-4ca1-902e-7a2616c45c1f">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Fight" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+        <Array name="leaveBoolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="leaveBoolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="SetAnimationParamsDuration0" eventType="SetAnimationParamsDuration" guid="b3e55383-7ab7-46f9-8adf-867350470d99" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="SetAnimationParamsDuration" time="0.000" length="0.172" isDuration="true" guid="2a71edbc-3b7e-405d-85d5-ddc8b5c5a27e">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Mockery_In" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+        <Array name="leaveBoolNames" refParamName="" useRefParam="false" type="String">
+          <String value="chaofeng" />
+        </Array>
+        <Array name="leaveBoolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="c2613b13-e3a6-4f4a-ba0b-310920c03633" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="SetAnimationParamsTick" time="0.000" isDuration="false" guid="c2a5d305-b251-450e-927a-64f4f5130701">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Fight" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="6d35f123-d150-42db-848e-a1a15fcf2300" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="SetAnimationParamsTick" time="0.200" isDuration="false" guid="87bb08a1-fa74-401d-acae-cfb5e2886ceb">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Mockery_In" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="false" />
+        </Array>
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="FilterTargetStateDuration0" eventType="FilterTargetStateDuration" guid="d6d607a7-906d-4c74-a5eb-e334beb93bf9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="FilterTargetStateDuration" time="0.000" length="10.100" isDuration="true" guid="7a3bc618-ba2e-4b33-b616-047c6f8dbbe1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="checkBehaviorMode" value="true" refParamName="" useRefParam="false" />
+        <bool name="bInMove" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="StopTracks0" eventType="StopTracks" guid="c84ad00f-308d-47f1-af27-b2053f274c52" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="4" guid="d6d607a7-906d-4c74-a5eb-e334beb93bf9" status="true" />
+      <Event eventName="StopTracks" time="0.000" isDuration="false" guid="94660188-a90e-4538-91ea-4493fefb2eec">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="29" guid="2cc93c1b-ac05-4373-9b17-89ae9ef80765" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+          <TrackObject id="-1" guid="" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="FilterTargetStateDuration0" eventType="FilterTargetStateDuration" guid="674d1c72-d74a-4177-802e-8a3b203eaf4b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="FilterTargetStateDuration" time="0.000" length="10.100" isDuration="true" guid="abdbe09b-5926-4f2b-925e-5f15cd8960ce">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="checkBehaviorMode" value="true" refParamName="" useRefParam="false" />
+        <bool name="bInIdle" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="StopTracks0" eventType="StopTracks" guid="d82465d1-8c7d-4976-9fcc-db54282e3954" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="6" guid="674d1c72-d74a-4177-802e-8a3b203eaf4b" status="true" />
+      <Event eventName="StopTracks" time="0.000" isDuration="false" guid="92e04d5c-29b9-4ad8-84c3-a12a6e4e7dbf">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="28" guid="02125d51-a33a-4ec7-97c8-4bef6c77bdaf" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.011" isDuration="false" guid="aaf18b0c-b559-4f17-a288-4d9a27819acb">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="1" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="f9eaaa84-29cd-4684-911e-4e99be06fed8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="7a94ed79-d3de-417c-be2d-8fe9740caefa">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor0" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="e1c51279-5828-4a0b-98fc-bf2d5c0cf593">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="2" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="a75eac54-4d4d-408b-8d01-b977f30e4513" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="771cbfb0-b8e2-4314-87bb-d82e7f9762f5">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor1" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos1" id="4" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="c8addbd6-69b3-49bd-8d08-875f17e7946c">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="3" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="0b83c198-5690-4c7a-8d77-61bc6cc6d5e1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.022" isDuration="false" guid="409f411a-bf46-4b7e-82ab-b8f8297bbb9c">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor2" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos2" id="5" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.022" isDuration="false" guid="b6ac8a4c-9af8-46ab-b90d-978a3193d868">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="4" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="00edf4f2-946e-4464-8a08-ae4a2cb1c45f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="de5b740d-4e18-41d3-a985-340e2d249931">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor3" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos3" id="6" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="0309faad-37d3-4f34-8261-20170060d639">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="5" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="9f59f027-5520-4213-8d62-346959ca86dd" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="8856f1fe-2799-4efd-bad4-9936ee13633f">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor4" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos4" id="7" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="6fc69cca-3956-4eec-bfc3-4a93de9679fb">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="6" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="a7cb4496-795b-4995-9eee-bf69da9048cb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="fff55796-1a7c-4798-81b5-b04bf37a6f54">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor5" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos5" id="8" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="85d513ae-4da7-4042-ba55-a5d689667dba">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="7" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="5bfcd3d9-39ea-4764-b611-814d0cba0ed0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="bc62a93b-1811-4894-a7a9-cd20e520e1a1">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor6" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos6" id="9" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="5074634b-af94-4ca2-9d1d-b04fc5b2aa01">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="8" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="08c9a5b5-83fd-42e2-bfee-4f9be9a48fde" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="a42e6011-53f1-405b-95c9-8898d7eabbd8">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor7" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos7" id="10" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="c23dc92d-58e0-4dd4-b131-e549c15d8719">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="9" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="e97b9f6a-d0f7-447d-9c40-437abbd3f92c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="4f04b765-6316-4982-90ec-07f85bf55d2e">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor8" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos8" id="11" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewCheckNumberTick0" eventType="NewCheckNumberTick" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="NewCheckNumberTick" time="0.000" isDuration="false" guid="8118484f-bac7-422a-8462-407c48e24195">
+        <String name="inputNumber" value="TauntCount" refParamName="" useRefParam="false" />
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="targetNumber" value="10" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="NewGetActorRootTick0" eventType="NewGetActorRootTick" guid="9a85474e-1a6c-49a4-b42b-50babc235798" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="NewGetActorRootTick" time="0.000" isDuration="false" guid="1cd471bc-5571-4ec0-a55b-574fde0e1584">
+        <Enum name="dataSrc" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="TauntEffectActor9" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="pos9" id="12" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="02125d51-a33a-4ec7-97c8-4bef6c77bdaf" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="3b4bcd6a-9746-4a49-acbb-18e48482eb65">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_run_loop" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="2cc93c1b-ac05-4373-9b17-89ae9ef80765" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="10.000" isDuration="true" guid="90eab945-c304-4aa5-a774-2c7f8acaa3e6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_idle_loop" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="9f3b23ec-4555-4666-8be7-e0ddb50d7e59" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="bb0d3206-7c0b-4cad-891a-630c38d9fb05">
+        <TemplateObject name="targetId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="daf6ab8d-7be2-40c9-aa83-35956b2afb01" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="291aefcf-fcc6-45b3-b055-f039772d3ced">
+        <TemplateObject name="targetId" objectName="pos1" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="566efdca-40e5-49c1-924c-332701e091f7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="138acaf0-1f47-41df-af09-3046378ed94b">
+        <TemplateObject name="targetId" objectName="pos2" id="5" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="84c1282a-e97c-4cb7-8f27-85aa5960141b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="d14c8e49-43f2-478a-89c3-774baac38f84">
+        <TemplateObject name="targetId" objectName="pos3" id="6" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="719216dc-0bba-431b-9480-a059efea22e3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="50e2cf85-1e98-4115-b19d-c3277267537a">
+        <TemplateObject name="targetId" objectName="pos4" id="7" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="42f457f8-fdd2-4712-86a4-86adb543763b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="8f7711d1-9556-4213-a6f4-d0a631fb599e">
+        <TemplateObject name="targetId" objectName="pos5" id="8" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="74ac17ca-d2f9-4f05-94b4-96d221feff38" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="7317a62c-dd96-49e0-8101-d2f6bac40cfe">
+        <TemplateObject name="targetId" objectName="pos6" id="9" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="cc107aae-e526-40b9-837a-ab8a5a60ab55" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="dd99335e-7088-427e-af94-63434f5ef4c7">
+        <TemplateObject name="targetId" objectName="pos7" id="10" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="0da97834-a081-4325-b410-e80f5bca1aa0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="02f88372-cbc0-46e8-9d5e-2cc15644800b">
+        <TemplateObject name="targetId" objectName="pos8" id="11" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="f9ac280d-f90a-43ce-95a7-d7f1548dac88" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="3.500" isDuration="true" guid="f507bd18-fcbc-45e0-82e6-04bda61740cf">
+        <TemplateObject name="targetId" objectName="pos9" id="12" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Assets/Prefabs/Prefab_Skill_Effects/Hero_Skill_Effects/174_YuJi/17408/174_YuJi_deadshow_02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="CheckTargetIsNullDuration0" eventType="CheckTargetIsNullDuration" guid="aea979b0-480f-42b4-b8b2-8de046a59e96" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true" SkinAvatarFilterType="9">
+      <Condition id="8" guid="884c948d-4edd-4ea0-81b7-902f76c98b01" status="true" />
+      <Condition id="10" guid="a08330da-3a67-43e9-9a0c-89d74b23c172" status="true" />
+      <Condition id="12" guid="b71b0bff-c957-4dfe-ba12-261521355d6f" status="true" />
+      <Condition id="14" guid="8e4aa89b-3560-4550-871b-8d0f7b94f7e4" status="true" />
+      <Condition id="16" guid="f5cc5d9d-2d07-4a55-96eb-508f794092ed" status="true" />
+      <Condition id="18" guid="a9078762-7994-4ce5-bfbd-c22d6de24b1c" status="true" />
+      <Condition id="20" guid="2534fa07-fb0e-4901-9625-39ac0e2a9bc6" status="true" />
+      <Condition id="22" guid="0d8c5e84-dee5-4319-92f6-86b48d6deb55" status="true" />
+      <Condition id="24" guid="c600b9b0-3f76-432f-854e-2641fbaaf71b" status="true" />
+      <Condition id="26" guid="3a2e7abf-7e24-4814-bfee-3606bfbcc5b6" status="true" />
+      <Event eventName="CheckTargetIsNullDuration" time="0.000" length="10.000" isDuration="true" guid="cfe50589-d633-4a00-9826-a75c18f318f5">
+        <TemplateObject name="actorId" objectName="pos0" id="3" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="7390d5a8-ea9f-4070-b597-1343adf54e02" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="40" guid="aea979b0-480f-42b4-b8b2-8de046a59e96" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="e80b9fbc-78c0-45d1-bb0e-ba2e10c6c543">
+        <TrackObject name="trackId" id="29" guid="2cc93c1b-ac05-4373-9b17-89ae9ef80765" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+    <Track trackName="SetAnimationParamsTick0" eventType="SetAnimationParamsTick" guid="8731f65a-d827-417b-afeb-3bd51cc0face" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="SetAnimationParamsTick" time="10.000" isDuration="false" guid="fb9f6e03-eb6a-4f5d-9bc3-47e87189f351">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="boolNames" refParamName="" useRefParam="false" type="String">
+          <String value="Fight" />
+        </Array>
+        <Array name="boolValues" refParamName="" useRefParam="false" type="bool">
+          <bool value="true" />
+        </Array>
+      </Event>
+      <SkinOrAvatarList id="17408" />
+    </Track>
+  </Action>
+</Project> />

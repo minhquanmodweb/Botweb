@@ -1,0 +1,20 @@
+TD MOD SKIN AOV — GẮN BỘ FIX RESET OUT.7z
+
+Bộ người dùng cung cấp gồm KernelLua.pkg.bytes và StableSystems_3.pkg.bytes.
+Web chép nguyên byte cả hai file vào Resources/1.64.1 sau bước mã hóa resource và trước khi tạo gói Android/iOS. Có kiểm tra hash, CRC và xác nhận hai file trong đầu ra đúng bản cung cấp.
+Không sửa lại nội dung Lua, bảng kiểm tra tài nguyên hay thông báo của bộ này.
+Bộ được gắn cho đường dẫn resource 1.64.1 hiện tại. Khi game đổi phiên bản resource cần bộ tương ứng, không tự dùng lại.
+
+CẬP NHẬT TRÊN ĐIỆN THOẠI
+1. Giải nén TD_MOD_WEB_UPLOAD_PHONE.zip mới vào Download/TD_MOD_WEB_UPLOAD_PHONE, thay 9 file cùng tên.
+2. Up thư mục này lên repo minhquanmodweb/Botweb bằng lệnh Termux đang dùng.
+3. Chờ Railway triển khai thành công. Không cần thay URL hoặc Variables.
+4. Vào web tạo file mod MỚI. Các file đã tạo trong Lịch sử không được sửa nội dung khi cập nhật source.
+5. Trước khi thử, khôi phục tài nguyên để game vào bình thường, đóng hẳn rồi cài file mới. Thử vào game, đóng rồi mở lại vài lần.
+
+Nút Xóa tất cả và thay đổi phần hiển thị trước đó vẫn giữ.
+Chưa xác nhận hiệu quả chống reset trên thiết bị thật; tích hợp đúng byte không đồng nghĩa đã kiểm chứng game.
+Lỗi model Biron Deathmerc chưa được xác nhận sửa xong.
+
+LỊCH SỬ
+Giữ Variables hiện tại. Railway Volume /data và 1 replica để giữ file qua deploy/restart. Mặc định file có hạn 24 giờ.

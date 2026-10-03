@@ -1,0 +1,33 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="bullet1" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="BulletPrefab" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="6.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="b52df516-5e3a-4a1c-8d26-ae48d92fdd1f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="6.000" isDuration="true" guid="5a5bbd3f-17d5-4255-8b8e-838b418aa1c9">
+        <Enum name="SkillFuncType" value="40" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffHudTriggerDuration0" eventType="BuffHudTriggerDuration" guid="3bf97cad-a9ef-48d5-80f6-cf7b96d1034a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BuffHudTriggerDuration" time="0.000" length="6.000" isDuration="true" guid="b3966419-9a12-4f0b-ad70-f2be9de72a19">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID" value="801102" refParamName="" useRefParam="false" />
+        <Enum name="iconType" value="5" refParamName="" useRefParam="false" />
+        <bool name="bVvisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOriginVisble" value="true" refParamName="" useRefParam="false" />
+        <Enum name="priority1" value="1" refParamName="" useRefParam="false" />
+        <int name="priority2" value="1000" refParamName="" useRefParam="false" />
+        <bool name="bDelay" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

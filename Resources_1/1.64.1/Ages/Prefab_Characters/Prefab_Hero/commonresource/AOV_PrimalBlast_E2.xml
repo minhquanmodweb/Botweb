@@ -1,0 +1,14 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.500" loop="false">
+    <Track trackName="SkillFuncInstant0" eventType="SkillFuncInstant" guid="56ad20a6-2e8d-427f-ae35-15ead38dd17b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="-1" guid="" status="true" />
+      <Event eventName="SkillFuncInstant" time="0.000" isDuration="false" guid="034d8e8b-4e88-4306-ab82-c270d723738b" />
+    </Track>
+  </Action>
+</Project> />

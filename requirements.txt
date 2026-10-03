@@ -1,0 +1,14 @@
+python-telegram-bot==22.8
+aiohttp==3.13.5
+aiofiles==25.1.0
+pyzstd==0.19.1
+unidecode==1.4.0
+colorama==0.4.6
+pycryptodome==3.23.0
+Pillow==12.3.0
+Brotli==1.2.0
+lz4==4.4.5
+tabulate==0.10.0
+texture2ddecoder==1.0.6
+etcpak==0.9.15
+sm4==1.0.2

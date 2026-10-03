@@ -1,0 +1,40 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="bullet1" id="3" isTemp="true" />
+    <TemplateObject objectName="bullet2" id="4" isTemp="true" />
+    <TemplateObject objectName="bullet3" id="5" isTemp="true" />
+    <TemplateObject objectName="bullet4" id="6" isTemp="true" />
+    <TemplateObject objectName="mubiao" id="7" isTemp="true" />
+    <TemplateObject objectName="bullet5" id="8" isTemp="true" />
+    <TemplateObject objectName="bullet6" id="9" isTemp="true" />
+    <TemplateObject objectName="bullet7" id="10" isTemp="true" />
+    <TemplateObject objectName="bullet8" id="11" isTemp="true" />
+    <TemplateObject objectName="bullet9" id="12" isTemp="true" />
+    <TemplateObject objectName="bullet10" id="13" isTemp="true" />
+    <TemplateObject objectName="bullet11" id="14" isTemp="true" />
+    <TemplateObject objectName="bullet12" id="15" isTemp="true" />
+    <TemplateObject objectName="bullet13" id="16" isTemp="true" />
+    <TemplateObject objectName="bullet14" id="17" isTemp="true" />
+    <TemplateObject objectName="bullet15" id="18" isTemp="true" />
+    <TemplateObject objectName="bullet16" id="19" isTemp="true" />
+    <TemplateObject objectName="bullet17" id="20" isTemp="true" />
+    <TemplateObject objectName="bullet18" id="21" isTemp="true" />
+    <TemplateObject objectName="bullet19" id="22" isTemp="true" />
+    <TemplateObject objectName="bullet20" id="23" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.066" loop="false">
+    <Track trackName="TriggerHeroHudParticle0" eventType="TriggerHeroHudParticle" guid="8f36c4c1-1e50-4d95-ba02-83ca37542ac5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerHeroHudParticle" time="0.000" isDuration="false" guid="1a03324b-dc03-4261-8739-59354cef20a5">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="open" value="true" refParamName="" useRefParam="false" />
+        <String name="path" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/UX_Evita_EnergyFore_Full" refParamName="" useRefParam="false" />
+        <Vector3i name="offset" x="-2000" y="-200" z="0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

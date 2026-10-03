@@ -1,0 +1,50 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="Bullet" id="3" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="100.000" loop="false">
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="249ded16-1b08-4798-9119-40ab989c9318" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="100.000" isDuration="true" guid="1371d115-62a9-42e8-b31d-6cbc50877b22">
+        <TemplateObject name="targetId" objectName="Bullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle6" eventType="TriggerParticle" guid="5d792067-989c-4089-b578-a0af6a8cfb10" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="100.000" isDuration="true" guid="11fca332-8e86-458f-bd6c-473e33871183">
+        <TemplateObject name="targetId" objectName="Bullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/108_MoDi/10812/10812_Mozi_chaofeng01" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorAroundDuration0" eventType="CheckActorAroundDuration" guid="9afbdf89-dafc-45c1-919d-d031054749cc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorAroundDuration" time="0.000" length="100.000" isDuration="true" guid="b8fdbcff-0643-4ad0-90c3-9b3f64170bbb">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="distance" value="6000" refParamName="" useRefParam="false" />
+        <bool name="bFindMonster" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFindSoldier" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFindOrgan" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFindTower" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFindCallActor" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFindSpecificTarget" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="chooseTargetId" objectName="Bullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <Array name="bulletActionNames" refParamName="" useRefParam="false" type="String">
+          <String value="Prefab_Characters/Prefab_Hero/108_MoDi/Stone/chaofenganniu" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

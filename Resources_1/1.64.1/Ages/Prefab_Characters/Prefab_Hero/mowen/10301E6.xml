@@ -1,0 +1,177 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="monster" isTemp="false" />
+    <TemplateObject id="3" objectName="bullet" isTemp="true" />
+    <TemplateObject id="4" objectName="bullet1" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="BulletPrefab" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="若此时炼金层数大于0层" eventType="CheckSkillCombineConditionTick" guid="bcac0965-f115-4b8e-bee9-402907e2f996" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="e37235aa-1c28-49a9-b14f-2e4f0e443853">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="881030134" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="5" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="3c654f90-45f2-4204-8e79-7f7db6506656" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="bcac0965-f115-4b8e-bee9-402907e2f996" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="74d1afad-2535-48b8-b844-bad040b0e3c5">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88103010" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="88103010" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_3" value="88103010" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="084a80e1-119b-4587-90b1-e2f80b29c211" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="bcac0965-f115-4b8e-bee9-402907e2f996" status="true" />
+      <Event eventName="HitTriggerTick" time="0.005" isDuration="false" guid="87206c1d-e2ee-460d-a585-76ff34d7eff3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88103010" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="88103010" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="cd998e68-d43f-487e-8591-e122a3276389" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="bcac0965-f115-4b8e-bee9-402907e2f996" status="true" />
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="a827551c-83a6-45e8-98ec-055f80d91084">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Systems_Effects/GoldenCoin_UI_01" refParamName="" useRefParam="false" />
+        <Vector3 name="bindPosOffset" x="0.000" y="1.000" z="0.000" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="炼金触发" eventType="CheckSkillCombineConditionTick" guid="f3e8aabd-7c12-4bb9-8e5c-26c1dcbb7bc8" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="bcac0965-f115-4b8e-bee9-402907e2f996" status="true" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="29efe582-f1aa-4ac4-8e20-76ab4527b18f">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88103010" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="+20元" eventType="HitTriggerTick" guid="096356f7-2733-4804-9112-dc54a6e5526a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="f3e8aabd-7c12-4bb9-8e5c-26c1dcbb7bc8" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="201fd37b-982b-4899-80bd-f5ea7836de38">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88103013" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="若减1层后炼金层数为0层" eventType="CheckSkillCombineConditionTick" guid="c17a9ef6-3384-4c92-8ab6-778490b2038d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="f3e8aabd-7c12-4bb9-8e5c-26c1dcbb7bc8" status="true" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="a621f0bd-18b2-44ce-9135-9c15264861f9">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="881030134" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="炼金层数减1" eventType="RemoveBuffTick" guid="f80c48dd-dff0-4032-a8b3-8438d96d153f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="6" guid="c17a9ef6-3384-4c92-8ab6-778490b2038d" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="de52d003-5386-4708-8d38-11fb324faf0e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="881030134" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="显示0层" eventType="SetBuffOverLayTick" guid="fe0d7506-5116-458d-80aa-c8ae81d138c1" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="6" guid="c17a9ef6-3384-4c92-8ab6-778490b2038d" status="true" />
+      <Event eventName="SetBuffOverLayTick" time="0.000" isDuration="false" guid="b5ba4942-de19-4c32-af81-d803e4fb3e7d">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="881030134" refParamName="" useRefParam="false" />
+        <int name="buffOverLayNum" value="0" refParamName="" useRefParam="false" />
+        <bool name="calZero" value="true" refParamName="" useRefParam="false" />
+        <bool name="resetAction" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="若减1层后炼金层数大于0层" eventType="CheckSkillCombineConditionTick" guid="bfabbe20-f3e1-498a-ae58-49396dbf2278" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="f3e8aabd-7c12-4bb9-8e5c-26c1dcbb7bc8" status="true" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="a5be9654-4b09-4326-8030-9e22f33ce448">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="881030134" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="4" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="炼金层数减1" eventType="RemoveBuffTick" guid="d4cf990a-27fb-4885-a794-42a32f5deda0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="9" guid="bfabbe20-f3e1-498a-ae58-49396dbf2278" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="cb228d54-3e7f-43e7-89b0-ebe100e6dcc8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="881030134" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="若此时炼金层数为2层" eventType="CheckSkillCombineConditionTick" guid="7ccfa4c1-6437-44bd-ae05-604fb4536652" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="10" guid="d4cf990a-27fb-4885-a794-42a32f5deda0" status="true" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="0fae066b-2a18-43a8-8ccd-98a120f84adb">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="881030134" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="炼金层数减1" eventType="RemoveBuffTick" guid="a2b3f5bd-fb90-4ae5-bd93-3cc3f5884c56" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="11" guid="7ccfa4c1-6437-44bd-ae05-604fb4536652" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="1b8ff16b-1055-4b04-b926-5db5f36fbd72">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="881030134" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="重启计时" eventType="HitTriggerTick" guid="5b681224-026f-4d9a-bfbb-e6b9f72997a0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="11" guid="7ccfa4c1-6437-44bd-ae05-604fb4536652" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="dab17052-74f5-4794-a6be-5d7bf05bbbc0">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="881030135" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="2层" eventType="CheckSkillCombineConditionTick" guid="e3aac879-6ade-4cdf-9222-e0448f45f902" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="eee2e672-9f7e-41fb-a4cc-b5d1e48557f5">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88103010" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="10" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="+10元" eventType="HitTriggerTick" guid="b2dfa6d4-0a70-4db2-bb50-4708db1719ce" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="e3aac879-6ade-4cdf-9222-e0448f45f902" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="b63d57d0-5dc5-4c76-b24e-bdc88142c403">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="881030132" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="3层" eventType="CheckSkillCombineConditionTick" guid="02c47682-a467-496c-b5f1-5d94c7221d50" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="606621eb-31c7-4d9e-9cba-8d3da2b1246a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88103010" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="15" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="+15元" eventType="HitTriggerTick" guid="cd722738-6da7-4c8e-91d7-a23d2bb86c6e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="16" guid="02c47682-a467-496c-b5f1-5d94c7221d50" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="f0dca452-b31b-4fe5-9d79-e628405ecbc1">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="881030133" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

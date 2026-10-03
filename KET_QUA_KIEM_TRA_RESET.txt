@@ -1,0 +1,14 @@
+ĐỐI CHIẾU ZIP MOD NGƯỜI DÙNG ĐÃ CÀI
+
+File: TD-MOD-android.zip
+ZIP không có lỗi CRC.
+Danh sách 6 skin: Nakroth Bạch Diện chiến thương, Billow Okarun, Biron Deathmerc, Hayate Siêu đạo chích Kid, Capheny Càn Nguyên Điện Chủ, Violet Nobara Kugisaki.
+Có 37 resource khác so với Resources.zip bạn đã gửi.
+Các nhóm khác gồm Databin, AssetRefs, Actions, Infos và resourcepackerinfosetall.assetbundle.
+Lớp nén/mã hoá của các file Databin và AssetRefs trong ZIP mới đã được khôi phục; kết quả trên điện thoại cho thấy sửa định dạng vẫn chưa giải quyết reset khi mở lại.
+Ảnh tải lại 3,59 MB không nêu tên resource; dung lượng tổng gần nhau không phải bằng chứng file nào bị ghi đè.
+Chưa có bộ tài nguyên chụp trước và sau reset của chính lượt mod này để xác định phần game thay thế.
+
+BẢN CẬP NHẬT NHIỆM VỤ
+Chỉ thêm yêu cầu hoàn thành link rút gọn trước tải file. Không tuyên bố sửa được reset.
+Không đổi nội dung mod hoặc bật thêm các patch chống reset chưa kiểm chứng.

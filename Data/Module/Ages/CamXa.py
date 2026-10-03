@@ -1,0 +1,8 @@
+import os
+
+def CamXa(chedocamyn, CamXa_MOD):
+    if chedocamyn.lower() == 'y':
+        with open (CamXa_MOD, 'rb') as f:
+            noidungsexx = f.read()
+            noidungsexx = noidungsexx.replace(b'</Action>', b'  <Track trackName="SetCameraHeightDuration0" eventType="SetCameraHeightDuration" guid="9489c796-894b-4c2e-9a95-acf27873964a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">\r\n      <Event eventName="SetCameraHeightDuration" time="0.000" length="1.000" isDuration="true" guid="422a1ed9-a12c-44b3-a9c5-3fe899d689dd">\r\n        <int name="slerpTick" value="0" refParamName="" useRefParam="false"/>\r\n        <float name="heightRate" value="1.3" refParamName="" useRefParam="false"/>\r\n        <bool name="bOverride" value="true" refParamName="" useRefParam="false"/>\r\n        <bool name="leftTimeSlerpBack" value="true" refParamName="" useRefParam="false"/>\r\n        <bool name="cutBackOnExit" value="true" refParamName="" useRefParam="false"/>\r\n        <bool name="exitKeepCurrentValue" value="true" refParamName="" useRefParam="false"/>\r\n        <bool name="isSlerpBackWhenInterrupted" value="true" refParamName="" useRefParam="false"/>\r\n        <int name="slerpBackTick" value="1500" refParamName="" useRefParam="false"/>\r\n        <String name="refParamName" value="" refParamName="" useRefParam="false"/>\r\n    </Event>\r\n  </Track>\r\n    </Action>')    
+        with open (CamXa_MOD,'wb') as f : f.write(noidungsexx)

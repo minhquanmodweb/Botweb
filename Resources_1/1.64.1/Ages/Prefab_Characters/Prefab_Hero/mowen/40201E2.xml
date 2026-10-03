@@ -1,0 +1,17 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList />
+  <RefParamList />
+  <Action tag="" length="2.400" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="d8a70349-4721-406d-a823-98b552149ba0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="0.500" isDuration="true" guid="ee1244a3-b654-4f38-ac50-680e9b021f6b">
+        <Enum name="SkillFuncType" value="133" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncDuration1" eventType="SkillFuncDuration" guid="969ba3af-c298-472f-86fb-4f018158a3e0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="0.500" isDuration="true" guid="d12d1389-d6c1-48cb-88af-19590ac7eb13">
+        <Enum name="SkillFuncType" value="134" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

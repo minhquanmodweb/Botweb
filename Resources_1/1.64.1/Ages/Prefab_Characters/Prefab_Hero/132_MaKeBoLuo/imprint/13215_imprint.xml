@@ -1,0 +1,107 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="source" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="self" id="2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="33.000" loop="false">
+    <Track trackName="次元判断" eventType="FilterTargetType" guid="2600b283-67f2-4230-9969-11571f007fba" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="cf0f0332-bcf6-49ce-9a52-7cea7493b940">
+        <TemplateObject name="targetId" objectName="self" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="132800" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="buffLayers" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗开始" eventType="TriggerParticle" guid="9533cbe6-b991-4acd-b78b-751f9ced35c1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="false" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.500" isDuration="true" guid="7264a5e4-2034-4f8c-86f2-ae029ff9772d">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_01_born" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗循环" eventType="TriggerParticle" guid="25b0d593-ff36-400f-b6bd-9e378749bd54" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="false" />
+      <Event eventName="TriggerParticle" time="1.500" length="30.000" isDuration="true" guid="b25bc004-994b-429e-b3c7-26cb0fb92dd7">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_02_loop" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗结束" eventType="TriggerParticle" guid="8c7a111b-2aef-45f0-a2d4-e829f08174aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="false" />
+      <Event eventName="TriggerParticle" time="31.489" length="1.500" isDuration="true" guid="d8ed2495-4321-44d4-9f1e-84c89c6fd699">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_03_death" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗开始" eventType="TriggerParticle" guid="583813c6-4a7a-4e33-b225-fe7b370507d9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.500" isDuration="true" guid="1953adb4-1997-4f4e-b05e-f38c107afed8">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_01_born_fire" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗循环" eventType="TriggerParticle" guid="245ac977-9869-458d-9f9e-f83b638c317c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="true" />
+      <Event eventName="TriggerParticle" time="1.500" length="30.000" isDuration="true" guid="26709b50-a820-4337-913c-2f80a6d4dc2d">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_02_loop_fire" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗结束" eventType="TriggerParticle" guid="6db3e370-1dfb-40cd-b415-2fb8425f41b2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="true" />
+      <Event eventName="TriggerParticle" time="31.500" length="1.500" isDuration="true" guid="1302a828-32cf-4fb3-83a2-819b20307ade">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/132_makeboluo/13215/13215_makeboluo_chaqi_03_death_fire" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick8" eventType="PlayHeroSoundTick" guid="8728bc88-3938-4d6a-a35b-2b6cdcbbfd09" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="false" />
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="e0bb123d-2e98-46f9-a926-996887791737">
+        <TemplateObject name="targetId" objectName="self" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="self" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_Hayate_VOX_breaker_Skin15" refParamName="" useRefParam="false" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick8_fire" eventType="PlayHeroSoundTick" guid="7eb1451a-aca0-40c7-b9a8-622da7954082" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="2600b283-67f2-4230-9969-11571f007fba" status="true" />
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="ef6cb2f5-2651-44a8-8d95-0c0f05003061">
+        <TemplateObject name="targetId" objectName="self" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="self" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_Hayate_VOX_breaker_Inner_Skin15" refParamName="" useRefParam="false" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

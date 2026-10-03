@@ -1,0 +1,90 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="CreateRandomNumTick0" eventType="CreateRandomNumTick" guid="a85a92df-1a77-4c8a-85ef-55e08e2c0dc1" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CreateRandomNumTick" time="0.006" isDuration="false" guid="1b20dcf6-1127-474b-ba72-d565201f9930">
+        <int name="randomRangeBegin" value="1" refParamName="" useRefParam="false" />
+        <int name="randomRangeEnd" value="3" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="RandomNum" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckRandomRangeTick0" eventType="CheckRandomRangeTick" guid="5bd1405b-6752-418a-afbe-8c34de4d3ff6" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckRandomRangeTick" time="0.006" isDuration="false" guid="27fc3dcd-8ede-4daf-bf2a-682a7cf6698b">
+        <int name="checkRangeBegin" value="1" refParamName="" useRefParam="false" />
+        <int name="checkRangeEnd" value="1" refParamName="" useRefParam="false" />
+        <bool name="bUsePreCreateRandonNum" value="true" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="RandomNum" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="5a84fd38-69d8-425e-9357-cc99f9cffd9f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="1" guid="5bd1405b-6752-418a-afbe-8c34de4d3ff6" status="true" />
+      <Condition id="-1" guid="" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="043b8c67-a539-4dae-aa43-ee9bd2dcaf74">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/commonresource/AOV_PrimalBlast_B0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckRandomRangeTick1" eventType="CheckRandomRangeTick" guid="f2c7afbe-3a2f-4c82-b1a1-8586ab450d3b" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckRandomRangeTick" time="0.000" isDuration="false" guid="c469d132-6d26-4440-8171-21a43bdda2ba">
+        <int name="checkRangeBegin" value="2" refParamName="" useRefParam="false" />
+        <int name="checkRangeEnd" value="2" refParamName="" useRefParam="false" />
+        <bool name="bUsePreCreateRandonNum" value="true" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="RandomNum" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick1" eventType="SpawnBulletTick" guid="29c54883-c259-4ca7-b103-22a90b334ed7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="f2c7afbe-3a2f-4c82-b1a1-8586ab450d3b" status="true" />
+      <Event eventName="SpawnBulletTick" time="1.500" isDuration="false" guid="62f71f57-0dc3-4079-bf5b-751572874f4b">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/commonresource/AOV_PrimalBlast_B0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckRandomRangeTick2" eventType="CheckRandomRangeTick" guid="3d2d237b-2a6f-4c7e-932e-ca07722ec185" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckRandomRangeTick" time="0.000" isDuration="false" guid="71c51572-37c0-484d-b0ab-6402a6ae271f">
+        <int name="checkRangeBegin" value="3" refParamName="" useRefParam="false" />
+        <int name="checkRangeEnd" value="3" refParamName="" useRefParam="false" />
+        <bool name="bUsePreCreateRandonNum" value="true" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="RandomNum" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick2" eventType="SpawnBulletTick" guid="bf275e71-0cc0-48a1-998c-3339572eb8d7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3d2d237b-2a6f-4c7e-932e-ca07722ec185" status="true" />
+      <Event eventName="SpawnBulletTick" time="3.000" isDuration="false" guid="0b969699-c2ab-4e24-8429-ec103109501a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/commonresource/AOV_PrimalBlast_B0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PrintTick1" eventType="PrintTick" guid="830d9739-e95a-4d63-a308-289debd31bb4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="0" guid="a85a92df-1a77-4c8a-85ef-55e08e2c0dc1" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="422f3d42-be87-42ed-b0ed-481693ec336a">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="生成随机数" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick1" eventType="PrintTick" guid="5247baec-11a1-43dd-a956-d4fe53f35205" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="1" guid="5bd1405b-6752-418a-afbe-8c34de4d3ff6" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="26f4f669-20f7-4146-b43b-e75bdf08560f">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="随机数1" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PrintTick1" eventType="PrintTick" guid="6b5a08a8-245d-4a28-8262-da7ad98cbe2a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="2" guid="5a84fd38-69d8-425e-9357-cc99f9cffd9f" status="true" />
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="ac6649ec-eaa6-465d-ad66-f1451666d612">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="随机数1的子弹" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

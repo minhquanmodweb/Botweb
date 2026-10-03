@@ -1,0 +1,21 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="CheckGameTimeDuration0" eventType="CheckGameTimeDuration" guid="de5e7d9e-4e87-424f-8ced-d4b6a1970387" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckGameTimeDuration" time="0.000" length="1.000" isDuration="true" guid="71950433-fbe9-494d-b652-45751332eb15">
+        <int name="sTime" value="120" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="188f045c-ad84-45ae-984b-1e228e2f1306" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="de5e7d9e-4e87-424f-8ced-d4b6a1970387" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="43fc0d31-1c43-4a45-b203-527bca59397b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9000590" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

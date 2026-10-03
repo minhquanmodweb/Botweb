@@ -1,0 +1,90 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="selfplayer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="3.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="c328d2fc-2e31-46e4-a224-544d76d90673" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="b1d46fbc-cca6-4fa9-b340-3a5db8e4a69c">
+        <Enum name="SkillFuncType" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TipProcessorTick0" eventType="TipProcessorTick" guid="3684212d-583f-4caf-a87b-daf7325a08b2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TipProcessorTick" time="0.000" isDuration="false" guid="51ffefeb-1dc7-4fe5-b66a-235c3a5a19cf">
+        <int name="GuideTipId" value="300207" refParamName="" useRefParam="false" />
+        <String name="linkURL" value="" refParamName="" useRefParam="false" />
+        <bool name="bPlayTip" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TipProcessorTick0" eventType="TipProcessorTick" guid="7d3ca0fa-627f-4526-bc13-7ef2e5ce0f4b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TipProcessorTick" time="0.005" isDuration="false" guid="2a7e6ff3-6182-42ee-873e-2d8029f1c591">
+        <int name="GuideTipId" value="300209" refParamName="" useRefParam="false" />
+        <String name="linkURL" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleUiWidgetSwtichTick0" eventType="BattleUiWidgetSwtichTick" guid="0dd652bd-0a9f-430d-8445-4e1a22d4fcae" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BattleUiWidgetSwtichTick" time="0.000" isDuration="false" guid="1000b28d-c183-441e-9aa1-184b79235098">
+        <bool name="bPauseBtn" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidInputTick0" eventType="ForbidInputTick" guid="b19ab54d-989b-44ec-bffa-f30cee0d0c2e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ForbidInputTick" time="0.000" isDuration="false" guid="73a695c2-9d96-4ad3-abce-00761b786709">
+        <TemplateObject name="srcId" id="0" objectName="selfplayer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+      <Event eventName="ForbidInputTick" time="1.350" isDuration="false" guid="51d523ba-8d46-4858-aeef-c24cd8f41264">
+        <bool name="bForbid" value="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="srcId" id="0" objectName="selfplayer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="18ced694-abba-4a7a-b9f8-addf8361a3e0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="3.000" isDuration="true" guid="b8362ad3-30f7-4c93-8ec9-98f318d3bb18">
+        <TemplateObject name="attackerId" id="0" objectName="selfplayer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="forbidMove" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forceForbidding" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetObjBehaviourModeTick0" eventType="SetObjBehaviourModeTick" guid="c85fa3a5-ad3d-4068-b117-9c8535e211b3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetObjBehaviourModeTick" time="0.000" isDuration="false" guid="51a0fe83-20e5-4ae3-8fe8-7ed79c54b6a6">
+        <TemplateObject name="targetId" id="0" objectName="selfplayer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleUIVisibleTick0" eventType="BattleUIVisibleTick" guid="34ed3a0e-fa08-46e2-b917-75951d40531b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BattleUIVisibleTick" time="0.000" isDuration="false" guid="4e08879c-0880-4acb-87df-09597c73e1e4">
+        <bool name="bOpenOrCloseBattleForm" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeEquipBtn" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeReplayKitBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeLockingTargetInfo" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludePauseResumeBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeSettingBtn" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeHeroInfoBtn" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeTrainPanel" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeMinimapSys" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeInBattleMsg" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeParticle" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeSkillBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeJoystick" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeBuffSkillPanel" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleUIVisibleTick1" eventType="BattleUIVisibleTick" guid="f102bf4e-98ff-494c-9fc5-54763cbfa16a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BattleUIVisibleTick" time="2.949" isDuration="false" guid="65c0f18f-47ca-4b98-af61-eee3562b7cf6">
+        <bool name="bOpenOrCloseBattleForm" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOpenOrClose" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeReplayKitBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludePauseResumeBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeSettingBtn" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeScoreBoard" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeKillNotify" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeMinimapSys" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeInBattleMsg" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeParticle" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeSkillBtns" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeJoystick" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludeBuffSkillPanel" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

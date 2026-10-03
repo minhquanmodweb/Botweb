@@ -1,0 +1,22 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="level" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffNum" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffMod2" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="0.533" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="854b74a4-5635-4121-98fc-c6942962a83d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="0.533" isDuration="true" guid="bea297f4-6ddc-4108-9faa-8e35679ba07d">
+        <Enum name="SkillFuncType" value="17" EnumValue="增加法术强度" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

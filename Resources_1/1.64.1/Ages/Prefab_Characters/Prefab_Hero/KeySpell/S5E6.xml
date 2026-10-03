@@ -1,0 +1,60 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="bullet1" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="BulletPrefab" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="检测是否有60s的标记buff" eventType="CheckSkillCombineConditionTick" guid="98eddd34-6c07-4684-9939-f671dc221c17" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="336efa1b-e635-49e1-b13b-6674493f8feb">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801056" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="检测没有正常的对敌封锁" eventType="CheckSkillCombineConditionTick" guid="c92553d5-13eb-445e-b8ff-7c4b4bbc609e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="98eddd34-6c07-4684-9939-f671dc221c17" status="true" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="65aaeb27-da95-4b04-b11c-a9204981c216">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801059" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="如果有，上一个持续1s的超弱封锁" eventType="HitTriggerTick" guid="a682aa21-7eca-48cb-b9f2-691ea440daab" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="c92553d5-13eb-445e-b8ff-7c4b4bbc609e" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="da97c1cb-34b4-4222-8622-88c72efad201">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="801057" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="801050" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="检测没有削弱的对敌封锁" eventType="CheckSkillCombineConditionTick" guid="d622cf39-24fa-4216-85ec-30473acb43de" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="98eddd34-6c07-4684-9939-f671dc221c17" status="false" />
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="f6f8b9f9-69f7-4794-8a5b-e1913016cbec">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801057" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="如果无，上正常的封锁buff，和一个60s的检测buff" eventType="HitTriggerTick" guid="21505f6e-bfbe-46d8-b6e3-98b63e0176ea" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="d622cf39-24fa-4216-85ec-30473acb43de" status="true" />
+      <Event eventName="HitTriggerTick" time="0.006" isDuration="false" guid="67401329-8009-4a40-a829-3f92683b22e9">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="801059" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="801050" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_3" value="801056" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

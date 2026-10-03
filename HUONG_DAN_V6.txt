@@ -1,0 +1,47 @@
+TD MOD – ADMIN THỐNG KÊ + NHẠC NỀN V6
+
+CÀI BẢN CẬP NHẬT
+1. Giải nén ZIP.
+2. Upload 6 file vào gốc repo minhquanmodweb/Botweb, cùng chỗ bundle.json và app.part01/app.part02. Ghi đè file cùng tên:
+   start_web.py
+   web_server.py
+   web_index.html
+   web_notice.py
+   web_notice_admin.html
+   web_admin_features.py (file mới)
+3. Giữ Start Command Railway: python start_web.py. Chờ deploy thành công.
+4. Mở /health: build là 2026-10-03-admin-stats-music-v6.
+
+TRANG ADMIN
+https://web-production-a7f18.up.railway.app/admin
+Mật khẩu mặc định: 177207 (nếu đã đặt WEB_ADMIN_PASSWORD thì dùng mật khẩu trong biến đó).
+Có 3 tab: Thống kê, Nhạc nền, Thông báo.
+Link riêng: /admin/stats, /admin/music, /admin/notice.
+
+THỐNG KÊ
+Người dùng hôm nay/tổng cộng; yêu cầu tạo; file thành công; lỗi tạo; lượt mở tải; đang tạo/đang chờ; bảng 7 ngày.
+Ngày tính theo giờ Việt Nam.
+Người dùng tính theo cookie trình duyệt. Xóa cookie, đổi trình duyệt có thể được tính là người mới.
+Mỗi file/trình duyệt tính một lượt mở tải hợp lệ, không xác nhận thiết bị đã tải hết file.
+Số liệu người dùng và tải bắt đầu khi cài bản này. Các job cũ còn meta trên máy chủ được bổ sung vào số tạo/thành công/lỗi. Các job đã bị xóa trước khi cài không khôi phục được.
+Số đếm vẫn giữ khi file ZIP hết hạn.
+
+GIỮ DỮ LIỆU QUA DEPLOY
+Cần gắn Railway Volume cho service web. Ví dụ mount path /data.
+Nếu chưa đặt WEB_STORAGE_DIR, app tự lưu trong /data/jobs khi Railway cung cấp RAILWAY_VOLUME_MOUNT_PATH=/data.
+Nếu đã đặt WEB_STORAGE_DIR, đổi nó sang /data/jobs hoặc thư mục thực sự nằm trên Volume.
+Nếu không có Volume, Railway có thể mất thống kê, nhạc, thông báo và lịch sử khi deploy/khởi tạo máy chủ mới.
+Bản cập nhật không thể tự khôi phục dữ liệu đã mất.
+
+NHẠC
+Vào tab Nhạc nền → chọn MP3/WAV/OGG (tối đa 25 MB) → Tải nhạc lên.
+Nhạc mới thay bài đang có. Có thể đổi tên, bật/tắt cho mọi người và nghe thử trong admin.
+Người dùng vào Cài đặt → Phát nhạc nền → bấm bật mới nghe. Không tự phát nhạc khi mở web.
+Nhạc đang phát tiếp tục khi đổi tab trong web. Tải lại trang thì nhạc trở về tắt.
+Âm thanh bấm luôn bật, không dùng trạng thái tắt cũ trong trình duyệt.
+
+GIAO DIỆN
+Đã bật/Đã tắt cho sáng đậm và nhạc.
+Thiết bị đang chọn có nền đậm, màu riêng cho Android/iOS/Cả 2.
+Cách sử dụng trong Cài đặt có hướng dẫn tạo, nhận ZIP, cài và tải Cần thiết trong trận + Bối cảnh ngoại vi.
+Chọn kiểu mod vẫn cần bấm TẠO MOD bên dưới mới chạy.

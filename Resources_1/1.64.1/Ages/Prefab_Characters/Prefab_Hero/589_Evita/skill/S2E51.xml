@@ -1,0 +1,88 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="utarget" id="2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="GetActorTick0" eventType="GetActorTick" guid="0b943737-c18f-4eb6-8423-ea7ed51d1af1" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetActorTick" time="-0.006" isDuration="false" guid="7e8f72e1-31a9-4e50-9b7f-eefc660593fb">
+        <String name="actorName" value="utarget" refParamName="" useRefParam="false" />
+        <TemplateObject name="GetActorId" objectName="utarget" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="refParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="2796c2f3-65ba-43ff-a04e-e826682fe178" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="-0.002" isDuration="false" guid="00c36a63-e3a7-4ac2-908d-fe72fbeaba1d">
+        <TemplateObject name="targetId" objectName="utarget" id="2" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="521300" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="4" EnumValue="大于" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncInstant0" eventType="SkillFuncInstant" guid="767805fe-8af9-448d-b3a3-99a648d4d893" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncInstant" time="0.000" isDuration="false" guid="29364599-c7d8-44ce-a887-c7cf161823f8">
+        <Enum name="SkillFuncType" value="16" EnumValue="减少技能CD" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="b95896d9-96e6-4687-9bc2-7947d34bb0ff" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="1.000" isDuration="true" guid="a5f77e8f-2f31-47f2-ad92-3a1e145425c9">
+        <Enum name="SkillFuncType" value="16" EnumValue="减少技能CD" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetSkillState0" eventType="FilterTargetSkillState" guid="ab33fb78-7850-466f-bce5-0aa0aa2096a7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetSkillState" time="0.000" isDuration="false" guid="fca9eb25-4e9e-44e3-a279-2af93ae02ddf">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bChooseSkillInCD" value="true" refParamName="" useRefParam="false" />
+        <bool name="CheckSkill1InCD" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="640a52dd-34bb-4c37-a965-56983fba383c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="ab33fb78-7850-466f-bce5-0aa0aa2096a7" status="true" />
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.200" isDuration="true" guid="a480e33f-2cd7-45df-85dd-1a6b405f5b62">
+        <TemplateObject name="selfId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/tongyong_effects/UI_fx/LOD_Meireny_skill_01" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="1" refParamName="" useRefParam="false" />
+        <int name="scale" value="8000" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <bool name="bPrepare" value="true" refParamName="" useRefParam="false" />
+        <int name="prepareNum" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetSkillState0" eventType="FilterTargetSkillState" guid="40af618c-02cd-4638-a8d0-7c6fe291d559" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetSkillState" time="0.000" isDuration="false" guid="e5b3b384-c8b5-475f-9fae-1f8f75883e0d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bChooseSkillInCD" value="true" refParamName="" useRefParam="false" />
+        <bool name="CheckSkill2InCD" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration1" eventType="SkillUIEffectDuration" guid="4e5fcc7f-507a-4930-b362-88feb44d55ac" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="40af618c-02cd-4638-a8d0-7c6fe291d559" status="true" />
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.200" isDuration="true" guid="cff64015-ba06-44b8-801a-d9106f9d0596">
+        <TemplateObject name="selfId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/tongyong_effects/UI_fx/LOD_Meireny_skill_01" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="2" refParamName="" useRefParam="false" />
+        <int name="scale" value="8000" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <bool name="bPrepare" value="true" refParamName="" useRefParam="false" />
+        <int name="prepareNum" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="a81e8674-6e12-4457-b475-92d2fdf34a50" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.200" isDuration="true" guid="dd75f252-8360-4656-a8ec-285f87a12c1a">
+        <TemplateObject name="selfId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/tongyong_effects/UI_fx/LOD_Meireny_skill_01" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="3" refParamName="" useRefParam="false" />
+        <int name="scale" value="8000" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <bool name="bPrepare" value="true" refParamName="" useRefParam="false" />
+        <int name="prepareNum" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

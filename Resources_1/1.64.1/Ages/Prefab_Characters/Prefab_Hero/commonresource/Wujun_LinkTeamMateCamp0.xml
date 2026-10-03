@@ -1,0 +1,24 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="600.000" loop="false">
+    <Track trackName="MoveBeamDuration0" eventType="MoveBeamDuration" guid="be1a32ed-faf0-4b33-a27d-c40dec6be896" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="MoveBeamDuration" time="0.000" length="600.000" isDuration="true" guid="01fe518f-71bc-44c6-97e1-ae38eb6d4527">
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Level_Effects/Wujun/Daqiao_buff04_spell01" refParamName="" useRefParam="false" />
+        <Vector3i name="bindPosOffset" x="0" y="250" z="0" refParamName="" useRefParam="false" />
+        <Vector3i name="bindDestOffet" x="0" y="250" z="0" refParamName="" useRefParam="false" />
+        <float name="textureScale" value="0.050" refParamName="" useRefParam="false" />
+        <float name="beamWidth" value="1.200" refParamName="" useRefParam="false" />
+        <bool name="bSetColor" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="ColorRGB" x="233" y="131" z="255" refParamName="" useRefParam="false" />
+        <bool name="bOptimizeRender" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

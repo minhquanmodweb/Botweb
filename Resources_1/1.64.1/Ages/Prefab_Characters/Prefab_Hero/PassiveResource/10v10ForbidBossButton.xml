@@ -1,0 +1,23 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="killer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="CreateSkillContextDuration0" eventType="CreateSkillContextDuration" guid="86a3eabd-36b4-4e47-a67f-9badae931b2c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CreateSkillContextDuration" time="0.000" length="2.000" isDuration="true" guid="c3efb62a-8226-45cc-bec9-e2ea0a3c0b02">
+        <TemplateObject name="attackerId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="6ed1f7a6-a6af-4e6b-a410-0baadc5ac0a1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="2.000" isDuration="true" guid="8720d4bf-d603-4caa-bf33-cd8c1f28daa8">
+        <TemplateObject name="attackerId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="forbidSkillAbort" value="false" refParamName="" useRefParam="false" />
+        <bool name="forbidCallBoss" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

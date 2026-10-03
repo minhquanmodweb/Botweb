@@ -1,0 +1,27 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="BulletPos" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="a69208fa-e04d-48ca-8755-e12ab8b55895" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SpawnBulletTick" time="0.300" isDuration="false" guid="4e04084a-74f3-4585-a845-32d6e38d6a5a">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/PassiveResource/10v10DragonBuff_Ground_Bullet" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="1010702401" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="保存子弹主人" eventType="SaveActorDuration" guid="7ef60181-67eb-482c-831e-39abeb919a8f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SaveActorDuration" time="0.000" length="2.000" isDuration="true" guid="51f8aad5-4191-4894-9cd2-c891e5437241">
+        <String name="actorName" value="10v10BulletOwner" refParamName="" useRefParam="false" />
+        <bool name="bGlobal" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="SetActorId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="strValue" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,35 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="Findbullet" id="3" isTemp="true" />
+    <TemplateObject objectName="Findbullet1" id="4" isTemp="true" />
+    <TemplateObject objectName="Findbullet2" id="5" isTemp="true" />
+    <TemplateObject objectName="Findbullet3" id="6" isTemp="true" />
+    <TemplateObject objectName="Findbullet4" id="7" isTemp="true" />
+    <TemplateObject objectName="Findbullet5" id="8" isTemp="true" />
+    <TemplateObject objectName="Findbullet6" id="9" isTemp="true" />
+    <TemplateObject objectName="Findbullet7" id="10" isTemp="true" />
+    <TemplateObject objectName="bullet5" id="11" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.066" loop="false">
+    <Track trackName="NewSaveActorRootTick0" eventType="NewSaveActorRootTick" guid="a1b7d3cd-43bf-45d0-b93b-b56be56abd8a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewSaveActorRootTick" time="0.000" isDuration="false" guid="d75f298b-8210-4ab1-8d75-2c7c56018372">
+        <Enum name="dataDest" value="2" EnumValue="SkillLogicUnit" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="variableName" value="target" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="25f7c765-00c5-48be-9889-8ddcd96a4bab" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="4b7066f3-8a48-4345-bbc9-ac4bf786f71e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="Findbullet" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/S3E378" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

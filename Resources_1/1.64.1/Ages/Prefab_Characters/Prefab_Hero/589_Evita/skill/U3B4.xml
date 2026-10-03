@@ -1,0 +1,905 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="bullet5" id="3" isTemp="true" />
+    <TemplateObject objectName="Findbullet" id="4" isTemp="true" />
+    <TemplateObject objectName="Findbullet1" id="5" isTemp="true" />
+    <TemplateObject objectName="Findbullet2" id="6" isTemp="true" />
+    <TemplateObject objectName="Findbullet3" id="7" isTemp="true" />
+    <TemplateObject objectName="Findbullet4" id="8" isTemp="true" />
+    <TemplateObject objectName="Findbullet5" id="9" isTemp="true" />
+    <TemplateObject objectName="Findbullet6" id="10" isTemp="true" />
+    <TemplateObject objectName="Findbullet7" id="11" isTemp="true" />
+    <TemplateObject objectName="bullet15" id="12" isTemp="true" />
+    <TemplateObject objectName="bullet14" id="13" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="16.000" loop="false">
+    <Track trackName="FilterTargetType2" eventType="FilterTargetType" guid="07d0505c-a89e-43fe-b856-d246540c8363" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="1678c545-db77-4c03-9788-8eef5479a3c6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="buffLayers" value="75" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType2" eventType="FilterTargetType" guid="fc83ef8d-f09f-4de6-8263-cbacfcef7de9" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="a310c375-2903-4113-9f1c-7404cf4a93ce">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="buffLayers" value="100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="1号飞机" eventType="SpawnBulletTick" guid="eb093945-3f8f-4874-8a21-2cbe1970f291" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="51abaca6-f9e4-4b21-a810-83e0ab550b16">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E11" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58931" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="2号飞机" eventType="SpawnBulletTick" guid="d5626774-d953-4330-a22a-fbdad2e38566" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="543a6d8a-45c4-4598-88be-88123db28d3c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E12" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58932" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="3号飞机" eventType="SpawnBulletTick" guid="ad06b292-c1fc-4b15-b22f-8056e01699aa" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="007069cc-e9cb-4d76-99c5-bf49da7a3058">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E13" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58933" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="4号飞机" eventType="SpawnBulletTick" guid="e77809c3-6e84-44b2-ba68-39ead61a78c4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="2a49cf31-301a-4755-95f6-87a5d9f61c64">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E14" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58934" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="5号飞机" eventType="SpawnBulletTick" guid="60de30de-c172-4bc2-b88e-485c5c7937e2" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="845afac6-ec51-4fe3-bf4d-b7743be4e991">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E15" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58935" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="6号飞机" eventType="SpawnBulletTick" guid="dc8ad7a1-de26-486f-a092-8c5fc99a2c06" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="fc253fb6-064a-4bdb-b2b2-c1a390d1f063">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E16" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58936" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="7号飞机" eventType="SpawnBulletTick" guid="3cdee30d-953d-4bcb-9769-651379b205d5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="f79cb1d3-53f7-4eaa-916c-684deacca51b">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E17" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58937" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="8号飞机" eventType="SpawnBulletTick" guid="f67f5c36-3a09-44b7-b583-42d6d6c48c92" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Event eventName="SpawnBulletTick" time="0.150" isDuration="false" guid="3a2f486e-4735-4ec1-897c-6005516cc4ef">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/P0E18" refParamName="" useRefParam="false" />
+        <bool name="bDeadRemove" value="true" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58938" refParamName="" useRefParam="false" />
+        <int name="bulletUpperLimit" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="eb093945-3f8f-4874-8a21-2cbe1970f291" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="b019f4d5-abbc-482b-a3ba-ce2eb8f73a90">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58931" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet" id="4" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="e785b349-2496-4b11-88fd-8e3486028fad" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="d5626774-d953-4330-a22a-fbdad2e38566" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="20b28e94-c860-46d4-a713-4a42f87331b8">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58932" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet1" id="5" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="0c8215c2-d49e-4c6d-89f7-afc1a6563f90" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="ad06b292-c1fc-4b15-b22f-8056e01699aa" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="7ce540cb-dbb6-48a0-84b6-ab04f38cd203">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58933" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet2" id="6" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="cc1d79b3-439e-4df3-987e-d2f4c4d1f753" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="e77809c3-6e84-44b2-ba68-39ead61a78c4" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="72e45500-144a-4ad9-9e1d-916e3ceb12a7">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58934" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet3" id="7" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="3423cf8f-9a2c-4fae-bde5-fc629865130f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="60de30de-c172-4bc2-b88e-485c5c7937e2" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="8b665e4b-ff2e-4100-958b-5486ebea1804">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58935" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet4" id="8" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="eabce91c-3134-43bd-859f-5b6decdfc066" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="dc8ad7a1-de26-486f-a092-8c5fc99a2c06" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="aad757ee-fd70-482e-8966-4db59c344dc1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58936" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet5" id="9" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="8bf4f2f5-23f8-4bee-895c-d60fb98c7e29" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="3cdee30d-953d-4bcb-9769-651379b205d5" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="cb53f858-5867-42a2-a269-24a8f238a3c6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58937" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet6" id="10" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="找到子弹" eventType="FindBulletTick" guid="829a29ae-ff8b-4e70-9830-18eb2c087886" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="f67f5c36-3a09-44b7-b583-42d6d6c48c92" status="true" />
+      <Event eventName="FindBulletTick" time="0.000" isDuration="false" guid="ef9ac543-ef36-412a-9646-1dcc4e52d0a7">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="58938" refParamName="" useRefParam="false" />
+        <int name="searchRange" value="13000" refParamName="" useRefParam="false" />
+        <bool name="nearestBullet" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="FindBulletId" objectName="Findbullet7" id="11" isTemp="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="bfdc75cd-323d-4a8b-a287-1a6f422ee420" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SpawnObjectDuration" time="0.000" length="0.250" isDuration="true" guid="ceee9d97-c561-4250-b187-6a1652d0a30d">
+        <TemplateObject name="targetId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="translation" x="0" y="0" z="6000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="dfa64be8-d565-4232-b7b6-8c7e6ab8afe6" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="457b48a0-1055-459a-8139-7d47ca5bff8e">
+        <TemplateObject name="targetId" objectName="Findbullet" id="4" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="99470877-6ba7-4de2-b041-8a15ac7dfe1f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="a910d14e-9148-485b-ba61-de432c6fde4f">
+        <TemplateObject name="targetId" objectName="Findbullet1" id="5" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="e6fc779e-cffa-48fa-b9b9-75ae7348c4d7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="55775a3a-ed40-4403-a0d2-be52b6757eaa">
+        <TemplateObject name="targetId" objectName="Findbullet2" id="6" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="2ce08f56-a321-451c-8eb2-9db34f5b2083" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="09565222-b78d-409f-ae71-22cad3fcbc99">
+        <TemplateObject name="targetId" objectName="Findbullet3" id="7" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="b2a1feaa-defc-4274-9c20-cea910991794" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="bf90eea8-9d85-4678-af4d-3b367b1aa876">
+        <TemplateObject name="targetId" objectName="Findbullet4" id="8" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="8b42671f-907c-4388-b2ca-aa4206bb4f35" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="36111629-a902-4877-85f3-8a3dde0bfab5">
+        <TemplateObject name="targetId" objectName="Findbullet5" id="9" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="71c265a1-3b79-4080-94ed-0d17bda644b9" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="ceb4c63f-0d0f-4450-a399-32a2dbde9db9">
+        <TemplateObject name="targetId" objectName="Findbullet6" id="10" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MoveBulletAroundActorDuration0" eventType="MoveBulletAroundActorDuration" guid="7bba7cb0-5d12-48e1-87bd-53b0c3f6a52a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="MoveBulletAroundActorDuration" time="0.000" length="0.250" isDuration="true" guid="26dc2749-8472-44b4-af10-48bf47e7e13e">
+        <TemplateObject name="targetId" objectName="Findbullet7" id="11" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" objectName="bullet5" id="3" isTemp="true" refParamName="" useRefParam="false" />
+        <int name="velocity" value="40000" refParamName="" useRefParam="false" />
+        <Enum name="viaSelectMode" value="1" EnumValue="自动搜索" refParamName="" useRefParam="false" />
+        <int name="viaSearchRange" value="10000" refParamName="" useRefParam="false" />
+        <int name="viaSearchBuffId" value="589333" refParamName="" useRefParam="false" />
+        <Enum name="viaSearchCamp" value="1" EnumValue="仅敌方" refParamName="" useRefParam="false" />
+        <int name="energyChargeTime" value="400" refParamName="" useRefParam="false" />
+        <int name="viaHitRange" value="1000" refParamName="" useRefParam="false" />
+        <int name="turnResumeDist" value="2500" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl1" value="14000" refParamName="" useRefParam="false" />
+        <int name="bezierCtrl2" value="9000" refParamName="" useRefParam="false" />
+        <int name="radius" value="9000" refParamName="" useRefParam="false" />
+        <int name="turnAtRef" value="20" refParamName="" useRefParam="false" />
+        <int name="maxTurn" value="50" refParamName="" useRefParam="false" />
+        <bool name="bUseRepulse" value="true" refParamName="" useRefParam="false" />
+        <int name="repulseRadius" value="2000" refParamName="" useRefParam="false" />
+        <int name="repulseTurn" value="25" refParamName="" useRefParam="false" />
+        <int name="verticalSpeed" value="180" refParamName="" useRefParam="false" />
+        <int name="maxHeight" value="1500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="db098611-6956-403f-9a7b-e3d4ac4574f8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="93e1e059-e2e2-4b55-842d-baed6c5765fc">
+        <TemplateObject name="targetId" objectName="Findbullet" id="4" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="bd59bccb-2237-4b44-bbe1-3adb2fb56fa8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="491f2718-906c-425c-82d2-897189299d9d">
+        <TemplateObject name="triggerId" objectName="Findbullet" id="4" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="54f96d63-e074-466a-90e6-b7d5677ad255" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="e9b61ab1-8b88-456c-8860-270164eb1b45">
+        <TemplateObject name="targetId" objectName="Findbullet1" id="5" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="03d9c642-40a0-4235-ac9b-280c69eb6b2e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="4b72741c-a688-4fe2-86be-979f049a13f5">
+        <TemplateObject name="triggerId" objectName="Findbullet1" id="5" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="f741c7b8-1bbe-46fb-bf36-e7e459e6b31b" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="4a7d3456-c4e5-4e14-bd19-52c679510835">
+        <TemplateObject name="targetId" objectName="Findbullet2" id="6" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="2f177bd9-5985-4219-95e0-7de813cae011" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="7c853c80-8bb8-4228-82a7-863a2262c3e6">
+        <TemplateObject name="triggerId" objectName="Findbullet2" id="6" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="0777a769-5b4c-492f-a420-b5bb973cfd73" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="3bf930de-0f55-4960-ac74-aebcebc96e36">
+        <TemplateObject name="targetId" objectName="Findbullet3" id="7" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="05e72eb7-2c0d-4d6f-81c6-1f1660ab366d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="3d626baa-126e-4294-8a6a-7c9f570b6a80">
+        <TemplateObject name="triggerId" objectName="Findbullet3" id="7" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="5e6d4b93-b253-4f3d-a756-3493361a9023" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="06095758-371a-4fc3-9c70-7ac3fe049c5a">
+        <TemplateObject name="targetId" objectName="Findbullet4" id="8" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="1e801c3b-b6b0-4408-be95-3fe13d69c1e5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="10915ae1-49a9-4a29-9a2f-6f53c523c5c8">
+        <TemplateObject name="triggerId" objectName="Findbullet4" id="8" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="c9d70677-8adc-4043-ab10-63d880656837" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="5de02020-070b-48c3-8589-9007e0b49e5d">
+        <TemplateObject name="targetId" objectName="Findbullet5" id="9" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="43faf5f7-2838-4485-b316-3863993a7d17" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="787d3aa0-6a5c-407e-b3b4-9d61a180b490">
+        <TemplateObject name="triggerId" objectName="Findbullet5" id="9" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="cebf3f8a-8f32-4cc4-bcdb-0e0c4ca92a35" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="04f48c0a-a805-4155-8dba-35c26af34dcb">
+        <TemplateObject name="targetId" objectName="Findbullet6" id="10" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="b33326fa-4f85-4b0a-bd24-7ed644424bff" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="69ddf256-3c91-4e85-ade0-2eb625b21dd6">
+        <TemplateObject name="triggerId" objectName="Findbullet6" id="10" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="ab004820-fab0-4b91-add1-cd75f8c4d925" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="6b10e175-e04c-4217-84dc-a706aeb55354">
+        <TemplateObject name="targetId" objectName="Findbullet7" id="11" isTemp="true" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="1500" y="8000" z="500" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="8f7f505b-f7f1-4379-8ce7-34539de75eaa" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="67698184-f83a-4311-91f0-77c17d872461">
+        <TemplateObject name="triggerId" objectName="Findbullet7" id="11" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589300" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="4c6f5134-5a03-4552-8d7a-1904401d6680" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="eb093945-3f8f-4874-8a21-2cbe1970f291" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="02ef1bd2-465d-4543-b04e-37db31190575">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893011" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="331bb768-d7ca-4103-b860-fb1c4d5be19c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="d5626774-d953-4330-a22a-fbdad2e38566" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="bec7a5c2-f89c-4659-8abc-2780891a19c2">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893012" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="824d1a88-9bb0-4522-bf2a-0b56b719a6ba" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="ad06b292-c1fc-4b15-b22f-8056e01699aa" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="46ca4b29-c8ca-46f4-83f0-686002615e65">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893013" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="f4b44b8e-e7c3-47c2-bb96-ee5aeceef5ae" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="e77809c3-6e84-44b2-ba68-39ead61a78c4" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="dab04816-477b-45dd-b175-e5a153431c0d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893014" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="b2567022-ffeb-445f-b3bc-c70297453923" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="60de30de-c172-4bc2-b88e-485c5c7937e2" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="ecc0b1b7-2f74-4aca-bc28-257955ac45fc">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893015" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="4dc0018c-f501-4e9c-b981-5511e8929e0d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="dc8ad7a1-de26-486f-a092-8c5fc99a2c06" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="0267960d-9b5a-4d5f-8338-4077e251b929">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893016" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="87c2918d-a000-430a-a971-1acb96960db0" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="3cdee30d-953d-4bcb-9769-651379b205d5" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="7e7abd72-3acc-44ff-bb37-2f9c1792de83">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893017" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="f84b7f44-e249-441f-9242-98dd9b02017f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="f67f5c36-3a09-44b7-b583-42d6d6c48c92" status="true" />
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="3b4f43de-b66e-4e5e-9c5f-2459bbae9c4f">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="5893018" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="bd8752f1-278d-436d-967d-ce6a275b1165" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="7e5c6623-7cff-49c5-8190-3121d95a3aef">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterDiffCamp" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType1" eventType="FilterTargetType" guid="6eeb760e-e92a-4029-9c08-35d06d48f5d8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="07e5514d-2ce0-4e4c-b342-feefd2c4dde4">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterSameCamp" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="dc3315f5-1f3e-4188-b6c0-bdc2237b84e8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="51" guid="bd8752f1-278d-436d-967d-ce6a275b1165" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="16.000" isDuration="true" guid="50c915be-03f0-462b-a931-01d45d6cd7c0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/Evita_spell_03" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="b1stTickParentRot" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="81139b83-ec6b-4c39-ac2b-0c6bf958ca65" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="52" guid="6eeb760e-e92a-4029-9c08-35d06d48f5d8" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="16.000" isDuration="true" guid="10c3a3e8-ba14-4553-8675-1699fd8f94cf">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/Evita_spell_03_E" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="b1stTickParentRot" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="0f8b1e98-4512-4ac9-ba15-e05433f6a6ff" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="16.000" isDuration="true" guid="e0ddb6af-d7b6-4fec-a16a-da8965f4a462">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/Evita_attack_03" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="cf08baca-3ae1-4bae-bff4-e707dd4cf94a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="16.000" isDuration="true" guid="183d1f59-b42c-4d0a-bdc8-39ae1d6f33c7">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/589_Evita/Evita_attack_03_weapon" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="bfec33c6-0ccb-42ba-b843-33aab0f81968" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="5d696bf2-595f-4e59-b46a-4cebd5c6cafb">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="589310" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="7598d3e3-9b96-436b-947f-565ecf1c506d" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.600" isDuration="false" guid="dbedaadf-8153-412b-b860-d0bf7249c975">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="589024" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="8157c519-7525-4158-8a87-e5a7fb27aaf9" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="16.000" isDuration="true" guid="07b9224c-45a4-4ab8-9637-950b8cadaa21">
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="forbidSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill0" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill1" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill2" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill4" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill5" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill6" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill7" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill8" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill9" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill10" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill11" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSkill12" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterSummonerSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterMapSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterEquipActiveSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterCallBoss" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidFilterExtraBtnSlot1" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidEnergyRecover" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnObjectDuration1" eventType="SpawnObjectDuration" guid="1caf7872-8c53-40a7-8a4c-b1ab189a08f2" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="16.000" isDuration="true" guid="501a6705-5aac-4fb3-af05-a6bc1547a58c">
+        <TemplateObject name="targetId" objectName="bullet15" id="12" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="parentId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="prefab_characters/commonempty" refParamName="" useRefParam="false" />
+        <bool name="modifyDirection" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="direction" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+        <TemplateObject name="recordTargeID" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick6" eventType="SetCollisionTick" guid="905e33bf-d26e-49cf-9406-62294d56fd28" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="75fa7f34-779b-46ff-8fd7-d668144b2f46">
+        <TemplateObject name="targetId" objectName="bullet15" id="12" isTemp="true" refParamName="" useRefParam="false" />
+        <Enum name="type" value="1" EnumValue="SPHERE" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="3000" y="8000" z="3000" refParamName="" useRefParam="false" />
+        <int name="Radius" value="8750" refParamName="" useRefParam="false" />
+        <int name="Rotation" value="160" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration1" eventType="HitTriggerDuration" guid="2c76adb1-45d2-4767-b0df-d4befe6b2a19" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerDuration" time="0.000" length="16.000" isDuration="true" guid="1fec575d-2930-41d7-a1e7-89033607faad">
+        <TemplateObject name="triggerId" objectName="bullet15" id="12" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <TemplateObject name="bulletID" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TriggerActorCount" value="32" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589333" refParamName="" useRefParam="false" />
+        <String name="BulletActionName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration1" eventType="HitTriggerDuration" guid="1ac16248-32e1-4299-8210-c5a1252be69f" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerDuration" time="0.800" length="15.200" isDuration="true" guid="4b67db40-5063-4a91-a49b-80fd8be0829f">
+        <TemplateObject name="triggerId" objectName="bullet15" id="12" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="132" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="132" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterOrgan" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="bulletID" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBuff" value="true" refParamName="" useRefParam="false" />
+        <int name="FilterBuffID" value="589300" refParamName="" useRefParam="false" />
+        <int name="TriggerActorCount" value="32" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="589931" refParamName="" useRefParam="false" />
+        <String name="BulletActionName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration1" eventType="HitTriggerDuration" guid="de698234-07c6-4fc7-b940-b6d7f84fbfab" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerDuration" time="0.000" length="16.000" isDuration="true" guid="b969e1f0-e909-4e75-bf41-b75f86461757">
+        <TemplateObject name="triggerId" objectName="bullet15" id="12" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="specifiedActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="250" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterFriend" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterEye" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterChest" value="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMyself" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyMe" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="bulletID" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TriggerActorCount" value="32" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589909" refParamName="" useRefParam="false" />
+        <String name="BulletActionName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration0" eventType="PlayAnimDuration" guid="97177485-275b-4161-8b3a-fc3a1f8aa7f5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimDuration" time="0.000" length="0.600" isDuration="true" guid="896870f4-86ef-455b-a6ca-0ef8eed195fd">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Spell3_Start" refParamName="" useRefParam="false" />
+        <int name="layer" value="4" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+        <bool name="bUseFadeOutTime" value="true" refParamName="" useRefParam="false" />
+        <float name="fadeOutTime" value="0.200" refParamName="" useRefParam="false" />
+        <bool name="breakSameLayerAnims2" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="de96b081-5fe7-491f-81ce-b230f15348d9" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="f3820fce-56a9-40d6-9c02-4a5e73c74210">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="589320" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetDuration0" eventType="FilterTargetDuration" guid="c381867f-fca5-4757-bac1-12af04aca906" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetDuration" time="0.000" length="16.000" isDuration="true" guid="6335659f-47ff-415a-8e4c-403b6439121a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="589320" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="2" EnumValue="小于等于" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="33b24545-ca9b-452f-bf84-648a3f7ff87e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="67" guid="c381867f-fca5-4757-bac1-12af04aca906" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="7ab12a42-b3b5-436e-ad8f-3c5b5916ae34">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/589_Evita/skill/U3B5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="6215b60f-d57a-4171-b0cd-46fea13d3fa1" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="976df516-d8da-42de-853d-07fc3d98fd4b">
+        <TemplateObject name="triggerId" objectName="Findbullet" id="4" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="1b131710-f8fb-49aa-82e8-d0ef153c4df3" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="6c97e778-1b09-4399-9482-c8ffba064935">
+        <TemplateObject name="triggerId" objectName="Findbullet1" id="5" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="4c4d67ef-a546-46c4-b197-d4102e8f811c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="bb38dbf2-08d0-4a10-87d3-8a6d0bbbea4a">
+        <TemplateObject name="triggerId" objectName="Findbullet2" id="6" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="44da1f78-c473-45c5-9186-99bc9da592e8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="0db37808-36d1-4dcf-8418-2402b76f3553">
+        <TemplateObject name="triggerId" objectName="Findbullet3" id="7" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="afe603cc-f64a-4ab7-8292-6f86cc09a222" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="d93608db-4566-43f2-91e1-75d9d2bc5874">
+        <TemplateObject name="triggerId" objectName="Findbullet4" id="8" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="cdcb2d0a-a7f7-456a-b898-38d4dfd63cac" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="071554b8-6b3b-48c6-91ac-d81e4030ae4d">
+        <TemplateObject name="triggerId" objectName="Findbullet5" id="9" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="5385800a-6060-4e98-95cc-9cf9dcf85f0a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="cf7783ea-ef08-4821-8bc6-8233dccc341c">
+        <TemplateObject name="triggerId" objectName="Findbullet6" id="10" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="7d42a08e-329f-482a-8942-bd7828d73b56" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="3082b7ed-61d4-42c1-84c5-eb6a8784b965" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.250" isDuration="true" guid="90c25a09-49e1-453b-90db-23cd08b218b3">
+        <TemplateObject name="triggerId" objectName="Findbullet7" id="11" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="triggerInterval" value="33" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="250" refParamName="" useRefParam="false" />
+        <bool name="bFilterHero" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="589301" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="589390" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

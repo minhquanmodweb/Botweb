@@ -1,0 +1,39 @@
+TD MOD STUDIO — BẢN WEB ĐỘC LẬP
+
+CÀI TRÊN RAILWAY BẰNG ĐIỆN THOẠI
+1. Tạo repository GitHub RIÊNG cho bản web. Giải nén ZIP và đưa toàn bộ nội dung bên trong lên repository đó.
+2. Trong Railway, tạo service MỚI và kết nối repository web. Không thay source hay Start Command của service bot Telegram đang hoạt động.
+3. Start Command: python web_server.py
+4. Healthcheck Path: /health
+5. Trong Settings > Networking, chọn Generate Domain. Mở tên miền đó để dùng.
+6. Web không cần BOT_TOKEN, WEBAPP_URL hay VUOTLINK_API. Không sao chép token bot sang service web.
+
+Web phải chạy Python; không chỉ upload các file này vào public_html của hosting PHP thông thường.
+
+CÁCH SỬ DỤNG
+Tìm tướng hoặc skin → chọn skin → tab ĐÃ CHỌN → Android/iOS/Cả 2 → TẠO MOD → làm nhiệm vụ link rút gọn → quay lại web tải ZIP.
+Tối đa 15 skin, mỗi tướng một skin. Có tuỳ chọn hiệu ứng sáng đậm.
+Tiến trình và file thuộc phiên trình duyệt đã tạo. Làm nhiệm vụ để mở tải, tải lại trong Lịch sử khi file chưa hết hạn.
+File được giữ mặc định 24 giờ. Lịch sử lưu trong cùng trình duyệt, trạng thái nhiệm vụ được lưu trên máy chủ. Gắn Railway Volume để giữ qua deploy/restart; xem HUONG_DAN_LICH_SU.txt.
+Mỗi service chỉ chạy 1 replica. Hàng chờ tối đa 10 lượt; mỗi phiên chỉ được tạo 1 lượt cùng lúc.
+Web xử lý tuần tự để hạn chế tải máy chủ; mỗi lượt có tiến trình riêng, timeout mặc định 900 giây.
+
+TÁCH KHỎI TELEGRAM
+bot.py và dữ liệu resource giữ nguyên từ file bạn gửi.
+web_server.py không import bot.py, không chạy polling Telegram, không gọi Telegram API.
+web_engine.py là bản tách phần tạo file từ bot; báo lỗi nếu thiếu dữ liệu hoặc lỗi xử lý, thay vì phát hành ZIP một phần.
+Khi tạo service và repository web riêng theo hướng dẫn, web không thay dữ liệu hoặc tiến trình bot.
+
+PHẠM VI BẢN NÀY
+Chuyển luồng chọn skin, tạo file, tiến trình và tải ZIP sang web độc lập.
+Không chuyển các lệnh quản trị Telegram (broadcast, chặn Telegram ID, key/VIP) thành trang quản trị web.
+Bản web này dùng công khai; không áp dụng key/VIP Telegram.
+Giữ nguyên resource mùa 1.64.1 trong ZIP gốc. Bản cập nhật này sửa lớp nén/mã hoá khi đóng gói resource theo Resources.zip bạn cung cấp. Chưa xác nhận hết reset khi mở lại game; xem THU_NGHIEM_LOI_RESET.txt.
+Nếu worker lỗi, log chi tiết ở WebJobs/<mã lượt tạo>/worker.log, không công khai qua web.
+
+CHẠY TRÊN MÁY CÓ PYTHON
+python -m pip install -r requirements.txt
+python web_server.py
+Mở http://localhost:8080
+
+Cấu hình bắt buộc để tải qua nhiệm vụ: xem CAU_HINH_NHIEM_VU.txt.

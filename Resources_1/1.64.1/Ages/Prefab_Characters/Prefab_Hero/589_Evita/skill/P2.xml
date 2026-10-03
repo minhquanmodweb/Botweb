@@ -1,0 +1,231 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="FilterTargetType1" eventType="FilterTargetType" guid="b6107262-25be-4d00-97fd-36062e3b6425" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="5d34ec6e-1ae5-4570-b22b-8cb1cb78759c">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMajorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMinorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterSoldier" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMonsterCreep" value="true" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="14120" />
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="d02db1a7-90de-444b-ad1f-8455c99479c7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" SkinAvatarFilterType="9">
+      <Condition id="0" guid="b6107262-25be-4d00-97fd-36062e3b6425" status="true" />
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="4ae6054a-6481-4389-ae8c-587778c4f77f">
+        <TemplateObject name="targetId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="bullet" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Hero_Skill_Effects/141_DiaoChan/14112/DiaoChan_hurt_spell03" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+      </Event>
+      <SkinOrAvatarList id="14120" />
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="92970af1-6a20-4986-b689-e15d01a7e347">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterDead" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="caebac10-b5f5-44e9-a4d6-0df383e817e4">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bImmediateRevive" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="9fcd1710-6027-4265-8a9c-749ab25e5b9c" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="cde2b467-53af-4f74-8507-5036ca966e42">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58902" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="2148c886-d1b7-4df8-bde0-6a2a22d06151">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="589320" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="5" EnumValue="大于等于" refParamName="" useRefParam="false" />
+        <int name="buffLayers" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="135afbd0-5e1a-469d-8a21-8b31e0f4660c" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="f5aa6432-f8fd-4045-b86d-69039073a632">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="ac037699-2c3d-4ab7-98a3-00dbc28890a3" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="299b2742-d3d2-4feb-82d2-3b4febd123f3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="4e851b2a-9ca7-47f3-bfa1-188a086d9f30" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.100" isDuration="false" guid="2531b8a5-2ac5-492d-adea-f49e427075e1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="83494daf-5f29-45bf-a318-9be608b6812b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.200" isDuration="false" guid="cd660278-300a-41ab-a7e2-c3be99387358">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="4aa20603-2270-4294-94eb-18cafe57156b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.300" isDuration="false" guid="8407b458-7672-43eb-9a63-cedbd7cd2bef">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="bc6c4aac-d601-4672-a870-f3c410c17afe" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.400" isDuration="false" guid="c4435761-2303-4a42-93cd-25c7f32d8249">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="76febb15-6c98-4263-ab23-0d443f2fd5a3" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.500" isDuration="false" guid="b705ec62-330c-4322-a461-14ce0bc8b83e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="3d71c32b-9571-4752-945a-8d2c6aac697d" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.600" isDuration="false" guid="f408d606-2922-4b42-b0ed-ab89fd7cccdb">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="afc3bc28-9c3c-4a70-b658-82162ec1a6e9" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.700" isDuration="false" guid="4da96948-4dd9-4757-9426-182dce74d11f">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="710e9e53-da79-40d6-a784-6d4724e83a48" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.800" isDuration="false" guid="844b6552-e94b-46b1-aa40-0153ecb47972">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="91f1290f-3d44-42aa-a40a-8c8d9e5e028e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="5" guid="3bbf9988-cae2-409b-b6b2-74addbf3520f" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.900" isDuration="false" guid="bff75501-e919-4613-adaf-4508b2fc0673">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+        <bool name="removeBuffByLayer" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="7557dde4-503e-49ed-b123-cd9afe24b11b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="42dcabf1-33ff-47a7-a113-eab25ef77b89">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterBufferLayers" value="true" refParamName="" useRefParam="false" />
+        <int name="buffId" value="58902" refParamName="" useRefParam="false" />
+        <Enum name="operatorType" value="2" EnumValue="小于等于" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick1" eventType="RemoveBuffTick" guid="a2cb9530-103b-4d4d-88be-bb3e32437ac1" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="17" guid="7557dde4-503e-49ed-b123-cd9afe24b11b" status="true" />
+      <Condition id="2" guid="c21dc7ce-069a-4cc6-8c60-28f930266ada" status="true" />
+      <Condition id="3" guid="42cfe99c-e91f-4c4d-b410-de165cf0bd4f" status="false" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="35ffc723-7a37-44fd-9e43-78bbe526791b">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="589320" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="96710b0e-aa43-47d6-a284-26a4c7c4cfa9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="13d10afe-fa43-443a-81d5-d5f4e50b9e75">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58902" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="8c3c7090-496b-4ba5-82b1-5e7889da8999" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.250" isDuration="false" guid="05a87ab4-c860-4a4c-b853-3132c5eae945">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58902" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="4c966b7c-bc8f-4326-8859-b8d665caa58a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.500" isDuration="false" guid="9470cbd9-963b-4d41-b817-a9031434dfca">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58902" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="43f7b520-fdbe-412d-9861-6f82c829e619" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.750" isDuration="false" guid="b29431f8-f428-4b47-b00b-67e4cf4bbded">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="58902" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,107 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="monster" id="3" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="SkillFuncInstant0" eventType="SkillFuncInstant" guid="a5d04b70-0308-4475-86cd-3d7b6a6b4c2a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncInstant" time="0.000" isDuration="false" guid="c8cb89ba-f191-4248-b373-df42a7e8ed85">
+        <Enum name="SkillFuncType" value="16" EnumValue="减少技能CD" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="小满特性条处理" eventType="FilterTargetType" guid="8526f54b-0922-48b3-a6b7-c7b5cf5a983d" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="cdcb52de-81ca-434d-b2e0-9681fc25adb1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterConfigID" value="true" refParamName="" useRefParam="false" />
+        <Array name="configIds" refParamName="" useRefParam="false" type="int">
+          <int value="564" />
+        </Array>
+        <bool name="bAnd" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SendBluePrintCommonEventTick0" eventType="SendBluePrintCommonEventTick" guid="07f783a8-62d8-434d-9b0a-015063f2ea5f" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="8526f54b-0922-48b3-a6b7-c7b5cf5a983d" status="true" />
+      <Event eventName="SendBluePrintCommonEventTick" time="0.000" isDuration="false" guid="ab0a66c3-37a8-4247-930c-69b377382c29">
+        <String name="evtName" value="JiXiaoMan_RefreshFeature" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetSkillSlotCDTick0" eventType="SetSkillSlotCDTick" guid="2baa55f7-e724-4315-a03e-63753aa0acbf" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetSkillSlotCDTick" time="0.000" isDuration="false" guid="3eb26eb7-b457-4f3b-a545-05705df7efdd">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="1" EnumValue="技能1" refParamName="" useRefParam="false" />
+        <bool name="setSkillBeanCDReduction" value="true" refParamName="" useRefParam="false" />
+        <bool name="reduceRemainingCdByRate" value="true" refParamName="" useRefParam="false" />
+        <int name="reductionRates" value="5000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetSkillSlotCDTick0" eventType="SetSkillSlotCDTick" guid="d32e682c-c586-4a5e-bc07-d5f86f9ee3b4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetSkillSlotCDTick" time="0.000" isDuration="false" guid="9ca6b640-ff5e-48e1-b90b-37b90803d5ed">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="2" EnumValue="技能2" refParamName="" useRefParam="false" />
+        <bool name="setSkillBeanCDReduction" value="true" refParamName="" useRefParam="false" />
+        <bool name="reduceRemainingCdByRate" value="true" refParamName="" useRefParam="false" />
+        <int name="reductionRates" value="5000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetSkillSlotCDTick0" eventType="SetSkillSlotCDTick" guid="59333108-2f15-43e5-8cb5-e294c89d0571" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetSkillSlotCDTick" time="0.000" isDuration="false" guid="743d1b9f-80aa-4731-b922-4f25457a8a17">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="3" EnumValue="技能3" refParamName="" useRefParam="false" />
+        <bool name="setSkillBeanCDReduction" value="true" refParamName="" useRefParam="false" />
+        <bool name="reduceRemainingCdByRate" value="true" refParamName="" useRefParam="false" />
+        <int name="reductionRates" value="5000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetSkillSlotCDTick0" eventType="SetSkillSlotCDTick" guid="a36c4a53-2a2f-4e0a-82f2-6ef3c7b84d9e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetSkillSlotCDTick" time="0.000" isDuration="false" guid="e75c0db6-46da-4501-8d9c-1151ed550d88">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="13" EnumValue="技能ex3" refParamName="" useRefParam="false" />
+        <bool name="setSkillBeanCDReduction" value="true" refParamName="" useRefParam="false" />
+        <bool name="reduceRemainingCdByRate" value="true" refParamName="" useRefParam="false" />
+        <int name="reductionRates" value="5000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="ad77dfdf-3080-4a65-8b2b-1bd5be73ef52" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.500" isDuration="true" guid="941b6b0e-7f26-411a-985b-e09361b58aba">
+        <TemplateObject name="selfId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/Common_Effects/LOD_Skilleffect_Cd" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="f6798088-77dc-4e48-88ec-c6c7b5af7be0" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.500" isDuration="true" guid="7aca9b5c-62a1-4e3d-a55d-fcf0dc79c56e">
+        <TemplateObject name="selfId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/Common_Effects/LOD_Skilleffect_Cd" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="346a9c7f-ec4f-40e1-9edf-91f9b896b04a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.500" isDuration="true" guid="eb7086f7-78d1-4146-b7ec-47e982bcac71">
+        <TemplateObject name="selfId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/Common_Effects/LOD_Skilleffect_Cd" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="69c48ed0-a103-4647-a6f6-ec04410b6e3c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.500" isDuration="true" guid="5f229278-7d9f-4683-9eee-1a0bb2657e3f">
+        <TemplateObject name="selfId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/Common_Effects/LOD_Skilleffect_Cd" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="13" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PrintTick0" eventType="PrintTick" guid="fe9a4c67-1830-4511-9fe0-a109c4daa439" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PrintTick" time="0.000" isDuration="false" guid="ac290773-70e2-450b-8d98-a010305fa4c3">
+        <Array name="printStr" refParamName="" useRefParam="false" type="String">
+          <String value="====dayin" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,64 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="SkillFuncDuration1" eventType="SkillFuncDuration" guid="a55a0836-18ff-4d01-8b27-1e07765abf71" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="6ff6d7e5-3289-43dd-b6a0-3b75010de662">
+        <Enum name="SkillFuncType" value="40" EnumValue="伤害输出率效果" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="d94c5c3c-7d82-46f6-9c2b-d7eb27ca061b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="2.000" isDuration="true" guid="c62d2a48-b8fa-4ada-aa79-052535355cff">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/Damage_Reduce" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToAnimation" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="eab80385-e7c7-4f18-bafb-2dfa2460bb9d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="2.000" isDuration="true" guid="e7bc212d-63c1-443f-8041-e65d11608a7f">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Monsters_Skill_Effects/B54_Jungle/B54_ElfBird_Atk_01" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToAnimation" value="true" refParamName="" useRefParam="false" />
+        <bool name="bAdjustPosOffsetY" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseActorBulletHeightOffset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffHudTriggerDuration0" eventType="BuffHudTriggerDuration" guid="86eb055e-3fcb-480a-b041-56b55e2c963a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="BuffHudTriggerDuration" time="0.000" length="2.000" isDuration="true" guid="5ad3d55f-2cb1-4610-9221-8c04ef43050a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID" value="7790231" refParamName="" useRefParam="false" />
+        <Enum name="iconType" value="6" EnumValue="伤害减少" refParamName="" useRefParam="false" />
+        <bool name="bVvisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOriginVisble" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerVisible" value="true" refParamName="" useRefParam="false" />
+        <Enum name="priority1" value="2" EnumValue="对拥有者优先显示" refParamName="" useRefParam="false" />
+        <int name="priority2" value="1000" refParamName="" useRefParam="false" />
+        <bool name="bDelay" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="本地玩家" eventType="FilterTargetType" guid="cc42f15e-6ea7-49a2-8ffd-c337d85d59dc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="54bd2e39-db8b-4b42-89e6-2ae7b0fe978a">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlySelf" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlyHostHero" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="飞行啄击音效" eventType="PlaySoundTick" guid="c0d66bda-e319-4b66-9a39-594de6f2f04b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="cc42f15e-6ea7-49a2-8ffd-c337d85d59dc" status="true" />
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="0617447f-89d7-44b1-b603-0d621fd0a0ce">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_B54_YeQu_ZCJZ_Bird_Fly_loop" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="飞行啄击音效" eventType="PlaySoundTick" guid="21dee02a-c7ae-489e-9aba-2ea9cc4474f1" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="true" execOnActionCompleted="true">
+      <Event eventName="PlaySoundTick" time="0.100" isDuration="false" guid="f2484b71-80a9-4e3e-8792-ff725dc8185c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Stop_B54_YeQu_ZCJZ_Bird_Fly_loop" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

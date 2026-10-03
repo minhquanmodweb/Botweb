@@ -1,0 +1,49 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="level" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffNum" value="0" refParamName="" useRefParam="false" />
+    <int name="BuffMod2" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.000" loop="false">
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="7c6336a5-25e4-42c6-a302-2fd1923ba9f0" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="1.000" isDuration="true" guid="2dda8341-ec93-417f-91f0-31941abe559d">
+        <TemplateObject name="selfId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/tongyong_effects/UI_fx/LOD_Meireny_skill_01" refParamName="" useRefParam="false" />
+        <bool name="stopCurrEffect" value="true" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="1" refParamName="" useRefParam="false" />
+        <int name="scale" value="10005" refParamName="" useRefParam="false" />
+        <bool name="scaleGameObject" value="true" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <bool name="bPrepare" value="true" refParamName="" useRefParam="false" />
+        <int name="prepareNum" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SkillUIEffectDuration0" eventType="SkillUIEffectDuration" guid="8890c915-d0f7-4972-88aa-24766411d08b" enabled="false" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillUIEffectDuration" time="0.000" length="0.200" isDuration="true" guid="70f98a94-e746-484f-a67b-741f3b09dad3">
+        <TemplateObject name="selfId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="effectName" value="Prefab_Skill_Effects/tongyong_effects/UI_fx/LOD_Meireny_skill_01" refParamName="" useRefParam="false" />
+        <bool name="stopCurrEffect" value="true" refParamName="" useRefParam="false" />
+        <int name="skillSlot" value="2" refParamName="" useRefParam="false" />
+        <int name="scale" value="10500" refParamName="" useRefParam="false" />
+        <bool name="scaleGameObject" value="true" refParamName="" useRefParam="false" />
+        <Enum name="gameRenderQuality" value="2" EnumValue="Medium" refParamName="" useRefParam="false" />
+        <bool name="bPrepare" value="true" refParamName="" useRefParam="false" />
+        <int name="prepareNum" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick0" eventType="PlayHeroSoundTick" guid="678f8071-1394-46d5-ab03-28299cc19790" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="6857c2b0-137d-4fa2-97f9-ce393258b730">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_Preyta_VO_Passive_Lv1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

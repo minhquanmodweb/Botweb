@@ -1,0 +1,25 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="5.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="c1dfeed2-7c59-4c87-b583-440e6265c1fc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="5.000" isDuration="true" guid="396776d7-26cb-45cf-84ea-a68a2ef3793b">
+        <Enum name="SkillFuncType" value="111" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ChangeHpSpriteStyleDuration0" eventType="ChangeHpSpriteStyleDuration" guid="69d08d2e-81db-49d3-86d7-1db7409d917e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ChangeHpSpriteStyleDuration" time="0.000" length="5.000" isDuration="true" guid="e5f7f0a6-bc44-4499-8a97-1a90214676f0">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="hpSpriteColorRGB" x="255" y="255" z="255" refParamName="" useRefParam="false" />
+        <int name="hpAlpha" value="100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

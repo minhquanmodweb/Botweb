@@ -1,0 +1,32 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="2b3ea44f-f725-4065-855b-d35fbde73e1c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SkillFuncDuration" time="0.000" length="2.000" isDuration="true" guid="bb3474e6-1746-4437-a11a-3661adfa9bfa">
+        <Enum name="SkillFuncType" value="37" EnumValue="伤害免疫率" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffHudTriggerDuration0" eventType="BuffHudTriggerDuration" guid="4bd22b27-00d5-4559-a7dd-52fc3d79c029" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="BuffHudTriggerDuration" time="0.000" length="2.000" isDuration="true" guid="d2da9275-b1d0-4e56-9372-81a9e5438a68">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOverlay" value="true" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID" value="505220" refParamName="" useRefParam="false" />
+        <Enum name="iconType" value="14" EnumValue="受伤减少" refParamName="" useRefParam="false" />
+        <bool name="bVvisibility" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerVisible" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerCampVisible" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnwerEnemyVisible" value="true" refParamName="" useRefParam="false" />
+        <bool name="bDelay" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

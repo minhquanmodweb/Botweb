@@ -1,0 +1,43 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="source" id="0" isTemp="false" />
+    <TemplateObject objectName="攻击者" id="1" isTemp="false" />
+    <TemplateObject objectName="target" id="2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="33.300" loop="false">
+    <Track trackName="拆塔特效" eventType="TriggerParticleTick" guid="1eedde94-0d29-4ab8-9a5f-068076657105" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="d06a4b4d-4868-49ee-9ba1-f369376ded7e">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bDonotAttackToMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/152_WangZhaoJun/15217/15218_wangzhaojun_jidibaozha" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="1.500" refParamName="" useRefParam="false" />
+        <bool name="bNoDynamicLod" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗循环" eventType="TriggerParticle" guid="77671aa9-cc20-4f01-9e41-ea9f00e53767" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="1.140" length="30.500" isDuration="true" guid="107fa4b3-9493-4810-a53a-fe44fc98b087">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/152_WangZhaoJun/15217/15218_wangzhaojun_chaqi_loop" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗结束" eventType="TriggerParticle" guid="aa301736-ee1a-45a3-82a1-c32e35d9c7d3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="31.600" length="1.700" isDuration="true" guid="cbbb185d-fe46-4038-b499-565d355fa08a">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/152_WangZhaoJun/15218_wangzhaojun_chaqi_death" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

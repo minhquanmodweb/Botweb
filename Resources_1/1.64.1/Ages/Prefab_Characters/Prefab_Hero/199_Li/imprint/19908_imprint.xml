@@ -1,0 +1,164 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="source" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="self" id="2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="33.300" loop="false">
+    <Track trackName="ChangeActorMeshTick0" eventType="ChangeActorMeshTick" guid="82a040bf-91e6-4cb3-9767-4053facd949e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="ChangeActorMeshTick" time="0.050" isDuration="false" guid="c6ec9519-ce91-4b85-91ff-bf0effb8952b">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="prefab_characters/prefab_organ/scene_prop/P_5V5_03RedTower_01/P_5V5_03RedTower_01_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimationTick2" eventType="PlayAnimationTick" guid="749665fe-be74-4334-a956-5626154f77c7" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayAnimationTick" time="0.050" isDuration="false" guid="a5d18cd1-0bd8-4af0-a765-bc62a2359abc">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="a2cf98cd-1201-4bbb-b33c-71c961f909c9" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="c45e7e41-a240-4712-a71b-d9d3ef83652b">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="1268c5e9-94ed-4494-99af-d10b0875d4fe" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="cede588d-2090-4413-9f1c-374a62d8f652">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bDonotAttackToMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/RedTower_Dead" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="1.500" refParamName="" useRefParam="false" />
+        <bool name="bNoDynamicLod" value="true" refParamName="" useRefParam="false" />
+        <bool name="bMeshResouce" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="拆塔特效" eventType="TriggerParticleTick" guid="44e09e62-b1b3-4e97-bce0-e1db9c836d4c" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="af7649e0-9be2-4998-8046-1dd159c9bec5">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bDonotAttackToMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_/19908/19908_Li_jidibaozha" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="1.500" refParamName="" useRefParam="false" />
+        <bool name="bNoDynamicLod" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗循环" eventType="TriggerParticle" guid="fb9fc80c-9e7e-482f-b20a-94fd5cf18c78" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="2.234" length="30.066" isDuration="true" guid="652a571e-e15b-413c-a54c-947de9b089dc">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_/19908/19908_Li_chaqi_02_loop" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗结束" eventType="TriggerParticle" guid="669be964-9c71-46e0-beb6-20ef269cc864" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="32.300" length="1.000" isDuration="true" guid="8f86bebe-7c80-455b-b264-f6f53a39e184">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_/19908/19908_Li_chaqi_02_death" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick30" eventType="PlayHeroSoundTick" guid="08f592a3-0300-488e-8ed2-735766787bfc" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="ea5f69e2-63d5-4617-86b6-b6d325613493">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_XiaoQiao_Skill_B" refParamName="" useRefParam="false" />
+        <Array name="extraSkinId" refParamName="" useRefParam="false" type="uint">
+          <uint value="11" />
+          <uint value="13" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick9" eventType="PlayHeroSoundTick" guid="90a2a773-e091-4a5a-9ba2-892b26d5b99f" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="d662b056-d6de-4d51-89e8-47ecade4bf22">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_XiaoQiao_VO_Skill_B" refParamName="" useRefParam="false" />
+        <Array name="extraSkinId" refParamName="" useRefParam="false" type="uint">
+          <uint value="11" />
+          <uint value="13" />
+        </Array>
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="9c0ba58e-140c-43b5-a84e-9487514284ad" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="0.000" isDuration="false" guid="dde4a058-6815-4d0d-bbfe-b6aeb9ac5af4">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="9694ae01-6550-4971-936d-f395e87ad65b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="1.000" isDuration="false" guid="ea218e6c-69f4-4654-8ccd-e430c5e59e87">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="db44a3f1-50d1-4451-acdb-50430c332d2d" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="2.000" isDuration="false" guid="c87d8b42-d2d3-409a-91c8-2b00b49ec8d8">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="57baae15-4810-4d7f-965e-30b3547bf73c" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="3.000" isDuration="false" guid="4bcd6206-afa9-4aa7-a49c-712804929f53">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="901caafc-690b-4659-b4c6-437ac0fcbae7" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="4.000" isDuration="false" guid="d2155f7b-19fc-4c48-b73a-23f0dba9d1e6">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="405d3524-1f64-423e-9387-8e52dd81ecc0" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="5.000" isDuration="false" guid="19200fd2-b504-4b9b-822c-7f1cd83a1bbd">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick34" eventType="PlaySoundTick" guid="00444579-9b99-416f-9138-2a65d4c59a1a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="6.000" isDuration="false" guid="a0f16243-58bc-43df-b8de-f2126af8d120">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_FangYuta_Dead" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="拆塔特效" eventType="TriggerParticleTick" guid="e3fb513f-0e0c-4862-85f5-69b2b2b7a1a5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="b8df7907-7168-4077-aea7-39ff2926dacb">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bDonotAttackToMesh" value="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_Li/19908/19908_Li_jidibaozha" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="1.500" refParamName="" useRefParam="false" />
+        <bool name="bNoDynamicLod" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗循环" eventType="TriggerParticle" guid="0f86f4b2-cce3-49d8-848e-e1a8fc869a44" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="1.300" length="31.000" isDuration="true" guid="e2513c02-de4d-4a30-b1a3-2f1729b3891f">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_Li/19908/19908_Li_chaqi_02_loop" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="插旗结束" eventType="TriggerParticle" guid="b0ac2d18-e29b-4a8a-9054-838613fe4eea" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="32.300" length="1.000" isDuration="true" guid="4ff9573b-021f-4e6a-938d-e90c996be34b">
+        <TemplateObject name="targetId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="source" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/199_Li/19908/19908_Li_chaqi_02_death" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideWhenDead" value="false" refParamName="" useRefParam="false" />
+        <bool name="bRevertZIn5v5" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

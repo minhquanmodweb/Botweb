@@ -1,0 +1,72 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="1.500" loop="false">
+    <Track trackName="SpawnLiteObjDuration0" eventType="SpawnLiteObjDuration" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnLiteObjDuration" time="0.000" length="1.500" isDuration="true" guid="2fe26c8e-0912-4f19-a05d-4edd29fdedaa">
+        <String name="OutputLiteBulletName" value="148a1b2" refParamName="" useRefParam="false" />
+        <uint name="ConfigID" value="14810" refParamName="" useRefParam="false" />
+        <TemplateObject name="ReferenceID" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="TargetID" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnLiteObjDuration0" eventType="SpawnLiteObjDuration" guid="8d567198-1219-44cd-84d8-b2f73a3511af" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnLiteObjDuration" time="0.000" length="1.500" isDuration="true" guid="ba075ab9-de94-4795-a7a9-26a7fbabcc90">
+        <String name="OutputLiteBulletName" value="148a1b3" refParamName="" useRefParam="false" />
+        <uint name="ConfigID" value="14811" refParamName="" useRefParam="false" />
+        <TemplateObject name="ReferenceID" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="TargetID" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="648eb0a4-08b4-442f-bfd9-4f00f1c8ddd7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="030dc0f6-31eb-4edb-a967-5d9b6155ea20">
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterOrgan" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterChest" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterEye" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterPet" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="998097e0-65af-4f8d-ac97-c0dc65063db4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="d40661c8-bdca-4a01-a63f-62d500894d54">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="lastHit" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="148002" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_2" value="148009" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="065229b3-c5ce-4985-9df9-e6e06a1cb0d7" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" status="true" />
+      <Condition id="2" guid="648eb0a4-08b4-442f-bfd9-4f00f1c8ddd7" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="7692fdc9-08aa-4471-9c46-92ef4dcd3164">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="lastHit" value="true" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="148003" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack1" eventType="StopTrack" guid="1ef7944d-494d-4886-b22b-2788124befcd" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="44b3734c-590b-49b7-a394-ad03f77e52d7">
+        <TrackObject name="trackId" id="0" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack1" eventType="StopTrack" guid="c4431500-bd56-41b7-8ce9-a86932885dcd" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="95d3ad79-4a0b-4871-836c-dc67a8dabaa7" status="true" />
+      <Event eventName="StopTrack" time="0.500" isDuration="false" guid="4ee135aa-d3da-40f0-98d7-4f1147e1ac8c">
+        <TrackObject name="trackId" id="1" guid="8d567198-1219-44cd-84d8-b2f73a3511af" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

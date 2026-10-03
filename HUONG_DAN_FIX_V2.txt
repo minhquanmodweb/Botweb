@@ -1,0 +1,32 @@
+TD MOD — FIX HỘP CHỌN KHI BẤM TẠO + TRANG ADMIN
+
+Đây là source cập nhật WEB, không phải file chép vào game.
+
+ĐÃ KIỂM TRA WEB ĐANG CHẠY
+Tên miền web-production-a7f18.up.railway.app hiện trả 404 ở /admin/notice và /api/notice; HTML trang chính chưa có các chức năng mới. Bản cập nhật trước chưa có hiệu lực trên dịch vụ đang phục vụ tên miền này. Đây không phải lỗi mật khẩu admin.
+
+CẬP NHẬT
+1. Giải nén ZIP này. Chép toàn bộ các tệp/thư mục bên trong, ghi đè vào đúng thư mục source mà dịch vụ Railway WEB đang chạy (cùng vị trí web_server.py).
+2. Commit cập nhật lên repository mà service WEB đang kết nối.
+3. Trong Railway, mở đúng service WEB → Deployments → đợi deployment mới Active hoặc Deploy/Redeploy commit mới.
+4. Start Command phải là: python web_server.py. Nếu có Root Directory, nó phải trỏ đến thư mục chứa web_server.py vừa cập nhật. Không đổi service của bot Telegram.
+5. Mật khẩu mặc định 177207. Nếu có biến WEB_ADMIN_PASSWORD cũ, đổi biến đó thành 177207.
+6. Sau deploy, mở /health. Bản mới có trường build: 2026-10-03-choice-admin-v2. Nếu không thấy trường này, dịch vụ vẫn chưa chạy source vừa sửa; đổi cache trình duyệt không sửa được việc đó.
+7. Khi /health có đúng build, tải lại web. Bấm TẠO MOD → chọn một trong hai kiểu → mới bắt đầu tạo.
+
+ADMIN
+/admin/notice hoặc /admin/notice/ (có hỗ trợ /admin).
+Mật khẩu: 177207.
+Các chức năng thông báo màu chữ/link/ảnh/video và dữ liệu lưu trên Volume giữ như bản full.
+
+NỘI DUNG FIX
+- Bấm TẠO MOD không gửi yêu cầu tạo file ngay nữa.
+- Luôn mở hộp chọn: Có nút bấm + hạ địch / Không có nút bấm + hạ địch.
+- Đóng/hủy hộp không tạo file. Chỉ sau khi chọn một kiểu mới gửi yêu cầu.
+- Giữ đúng skin, thiết bị và lựa chọn sáng đậm tại thời điểm bấm TẠO MOD.
+- Nếu chỉ cập nhật giao diện nhưng máy chủ còn cũ, chặn tạo và báo máy chủ chưa cập nhật để không âm thầm bỏ qua lựa chọn.
+- Bổ sung đường dẫn admin có dấu / cuối và /admin; thêm dấu nhận biết build trong /health.
+- Gói này chứa đủ engine/worker/module/mẫu hiệu ứng của bản full trước, để không cần tải lại bộ Resources_1 nặng.
+
+Giữ nguyên thư mục Resources_1, Data, ResetFiles, assets hiện tại và các biến nhiệm vụ/Volume. Không ghi đè dữ liệu web_notice.json hoặc notice_media đã lưu.
+Đã kiểm tra hộp chọn, hủy, cả hai chế độ, sáng đậm, chặn máy chủ cũ, đường dẫn admin, đăng nhập và dấu nhận biết bản mới. Không thay đổi dữ liệu mod so với bản full trước. Chưa deploy vào tài khoản Railway của bạn trong phiên này.

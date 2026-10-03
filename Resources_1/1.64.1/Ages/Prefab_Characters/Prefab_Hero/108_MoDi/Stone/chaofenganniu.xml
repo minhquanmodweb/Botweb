@@ -1,0 +1,31 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="pos0" id="3" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="100.000" loop="false">
+    <Track trackName="InscribeActionButtonDuration0" eventType="InscribeActionButtonDuration" guid="fa04e7f6-b41d-4c01-9422-ec54b2737c9b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="InscribeActionButtonDuration" time="0.000" length="100.000" isDuration="true" guid="1c3c136a-1d65-4881-a097-bb1f739e245a">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="activeButton" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NewSaveVariableTick0" eventType="NewSaveVariableTick" guid="57f1e70e-2307-46e2-b68e-2a8b21358596" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="NewSaveVariableTick" time="0.000" isDuration="false" guid="db7acd92-b0e3-44d0-b417-a74b35188eb5">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="variableList" refParamName="" useRefParam="false" type="String">
+          <String value="chaofengweizhi" />
+        </Array>
+        <Enum name="srcDest" value="1" EnumValue="SkillContext" refParamName="" useRefParam="false" />
+        <Enum name="saveDest" value="2" EnumValue="SkillLogicUnit" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

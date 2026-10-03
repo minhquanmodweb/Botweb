@@ -1,0 +1,90 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="CheckActorCampTick0" eventType="CheckActorCampTick" guid="f22387b6-0bd7-4b30-8bde-4af48e9ac0bb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorCampTick" time="0.000" isDuration="false" guid="8625bc86-8be7-4d26-a8ef-ba4cd4f56517">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="camp" value="2" EnumValue="阵营2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick蓝方野区" eventType="RegisterEventTick" guid="89c06024-c9fa-4c4b-83f3-50fefd0f2b33" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="f22387b6-0bd7-4b30-8bde-4af48e9ac0bb" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="9734cc47-8714-47a9-b3b0-e7b7abf887f6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/JungleProtectP1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Jungle1" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+        <bool name="bMatchInAreaTags" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick蓝方野区" eventType="RegisterEventTick" guid="9635077c-64f2-4a0c-9d49-66e5b1656a26" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="f22387b6-0bd7-4b30-8bde-4af48e9ac0bb" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="641bcd88-b950-4c18-bc06-01984aa9ac26">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/JungleProtectP2" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Jungle2" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+        <bool name="bMatchInAreaTags" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorCampTick1" eventType="CheckActorCampTick" guid="dbf61ffc-e0cb-481a-a59a-05c6474aaab5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorCampTick" time="0.000" isDuration="false" guid="a947cc31-ed61-4de7-a2e5-215321540041">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="camp" value="1" EnumValue="阵营1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick红方野区" eventType="RegisterEventTick" guid="29c96586-f08f-4009-b40b-1a787190101c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="dbf61ffc-e0cb-481a-a59a-05c6474aaab5" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="6f17365d-5933-4035-ae4a-7c4669d60ea5">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/JungleProtectP3" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Jungle3" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+        <bool name="bMatchInAreaTags" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventTick红方野区" eventType="RegisterEventTick" guid="dbcc06cb-43cd-47d5-9982-c4c90a22d3e7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="dbf61ffc-e0cb-481a-a59a-05c6474aaab5" status="true" />
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="52157a6b-87ff-448b-acb0-8cff7e8fe9d0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" EnumValue="所处地形变化" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/JungleProtectP4" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="Jungle4" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+        <bool name="bMatchInAreaTags" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

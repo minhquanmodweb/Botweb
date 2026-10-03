@@ -1,0 +1,74 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="0.100" loop="false">
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="5b24dc61-0085-4859-8ee3-b89fe09e0691" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="31ef64f6-8a60-434b-8a79-22347c8303d0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88101052" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillIDTick0" eventType="CheckSkillIDTick" guid="e0429bb9-dca2-4f1b-a83a-27e808194692" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillIDTick" time="0.000" isDuration="false" guid="69125837-6baa-46f9-ac72-b855214856e1">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="90020" refParamName="" useRefParam="false" />
+        <bool name="bCheckSlot" value="true" refParamName="" useRefParam="false" />
+        <Enum name="checkSlot" value="4" EnumValue="技能4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillIDTick0" eventType="CheckSkillIDTick" guid="9ecdfa84-079d-424e-b5d0-01fa24b2481f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillIDTick" time="0.000" isDuration="false" guid="d675e10d-0670-4ee5-bbea-8cdfe731a7c0">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="90021" refParamName="" useRefParam="false" />
+        <bool name="bCheckSlot" value="true" refParamName="" useRefParam="false" />
+        <Enum name="checkSlot" value="4" EnumValue="技能4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillIDTick0" eventType="CheckSkillIDTick" guid="f983d017-9e33-4b6a-98b4-4c095d892c32" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillIDTick" time="0.000" isDuration="false" guid="3d6bdf94-0199-430f-9a92-4ce13ce542b7">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="916300" refParamName="" useRefParam="false" />
+        <bool name="bCheckSlot" value="true" refParamName="" useRefParam="false" />
+        <Enum name="checkSlot" value="4" EnumValue="技能4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="恢复替换" eventType="ChangeSkillTriggerTick" guid="fef90798-c78c-4f9c-8017-52e83b6b24b9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" OrConditions="true">
+      <Condition id="1" guid="e0429bb9-dca2-4f1b-a83a-27e808194692" status="true" />
+      <Condition id="2" guid="9ecdfa84-079d-424e-b5d0-01fa24b2481f" status="true" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="d163a282-545b-47e0-a177-87ab4250b26b">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="4" EnumValue="空" refParamName="" useRefParam="false" />
+        <int name="recoverSkillID" value="90021" refParamName="" useRefParam="false" />
+        <bool name="bOvertimeCD" value="false" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <bool name="bAbort" value="true" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="90021" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="恢复替换" eventType="ChangeSkillTriggerTick" guid="4295d522-6097-4c8a-8b4f-3d3093f69a19" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="e0429bb9-dca2-4f1b-a83a-27e808194692" status="false" />
+      <Condition id="2" guid="9ecdfa84-079d-424e-b5d0-01fa24b2481f" status="false" />
+      <Condition id="3" guid="f983d017-9e33-4b6a-98b4-4c095d892c32" status="false" />
+      <Event eventName="ChangeSkillTriggerTick" time="0.000" isDuration="false" guid="b3dae79f-6aa8-4435-9b57-c36e1a83a8fc">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="slotType" value="4" EnumValue="空" refParamName="" useRefParam="false" />
+        <int name="recoverSkillID" value="91000" refParamName="" useRefParam="false" />
+        <bool name="bOvertimeCD" value="false" refParamName="" useRefParam="false" />
+        <bool name="bSendEvent" value="false" refParamName="" useRefParam="false" />
+        <bool name="bAbort" value="true" refParamName="" useRefParam="false" />
+        <int name="changeSkillID" value="91000" refParamName="" useRefParam="false" />
+        <bool name="bDeadReviveNotReset" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

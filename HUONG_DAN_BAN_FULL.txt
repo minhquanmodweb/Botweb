@@ -1,0 +1,41 @@
+TD MOD — BẢN FULL WEB: NÚT BẤM + THÔNG BÁO HẠ + ADMIN
+
+CẬP NHẬT WEB ĐANG CHẠY
+1. Sao lưu source hiện tại. Giải nén ZIP và đưa toàn bộ các tệp/thư mục bên trong lên repository của dịch vụ WEB đang chạy.
+2. Giữ nguyên các biến Railway đang dùng cho nhiệm vụ và tên miền (VUOTLINK_API, WEB_PUBLIC_URL...), Volume và Start Command: python web_server.py.
+3. Mật khẩu admin mặc định: 177207. Nếu đã có biến WEB_ADMIN_PASSWORD từ bản trước, đổi giá trị biến đó thành 177207 để khớp mật khẩu bạn yêu cầu.
+4. Deploy lại dịch vụ web. Không đổi service/Start Command của bot Telegram.
+
+TRANG ADMIN
+https://web-production-a7f18.up.railway.app/admin/notice
+Mật khẩu: 177207
+Admin sửa tiêu đề, bật/tắt thông báo, dùng chữ đậm/nghiêng/gạch chân, màu chữ, link lồng vào chữ, ảnh và video.
+Bôi đen chữ trước khi đổi màu hoặc gắn link. Tải trực tiếp JPG/PNG/WEBP/GIF/MP4/WEBM (tối đa 25 MB) hoặc dán link trực tiếp đến tệp. Bấm Xem trước để kiểm tra, rồi Lưu thông báo.
+Thông báo hiện cho tất cả khách mỗi khi mở web, kể cả khi quay về bằng lịch sử trình duyệt. Không có chức năng ẩn 1 giờ. Khách đóng bằng nút Đã hiểu để tiếp tục chọn skin. Nội dung mới áp dụng khi khách mở/tải lại web.
+
+HAI LỰA CHỌN TẠO MOD
+Ở tab ĐÃ CHỌN:
+- Có nút + hạ địch: bộ tạo đọc bảng cấu hình gốc và gán bộ hiệu ứng tương ứng cho các skin đã chọn.
+- Không nút • không hạ: giữ mod skin, xuất các tệp gốc của phần nút/hạ để ghi đè phần hiệu ứng thêm đã cài ở lượt trước.
+Mỗi tướng chỉ một skin, tối đa 15 skin; hỗ trợ đóng gói Android, iOS hoặc Cả 2.
+Chỉ skin vốn có bộ nút/thông báo hạ trong cấu hình tài nguyên mới có hiệu ứng đó. Có skin chỉ có nút, có skin chỉ có thông báo hạ; skin không có cả hai không được tự tạo hiệu ứng mới.
+
+TRONG GAME
+Tải hoàn tất gói Bối cảnh ngoại vi: Danh sách tải → Trải nghiệm đa dạng → Bối cảnh ngoại vi.
+Thoát hẳn game trước khi chép file. Thử đấu luyện mới, kiểm tra joystick, đánh thường và hạ bot rồi mới thử trận thường.
+Bản tích hợp dùng đường chạy V10 đã hiện nút trong trận. Giữ nguyên 13 hàm vá chính thức; không mang thử nghiệm V11/V12 ghi cài đặt đồng bộ vào lúc đọc nút. Phần mới gán bộ hiệu ứng theo lựa chọn người dùng; không chép nguyên gói mod 50 skin.
+Bản full giữ các sửa trước đó về pick, lobby, mô hình, kỹ năng, reset và hàng chờ. Kiểm tra ngoại tuyến không bảo đảm tuyệt đối không lỗi mạng/trận ảo; cần xác nhận trên điện thoại. Không thay phiên bản tài nguyên khác 1.64.1 vào bộ mẫu này.
+
+LƯU THÔNG BÁO / ẢNH / VIDEO
+Thông báo lưu trong WEB_STORAGE_DIR/web_notice.json; media lưu trong WEB_STORAGE_DIR/notice_media.
+Nếu dùng Railway Volume, mặc định tự dùng thư mục jobs dưới RAILWAY_VOLUME_MOUNT_PATH. Giữ Volume đã gắn; nếu tự đặt WEB_STORAGE_DIR thì phải nằm trên Volume để giữ qua redeploy. Filesystem tạm không giữ dữ liệu sau redeploy.
+Các tệp dữ liệu thông báo/media đã lưu của admin không nằm trong ZIP này để tránh ghi đè.
+
+KIỂM TRA ĐÃ THỰC HIỆN
+- Đọc ánh xạ và tạo bản vá cho 92 skin có bộ hiệu ứng trong cấu hình.
+- Tạo hai gói thật cùng 15 skin, bật/tắt, gồm Android và iOS; ZIP và mã hóa đọc lại hợp lệ.
+- Đối chiếu hai gói: ngoài phần phụ kiện, dữ liệu không đổi sau khi bỏ khác biệt thời gian đóng gói và UUID được bộ tạo gốc sinh ngẫu nhiên.
+- Kiểm tra hai lựa chọn trên giao diện và giá trị gửi đến API; API lưu đúng lựa chọn cho worker/lịch sử.
+- Kiểm tra thông báo khi mở web/quay lại, định dạng, admin đăng nhập/sửa/lưu/tải ảnh, từ chối người chưa đăng nhập và markup thực thi, lưu lại qua khởi động.
+- Giữ sửa hàng chờ: lịch sử đã hoàn thành không làm đầy hàng chờ.
+- Kiểm tra cấu trúc Python/JavaScript. Chưa triển khai lên Railway hoặc thử bản full mới trên điện thoại trong phiên này.

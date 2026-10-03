@@ -1,0 +1,109 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="bullet2" isTemp="true" />
+    <TemplateObject id="4" objectName="temp_obj_0" isTemp="true" />
+    <TemplateObject id="5" objectName="BulletOwner" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="4.000" loop="false">
+    <Track trackName="获取子弹主人" eventType="GetActorTick" guid="8e1ca90e-7bfe-4b6d-b324-b472df8a5061" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetActorTick" time="0.000" isDuration="false" guid="4664e75d-a0df-4bbe-9f22-f9ef57d95a03">
+        <String name="actorName" value="BulletOwner" refParamName="" useRefParam="false" />
+        <bool name="bGlobal" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="GetActorId" id="5" objectName="BulletOwner" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="refParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetActorTick0" eventType="GetActorTick" guid="45d7fc22-d12a-4c17-9e0e-c0dd16a57563" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetActorTick" time="0.000" isDuration="false" guid="7c3403a6-6a90-4c3f-b4c1-1794d2f6de9f">
+        <String name="actorName" value="Roshan" refParamName="" useRefParam="false" />
+        <bool name="bGlobal" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="GetActorId" id="2" objectName="bullet" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="refParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CommonSkillProcessBarDuration1" eventType="CommonSkillProcessBarDuration" guid="a9e672ec-a6f5-46a9-945f-7fb0bb306fe6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CommonSkillProcessBarDuration" time="0.000" length="3.000" isDuration="true" guid="00d32923-2ccf-4ec5-8526-68207c180e75">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="useCurrentSkillName" value="false" refParamName="" useRefParam="false" />
+        <String name="skillNameTextKey" value="Age_Obtain_Dragon_Buff" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="39d7cef2-ece1-4170-a29a-e433da01a067" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="3.000" isDuration="true" guid="05f1dcd7-a58d-426b-baab-a2e393b890a5">
+        <TemplateObject name="targetId" id="2" objectName="bullet" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/Roshan_Circle" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SendGameEventTick1" eventType="SendGameEventTick" guid="7740bde6-d634-4a1c-b5b1-1670d5cd0f7c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SendGameEventTick" time="3.000" isDuration="false" guid="8294071d-e40f-4712-9253-65dd3cd0b82d">
+        <Enum name="eventType" value="6" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventSrcId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventAtkerId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="2c042359-a53b-4b3c-ab94-0d76cc4f73c4" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="HitTriggerTick" time="3.000" isDuration="false" guid="87148e6a-4814-4b4c-a55e-f5197c2a5667">
+        <TemplateObject name="targetId" id="5" objectName="BulletOwner" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="7750040" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBulletTick0" eventType="RemoveBulletTick" guid="175e1964-602c-454c-ae2b-c9c3b8021413" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBulletTick" time="3.000" isDuration="false" guid="f2c3e245-025d-4b00-bb6c-3fefcf4a7751">
+        <TemplateObject name="targetId" id="5" objectName="BulletOwner" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="702401" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="e9be6e25-4521-4011-a606-8a63db4447ac" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticleTick" time="3.000" isDuration="false" guid="b6968e82-545b-4533-b07a-69bb922d5ee5">
+        <TemplateObject name="targetId" id="2" objectName="bullet" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/Roshan_Disappear" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="3.000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="c3af5b5b-66ba-4a22-9b05-471fcd117eab" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticleTick" time="3.000" isDuration="false" guid="e1aa3f88-19c7-4e50-8af2-a90d5bfdff0e">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/Roshan_MoveBullet" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="3.000" refParamName="" useRefParam="false" />
+        <bool name="bUseRealScaling" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="NotifyTick0" eventType="NotifyTick" guid="61d8a238-57ab-4ef2-a0e3-50cf2ee793e0" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="NotifyTick" time="3.000" isDuration="false" guid="d4b9990c-4f88-4bf2-ad31-4f2acca909fe">
+        <TemplateObject name="subjectId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="contentKey" value="Battle_NotifyText_DragonBuff_Roshan" refParamName="" useRefParam="false" />
+        <String name="sound" value="" refParamName="" useRefParam="false" />
+        <String name="sound_enemy" value="" refParamName="" useRefParam="false" />
+        <bool name="isUseSubjectCamp" value="true" refParamName="" useRefParam="false" />
+        <bool name="isSelfCamp" value="true" refParamName="" useRefParam="false" />
+        <bool name="isImmediately" value="true" refParamName="" useRefParam="false" />
+        <int name="priority" value="100" refParamName="" useRefParam="false" />
+        <int name="showTime" value="2000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckRandomRangeTick0" eventType="CheckRandomRangeTick" guid="3c25a6d8-c835-4bad-b582-604755e3a2a7" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckRandomRangeTick" time="0.000" isDuration="false" guid="ac627738-fcdf-4a8e-b6b1-8ec4a40769c3">
+        <int name="randomRangeEnd" value="100" refParamName="" useRefParam="false" />
+        <int name="checkRangeEnd" value="100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleLightBlinkDuration0" eventType="BattleLightBlinkDuration" guid="f3990ca0-bd7e-48af-8d64-9c0dbd0f390e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="10" guid="3c25a6d8-c835-4bad-b582-604755e3a2a7" status="true" />
+      <Event eventName="BattleLightBlinkDuration" time="0.000" length="1.000" isDuration="true" guid="1d8db866-6108-498c-9066-9faea33a6750">
+        <String name="curvesPath" value="Prefab_Skill_Assets/BattleLightBlinkCurves/KillAbysDragon" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

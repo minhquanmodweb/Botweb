@@ -1,0 +1,76 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="b9729512-4050-459e-9644-dc609c2a3a1f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="7084b67b-e650-445b-849f-a03d93347cfd">
+        <TemplateObject name="targetId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/tongyong_hurt/born_back_reborn/huijidi_dead" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToAnimation" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayAnimDuration3" eventType="PlayAnimDuration" guid="cbebed14-0e88-4abd-b465-42910989599d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="PlayAnimDuration" time="0.000" length="1.500" isDuration="true" guid="a149bd4f-7296-4963-8445-8da27babc6f6">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="clipName" value="Revival" refParamName="" useRefParam="false" />
+        <int name="layer" value="2" refParamName="" useRefParam="false" />
+        <float name="crossFadeTime" value="0.100" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlayHeroSoundTick0" eventType="PlayHeroSoundTick" guid="583a8bf9-05e1-4512-9ee6-d05c3903d14f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="PlayHeroSoundTick" time="0.000" isDuration="false" guid="24bf4078-53aa-4e37-83ab-984c5ed9677d">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="sourceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_Revive" refParamName="" useRefParam="false" />
+        <bool name="useSkinSwitch" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetActorPlaneShadowVisibilityTick0" eventType="SetActorPlaneShadowVisibilityTick" guid="8095dfd7-c382-4e69-8c1f-34855bd18895" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SetActorPlaneShadowVisibilityTick" time="0.000" isDuration="false" guid="c59a91d6-06f8-4d94-a074-c89aef0cd714">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="17f9e6a7-597e-4f55-8db4-9632e5526d02" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="6" guid="a032bd60-9ae0-46e8-b6ba-4880aa00677c" status="false" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="e562d762-bf16-4930-91a8-76b281e5c8cf">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="9000590" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="13000ef5-4699-4f06-a375-8a8130567317" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="6" guid="a032bd60-9ae0-46e8-b6ba-4880aa00677c" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="085db9e7-b479-431b-a502-becf843d45c3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9000590" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckGameTimeTick0" eventType="CheckGameTimeTick" guid="a032bd60-9ae0-46e8-b6ba-4880aa00677c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckGameTimeTick" time="0.000" isDuration="false" guid="3b68c377-84c7-48a4-be2f-4912ec170d61">
+        <int name="sTime" value="120" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="fa02bb76-dab7-48f7-884a-faa6bde295da" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="f23e2b0a-62c1-4a2c-9b6f-f7b87a2df075" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="a31815b2-36a4-456f-a737-80b56964ac36">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="9000590" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckHPConditionTick0" eventType="CheckHPConditionTick" guid="f23e2b0a-62c1-4a2c-9b6f-f7b87a2df075" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true" comment="检测是否满血复活（仅泉水复活才满血，区别其他复活）">
+      <Event eventName="CheckHPConditionTick" time="0.000" isDuration="false" guid="5cc23812-ea6c-4c17-8c0e-919bd0ef5466">
+        <TemplateObject name="srcId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="value" value="100" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" refParamName="" useRefParam="false" />
+        <Enum name="checkValueType" value="1" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

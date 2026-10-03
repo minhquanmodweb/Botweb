@@ -1,0 +1,42 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="BulletPos" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="CreateRandomNumTick0" eventType="CreateRandomNumTick" guid="9d82a01a-c7d7-4f56-9499-22c606bfe939" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CreateRandomNumTick" time="0.000" isDuration="false" guid="9c39558a-2c4c-4969-8553-e4fa8545a303">
+        <int name="randomRangeEnd" value="99" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="recover" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckRandomRangeTick0" eventType="CheckRandomRangeTick" guid="f7fc4997-ace6-4804-803f-1ef96b26d564" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckRandomRangeTick" time="0.005" isDuration="false" guid="79064787-5bde-4368-b989-647b4b49a06f">
+        <int name="checkRangeEnd" value="9" refParamName="" useRefParam="false" />
+        <bool name="bUsePreCreateRandonNum" value="true" refParamName="" useRefParam="false" />
+        <String name="preCreateRandonNumName" value="recover" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="a69208fa-e04d-48ca-8755-e12ab8b55895" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="f7fc4997-ace6-4804-803f-1ef96b26d564" status="true" />
+      <Event eventName="SpawnBulletTick" time="0.300" isDuration="false" guid="c7779af4-fa6d-486b-9b38-1b3eee9f186e">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/PassiveResource/Soilder_Ground_Bullet" refParamName="" useRefParam="false" />
+        <int name="bulletTypeId" value="1750040" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="保存子弹主人" eventType="SaveActorDuration" guid="7ef60181-67eb-482c-831e-39abeb919a8f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="f7fc4997-ace6-4804-803f-1ef96b26d564" status="true" />
+      <Event eventName="SaveActorDuration" time="0.000" length="2.000" isDuration="true" guid="a2663177-c401-4aac-b239-00c226a7f39a">
+        <String name="actorName" value="BulletOwnerSoldier" refParamName="" useRefParam="false" />
+        <bool name="bGlobal" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="SetActorId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="strValue" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

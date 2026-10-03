@@ -1,0 +1,18 @@
+TD MOD SKIN AOV — CẬP NHẬT HIỂN THỊ / XML / PHỤ KIỆN
+
+1. Bộ OUT.7z giữ nguyên KernelLua.pkg.bytes và StableSystems_3.pkg.bytes. Người dùng đã báo mở lại game không reset ở bản trước.
+2. Các ô trang phục cùng tướng hiển thị tên/ảnh/background skin mod đã chọn. Ô ảnh tướng gốc giữ key ảnh gốc để không thay skin vào danh sách tướng.
+3. Sửa lỗi biên XML ở các file hành động: khai báo bị mất chữ xml và ký tự thừa sau thẻ đóng. Kiểm tra cú pháp trước/sau xử lý và trước đóng gói. Không thay giá trị khóa thao tác hoặc di chuyển trong bước sửa XML này.
+4. Gắn liên kết nút bấm riêng và bảng hạ địch từ bảng native khi skin có dữ liệu. Giữ ID phụ kiện/material gốc; không ép mọi skin dùng một thông báo toàn cục. Web hiển thị nhãn Nút riêng/Hạ địch theo dữ liệu nguồn. Cần thử trên game để xác nhận UI game có tải/hiện phụ kiện.
+5. Web thay icon số lượng Tướng (mũ giáp)/Skin (pha lê), màu xanh-tím, animation ngắn khi mở danh sách, phản hồi chọn thẻ; tôn trọng Giảm chuyển động, tải ảnh lười. Ảnh skin ưu tiên ảnh đầy đủ rồi dự phòng ảnh head. Nút Xóa tất cả và Lịch sử giữ nguyên.
+
+KIỂM TRA
+Tạo thật Android 6 skin và iOS 2 skin thành công. ZIP CRC hợp lệ; 1279 file XML hành động trong bản Android parse được. Kiểm tra ảnh/name skin đồng bộ, phụ kiện giữ ID/resource gốc, bộ reset giữ nguyên byte.
+Chưa kiểm chứng hết lỗi đứng nhân vật, Biron hay hiệu quả nút/hạ địch trong game. Không khẳng định đã hết lỗi trên thiết bị.
+
+CÀI FILE
+Đóng hẳn game trước khi chép. Giải nén toàn bộ vào đúng thư mục và chọn Ghi đè tất cả. Tải tài nguyên cần thiết trong game trước khi cài. Chỉ thử file MỚI tạo sau deploy; file cũ trong Lịch sử không tự đổi.
+Việc phải chép nhiều lần chưa xác định được từ video; cần biết app/cách bạn đang chép nếu vẫn xảy ra. Không khuyến nghị chép lặp trong khi game đang chạy.
+
+UP WEB
+Giải nén TD_MOD_WEB_UPLOAD_PHONE.zip mới, thay 9 file trong Download/TD_MOD_WEB_UPLOAD_PHONE rồi up repo Botweb bằng Termux như trước. Không thay URL/Variables. Chờ Railway deploy xong và tạo file mới.

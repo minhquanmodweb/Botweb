@@ -1,0 +1,472 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="5.000" loop="false">
+    <Track trackName="1层" eventType="CheckSkillCombineConditionTick" guid="6c1834b7-3267-4a02-92a0-37b040d92426" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.005" isDuration="false" guid="f8a083f9-6fe5-4077-8067-c552d3b83474">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第一层特效1" eventType="TriggerParticle" guid="367beb1f-8a08-4c6b-a276-0cd5e9b22fa9" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="0" guid="6c1834b7-3267-4a02-92a0-37b040d92426" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="b6479b96-2dd7-419c-851a-a215db650731">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_liang01" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="2层" eventType="CheckSkillCombineConditionTick" guid="3065eecf-703a-4a86-9534-e9bc0730d1cf" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="f7461c7b-289d-4d21-bd9b-8e374cd86ae7">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第一层特效2" eventType="TriggerParticle" guid="c71597db-910d-4236-8856-0406de5a91be" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="3065eecf-703a-4a86-9534-e9bc0730d1cf" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="4d76fb37-75e1-480b-bfc1-31c4a400d59b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_liang02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="3层" eventType="CheckSkillCombineConditionTick" guid="5bd5ea87-4207-4822-b447-9e184323d87a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="7c70d742-7b6f-47c4-8afe-9aaac3616c39">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第一层特效3" eventType="TriggerParticle" guid="614eac88-2157-4848-966f-fcb28fd06834" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="4" guid="5bd5ea87-4207-4822-b447-9e184323d87a" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="cc0e6677-f021-452e-96e5-4d62f2d3dd32">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_liang03" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="4层" eventType="CheckSkillCombineConditionTick" guid="d9c8249c-1a5e-4849-abe0-b22959986257" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="496dd85a-53f7-4f3e-8b53-073b2e04c349">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第一层特效4" eventType="TriggerParticle" guid="03f15f59-dac1-4436-99f3-3cb298f5fa5c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="6" guid="d9c8249c-1a5e-4849-abe0-b22959986257" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="d45627c7-753e-430a-9b59-5596fc9b3a71">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_liang04" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="20ceng " eventType="CheckSkillCombineConditionTick" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="45b2f52c-7eac-4211-8cec-cca6b07cc085">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="037c062c-2e38-4568-bfc2-a58b99e477e6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="2999a48e-b0a5-43ef-9d0a-4638163582c8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88403066" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="88403067" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="02c0d847-b06c-451f-afdf-69c77e0969a6" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="SpawnObjectDuration" time="0.000" length="0.500" isDuration="true" guid="4d5a1ec4-d25c-41b6-b2e0-a9256f4c1eea">
+        <TemplateObject name="targetId" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="parentId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="prefab_characters/commonempty" refParamName="" useRefParam="false" />
+        <bool name="modifyDirection" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="direction" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+        <TemplateObject name="materialParentActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="visionActorId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="recordTargeID" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SetCollisionTick0" eventType="SetCollisionTick" guid="4ceef0d2-ec6e-4138-831d-8a916b58720c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="SetCollisionTick" time="0.000" isDuration="false" guid="7fb2dd28-81ff-4f76-9e32-23130272e9be">
+        <TemplateObject name="targetId" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />
+        <Enum name="type" value="1" refParamName="" useRefParam="false" />
+        <Vector3i name="Size" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+        <int name="Radius" value="4000" refParamName="" useRefParam="false" />
+        <int name="Rotation" value="160" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerDuration0" eventType="HitTriggerDuration" guid="bf671fa2-9b9c-4316-b40b-8c6fe8be7b8a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="HitTriggerDuration" time="0.000" length="0.500" isDuration="true" guid="50076dde-ff83-43b7-ad46-35829d1c6869">
+        <TemplateObject name="triggerId" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="attackerId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="TriggerActorInterval" value="600" refParamName="" useRefParam="false" />
+        <bool name="bFileterMonter" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFileterOrgan" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="bulletID" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="88403063" refParamName="" useRefParam="false" />
+        <int name="TargetSkillCombine_1" value="88403065" refParamName="" useRefParam="false" />
+        <String name="BulletActionName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="爆炸特效" eventType="TriggerParticle" guid="269627b5-1b72-4217-8eee-3a621dd4d845" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="9e1d11e0-f85f-41f2-ad55-634b3d8f3682">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_bazha01" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <TemplateObject name="lookTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticleTick0" eventType="TriggerParticleTick" guid="0091bab3-5d46-43ac-a8ca-e4f713bedd4f" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="TriggerParticleTick" time="0.000" isDuration="false" guid="03ff739c-d71b-4af7-b8b6-151eb2854986">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/mowen/mowen_shujia_bazha01" refParamName="" useRefParam="false" />
+        <float name="lifeTime" value="4.000" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="424802d6-4d97-4676-8f3f-3ae3190c5534" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="RemoveBuffTick" time="1.666" isDuration="false" guid="8ad9d5c2-96ca-44cd-94d4-82ff94a7eeee">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88403061" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="-1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="6a2ef711-0bc3-4bb2-bf8b-e89c7af5a9f8" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="8" guid="d20abb10-92d8-4b19-ad53-4d22f57f15d7" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.216" isDuration="false" guid="5232f88d-cdea-469e-9d6a-0442a6ec2262">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="88403061" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="-1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="4层" eventType="CheckSkillCombineConditionTick" guid="f5a77d0e-7e5d-479b-9034-0c1ca771a785" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="288973f9-a428-48bf-826d-0cc9a2bccaed">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="4" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第一层特效4" eventType="TriggerParticle" guid="40d743ce-f594-4f1b-ba38-69d2941b28ed" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="17" guid="f5a77d0e-7e5d-479b-9034-0c1ca771a785" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="8d0656cb-6e2a-4995-90eb-980912cb6ee8">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff01" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="5层" eventType="CheckSkillCombineConditionTick" guid="6398dbfe-c3be-42b6-84ee-fe25845e1b60" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="7d9e99cb-2f7c-422b-8439-ef57678b400a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第2层特效1" eventType="TriggerParticle" guid="70a7f861-8815-4ac1-8c79-23bb42720418" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="19" guid="6398dbfe-c3be-42b6-84ee-fe25845e1b60" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="43fa2f51-c3dc-4ed4-8346-e5dff4259f62">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="6层" eventType="CheckSkillCombineConditionTick" guid="b628f786-3a5c-472f-93f7-19b696dbff97" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="95f8c5b5-0bbf-4209-a995-dac7a5f67925">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="6" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第2层特效2" eventType="TriggerParticle" guid="1619570c-3c07-4eb5-99c8-9ee3fa1e456e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="21" guid="b628f786-3a5c-472f-93f7-19b696dbff97" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="51b15809-110d-43e3-9a86-6fc435d64854">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="7层" eventType="CheckSkillCombineConditionTick" guid="971e6620-5a50-409d-b14d-edf1d45c94e2" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="cbf26556-683a-4cf2-941c-5a2b37c233ab">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="7" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第2层特效3" eventType="TriggerParticle" guid="5acae8ad-b291-418c-826c-36c49a9f56c6" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="23" guid="971e6620-5a50-409d-b14d-edf1d45c94e2" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="d73cdb85-bb3c-49dd-af07-f69889b3e941">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="8层" eventType="CheckSkillCombineConditionTick" guid="daa2f7d0-32a8-434f-bc43-6f1f87d90989" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="5808c4d1-5500-4f60-bf6f-f186a2b9ec74">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="8" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第2层特效4" eventType="TriggerParticle" guid="830a44a2-8eb5-418d-994d-68473ee2f2d6" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="25" guid="daa2f7d0-32a8-434f-bc43-6f1f87d90989" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="31877ab7-a14e-4c1e-b6b1-de7fe4e9683a">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff02" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="9层" eventType="CheckSkillCombineConditionTick" guid="53275566-1ef2-4b16-88bc-afb44d41b505" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="82ee8af1-3a26-406a-8782-570d1fd7e9d2">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="9" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第3层特效1" eventType="TriggerParticle" guid="37ab0ca4-366b-409c-aea3-81a0a5dac0fa" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="27" guid="53275566-1ef2-4b16-88bc-afb44d41b505" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="bcc97491-ca09-4fe6-8219-59846b850099">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff03" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="10层" eventType="CheckSkillCombineConditionTick" guid="7d5d8d9e-78a2-40a8-8e4a-5ab701d60a3d" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="a368b5b7-cf16-4d02-98ba-7f3e8961568b">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="10" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第3层特效2" eventType="TriggerParticle" guid="7c792347-dfdf-442e-87da-bd7b66299d0d" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="29" guid="7d5d8d9e-78a2-40a8-8e4a-5ab701d60a3d" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="5dfbb26b-2ecd-4417-af77-b834dc327518">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff03" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="11层" eventType="CheckSkillCombineConditionTick" guid="b2a2e757-533e-4251-b5e3-8e5cae31b6c2" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="88dad260-9a76-4787-ae55-0b0dfe002b6e">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="11" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第3层特效3" eventType="TriggerParticle" guid="5dc94b2f-413c-4240-922a-8192984d0365" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="31" guid="b2a2e757-533e-4251-b5e3-8e5cae31b6c2" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="0fe736a7-5ecf-4703-9e0d-ff5456585c4f">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff03" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="12层" eventType="CheckSkillCombineConditionTick" guid="cc762942-f464-4ad0-8ea3-55a15d29f5c2" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="e24e00e0-a384-456d-a016-044c352d5524">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="12" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第3层特效4" eventType="TriggerParticle" guid="cba84bcc-85a9-4553-af08-0fcd8bab518e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="33" guid="cc762942-f464-4ad0-8ea3-55a15d29f5c2" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="9ecae0fd-2a5f-43e1-8d78-b774bdcc7024">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff03" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="13层" eventType="CheckSkillCombineConditionTick" guid="37eb670c-427a-40e9-a071-61b8c65d9d47" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="c2e4f869-0cdf-4128-a640-4336821726e6">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="13" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第4层特效1" eventType="TriggerParticle" guid="76dff22f-f416-4ab3-98e7-8894b57a0202" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="35" guid="37eb670c-427a-40e9-a071-61b8c65d9d47" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="9e6fb0cd-7549-4ee8-82b6-92cdd7a32186">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff04" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="14层" eventType="CheckSkillCombineConditionTick" guid="9befae9e-18af-4c40-9c98-14be4878c7bc" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="146ef962-399b-48b8-b935-bae898f91909">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="14" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第4层特效2" eventType="TriggerParticle" guid="8160f1b8-90ea-4407-84e7-40197f7a58b9" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="37" guid="9befae9e-18af-4c40-9c98-14be4878c7bc" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="673a51e4-4691-4df7-b5f3-dff0fb8e40b2">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff04" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="15层" eventType="CheckSkillCombineConditionTick" guid="e55733a7-9114-4743-8cbe-d02167b0c34b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="27d782cc-db46-4fdc-b1ee-5bce0c820ac5">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="15" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第4层特效3" eventType="TriggerParticle" guid="541a5abf-82c6-460a-89d1-e4102b272118" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="39" guid="e55733a7-9114-4743-8cbe-d02167b0c34b" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="8b2915a1-edf5-4abc-85ba-e197f74e47d7">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff04" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="16层" eventType="CheckSkillCombineConditionTick" guid="acccf3be-ec0f-4f51-a3f4-3d61edf4b05a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="48de7862-fc2d-48c4-a0dc-595407309641">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="16" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第4层特效4" eventType="TriggerParticle" guid="71f92d99-3cda-49ce-af4e-38169c7d723b" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="41" guid="acccf3be-ec0f-4f51-a3f4-3d61edf4b05a" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="3152713b-76ce-45c8-941a-2928afb43528">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff04" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="17层" eventType="CheckSkillCombineConditionTick" guid="b5f2d4e2-c627-4a82-9760-7c32b58a6ebd" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="49f80fc0-e2b0-4849-86a0-1a87f096e591">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="17" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第5层特效1" eventType="TriggerParticle" guid="fa251aa1-cbac-4166-8785-6e7c76b8d453" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="43" guid="b5f2d4e2-c627-4a82-9760-7c32b58a6ebd" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="560eb4ab-f183-41c9-bd4d-c6592eebe85d">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff05" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="18层" eventType="CheckSkillCombineConditionTick" guid="bb7ffd2e-d043-437f-81bb-7c90ece8de37" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="ff064ea5-1452-4b70-85f7-df349390445f">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="18" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第5层特效2" eventType="TriggerParticle" guid="5dd13ee8-650b-4392-852e-ebcc5dfe1372" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="45" guid="bb7ffd2e-d043-437f-81bb-7c90ece8de37" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="24c850e8-d7fd-4ddd-bd00-17a86b9e5619">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff05" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="19层" eventType="CheckSkillCombineConditionTick" guid="9ca5e0fe-995b-4e00-9766-82bc450d28fe" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="f821cba7-9788-4859-9c74-d044acc27a63">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="88403061" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="19" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="第5层特效3" eventType="TriggerParticle" guid="79e4f576-0d00-4f38-9740-fa84ad8e5ee4" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="47" guid="9ca5e0fe-995b-4e00-9766-82bc450d28fe" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="5.000" isDuration="true" guid="216fcba7-ded1-472b-8d77-8d15941926d3">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/tongyong_effects/Zhuangbei/EF_LYKJ_GP_mowen_NaiShou_buff05" refParamName="" useRefParam="false" />
+        <Vector3i name="scalingInt" x="10000" y="10000" z="10000" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

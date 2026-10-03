@@ -1,0 +1,70 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="duke" isTemp="false" />
+    <TemplateObject id="1" objectName="killer" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.500" loop="false">
+    <Track trackName="CreateSkillContextDuration0" eventType="CreateSkillContextDuration" guid="24636385-a828-4115-985b-eeb359e607da" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CreateSkillContextDuration" time="0.000" length="2.500" isDuration="true" guid="2faa98a4-6717-4198-93f6-9d25cecc4ab0">
+        <TemplateObject name="attackerId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CallBossTick0" eventType="CallBossTick" guid="83e2f7e0-0420-4161-9faa-175ca338d857" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CallBossTick" time="0.000" isDuration="false" guid="9801c8b9-6b46-431e-b639-1811f5190220">
+        <TemplateObject name="CallerId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="MonserId" id="0" objectName="duke" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="LifeTime" value="180000" refParamName="" useRefParam="false" />
+        <int name="ConfigIDCamp1" value="17102" refParamName="" useRefParam="false" />
+        <int name="ConfigIDCamp2" value="17103" refParamName="" useRefParam="false" />
+        <Enum name="wayPointHolderFuncProxy" value="2" refParamName="" useRefParam="false" />
+        <int name="WayPointId" value="5" refParamName="" useRefParam="false" />
+        <TemplateObject name="BornPosition" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ForbidAbilityDuration0" eventType="ForbidAbilityDuration" guid="551f97d3-dc8c-459e-9a14-0b5f3d7e5585" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ForbidAbilityDuration" time="0.000" length="2.000" isDuration="true" guid="cb8b2821-210e-4a96-833f-5e8e74510215">
+        <TemplateObject name="attackerId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="forbidMove" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidSkill" value="true" refParamName="" useRefParam="false" />
+        <bool name="forbidMoveRotate" value="true" refParamName="" useRefParam="false" />
+        <bool name="delaySkillAbort" value="true" refParamName="" useRefParam="false" />
+        <bool name="ImmuneControl" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CommonSkillProcessBarDuration0" eventType="CommonSkillProcessBarDuration" guid="2cdc495d-e73c-465f-97e2-a0e07a348d0a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CommonSkillProcessBarDuration" time="0.000" length="2.000" isDuration="true" guid="ff360f73-10be-4147-9ef1-81422be01773">
+        <TemplateObject name="targetId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="useCurrentSkillName" value="false" refParamName="" useRefParam="false" />
+        <String name="skillNameTextKey" value="Age_Call_Boss" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SendGameEventTick0" eventType="SendGameEventTick" guid="f93e8eb4-fe98-4398-ad13-9cf9efb12377" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SendGameEventTick" time="0.100" isDuration="false" guid="a78d2d54-a5e1-4dab-8150-c2ae4cac35ef">
+        <Enum name="eventType" value="7" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventSrcId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventAtkerId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="41a96a57-8083-44ca-9b96-2ce448b63634" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="0.100" isDuration="false" guid="8fd1f39c-e5ab-47db-8a25-3b0130289483">
+        <TemplateObject name="targetId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="7760020" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration0" eventType="OldMoveActorDuration" guid="d1792da3-b888-430e-8ab9-6ace593e06df" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="OldMoveActorDuration" time="0.000" length="0.050" isDuration="true" guid="17bf7f48-1294-4460-bed4-5c6a0bd477ae">
+        <Enum name="moveType" value="1" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" id="0" objectName="duke" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="1" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bMoveToRealTimePosition" value="true" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="10" refParamName="" useRefParam="false" />
+        <bool name="IgnoreCollision" value="true" refParamName="" useRefParam="false" />
+        <bool name="bStayInCurrentPosWhenStop" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

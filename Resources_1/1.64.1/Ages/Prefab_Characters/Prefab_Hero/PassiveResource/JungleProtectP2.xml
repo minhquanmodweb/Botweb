@@ -1,0 +1,93 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.500" loop="false">
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="c71495af-5be6-43dc-9303-2098b5a8d522" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="9fc45916-1c7c-46a9-bcd5-60d48cd58f5d">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="7790231" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="f20feafe-57b2-4187-962b-1d73cf5f10db" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="060c58f7-d87c-4616-a3f5-1da31e0edcc4">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="7790235" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="aff9a2a5-81ee-4812-9e70-d4ae625e5a85" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="7e9da999-7d0c-4d84-b840-ba75e3d04176">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="7790238" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="野区2" eventType="CheckInAreaTick" guid="72e2506d-b268-40d3-a60e-e8d00dc382f3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckInAreaTick" time="0.000" isDuration="false" guid="7a212609-0718-43eb-8b19-db74bd255dc2">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="AreaType" value="2" EnumValue="其他" refParamName="" useRefParam="false" />
+        <String name="AreaTag" value="Jungle2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionTick0" eventType="CheckSkillCombineConditionTick" guid="ebe99e2a-be22-4d6e-981a-c6c16a712da7" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionTick" time="0.000" isDuration="false" guid="0dbf3b86-e9b6-40d1-9a76-1d0f58c6d237">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="500035" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="1" EnumValue="小于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="9edbb7de-f944-4b52-bef3-d73bf371f504" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="72e2506d-b268-40d3-a60e-e8d00dc382f3" status="true" />
+      <Condition id="4" guid="ebe99e2a-be22-4d6e-981a-c6c16a712da7" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="6af0bf2e-24fc-42bd-9236-e2ab3951c741">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="7790231" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="7790235" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="70696048-32d5-45ec-9e33-fe15a014541d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="72e2506d-b268-40d3-a60e-e8d00dc382f3" status="true" />
+      <Event eventName="RemoveBuffTick" time="0.000" isDuration="false" guid="6e17c09f-010c-419f-a2e1-7c714d293c36">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="7790231" refParamName="" useRefParam="false" />
+        <int name="BuffLayer" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="野区2（塔下进野区）" eventType="CheckInAreaTick" guid="e5a36d85-9a21-48ce-9ecd-5bf8cd67e607" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckInAreaTick" time="0.000" isDuration="false" guid="18769a6a-7edd-4584-a877-213d35acf67c">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="AreaType" value="2" EnumValue="其他" refParamName="" useRefParam="false" />
+        <String name="AreaTag" value="Jungle2" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="495e3578-4a6a-4e9e-9332-65a2b4ada42a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="e5a36d85-9a21-48ce-9ecd-5bf8cd67e607" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="221ab3a4-ebca-48ce-8fe4-906aaf21f987">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="7790231" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_2" value="7790235" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_3" value="7790238" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="入野事件2" eventType="SendBluePrintCommonEventTick" guid="43803f8d-7290-43c8-ad89-4ecbb19253bc" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="7" guid="e5a36d85-9a21-48ce-9ecd-5bf8cd67e607" status="true" />
+      <Event eventName="SendBluePrintCommonEventTick" time="0.100" isDuration="false" guid="242df70a-616f-4b04-a250-7c5891c42780">
+        <String name="evtName" value="InvadeJungle2" refParamName="" useRefParam="false" />
+        <int name="intParam1" value="1" refParamName="" useRefParam="false" />
+        <int name="intParam2" value="2" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="eventActorParamId2" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

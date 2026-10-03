@@ -1,0 +1,74 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="3.000" loop="false">
+    <Track trackName="FocusCameraDuration1" eventType="FocusCameraDuration" guid="5bc50acd-b966-4a98-afdb-143f5104bae4" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FocusCameraDuration" time="0.000" length="3.000" isDuration="true" guid="d298278d-89fc-4635-87c9-d5812ea3a676">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MainCameraLookAt1" eventType="MainCameraLookAt" guid="ce9883bb-2290-421c-adee-0a132712528e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="MainCameraLookAt" time="0.000" isDuration="false" guid="04da9e47-246d-4a0c-aab3-e21488cbc23a">
+        <TemplateObject name="srcId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ShowCallBossBtnDuration0" eventType="ShowCallBossBtnDuration" guid="5c7a058d-bdf5-4743-845a-effe3c81de2c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="ShowCallBossBtnDuration" time="0.000" length="3.000" isDuration="true" guid="66aab265-d377-4ff2-bb16-f2803900e90c">
+        <TemplateObject name="callBossActorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="CallBossAgeName" value="Prefab_Characters/Prefab_Hero/KeySpell/S292" refParamName="" useRefParam="false" />
+        <bool name="bIsCallAgeWhenTrackNormalEnd" value="false" refParamName="" useRefParam="false" />
+        <String name="ImagePath" value="UGUI/Sprite/Dynamic/Skill/801291.prefab" refParamName="" useRefParam="false" />
+        <String name="NameKey" value="Battle_SkillBtn_Chuansong_SwitchViewText" refParamName="" useRefParam="false" />
+        <Enum name="BuffSkillType" value="1" EnumValue="召唤天空巨龙Buff" refParamName="" useRefParam="false" />
+        <bool name="useOffsetPos" value="true" refParamName="" useRefParam="false" />
+        <int name="offsetX" value="50" refParamName="" useRefParam="false" />
+        <int name="offsetY" value="-50" refParamName="" useRefParam="false" />
+        <bool name="hideImmediately" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="964aa063-971e-4353-8692-b998057803ea" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="3.000" isDuration="true" guid="2d91ece7-1e62-4dac-844b-f2478bf6df6e">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801295" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="1" EnumValue="小于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="50f1c253-79b0-4cf9-a02b-4c1af9648ee8" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="3" guid="964aa063-971e-4353-8692-b998057803ea" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="8aca0420-46f2-469f-b933-a40f94538499">
+        <TrackObject name="trackId" id="2" guid="5c7a058d-bdf5-4743-845a-effe3c81de2c" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetActorTick1" eventType="GetActorTick" guid="621a182c-0e07-442b-bf89-15ba051aa09c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="GetActorTick" time="0.000" isDuration="false" guid="142d6fb3-cf19-4025-a72b-e0d73a3e44d0">
+        <String name="actorName" value="temp1" refParamName="" useRefParam="false" />
+        <TemplateObject name="getFromTargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="GetActorId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="refParamName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="2137049f-b562-48bf-9c0e-290362ae30bb" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="3.000" isDuration="true" guid="5c44e847-06ea-4746-a46b-c4071ddd5972">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="801298" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="1" EnumValue="小于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="9f1c7569-0363-472e-8f73-05ef4ce2a831" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="2137049f-b562-48bf-9c0e-290362ae30bb" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="d0775e51-c097-4f14-a9f7-4fed3fe3b40e">
+        <TrackObject name="trackId" id="2" guid="5c7a058d-bdf5-4743-845a-effe3c81de2c" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,45 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="600.000" loop="false">
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="957c6938-1bba-4e79-bc9d-7b71bb877d96" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="600.000" isDuration="true" guid="eabddeba-809c-47b2-be5e-f9e7e47677c0">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Level_Effects/Wujun/Wujun_guangquan_red" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="9ed5965d-c1ce-4bfb-ba63-76b850e58862" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="3917bc25-e0ff-4aef-afe6-838c58c01649">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMonter" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterBoss" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterOrgan" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterChest" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterEye" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlySelf" value="true" refParamName="" useRefParam="false" />
+        <bool name="bOnlyHostHero" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TeamMemberBuffTick0" eventType="TeamMemberBuffTick" guid="a3ab4242-ff27-4148-aeb6-40e03bd13cd2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="9ed5965d-c1ce-4bfb-ba63-76b850e58862" status="true" />
+      <Event eventName="TeamMemberBuffTick" time="0.000" isDuration="false" guid="f9392d00-e940-41b3-bfba-2c93aa46e35b">
+        <bool name="bPlayer1" value="true" refParamName="" useRefParam="false" />
+        <bool name="bPlayer2" value="true" refParamName="" useRefParam="false" />
+        <bool name="bPlayer3" value="true" refParamName="" useRefParam="false" />
+        <bool name="bPlayer4" value="true" refParamName="" useRefParam="false" />
+        <bool name="bPlayer5" value="true" refParamName="" useRefParam="false" />
+        <int name="BuffID" value="1000027" refParamName="" useRefParam="false" />
+        <Enum name="PlayerCamp" value="5" refParamName="" useRefParam="false" />
+        <TemplateObject name="actorId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

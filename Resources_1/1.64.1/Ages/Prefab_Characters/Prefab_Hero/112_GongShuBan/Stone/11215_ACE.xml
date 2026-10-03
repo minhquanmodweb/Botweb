@@ -1,0 +1,213 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="zidan" id="3" isTemp="false" />
+    <TemplateObject objectName="loop_zidan" id="4" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="25.000" loop="false">
+    <Track trackName="CheckSkinIdTick0" eventType="CheckSkinIdTick" guid="e5b12216-80d9-4c4a-b94c-f73d2571777d" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkinIdTick" time="0.000" isDuration="false" guid="0c96dfcd-bb38-4d04-b1bf-cc6574eea765">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skinId" value="11215" refParamName="" useRefParam="false" />
+        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />
+        <bool name="bSkipLogicCheck" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="VStopAction0" eventType="VStopAction" guid="e9564168-9c73-40eb-b878-efedbb2eba2f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="0" guid="e5b12216-80d9-4c4a-b94c-f73d2571777d" status="true" />
+      <Event eventName="VStopAction" time="0.000" isDuration="false" guid="d38994cf-a45d-473f-9e83-a6eddc8c2050" />
+    </Track>
+    <Track trackName="BattleUIAnimationDuration0" eventType="BattleUIAnimationDuration" guid="a4144bcd-27b7-4b53-85c3-d89584f04f7e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="BattleUIAnimationDuration" time="0.000" length="5.000" isDuration="true" guid="82271a3c-276c-40c4-a3c8-a3307c6d8b19">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="skinTargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefab" value="prefab_skill_effects/hero_skill_effects/112_GongShuBan/11215/11215_spine_drpmgg_01" refParamName="" useRefParam="false" />
+        <bool name="bWatchClose" value="true" refParamName="" useRefParam="false" />
+        <bool name="notBingTarget" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BattleUIAnimationDuration0" eventType="BattleUIAnimationDuration" guid="d010e532-d4d5-4733-bf41-ebf74dfb3475" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="BattleUIAnimationDuration" time="0.000" length="5.000" isDuration="true" guid="d410ba3e-05df-442a-885e-a1c40bc184e3">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="skinTargetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="prefab" value="prefab_skill_effects/hero_skill_effects/191_daqiao/daqiao_buff03_spell01" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SpawnBulletTick0" eventType="SpawnBulletTick" guid="118d0610-9e88-4679-9585-aa91448aa60a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnBulletTick" time="0.000" isDuration="false" guid="a5a2c6dd-045e-4773-82ad-65646a1e3016">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="referenceObjectId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="ActionName" value="Prefab_Characters/Prefab_Hero/505_Yao/skill/skinaction/ACE1.xml" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="击杀特效挂点" eventType="SpawnObjectDuration" guid="437e504b-5d5d-47a5-a902-8ede61fb28bd" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="1.000" isDuration="true" guid="f568b6a5-beb6-4e71-aca1-a5c1b3db5ee6">
+        <TemplateObject name="targetId" objectName="zidan" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="击杀特效" eventType="TriggerParticle" guid="c9949d0e-3ce4-44ae-b5c6-274dfc86fac7" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="e4d658e7-ed4c-498c-9626-1e5c51be955f">
+        <TemplateObject name="targetId" objectName="zidan" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_jisha.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="Loop和End特效挂接点" eventType="SpawnObjectDuration" guid="0e5d0fc4-ddec-432b-80ec-2ae773a431fc" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.900" length="24.100" isDuration="true" guid="928bf074-dae2-4eed-be2a-f83c74c6346c">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="objectSpaceId" objectName="target" id="1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bVisibleByFow" value="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorSurvivalTick0" eventType="CheckActorSurvivalTick" guid="6078b79b-1a56-4064-93b9-43cebce47124" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorSurvivalTick" time="1.000" isDuration="false" guid="a6252622-1176-471a-a6d2-591644e5438c">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" EnumValue="团灭高光条件" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="466cda3d-73fc-4805-93ac-37742796bf81" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="1.000" length="15.000" isDuration="true" guid="457d49f7-70ef-4dc7-ad3d-4f15c6783fee">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/127_zhenji/zhenji_highlight_spell01" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorSurvivalTick0" eventType="CheckActorSurvivalTick" guid="66eaf5db-75bf-4325-9bbd-1d6cf3fe44ad" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorSurvivalTick" time="4.000" isDuration="false" guid="9b917007-d8e3-47db-8eea-142bb35d8c68">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" EnumValue="团灭高光条件" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorSurvivalTick0" eventType="CheckActorSurvivalTick" guid="79046154-df22-4b87-9e93-5fc0bfae6e0e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorSurvivalTick" time="7.000" isDuration="false" guid="078731d4-b9fb-4bdb-b567-9e1fcfc388aa">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" EnumValue="团灭高光条件" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorSurvivalTick0" eventType="CheckActorSurvivalTick" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorSurvivalTick" time="10.000" isDuration="false" guid="58feae6d-3a80-4ea3-a752-2a2dbad1c3d5">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" EnumValue="团灭高光条件" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckActorSurvivalTick0" eventType="CheckActorSurvivalTick" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckActorSurvivalTick" time="13.000" isDuration="false" guid="2b841cf0-5431-4ba9-bcb8-e025b85faa12">
+        <TemplateObject name="actorId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="checkType" value="1" EnumValue="团灭高光条件" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="这个当作结束" eventType="TriggerParticle" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="TriggerParticle" time="16.000" length="1.000" isDuration="true" guid="c0568e21-14e8-4af8-89e3-ed6c55b7c3e8">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="6触发了停7.8.9.10.11.12" eventType="StopTracks" guid="bf33c05a-cf81-4308-8904-7fae73371d15" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="6078b79b-1a56-4064-93b9-43cebce47124" status="true" />
+      <Event eventName="StopTracks" time="0.033" isDuration="false" guid="023b6404-061a-41f6-8d22-90e5bdce4aac">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="10" guid="66eaf5db-75bf-4325-9bbd-1d6cf3fe44ad" />
+          <TrackObject id="11" guid="79046154-df22-4b87-9e93-5fc0bfae6e0e" />
+          <TrackObject id="12" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" />
+          <TrackObject id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" />
+          <TrackObject id="9" guid="466cda3d-73fc-4805-93ac-37742796bf81" />
+          <TrackObject id="14" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="8触发了停7.9.10.11.12" eventType="StopTracks" guid="fa0f615c-5261-4ce9-b56e-58689782e909" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="66eaf5db-75bf-4325-9bbd-1d6cf3fe44ad" status="true" />
+      <Event eventName="StopTracks" time="0.033" isDuration="false" guid="1d2d713a-2d09-4b96-aec2-d4993fde3431">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="11" guid="79046154-df22-4b87-9e93-5fc0bfae6e0e" />
+          <TrackObject id="12" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" />
+          <TrackObject id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" />
+          <TrackObject id="9" guid="466cda3d-73fc-4805-93ac-37742796bf81" />
+          <TrackObject id="14" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="9触发了停7.10.11.12" eventType="StopTracks" guid="a55e18df-33d1-4d27-a1aa-1a9eea568241" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="79046154-df22-4b87-9e93-5fc0bfae6e0e" status="true" />
+      <Event eventName="StopTracks" time="0.033" isDuration="false" guid="c17c5733-97f6-49f8-b091-85757c4c9d69">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="12" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" />
+          <TrackObject id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" />
+          <TrackObject id="9" guid="466cda3d-73fc-4805-93ac-37742796bf81" />
+          <TrackObject id="14" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="10触发了停7.11.12" eventType="StopTracks" guid="aa6bfa1b-cddf-4f22-9017-c90c40486fed" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="12" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" status="true" />
+      <Event eventName="StopTracks" time="0.033" isDuration="false" guid="ed625da3-ff23-4af3-9183-05ac34a14846">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" />
+          <TrackObject id="9" guid="466cda3d-73fc-4805-93ac-37742796bf81" />
+          <TrackObject id="14" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="11触发了停7.12" eventType="StopTracks" guid="0cfbc779-406c-4f50-a3eb-d9e81f7f64e1" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" status="true" />
+      <Event eventName="StopTracks" time="0.033" isDuration="false" guid="c48c971c-aa78-4d10-b737-70dee02872a1">
+        <Array name="trackIds" refParamName="" useRefParam="false" type="TrackObject">
+          <TrackObject id="9" guid="466cda3d-73fc-4805-93ac-37742796bf81" />
+          <TrackObject id="14" guid="160154f3-7ae7-4a62-a971-ddbb62d0ef42" />
+        </Array>
+        <bool name="alsoStopNotStartedTrack" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="fbbe3ac8-eb1a-40fd-a47e-08ab7310e440" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="6078b79b-1a56-4064-93b9-43cebce47124" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="d9ecf40b-d2d5-412b-a585-9961ea60059f">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="3a315bd9-c7d2-4474-a4e5-27e90a762418" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="10" guid="66eaf5db-75bf-4325-9bbd-1d6cf3fe44ad" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="f825bb0c-311c-4aeb-b6e6-0615b989b39e">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="7f5bfb36-b168-47c4-987c-222615269f5e" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="11" guid="79046154-df22-4b87-9e93-5fc0bfae6e0e" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="5a9e617d-46d5-494b-813f-d3af3209f65d">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="5335647c-7a18-49bd-96a0-180432bd3381" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="12" guid="6aee2276-28e5-4c38-a13d-44ff06fe84a8" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="572d15bb-500b-4f2c-befc-13aa2cbca206">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="e6a99c41-19af-40b9-9990-51e91052cef4" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="13" guid="1bc4c2ca-6dcb-4ebc-8acb-65110b3f7397" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="1.000" isDuration="true" guid="b4970343-3f48-40f5-b938-6144210639b4">
+        <TemplateObject name="targetId" objectName="loop_zidan" id="4" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Player_Effects/CeShi/ef_Highlight_03.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="PlaySoundTick2" eventType="PlaySoundTick" guid="e565031a-f042-4b94-9827-9a900b7eacf1" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="PlaySoundTick" time="0.033" isDuration="false" guid="bf0292e2-80ee-40a3-ba0b-95637dcae81b">
+        <TemplateObject name="targetId" objectName="zidan" id="3" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="eventName" value="Play_BaoJun_VO_Anger" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

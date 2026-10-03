@@ -1,0 +1,4 @@
+TD MOD — SỬA ẢNH SẢNH ĐỘC LẬP
+
+Màn danh sách tướng dùng skin đã chọn để tải ảnh và ảnh động. Giữ khóa ảnh tướng gốc cho pick/minimap. Áp dụng tự động theo 1–15 skin của mỗi lần tạo file. Gói 15 skin đã được người dùng xác nhận chạy đúng cả sảnh, pick và trong trận trên Android.
+Thay đủ 9 file, đợi Railway deploy. Tạo và tải FILE MỚI; file cũ trong Lịch sử giữ nội dung cũ. Đóng hẳn game trước khi cài và ghi đè tất cả.

@@ -1,0 +1,25 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="2.000" loop="false">
+    <Track trackName="RegisterEventTick0" eventType="RegisterEventTick" guid="89c06024-c9fa-4c4b-83f3-50fefd0f2b33" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RegisterEventTick" time="0.000" isDuration="false" guid="9734cc47-8714-47a9-b3b0-e7b7abf887f6">
+        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="8" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="prefab_characters/prefab_hero/mowen/40101p1" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <Array name="AreaTags" refParamName="" useRefParam="false" type="String">
+          <String value="River" />
+        </Array>
+        <Array name="AreaPriority" refParamName="" useRefParam="false" type="int">
+          <int value="2" />
+        </Array>
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,20 @@
+NHIỆM VỤ LINK RÚT GỌN TRƯỚC KHI TẢI MOD
+
+Dùng dịch vụ vuotlink.xyz, cùng API mà bot Telegram gốc đã hỗ trợ.
+Trong service WEB trên Railway > Variables, thêm:
+VUOTLINK_API = API key trong tài khoản Vuotlink của bạn.
+WEB_PUBLIC_URL = https://web-production-a7f18.up.railway.app
+Nếu dùng tên miền khác, đặt đúng tên miền đó, không thêm đường dẫn.
+Lưu rồi deploy/restart service web để áp dụng. Không đưa API key vào GitHub.
+
+Luồng: tạo file > bấm Làm nhiệm vụ để tải file > hoàn thành ở dịch vụ link rút gọn > dịch vụ đưa về web > tải ZIP.
+Mỗi lượt tạo file cần nhiệm vụ riêng. Hoàn thành chỉ mở tải cho đúng phiên trình duyệt sở hữu lượt tạo đó.
+Giữ cùng trình duyệt/tab để trở về. Nếu dịch vụ mở bằng trình duyệt khác, phiên sở hữu file có thể không được gửi.
+Không có API key, lỗi dịch vụ hoặc chưa hoàn thành nhiệm vụ: máy chủ chặn tải, không đưa link ZIP trực tiếp.
+Thời hạn file là 1 giờ sau khi tạo xong. Khởi động lại máy chủ sẽ làm mất lượt tạo và link tạm.
+
+Máy chủ xác nhận khi người dùng trở về URL ngẫu nhiên đã cấp riêng cho dịch vụ rút gọn. API hiện có không cung cấp chứng nhận riêng rằng người dùng đã xem đủ quảng cáo. Không coi đây là cơ chế chống mọi công cụ bỏ qua quảng cáo.
+
+KIỂM TRA ĐÃ THỰC HIỆN
+Đã kiểm tra với dịch vụ giả lập: không làm nhiệm vụ bị chặn tải; phiên khác không dùng được link; callback đúng phiên mở tải; URL đoán sai bị từ chối; lỗi dịch vụ không mở tải.
+Chưa chạy nhiệm vụ thật bằng tài khoản của bạn vì chưa có API key.

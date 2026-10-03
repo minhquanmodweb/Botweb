@@ -1,0 +1,76 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_BulletDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="600.000" loop="false">
+    <Track trackName="SkillFuncDuration0" eventType="SkillFuncDuration" guid="3009f47e-e26b-4941-ab9c-e51bd99be050" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="SkillFuncDuration" time="0.000" length="600.000" isDuration="true" guid="b2d7e90a-c37a-47bb-b412-0ddfa1a20dcb">
+        <Enum name="SkillFuncType" value="75" EnumValue="现形效果" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="aab6a456-e8d7-4a71-bc4e-fbe2de4f908a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="7a67be49-3181-42b7-a3e4-f8c6774054b3">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMajorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMinorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterSameCamp" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="a0860ebe-ef89-4335-a71c-943a5b779039" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="97a91c0b-be44-48ce-9a74-f4b18f404b6e">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterMajorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterMinorMonster" value="true" refParamName="" useRefParam="false" />
+        <bool name="bFilterDiffCamp" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="玩家脚下的特效路径" eventType="TriggerParticle" guid="475b69e6-1b37-4e94-a24e-21d10d504b0a" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="600.000" isDuration="true" guid="00d29779-d626-43da-a7c0-5f3c7810b512">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/Level_Effects/Wujun/UI_wujun_first_buff" refParamName="" useRefParam="false" />
+        <Vector3 name="bindPosOffset" x="0.000" y="1.200" z="0.000" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="applyActionSpeedToParticle" value="false" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="暴露时最外部的一个扩散圈" eventType="MinimapEffect" guid="494ec4a5-4b3f-4259-83c6-d1a3500262de" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="aab6a456-e8d7-4a71-bc4e-fbe2de4f908a" status="true" />
+      <Event eventName="MinimapEffect" time="0.000" length="1.000" isDuration="true" guid="12909ecc-9114-4863-acf9-3340f2df5b2e">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bVisibleFollowActor" value="true" refParamName="" useRefParam="false" />
+        <String name="effect" value="UGUI/Particle/LOD_MiniMap_qk_diyi_red/LOD_MiniMap_qk_diyi_red.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="红色的第一名地图标识" eventType="MinimapEffect" guid="6139ed7a-377f-45c4-bf7e-32cf569336ec" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="1" guid="aab6a456-e8d7-4a71-bc4e-fbe2de4f908a" status="true" />
+      <Event eventName="MinimapEffect" time="0.000" length="600.000" isDuration="true" guid="fc87b953-8fde-4900-9b54-d0a9d581ce4d">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bVisibleFollowActor" value="true" refParamName="" useRefParam="false" />
+        <String name="effect" value="UGUI/Particle/LOD_MiniMap_qk_diyi_red/LOD_MiniMap_qk_diyi_red.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="暴露时最外部的一个扩散圈" eventType="MinimapEffect" guid="98434170-63cb-4948-a35e-4e80e31458c9" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="a0860ebe-ef89-4335-a71c-943a5b779039" status="true" />
+      <Event eventName="MinimapEffect" time="0.000" length="1.000" isDuration="true" guid="7231028f-4c4a-4cb9-8f1e-8db3bc6f21b6">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bVisibleFollowActor" value="true" refParamName="" useRefParam="false" />
+        <String name="effect" value="UGUI/Particle/LOD_MiniMap_qk_diyi_red/LOD_MiniMap_qk_diyi_red.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="蓝色的第一名地图标识" eventType="MinimapEffect" guid="724c42d5-b8fa-4ce3-b1fa-3ca46367a6a3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="2" guid="a0860ebe-ef89-4335-a71c-943a5b779039" status="true" />
+      <Event eventName="MinimapEffect" time="0.000" length="600.000" isDuration="true" guid="75c13744-fde2-4473-a584-cc06d42d03a5">
+        <TemplateObject name="targetId" id="1" objectName="target" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bVisibleFollowActor" value="true" refParamName="" useRefParam="false" />
+        <String name="effect" value="UGUI/Particle/LOD_MiniMap_qk_diyi_blue/LOD_MiniMap_qk_diyi_blue.prefab" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,305 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="self" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+    <TemplateObject id="2" objectName="bullet" isTemp="true" />
+    <TemplateObject id="3" objectName="actor" isTemp="false" />
+    <TemplateObject id="4" objectName="SkillTargetActor" isTemp="false" />
+    <TemplateObject id="5" objectName="Sunce_get" isTemp="false" />
+    <TemplateObject id="6" objectName="actor2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="SelfPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="SkillID" value="0" refParamName="" useRefParam="false" />
+    <Vector3i name="TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="Camp" value="0" refParamName="" useRefParam="false" />
+    <Vector3i name="SelfDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="MultipleCount" value="0" refParamName="" useRefParam="false" />
+    <int name="skillMultipleType" value="0" refParamName="" useRefParam="false" />
+    <int name="slotType" value="0" refParamName="" useRefParam="false" />
+    <int name="skillLv" value="0" refParamName="" useRefParam="false" />
+    <int name="skillAppointType" value="0" refParamName="" useRefParam="false" />
+    <Vector3i name="MultipleSrcPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="MultipleSrcDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <int name="flowSrcActorDir" value="0" refParamName="" useRefParam="false" />
+    <int name="skillMultipleType" value="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="5.000" loop="false">
+    <Track trackName="FindActorDuration0" eventType="FindActorDuration" guid="5e71a8c7-7c91-4e4f-82c6-6ca9c5f957c5" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="FindActorDuration" time="0.000" length="0.500" isDuration="true" guid="f21bd04d-1269-42c0-88eb-ed0324c21543">
+        <TemplateObject name="targetId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetActorCurSkillContextTick0" eventType="GetActorCurSkillContextTick" guid="cdcb1306-72be-4bc9-adb9-6d01cd7c3997" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetActorCurSkillContextTick" time="0.000" isDuration="false" guid="7eff7c14-f9c8-42b4-a467-90cfe83a840c">
+        <TemplateObject name="srcActor" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="skillID" value="SkillID" refParamName="" useRefParam="false" />
+        <String name="UseVector" value="TargetPos" refParamName="" useRefParam="false" />
+        <String name="BulletDir" value="TargetDir" refParamName="" useRefParam="false" />
+        <TemplateObject name="target" id="4" objectName="SkillTargetActor" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="slotType" value="slotType" refParamName="&lt;N/A&gt;" useRefParam="false" />
+        <String name="skillLv" value="skillLv" refParamName="" useRefParam="false" />
+        <String name="skillAppointType" value="skillAppointType" refParamName="" useRefParam="false" />
+        <String name="srcPos" value="MultipleSrcPos" refParamName="" useRefParam="false" />
+        <String name="srcDir" value="MultipleSrcDir" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetActorPositionTick0" eventType="GetActorPositionTick" guid="a0a8af85-c4ab-45d7-8641-fd55668cc247" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetActorPositionTick" time="0.000" isDuration="false" guid="4a5e2ebb-57b5-4452-ba07-7a3091234eb5">
+        <TemplateObject name="actorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="preCreateGetPositionName" value="SelfPos" refParamName="" useRefParam="false" />
+        <String name="preCreateGetDirectionName" value="SelfDir" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetMultipleProbabilityTick0" eventType="GetMultipleProbabilityTick" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetMultipleProbabilityTick" time="0.000" isDuration="false" guid="184d3eba-6acc-4070-a969-1807f33605a4">
+        <TemplateObject name="srcActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="0" refParamName="SkillID" useRefParam="true" />
+        <int name="conditionCount" value="2" refParamName="" useRefParam="false" />
+        <String name="setMultipleCount" value="MultipleCount" refParamName="" useRefParam="false" />
+        <int name="getMultipleCount" value="0" refParamName="MultipleCount" useRefParam="true" />
+        <String name="skillMultipleType" value="skillMultipleType" refParamName="" useRefParam="false" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+        <int name="skillLv" value="-1" refParamName="skillLv" useRefParam="true" />
+        <String name="getFlowSrcActorDir" value="flowSrcActorDir" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CopyActorTick0" eventType="CopyActorTick" guid="23e048d9-fb84-4ac2-846a-ebe352d9b780" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="CopyActorTick" time="0.000" isDuration="false" guid="18e8c05e-f500-42a5-a72f-cdc5755985b7">
+        <TemplateObject name="srcActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="tarActorId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="Invincible" value="true" refParamName="" useRefParam="false" />
+        <bool name="CopyProperty" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="targetPosition" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="targetForward" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+        <int name="skillMultipleType" value="0" refParamName="skillMultipleType" useRefParam="true" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="0b298f9c-70b5-4956-b47b-dd90612324bd" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="a81288b4-3918-4b27-8bfc-36bf4aeb123b">
+        <TemplateObject name="targetId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="310001" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HideActorModelDuration0" eventType="HideActorModelDuration" guid="fdd890cb-b963-424b-bb5c-51f4dfe3e010" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="HideActorModelDuration" time="0.000" length="5.000" isDuration="true" guid="c1049329-6440-48eb-8a7e-ff50dcf57e6b">
+        <TemplateObject name="targetId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bHideModel" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHPBar" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHead" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllBuffEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllBuffEffectDuration" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludingSkill3Effect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideShadow" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllMarkEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bLeaveNotRestore" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemovePassiveTick0" eventType="RemovePassiveTick" guid="9cd5ee4c-dd3d-4495-9046-bb7dffe828af" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="RemovePassiveTick" time="0.000" isDuration="false" guid="29a2e732-8dba-432d-ba8f-299a14b6f117">
+        <TemplateObject name="actorId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="passiveSkillId" value="31000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MultipleSkillActorUseSkillTick0" eventType="MultipleSkillActorUseSkillTick" guid="613ad1a1-93cb-4474-b4e6-8ba251a6e91f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="MultipleSkillActorUseSkillTick" time="0.400" isDuration="false" guid="c1f11bcf-04df-49ee-af94-6701567c74f7">
+        <TemplateObject name="actorId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="0" refParamName="SkillID" useRefParam="true" />
+        <bool name="forceUse" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="forceDestId" id="4" objectName="SkillTargetActor" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="forceTargetPosition" x="0" y="0" z="0" refParamName="TargetPos" useRefParam="true" />
+        <Vector3i name="forceTargetDir" x="0" y="0" z="0" refParamName="TargetDir" useRefParam="true" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+        <int name="skillLv" value="-1" refParamName="skillLv" useRefParam="true" />
+        <int name="skillAppointType" value="-1" refParamName="skillAppointType" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="判断特殊技能类型" eventType="CampareIntTick" guid="10043189-c71f-4a4d-a221-e4175045e937" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CampareIntTick" time="0.000" isDuration="false" guid="a996e778-e0d2-4a78-a939-17e0d51bdf00">
+        <int name="srcValue" value="0" refParamName="skillMultipleType" useRefParam="true" />
+        <int name="targetValue" value="5" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration跟随" eventType="OldMoveActorDuration" guid="004ef9d5-34fb-4ed1-a837-b63564075075" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Condition id="9" guid="10043189-c71f-4a4d-a221-e4175045e937" status="true" />
+      <Event eventName="OldMoveActorDuration" time="0.000" length="5.000" isDuration="true" guid="0a2c2dfa-9ec5-4352-a141-25e91f4ceb54">
+        <TemplateObject name="actorId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bMoveToRealTimePosition" value="true" refParamName="" useRefParam="false" />
+        <int name="distanceOffset" value="-700" refParamName="" useRefParam="false" />
+        <bool name="bFollow" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseRelativeOffset" value="true" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="200000" refParamName="" useRefParam="false" />
+        <bool name="enableRotate" value="false" refParamName="" useRefParam="false" />
+        <bool name="IgnoreCollision" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreAreaLimit" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+        <int name="delayTime" value="10" refParamName="" useRefParam="false" />
+        <bool name="bInMultipleSkillAction" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="MultipleSrcPos" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="MultipleSrcDir" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="判断影子是否跟随源Actor转向" eventType="CampareIntTick" guid="552fed5d-d4f3-432c-9f8b-e124011d6906" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CampareIntTick" time="0.000" isDuration="false" guid="cabc0b41-713c-48df-a6e1-1fd05c0b1a4c">
+        <int name="srcValue" value="0" refParamName="flowSrcActorDir" useRefParam="true" />
+        <int name="targetValue" value="1" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration转向" eventType="OldMoveActorDuration" guid="085e057c-22a6-49ae-b9bd-de79f2bd4f5e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Condition id="11" guid="552fed5d-d4f3-432c-9f8b-e124011d6906" status="true" />
+      <Event eventName="OldMoveActorDuration" time="0.000" length="5.000" isDuration="true" guid="5319662b-e8d3-4cc5-8b3e-3227887bc434">
+        <TemplateObject name="actorId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bMoveToRealTimePosition" value="true" refParamName="" useRefParam="false" />
+        <int name="distanceOffset" value="-700" refParamName="" useRefParam="false" />
+        <bool name="bUseRelativeOffset" value="true" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="200000" refParamName="" useRefParam="false" />
+        <bool name="IgnoreCollision" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreAreaLimit" value="true" refParamName="" useRefParam="false" />
+        <bool name="bImmediateRotate" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+        <int name="delayTime" value="10" refParamName="" useRefParam="false" />
+        <bool name="bInMultipleSkillAction" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="MultipleSrcPos" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="MultipleSrcDir" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="HideAllParticlesDuration0" eventType="HideAllParticlesDuration" guid="49423482-3f5b-4dd2-9d26-991a0efaa88b" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="3" guid="ba31ea0b-205f-4918-a8b7-d46e60aace3a" status="true" />
+      <Event eventName="HideAllParticlesDuration" time="0.000" length="5.000" isDuration="true" guid="fecac9e6-4d21-4a2f-96e3-403ea96be6d3">
+        <TemplateObject name="targetId" id="3" objectName="actor" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="GetMultipleProbabilityTick1" eventType="GetMultipleProbabilityTick" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="GetMultipleProbabilityTick" time="0.000" isDuration="false" guid="24580864-bb19-4d2a-8b64-dfcf0d9bdd2a">
+        <TemplateObject name="srcActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="0" refParamName="SkillID" useRefParam="true" />
+        <int name="conditionCount" value="3" refParamName="" useRefParam="false" />
+        <String name="setMultipleCount" value="MultipleCount" refParamName="" useRefParam="false" />
+        <int name="getMultipleCount" value="0" refParamName="MultipleCount" useRefParam="true" />
+        <String name="skillMultipleType" value="skillMultipleType" refParamName="" useRefParam="false" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+        <int name="skillLv" value="-1" refParamName="skillLv" useRefParam="true" />
+        <String name="getFlowSrcActorDir" value="flowSrcActorDir" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CopyActorTick1" eventType="CopyActorTick" guid="e3473eea-7bf3-49f2-a843-44fb946d221c" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="CopyActorTick" time="0.000" isDuration="false" guid="408a9ece-5cc9-4663-bb59-beec08b52e27">
+        <TemplateObject name="srcActorId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="tarActorId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="Invincible" value="true" refParamName="" useRefParam="false" />
+        <bool name="CopyProperty" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="targetPosition" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="targetForward" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+        <int name="skillMultipleType" value="0" refParamName="skillMultipleType" useRefParam="true" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="9717a4be-8ee7-472e-9fbc-fb862d5c8e05" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="b98437ac-8f44-4c9c-8826-348277052603">
+        <TemplateObject name="targetId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="310001" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HideActorModelDuration1" eventType="HideActorModelDuration" guid="030530fc-56fd-4eab-8cf4-1943bfd3f553" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="HideActorModelDuration" time="0.000" length="5.000" isDuration="true" guid="13c7f7e3-7702-495e-8c49-f975fb3656b4">
+        <TemplateObject name="targetId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bHideModel" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHPBar" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideHead" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllBuffEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllBuffEffectDuration" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIncludingSkill3Effect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideShadow" value="true" refParamName="" useRefParam="false" />
+        <bool name="bHideAllMarkEffect" value="true" refParamName="" useRefParam="false" />
+        <bool name="bLeaveNotRestore" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemovePassiveTick1" eventType="RemovePassiveTick" guid="eba71e77-9b40-4253-91c7-977cf75eeca3" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="RemovePassiveTick" time="0.000" isDuration="false" guid="fba63526-1e35-4674-814a-ef79b3e0d382">
+        <TemplateObject name="actorId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="passiveSkillId" value="31000" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MultipleSkillActorUseSkillTick1" eventType="MultipleSkillActorUseSkillTick" guid="9f6e7ac8-6336-4997-a974-2072557a2456" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="MultipleSkillActorUseSkillTick" time="0.800" isDuration="false" guid="acdbd35d-f31e-44ef-a249-40fbfbbf4b7c">
+        <TemplateObject name="actorId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillID" value="0" refParamName="SkillID" useRefParam="true" />
+        <bool name="forceUse" value="true" refParamName="" useRefParam="false" />
+        <TemplateObject name="forceDestId" id="4" objectName="SkillTargetActor" isTemp="false" refParamName="" useRefParam="false" />
+        <Vector3i name="forceTargetPosition" x="0" y="0" z="0" refParamName="TargetPos" useRefParam="true" />
+        <Vector3i name="forceTargetDir" x="0" y="0" z="0" refParamName="TargetDir" useRefParam="true" />
+        <int name="slotType" value="-1" refParamName="slotType" useRefParam="true" />
+        <int name="skillLv" value="-1" refParamName="skillLv" useRefParam="true" />
+        <int name="skillAppointType" value="-1" refParamName="skillAppointType" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration跟随" eventType="OldMoveActorDuration" guid="41d00a1f-4553-4238-b674-fca3988f921a" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Condition id="9" guid="10043189-c71f-4a4d-a221-e4175045e937" status="true" />
+      <Event eventName="OldMoveActorDuration" time="0.000" length="5.000" isDuration="true" guid="8156de8e-6b8b-41e3-810c-0baf934fa70c">
+        <TemplateObject name="actorId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bMoveToRealTimePosition" value="true" refParamName="" useRefParam="false" />
+        <int name="distanceOffset" value="-700" refParamName="" useRefParam="false" />
+        <bool name="bFollow" value="true" refParamName="" useRefParam="false" />
+        <bool name="bUseRelativeOffset" value="true" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="200000" refParamName="" useRefParam="false" />
+        <bool name="enableRotate" value="false" refParamName="" useRefParam="false" />
+        <bool name="IgnoreCollision" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreAreaLimit" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+        <int name="delayTime" value="10" refParamName="" useRefParam="false" />
+        <bool name="bInMultipleSkillAction" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="MultipleSrcPos" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="MultipleSrcDir" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="OldMoveActorDuration转向" eventType="OldMoveActorDuration" guid="b55031fa-5b1c-48a9-99ed-c9e66064e19e" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Condition id="11" guid="552fed5d-d4f3-432c-9f8b-e124011d6906" status="true" />
+      <Event eventName="OldMoveActorDuration" time="0.000" length="5.000" isDuration="true" guid="7bdd98f3-0f5a-4feb-af99-5714f4d2247c">
+        <TemplateObject name="actorId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="destId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bMoveToRealTimePosition" value="true" refParamName="" useRefParam="false" />
+        <int name="distanceOffset" value="-700" refParamName="" useRefParam="false" />
+        <bool name="bUseRelativeOffset" value="true" refParamName="" useRefParam="false" />
+        <int name="moveSpeed" value="200000" refParamName="" useRefParam="false" />
+        <bool name="IgnoreCollision" value="true" refParamName="" useRefParam="false" />
+        <bool name="bIgnoreAreaLimit" value="true" refParamName="" useRefParam="false" />
+        <bool name="bImmediateRotate" value="true" refParamName="" useRefParam="false" />
+        <String name="OutFinalPos" value="" refParamName="" useRefParam="false" />
+        <int name="delayTime" value="10" refParamName="" useRefParam="false" />
+        <bool name="bInMultipleSkillAction" value="true" refParamName="" useRefParam="false" />
+        <Vector3i name="MultipleSrcPos" x="0" y="0" z="0" refParamName="MultipleSrcPos" useRefParam="true" />
+        <Vector3i name="MultipleSrcDir" x="0" y="0" z="0" refParamName="MultipleSrcDir" useRefParam="true" />
+      </Event>
+    </Track>
+    <Track trackName="HideAllParticlesDuration0" eventType="HideAllParticlesDuration" guid="8052ca36-bea7-4c9f-9fbd-b809905c2ab2" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="14" guid="a33fa71b-6e71-46a8-aaa8-ccc7dd0e6a32" status="true" />
+      <Event eventName="HideAllParticlesDuration" time="0.000" length="5.000" isDuration="true" guid="6d1935cd-52dd-4aa4-b2e6-a91d9bc69c4b">
+        <TemplateObject name="targetId" id="6" objectName="actor2" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

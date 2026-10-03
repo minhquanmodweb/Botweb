@@ -1,0 +1,78 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject id="0" objectName="killer" isTemp="false" />
+    <TemplateObject id="1" objectName="target" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="90.000" loop="false">
+    <Track trackName="RegisterEventDuration0" eventType="RegisterEventDuration" guid="da72040c-f1b8-49b5-adea-0c60926a06ea" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RegisterEventDuration" time="0.000" length="90.000" isDuration="true" guid="db9dc83d-bc97-4fc1-bff3-04c4138b40cd">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="3" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/10v10CallBossDuration_Dead" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RegisterEventDuration0" eventType="RegisterEventDuration" guid="fd49f5f0-8bb6-4562-abc9-b73d92eea758" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RegisterEventDuration" time="0.000" length="90.000" isDuration="true" guid="1c9efa42-330e-4b76-b432-79f3a1f483df">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <Enum name="EventType1" value="4" refParamName="" useRefParam="false" />
+        <String name="EventName" value="" refParamName="" useRefParam="false" />
+        <String name="AgeName" value="Prefab_Characters/Prefab_Hero/PassiveResource/10v10CallBossDuration_Alive" refParamName="" useRefParam="false" />
+        <TemplateObject name="AgeTargetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="ShowCallBossBtnDuration0" eventType="ShowCallBossBtnDuration" guid="e8ef7671-dbd8-40c0-a656-0704f3e476a5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="ShowCallBossBtnDuration" time="0.000" length="90.000" isDuration="true" guid="472eced5-6416-424a-a271-73ca7aa9a1e4">
+        <TemplateObject name="callBossActorId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="CallBossAgeName" value="Actions/SysEvent/PVP_10v10/CallBossCallback" refParamName="" useRefParam="false" />
+        <String name="ImagePath" value="UGUI/Sprite/Battle/Img_Extra_Btn_Call_Dragon.prefab" refParamName="" useRefParam="false" />
+        <bool name="ShowCD" value="true" refParamName="" useRefParam="false" />
+        <String name="NameKey" value="" refParamName="" useRefParam="false" />
+        <Enum name="BuffSkillType" value="1" refParamName="" useRefParam="false" />
+        <String name="NameKeyUp" value="" refParamName="" useRefParam="false" />
+        <String name="NameKeyMid" value="" refParamName="" useRefParam="false" />
+        <String name="NameKeyDown" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="735f0883-5df1-4887-b82f-67c950e249ec" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="TriggerParticle" time="0.000" length="90.000" isDuration="true" guid="bb04e9aa-7976-4c93-949d-e0e3afbcc566">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="prefab_skill_effects/New_Common_Effects/SoldierDuke_Icon" refParamName="" useRefParam="false" />
+        <bool name="bOnlyFollowPos" value="true" refParamName="" useRefParam="false" />
+        <bool name="bRotateFollowCamera" value="true" refParamName="" useRefParam="false" />
+        <String name="syncAnimationName" value="" refParamName="" useRefParam="false" />
+        <String name="customTagName" value="" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="RemoveBuffTick0" eventType="RemoveBuffTick" guid="70b9392f-21c1-4782-bf92-7de2db741b3f" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="RemoveBuffTick" time="89.700" isDuration="false" guid="6829fcec-acfc-4581-96bc-da0959336787">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffId" value="77600201" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckConditionDuration0" eventType="CheckConditionDuration" guid="6ed9f2f1-85d1-4bd7-be65-9bf822e1b7bb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="CheckConditionDuration" time="0.000" length="0.100" isDuration="true" guid="e1a87811-84d9-4592-94dc-97c011bbdac1">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bActorDead" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="HitTriggerTick0" eventType="HitTriggerTick" guid="fdd150be-2639-4dff-9626-5ba59947a523" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Condition id="5" guid="6ed9f2f1-85d1-4bd7-be65-9bf822e1b7bb" status="true" />
+      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="1d11d4df-bea8-447f-b888-459b24887c06">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <TemplateObject name="hitTargetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="SelfSkillCombineID_1" value="77600211" refParamName="" useRefParam="false" />
+        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="BuffPerformanceDuration0" eventType="BuffPerformanceDuration" guid="64a3a492-7100-492b-8464-2ffdbaf0e8d5" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+      <Event eventName="BuffPerformanceDuration" time="0.000" length="90.000" isDuration="true" guid="b20782b2-4a07-4837-abc3-e20ffbd69112">
+        <TemplateObject name="targetId" id="0" objectName="killer" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="buffIconID" value="7760020" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

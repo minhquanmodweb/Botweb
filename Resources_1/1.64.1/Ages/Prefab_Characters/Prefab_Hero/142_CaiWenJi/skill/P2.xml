@@ -1,0 +1,16 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="攻击者" id="2" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList />
+  <Action tag="" length="0.100" loop="false">
+    <Track trackName="CreateCodeAnimTick1" eventType="CreateCodeAnimTick" guid="0bf095be-c578-4062-8074-89bd5992e042" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CreateCodeAnimTick" time="0.000" isDuration="false" guid="3cd00c8f-03a1-40ed-b874-9ea1792222f6">
+        <String name="boneName" value="Bone_Crow13" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

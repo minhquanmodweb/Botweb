@@ -1,0 +1,24 @@
+TD MOD SKIN AOV — GIAO DIỆN & LỊCH SỬ
+
+1. Giao diện công nghệ xanh/tím; avatar do bạn cung cấp.
+2. Chọn skin trong Tướng, vào Đã chọn, chọn nền tảng, tạo mod.
+3. Màn hình tiến độ có 3 bước: Tạo file — Làm nhiệm vụ — Tải file.
+4. Sau khi làm nhiệm vụ, quay lại cùng trình duyệt. Không dùng tab ẩn danh.
+5. Tab Lịch sử cho phép xem lại tiến độ, tiếp tục nhiệm vụ, tải lại file đã mở khóa. Mặc định giữ file 24 giờ. Hết hạn cần tạo lại.
+6. Xoá cookie/dữ liệu trình duyệt hoặc dùng trình duyệt khác sẽ không truy cập được lịch sử cũ. Lịch sử này không phải tài khoản đăng nhập đồng bộ nhiều thiết bị.
+
+GIỮ FILE QUA RESTART/DEPLOY TRÊN RAILWAY
+Tạo Volume, gắn vào dịch vụ web, đặt Mount Path: /data
+Ứng dụng tự đọc RAILWAY_VOLUME_MOUNT_PATH và lưu trong /data/jobs.
+Có thể đặt WEB_STORAGE_DIR=/data/jobs để chỉ rõ đường dẫn.
+Giữ đúng 1 replica.
+Nếu chưa gắn Volume, việc đóng/mở web vẫn dùng lại được file khi tiến trình còn chạy; deploy/restart có thể làm mất file.
+WEB_FILE_TTL=86400 là 24 giờ, có thể tăng tối đa 604800 (7 ngày). Giới hạn tạo tối đa 200 file đang giữ trên một dịch vụ. Volume cần đủ dung lượng cho số người dùng thực tế.
+Lượt đang tạo bị gián đoạn bởi restart sẽ được đánh dấu lỗi để tạo lại, không phát hành file dở dang.
+
+CẬP NHẬT
+Giải nén TD_MOD_WEB_UPLOAD_PHONE.zip bản mới vào Download/TD_MOD_WEB_UPLOAD_PHONE.
+Thay các file cùng tên, rồi chạy lại lệnh Termux đã dùng để up Botweb.
+Giữ VUOTLINK_API và WEB_PUBLIC_URL hiện có trong Variables.
+Các file mod cũ từ phiên bản trước cập nhật này không có metadata nên không thể phục hồi lịch sử.
+Bản này không sửa lỗi game tự reset mod. Phần tạo resource giữ như bản trước.

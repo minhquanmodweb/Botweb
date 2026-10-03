@@ -1,0 +1,12 @@
+--- a/app/web_server.py
++++ b/app/web_server.py
+@@ -150,7 +150,8 @@
+     session=request['session']
+     if any(j['owner']==session and j['state'] in ('queued','running') for j in JOBS.values()):
+         return fail('Bạn đang có file chờ xử lý. Hãy đợi hoàn tất.',429)
+-    if len(JOBS)>=200 or QUEUE.full():return fail('Hàng chờ đã đầy. Thử lại sau ít phút.',429)
++    active_jobs=sum(j['state'] in ('queued','running') for j in JOBS.values())
++    if active_jobs>=200 or QUEUE.full():return fail('Hàng chờ đã đầy. Thử lại sau ít phút.',429)
+     try:data=await request.json()
+     except Exception:return fail('Dữ liệu không hợp lệ.')
+     if not isinstance(data,dict):return fail('Dữ liệu không hợp lệ.')

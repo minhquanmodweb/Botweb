@@ -1,0 +1,33 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="bullet" id="2" isTemp="true" />
+    <TemplateObject objectName="b1" id="3" isTemp="true" />
+    <TemplateObject objectName="攻击者" id="4" isTemp="false" />
+  </TemplateObjectList>
+  <RefParamList>
+    <Vector3i name="targetdir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_BulletPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="5.000" loop="false">
+    <Track trackName="SetCameraHeightDuration1" eventType="SetCameraHeightDuration" guid="77d8e124-2827-47b0-8a14-bcaa9de597a2" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SetCameraHeightDuration" time="0.000" length="5.000" isDuration="true" guid="ce727892-a6c8-49c3-ade3-1b6a963e7559">
+        <int name="slerpTick" value="1650" refParamName="" useRefParam="false" />
+        <float name="heightRate" value="1.600" refParamName="" useRefParam="false" />
+        <bool name="isSlerpBackWhenInterrupted" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="SGameSetCameraHeightDuration0" eventType="SGameSetCameraHeightDuration" guid="76c17563-abce-4c2b-9af1-df30a3e5e0bb" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SGameSetCameraHeightDuration" time="0.000" length="5.000" isDuration="true" guid="9d58a9c9-7e33-405a-b899-9f2b474db1f9">
+        <int name="slerpTick" value="1650" refParamName="" useRefParam="false" />
+        <int name="leaveLerpTick" value="500" refParamName="" useRefParam="false" />
+        <bool name="cutBackOnExit" value="false" refParamName="" useRefParam="false" />
+        <bool name="holdOnExit" value="true" refParamName="" useRefParam="false" />
+        <float name="heightRate" value="1.600" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

@@ -1,0 +1,15 @@
+{
+  "sha256": "f75f6ab1a54e288dab1bc4d39cd7fc7e369809f4c7d04837a464058e5817c60f",
+  "parts": [
+    {
+      "name": "app.part01",
+      "size": 18874368,
+      "sha256": "ff2f4efc457778e3bcbab11e5057823869f6d0e19b73c41549d32429030746d9"
+    },
+    {
+      "name": "app.part02",
+      "size": 16167366,
+      "sha256": "c99b372c276346405b2cf5fb5abf1831cb19faae16539f61c727a423fd877b57"
+    }
+  ]
+}

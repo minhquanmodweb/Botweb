@@ -1,0 +1,151 @@
+< version="1.0" encoding="utf-8"?>
+<Project>
+  <TemplateObjectList>
+    <TemplateObject objectName="self" id="0" isTemp="false" />
+    <TemplateObject objectName="target" id="1" isTemp="false" />
+    <TemplateObject objectName="point" id="2" isTemp="true" />
+  </TemplateObjectList>
+  <RefParamList>
+    <String name="string" value="" refParamName="" useRefParam="false" />
+    <Vector3 name="Vector3" x="0.000" y="0.000" z="0.000" refParamName="" useRefParam="false" />
+    <String name="string1" value="" refParamName="" useRefParam="false" />
+    <String name="string_2" value="" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetDir" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+    <Vector3i name="_TargetPos" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+  </RefParamList>
+  <Action tag="" length="30.000" loop="false">
+    <Track trackName="SpawnObjectDuration0" eventType="SpawnObjectDuration" guid="966e9933-86fd-4907-9cda-03b7ce522446" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="SpawnObjectDuration" time="0.000" length="30.000" isDuration="true" guid="abe5bfe7-1d28-4ebc-a8ca-8d05ae449c57">
+        <TemplateObject name="targetId" objectName="point" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <bool name="bTargetPosition" value="true" refParamName="" useRefParam="false" />
+        <String name="prefabName" value="prefab_characters/commonempty" refParamName="" useRefParam="false" />
+        <Vector3i name="direction" x="0" y="0" z="0" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType0" eventType="FilterTargetType" guid="7ef55a91-7062-4891-8e5d-bce2ed12736e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="52c3cf5d-90ab-43cd-859d-516d4cb4a1e2">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bOnlyHostHero" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType01" eventType="FilterTargetType" guid="ce39495f-fab3-4aec-afd2-26d6e49af373" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="eb759f7a-336a-4f5e-9db3-720db8dc0595">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterLane" value="true" refParamName="" useRefParam="false" />
+        <Enum name="laneType" value="1" EnumValue="凯撒路" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="f9c9e8bc-f6c0-45c8-bc0d-649789a2a6d5" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="2" guid="ce39495f-fab3-4aec-afd2-26d6e49af373" status="true" />
+      <Condition id="1" guid="7ef55a91-7062-4891-8e5d-bce2ed12736e" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="30.000" isDuration="true" guid="3687f062-5f71-473a-ae9c-76c5839ca175">
+        <TemplateObject name="targetId" objectName="point" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/5v5_Level/E_5V5_06_duikanglu_lanfang" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bForceIngoreCull" value="true" refParamName="" useRefParam="false" />
+        <bool name="bNeedReConnectAgePerformance" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType02" eventType="FilterTargetType" guid="cbd82fd1-0e6b-49db-8878-60648b816991" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="78e385d2-70e8-4bc5-bc82-bbbf4a0562c6">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterLane" value="true" refParamName="" useRefParam="false" />
+        <Enum name="laneType" value="2" EnumValue="魔龙路" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="aee243c5-e92c-4ede-9dba-0f678f207dc1" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="4" guid="cbd82fd1-0e6b-49db-8878-60648b816991" status="true" />
+      <Condition id="1" guid="7ef55a91-7062-4891-8e5d-bce2ed12736e" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="30.000" isDuration="true" guid="50cb88ae-cbc7-48b2-9ee5-8cbd6df7636b">
+        <TemplateObject name="targetId" objectName="point" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/5v5_Level/E_5V5_06_fayulu_lanfang" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bForceIngoreCull" value="true" refParamName="" useRefParam="false" />
+        <bool name="bNeedReConnectAgePerformance" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="FilterTargetType03" eventType="FilterTargetType" guid="f84b8152-ae12-48ef-8dcf-22e069e0c25e" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="FilterTargetType" time="0.000" isDuration="false" guid="25cfe66c-825d-40d1-85ad-9958e3b6fac5">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFilterLane" value="true" refParamName="" useRefParam="false" />
+        <Enum name="laneType" value="3" EnumValue="中路" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="TriggerParticle0" eventType="TriggerParticle" guid="7efc51b7-023b-4162-9724-eb4b132c080a" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="6" guid="f84b8152-ae12-48ef-8dcf-22e069e0c25e" status="true" />
+      <Condition id="1" guid="7ef55a91-7062-4891-8e5d-bce2ed12736e" status="true" />
+      <Event eventName="TriggerParticle" time="0.000" length="30.000" isDuration="true" guid="9f37a82e-f6bb-408b-8972-f53cc24de5ea">
+        <TemplateObject name="targetId" objectName="point" id="2" isTemp="true" refParamName="" useRefParam="false" />
+        <String name="resourceName" value="Prefab_Skill_Effects/New_Common_Effects/5v5_Level/E_5V5_06_zhonlu_lanfang" refParamName="" useRefParam="false" />
+        <bool name="bEnableOptCull" value="false" refParamName="" useRefParam="false" />
+        <bool name="bForceIngoreCull" value="true" refParamName="" useRefParam="false" />
+        <bool name="bNeedReConnectAgePerformance" value="true" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="0c7dd562-368d-4214-aa98-38be077962db" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="1.000" isDuration="true" guid="4b2062cf-0f61-4131-bb4d-df8da3ca5700">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="916113" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" EnumValue="等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="CheckSkillCombineConditionDuration0" eventType="CheckSkillCombineConditionDuration" guid="977445b2-84cc-4711-979b-96a431dbae69" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Event eventName="CheckSkillCombineConditionDuration" time="0.000" length="1.000" isDuration="true" guid="a23dd508-200a-4aab-a806-b654860ba033">
+        <TemplateObject name="targetId" objectName="self" id="0" isTemp="false" refParamName="" useRefParam="false" />
+        <int name="skillCombineId" value="915110" refParamName="" useRefParam="false" />
+        <Enum name="checkOPType" value="3" EnumValue="等于" refParamName="" useRefParam="false" />
+        <int name="skillCombineLevel" value="1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="88be818a-8d10-4347-aa3a-ed1b4d877e4b" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="0c7dd562-368d-4214-aa98-38be077962db" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="cc29d77d-b7ec-41c8-a8e2-cd85a0cfdd06">
+        <TrackObject name="trackId" id="3" guid="f9c9e8bc-f6c0-45c8-bc0d-649789a2a6d5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="a7b85ff1-6ba1-41ba-8294-79db49b6b7dc" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="0c7dd562-368d-4214-aa98-38be077962db" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="612083ba-4bdd-4166-9afa-f663a9aac837">
+        <TrackObject name="trackId" id="5" guid="aee243c5-e92c-4ede-9dba-0f678f207dc1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="206299a1-c318-4edd-b586-f0ec7a5f73dd" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="8" guid="0c7dd562-368d-4214-aa98-38be077962db" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="e934025f-b832-40db-ba89-1272eeed74f4">
+        <TrackObject name="trackId" id="7" guid="7efc51b7-023b-4162-9724-eb4b132c080a" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="c081c550-0a30-4c26-a252-288a6e9f3626" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="977445b2-84cc-4711-979b-96a431dbae69" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="434e9349-0a08-4308-8492-9e9ea12166b9">
+        <TrackObject name="trackId" id="3" guid="f9c9e8bc-f6c0-45c8-bc0d-649789a2a6d5" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="77eba8ee-35e6-44a6-b65e-b8e3c7a6c597" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="977445b2-84cc-4711-979b-96a431dbae69" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="a7da9c54-b910-439e-874f-477119933e23">
+        <TrackObject name="trackId" id="5" guid="aee243c5-e92c-4ede-9dba-0f678f207dc1" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="StopTrack0" eventType="StopTrack" guid="e643d790-74f8-4270-9416-09d31bdc9d7c" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="9" guid="977445b2-84cc-4711-979b-96a431dbae69" status="true" />
+      <Event eventName="StopTrack" time="0.000" isDuration="false" guid="4726b138-e63d-42db-b4d8-46c63b26048b">
+        <TrackObject name="trackId" id="7" guid="7efc51b7-023b-4162-9724-eb4b132c080a" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+    <Track trackName="MinimapEffect0" eventType="MinimapEffect" guid="03dfa25c-3ccf-427d-97b2-df08a7872459" enabled="true" useRefParam="false" refParamName="" execOnForceStopped="false" execOnActionCompleted="false">
+      <Condition id="1" guid="7ef55a91-7062-4891-8e5d-bce2ed12736e" status="true" />
+      <Event eventName="MinimapEffect" time="0.000" length="15.000" isDuration="true" guid="116b53ba-b620-484c-b750-38376e244e84">
+        <Enum name="type" value="1" EnumValue="世界坐标" refParamName="" useRefParam="false" />
+        <TemplateObject name="targetId" objectName="None" id="-1" isTemp="false" refParamName="" useRefParam="false" />
+        <bool name="bFenluTip" value="true" refParamName="" useRefParam="false" />
+        <String name="effectKaisa" value="UGUI/Particle/UI_Battlefield_Arrow/UI_Battlefield_Arrow_shang" refParamName="" useRefParam="false" />
+        <Vector3 name="targetPosKaisa" x="-45.000" y="0.000" z="0.000" refParamName="" useRefParam="false" />
+        <String name="effectDragon" value="UGUI/Particle/UI_Battlefield_Arrow/UI_Battlefield_Arrow_xia" refParamName="" useRefParam="false" />
+        <Vector3 name="targetPosDragon" x="0.000" y="0.000" z="-45.000" refParamName="" useRefParam="false" />
+        <String name="effectMid" value="UGUI/Particle/UI_Battlefield_Arrow/UI_Battlefield_Arrow_zhong" refParamName="" useRefParam="false" />
+      </Event>
+    </Track>
+  </Action>
+</Project> />

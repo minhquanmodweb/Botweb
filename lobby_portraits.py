@@ -81,7 +81,7 @@ def jump(a,n):return 20+(a<<6)+((n+131071)<<14)
 
 def gallery_package(package,selections,dictionary):
     selections={int(h):int(s) for h,s in selections.items()}
-    if not 1<=len(selections)<=15:raise ValueError('Số tướng không hợp lệ')
+    if not 1<=len(selections)<=50:raise ValueError('Số tướng không hợp lệ')
     if any(not 100<=h<=999 or not 0<=s<=99 for h,s in selections.items()):raise ValueError('Mã skin không hợp lệ')
     with zipfile.ZipFile(io.BytesIO(package)) as z:
         name='Lua_Signed/AOV/HeroInfo/HeroOverviewSys_lua.bytes'

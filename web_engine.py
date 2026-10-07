@@ -287,8 +287,7 @@ async def MainCodeMod(update, context, all_ids_str, all_skins_str, all_tuongs_st
                 if ID_SKIN[:3] == '526':
                     d1 = pet_dir + f'/526_Summoner_Pet_actorinfo.bytes'
                     with open(d1, 'rb') as f_rb: strin = f_rb.read()
-                    string = giai(strin, ZSTD_DICT)
-                    with open(d1, 'wb') as f_wb: f_wb.write(string)
+                    # Convert_File accepts this native uncompressed actor table.
                     Convert_File(d1, "1"); ModInfos(ID_INFO, ID_SKIN, ID_HD, pet_name, d1, phukienbutter, phukienveres); Convert_File(d1, "2")
             
             if ID_SKIN[:3] in ['192', '196']:

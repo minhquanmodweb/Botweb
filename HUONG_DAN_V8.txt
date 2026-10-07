@@ -1,0 +1,48 @@
+TD MOD — V8 · 30 SKIN / CHỌN NHANH 50 / ADMIN MỚI
+
+CẬP NHẬT WEB ĐANG CHẠY
+1. Tải TD_MOD_V8_UPDATE.zip rồi giải nén trên điện thoại.
+2. Mở GitHub minhquanmodweb/Botweb, vào thư mục GỐC (cùng vị trí start_web.py).
+3. Upload toàn bộ các tệp code trong bản UPDATE, gồm cả web_site.py và web_atomic.py là tệp mới. Ghi đè các tệp cùng tên và commit.
+4. Đợi Railway deploy thành công. Lệnh chạy vẫn là python start_web.py.
+5. Mở /health: build phải là 2026-10-06-30-quick50-admin-v8; features.manual_limit=30 và quick_limit=50.
+6. Tải lại web. Phần Chọn nhanh nằm ngay dưới ô chữ cái. /admin, /admin/stats, /admin/jobs, /admin/site đều mở trang quản trị.
+
+BẢN FULL
+TD_MOD_V8_FULL.zip có cả app.part01, app.part02, bundle.json, source web và CosmeticTemplates; dùng nếu cần đầy đủ bộ triển khai. Bản UPDATE nhỏ hơn và phù hợp để sửa repo hiện tại. Không upload nguyên ZIP vào repo: giải nén và upload các tệp bên trong.
+
+CHỌN SKIN
+- Chọn thủ công: tối đa 30 skin, mỗi tướng một skin, API từ chối 31 thay vì cắt danh sách.
+- 50 Skin Random: chọn 50 tướng ngẫu nhiên khác nhau, mỗi tướng một skin.
+- 50 Skin Hot Pick: bộ 50 tướng do admin biên tập; bộ khởi tạo không phải thống kê độ hot thực tế của game.
+- Bấm gói nhanh sẽ thay danh sách đang chọn, mở tab ĐÃ CHỌN để xem trước.
+- Gói nhanh có 50 skin cố định: xóa cả gói để chuyển sang chọn thủ công. Chọn lại Random để đổi bộ.
+- Chọn thiết bị, sáng đậm; bấm TẠO MOD, chọn có/không nút + hạ, rồi bấm TẠO MOD cuối cùng. Chọn gói không tự tạo ZIP.
+- Trong game tải đủ Cần thiết trong trận (100%) và Trải nghiệm đa dạng → Bối cảnh ngoại vi (100%).
+
+ADMIN
+- Mật khẩu mặc định vẫn 177207; WEB_ADMIN_PASSWORD nếu đang cấu hình trên Railway sẽ được ưu tiên.
+- Tổng quan: người dùng, hôm nay, online trong 90 giây, yêu cầu, thành công/lỗi, mở tải, đang tạo/chờ, tỉ lệ thành công, thời gian trung bình, dung lượng và tổng skin.
+- Bấm ô thống kê để mở danh sách tương ứng. Lọc trạng thái, thiết bị, cách chọn, ngày Việt Nam, tìm mã lượt tạo / tên skin / mã lỗi. Có phân trang.
+- Chi tiết: mã lượt tạo, skin và ID, trạng thái, thiết bị, tùy chọn, thời gian, dung lượng, tình trạng ZIP, lỗi và bộ xử lý gây lỗi nếu có thông tin.
+- Hồ sơ lượt tạo được lưu SQLite dù ZIP hết hạn. Số tổng cũ không bị xóa. Những lượt cũ đã mất cả metadata chỉ còn số đếm; không thể phục hồi chi tiết đã mất.
+- Người dùng tính theo cookie trình duyệt, không phải tài khoản/người thật. Lượt mở tải không xác nhận tải hoàn tất.
+- Giao diện: đổi tên, mô tả, avatar (JPG/PNG/WEBP/GIF tối đa 3 MB), tên menu, tiêu đề/ghi chú thư viện, chọn nhanh, thiết bị, sáng đậm, chọn kiểu mod, phát nhạc và hướng dẫn.
+- Hướng dẫn hỗ trợ HTML an toàn: chữ đậm, màu, link, ảnh/video. Không chạy script.
+- Sửa bộ Hot Pick: tìm skin, xóa/thay trong danh sách, lưu khi đủ đúng 50 tướng khác nhau.
+- Các chức năng thông báo rich text và nhạc nền hiện tại được giữ.
+
+DỮ LIỆU & TRIỂN KHAI
+- Bản cập nhật không thay app.part01/app.part02 hoặc xóa jobs, thông báo, nhạc, SQLite.
+- start_web.py đã thêm module mới vào danh sách copy vào app; chỉ sửa app/web_index.html sẽ bị bỏ qua khi khởi động.
+- Dữ liệu lưu trong WEB_STORAGE_DIR, hoặc jobs trên RAILWAY_VOLUME_MOUNT_PATH nếu có; mặc định là app/WebJobs. Muốn giữ số liệu và nội dung qua các lần deploy, đường dẫn này cần nằm trên volume bền vững của Railway.
+- Giữ nguyên biến môi trường nhiệm vụ/download đang dùng. Giới hạn hàng chờ và số worker không thay đổi.
+- Không chỉnh bot Telegram. Không tự deploy hoặc push vào GitHub trong phiên làm việc này.
+
+KIỂM TRA
+- API: thủ công 30 nhận / 31 từ chối; gói 50 chữ ký gắn với trình duyệt, từ chối sửa danh sách/token; đủ 50 tướng khác nhau.
+- Admin: đăng nhập/bảo vệ API, di trú SQLite giữ số tổng cũ, lọc và chi tiết lỗi, lưu tên/HTML/avatar; xóa ZIP vẫn có hồ sơ.
+- UI DOM: gói nằm dưới chữ cái, xem danh sách trước, chọn hiệu ứng không tự tạo, nút xác nhận gửi đúng gói, branding/hướng dẫn và admin chạy được.
+- ZIP thực: 30 Android; 50 Hot Pick Android + iOS; 50 Random iOS. Kiểm tra CRC và số/mã tướng trong ZIP, gồm ZIP iOS bên trong.
+- Tài nguyên đầu vào Resources_1 không đổi sau các thử nghiệm.
+- Kiểm tra trong trình duyệt dùng DOM mô phỏng; chưa kiểm tra hiển thị trực tiếp bằng Chromium và chưa chạy các ZIP trong game.

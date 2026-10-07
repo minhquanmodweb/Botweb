@@ -8,7 +8,7 @@ def apply_root_updates(target):
     """Use current root-level application updates with the verified data bundle."""
     required = (
         'web_server.py', 'web_index.html', 'web_engine.py', 'web_worker.py',
-        'web_admin_features.py','web_notice.py', 'web_notice_admin.html', 'web_cosmetics.py',
+        'web_admin_features.py','web_site.py','web_atomic.py','web_notice.py', 'web_notice_admin.html', 'web_cosmetics.py',
         'cosmetic_lua.py', 'ifix_codec.py', 'notice_content.py',
     )
     if not (ROOT / 'web_notice.py').is_file():

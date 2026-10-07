@@ -133,7 +133,7 @@ def apply_web_cosmetics(root, version, ids, enabled):
     if version != '1.64.1':
         raise RuntimeError('Cosmetic templates do not match resource version')
     ids = [int(i) for i in ids]
-    if not 1 <= len(ids) <= 15 or len({i // 100 for i in ids}) != len(ids):
+    if not 1 <= len(ids) <= 50 or len({i // 100 for i in ids}) != len(ids):
         raise ValueError('Invalid selected cosmetics')
     root = Path(root)
     folder = root / 'Databin/Client/Huanhua'

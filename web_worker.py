@@ -7,6 +7,8 @@ import web_engine as engine
 job = Path(sys.argv[1]).resolve()
 data = json.loads((job / 'request.json').read_text())
 os.chdir(job)
+from web_atomic import install_output_writes
+install_output_writes(job)
 
 def progress(percent, message):
     p = job / 'progress.tmp'

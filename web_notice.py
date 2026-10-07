@@ -170,6 +170,8 @@ def setup_notice(app, storage):
     app.router.add_get('/admin', admin_page)
     app.router.add_get('/admin/stats', admin_page)
     app.router.add_get('/admin/music', admin_page)
+    app.router.add_get('/admin/site', admin_page)
+    app.router.add_get('/admin/jobs', admin_page)
     app.router.add_post('/api/admin/notice/login', login)
     app.router.add_post('/api/admin/notice/logout', logout)
     app.router.add_get('/api/admin/notice', settings)

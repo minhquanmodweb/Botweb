@@ -1,0 +1,47 @@
+{
+  "build": "2026-10-06-30-quick50-admin-v8",
+  "files": {
+    "web_site.py": "ffe2948a4824fd44bee71b0484eb1bea6709cac758a0fe776a1cdfde6f805fca",
+    "web_notice_admin.html": "e75e2c40a3918fe95d2082433a4aa5fdd7c09dd17702e7fc48d146c7b830dd66",
+    "web_index.html": "94d1ba9313b9ba27f4bef2dcdcf04129aed26badfef1dd6a44763e12fe61c890",
+    "web_server.py": "b34c13efc8588c2d8a046b86645dd7f95f276a5a522ee3e597ea258f9b6dae6a",
+    "lobby_portraits.py": "80ff9721f1b93436967eb6fa44b4be26016036290b22e5b081d3ed209d6a4ffb",
+    "web_notice.py": "eeed3baa9909c5b2ae9b2cccc3b989c89d72b16886675819d9dd94d06b79aee2",
+    "web_worker.py": "f372b3714c266bd7d428b71a4ecd4dc022de5d9b608601687218e8b71927e7f4",
+    "web_atomic.py": "a8261f75439c801e1358e91c589017a8e95c81ac7637050c8f1165699ea0bcc0",
+    "web_admin_features.py": "b3a973aec03bb137f4a8c6df0e35ecd059fc8491d34fed0e841c6a0fba65d281",
+    "web_errors.py": "283479b64701f4d49a85041daebc85bc0f5c22a272ed3100a25fa60bb3d8fe81",
+    "web_engine.py": "481bc6ea117c5d9e92b1afae33ff8ceab5f4b6a29f42330e15c58cbd1af3f2fd",
+    "web_cosmetics.py": "e332b9bed61c0ec7a25053cc345e8517c8b60fb7093fd4418bca507bc2a75e9b",
+    "start_web.py": "f69ec882ddf2ca496cf7cbd3fe2670a793c2a00459dced210eb900202ee2c5f5"
+  },
+  "validation": [
+    {
+      "case": "manual30",
+      "selections": 30,
+      "android_heroes": 30,
+      "ios_heroes": null,
+      "size_MB": 8.4,
+      "CRC": "PASS",
+      "exact_hero_ids": "PASS"
+    },
+    {
+      "case": "hot50",
+      "selections": 50,
+      "android_heroes": 50,
+      "ios_heroes": 50,
+      "size_MB": 57.54,
+      "CRC": "PASS",
+      "exact_hero_ids": "PASS"
+    },
+    {
+      "case": "random50",
+      "selections": 50,
+      "android_heroes": 0,
+      "ios_heroes": 50,
+      "size_MB": 24.45,
+      "CRC": "PASS",
+      "exact_hero_ids": "PASS"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 from web_errors import public_failure
 from web_notice import setup_notice
 from web_admin_features import UsageStats, setup_admin_features
+from web_site import SiteSettings,setup_site,MANUAL_LIMIT,QUICK_LIMIT
 
 ROOT=Path(__file__).resolve().parent
 STORE=Path(os.getenv('WEB_STORAGE_DIR',str(Path(os.environ['RAILWAY_VOLUME_MOUNT_PATH'])/'jobs') if os.getenv('RAILWAY_VOLUME_MOUNT_PATH') else str(ROOT/'WebJobs'))).resolve()
@@ -15,6 +16,7 @@ STORE.mkdir(parents=True,exist_ok=True)
 CAT=json.loads((ROOT/'web_catalog.json').read_text())
 FEATURES=json.loads((ROOT/'skin_features.json').read_text())
 STATS=UsageStats(STORE/'web_usage.sqlite3')
+SITE=SiteSettings(STORE,CAT)
 JOBS={}
 QUEUE=asyncio.Queue(maxsize=10)
 TTL=max(3600,min(int(os.getenv("WEB_FILE_TTL", "86400")),604800))
@@ -35,7 +37,7 @@ def job_view(jid,job):
     expired=bool(job.get('expires') and time.time()>job['expires'])
     return {'id':jid,'state':'expired' if expired else job['state'],
         'percent':job['percent'],'message':job['message'],
-        'platform':job['platform'],'cosmetics':job.get('cosmetics',False),'created':job.get('created',0),
+        'platform':job['platform'],'cosmetics':job.get('cosmetics',False),'mode':job.get('mode','manual'),'created':job.get('created',0),
         'expires':job.get('expires'),'selections':job.get('selections',[]),
         'task_complete':job.get('task_complete',False),
         'size':(job['folder']/'result.zip').stat().st_size if (job['folder']/'result.zip').is_file() else 0}
@@ -46,6 +48,9 @@ def can_access(job,session):
 async def history(request):
     rows=[job_view(jid,j) for jid,j in JOBS.items() if can_access(j,request['session'])]
     return web.json_response({'jobs':sorted(rows,key=lambda j:j['created'],reverse=True)[:50]})
+
+async def visit(request):
+    STATS.visit(request['session']);return web.json_response({'ok':True})
 
 async def avatar(request):
     return web.FileResponse(ROOT/'web_avatar.jpg')
@@ -129,7 +134,7 @@ async def index(request):
     return web.Response(text=(ROOT/'web_index.html').read_text(),content_type='text/html',headers={'Cache-Control':'no-store'})
 
 async def health(request):
-    return web.json_response({'ok':True,'service':'TD MOD SKIN AOV','build':'2026-10-03-admin-stats-music-v6','features':{'cosmetics':True,'notice_admin':True,'create_choice_dialog':True,'admin_stats':True,'background_music':True}})
+    return web.json_response({'ok':True,'service':'TD MOD SKIN AOV','build':'2026-10-06-30-quick50-admin-v8','features':{'cosmetics':True,'notice_admin':True,'create_choice_dialog':True,'admin_stats':True,'background_music':True,'manual_limit':MANUAL_LIMIT,'quick_limit':QUICK_LIMIT,'site_settings':True,'job_details':True}})
 
 async def heroes(request):
     items=[summary(n) for n in sorted(CAT,key=normal) if CAT[n]]
@@ -165,7 +170,14 @@ async def create_job(request):
     selected=data.get('selections')
     platform=data.get('platform')
     if platform not in ('android','ios','both'):return fail('Thiết bị không hợp lệ.')
-    if not isinstance(selected,list) or not 1<=len(selected)<=15:return fail('Chọn từ 1 đến 15 skin.')
+    mode=data.get('mode','manual')
+    if mode not in ('manual','random','hot'):return fail('Kiểu chọn skin không hợp lệ.')
+    if mode!='manual':
+        try:preview=SITE.resolve(data.get('quick_token'),mode,session)
+        except ValueError as e:return fail(str(e))
+        if selected!=preview:return fail('Danh sách gói đã thay đổi. Hãy chọn lại gói nhanh.')
+    limit=MANUAL_LIMIT if mode=='manual' else QUICK_LIMIT
+    if not isinstance(selected,list) or not 1<=len(selected)<=limit:return fail('Chọn từ 1 đến 30 skin, hoặc dùng gói chọn nhanh 50 skin.')
     seen=set();clean=[]
     for x in selected:
         if not isinstance(x,dict):return fail('Skin không hợp lệ.')
@@ -175,8 +187,8 @@ async def create_job(request):
         seen.add(hero);clean.append({'tuong':hero,'skin':skin,'id':sid})
     jid=secrets.token_hex(24)
     folder=STORE/jid;folder.mkdir()
-    (folder/'request.json').write_text(json.dumps({'selections':clean,'platform':platform,'bright':data.get('bright') is True,'cosmetics':data.get('cosmetics',False)},ensure_ascii=False))
-    JOBS[jid]={'owner':session,'state':'queued','percent':0,'message':'Đang chờ xử lý…','folder':folder,'platform':platform,'cosmetics':data.get('cosmetics',False),'expires':None,'task_complete':False,'task_link':None,'task_lock':asyncio.Lock(),'created':time.time(),'selections':clean}
+    (folder/'request.json').write_text(json.dumps({'selections':clean,'mode':mode,'platform':platform,'bright':data.get('bright') is True,'cosmetics':data.get('cosmetics',False)},ensure_ascii=False))
+    JOBS[jid]={'owner':session,'state':'queued','percent':0,'message':'Đang chờ xử lý…','folder':folder,'platform':platform,'cosmetics':data.get('cosmetics',False),'expires':None,'task_complete':False,'task_link':None,'task_lock':asyncio.Lock(),'created':time.time(),'mode':mode,'bright':data.get('bright') is True,'selections':clean}
     save_job(jid)
     QUEUE.put_nowait(jid)
     return web.json_response({'id':jid},status=202)
@@ -201,6 +213,7 @@ async def download(request):
     if not job.get('task_complete'):return fail('Bạn cần hoàn thành nhiệm vụ trước khi tải file.',403)
     if not (job['folder']/'result.zip').is_file():return fail('File không còn trên máy chủ.',410)
     if request.method=='GET':STATS.event('download',hashlib.sha256((request.match_info['id']+':'+request['session']).encode()).hexdigest())
+    job['downloaded']=True;save_job(request.match_info['id'])
     response=web.FileResponse(job['folder']/'result.zip')
     response.headers['Content-Type']='application/zip'
     response.headers['Content-Disposition']=f'attachment; filename="TD-MOD-{job["platform"]}.zip"'
@@ -258,7 +271,7 @@ async def queue_worker(app):
             # Private job working directory; bundled input resources are read only.
             for name in ('Data','Resources_1'):
                 (folder/name).symlink_to(ROOT/name,target_is_directory=True)
-            job.update(state='running',message='Đang chuẩn bị tạo file…')
+            job.update(state='running',started=time.time(),message='Đang chuẩn bị tạo file…')
             save_job(jid)
             env=os.environ.copy()
             for name in ('BOT_TOKEN','VUOTLINK_API','WEBAPP_URL','WEB_ADMIN_PASSWORD'):env.pop(name,None)
@@ -266,16 +279,16 @@ async def queue_worker(app):
                 process=await asyncio.create_subprocess_exec(sys.executable,str(ROOT/'web_worker.py'),str(folder),cwd=ROOT,env=env,stdout=log,stderr=log,start_new_session=True)
                 try:await asyncio.wait_for(process.wait(),MAX_TIME)
                 except asyncio.TimeoutError:
-                    process.kill();await process.wait();raise RuntimeError('Quá thời gian xử lý.')
+                    process.kill();await process.wait();job['error_code']='TIMEOUT';raise RuntimeError('Quá thời gian xử lý.')
             if process.returncode or not (folder/'result.zip').is_file():raise RuntimeError('Worker failed')
-            job.update(state='done',generation_state='done',finished=time.time(),percent=100,message='Đã tạo file · Hoàn thành nhiệm vụ để tải',expires=time.time()+TTL)
+            job.update(state='done',generation_state='done',size=(folder/'result.zip').stat().st_size,finished=time.time(),percent=100,message='Đã tạo file · Hoàn thành nhiệm vụ để tải',expires=time.time()+TTL)
         except asyncio.CancelledError:
             if process and process.returncode is None:
                 process.kill();await process.wait()
             raise
         except Exception:
             logging.exception('Job %s failed; inspect WebJobs/%s/worker.log',jid,jid)
-            job.update(state='error',generation_state='error',finished=time.time(),message=public_failure(folder,job.get('selections',[]),process.returncode if process else None),expires=time.time()+TTL)
+            job.update(state='error',generation_state='error',finished=time.time(),message=('Quá thời gian xử lý. Thử gói ít skin hơn.' if job.get('error_code')=='TIMEOUT' else public_failure(folder,job.get('selections',[]),process.returncode if process else None)),expires=time.time()+TTL)
         finally:
             save_job(jid)
             QUEUE.task_done()
@@ -295,12 +308,12 @@ async def lifecycle(app):
         try:
             j=json.loads((folder/'meta.json').read_text())
             if j.get('state') in ('done','error'):j.setdefault('generation_state',j['state'])
-            STATS.job(folder.name,j)
+            STATS.job(folder.name,{**j,'folder':folder})
             if j.get('expires') and j['expires']<time.time():
                 shutil.rmtree(folder,ignore_errors=True);continue
             j.update(folder=folder,task_lock=asyncio.Lock())
             if j['state'] in ('queued','running'):
-                j.update(state='error',generation_state='error',finished=time.time(),message='Máy chủ đã khởi động lại khi đang tạo file. Vui lòng tạo lại.',expires=time.time()+TTL)
+                j.update(state='error',generation_state='error',error_code='SERVER_RESTART',finished=time.time(),message='Máy chủ đã khởi động lại khi đang tạo file. Vui lòng tạo lại.',expires=time.time()+TTL)
             if j['state']=='done' and not (folder/'result.zip').is_file():
                 j.update(state='error',message='File không còn trên máy chủ.',expires=time.time()+TTL)
             JOBS[folder.name]=j
@@ -317,6 +330,8 @@ def make_app():
     app=web.Application(middlewares=[headers],client_max_size=26*1024*1024)
     authorized=setup_notice(app, STORE)
     setup_admin_features(app,STORE,authorized,STATS,lambda:JOBS)
+    setup_site(app,SITE,authorized)
+    app.router.add_post('/api/visit',visit)
     app.router.add_get('/',index)
     app.router.add_get('/health',health)
     app.router.add_get('/web-avatar.jpg',avatar)

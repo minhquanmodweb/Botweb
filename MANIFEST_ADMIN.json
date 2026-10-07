@@ -1,0 +1,14 @@
+{
+  "version": "admin-v9",
+  "date": "2026-10-07",
+  "base": "V8 admin APIs",
+  "changed_files": [
+    "web_notice_admin.html"
+  ],
+  "sha256": "41a272ecf040c8d62987285862e9a8a4f025db3739628abcf1f445536288793c",
+  "checks": [
+    "Chromium 360/390/1280",
+    "DOM interactions",
+    "V8 aiohttp API integration with isolated data"
+  ]
+}

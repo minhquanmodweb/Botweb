@@ -1,8 +1,20 @@
 """One isolated job per process. No Telegram token or network calls to Telegram."""
-import asyncio, json, os, sys, zipfile, shutil
+import asyncio, json, os, sys, zipfile, shutil, importlib
 from pathlib import Path
 from types import SimpleNamespace
 import web_engine as engine
+
+# This old actor-info converter asks a terminal-only question for skin 52102.
+# Only its module gets an answer; builtins.input and other processors stay intact.
+_infos_code = importlib.import_module('Data.Module.Infos.Code')
+
+def _web_info_answer(prompt=''):
+    if str(prompt).strip() == 'Mod Ngoại Hình Lính (y/n):':
+        return 'n'  # Keep the requested hero skin; do not replace soldier models.
+    raise RuntimeError('Bộ xử lý Infos yêu cầu lựa chọn chưa được hỗ trợ trên web.')
+
+_infos_code.input = _web_info_answer
+
 
 job = Path(sys.argv[1]).resolve()
 data = json.loads((job / 'request.json').read_text())

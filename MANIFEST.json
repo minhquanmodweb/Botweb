@@ -1,0 +1,8 @@
+{
+  "patch": "florentino-52102-terminal-eof",
+  "changed_files": [
+    "web_worker.py"
+  ],
+  "base": "TD_MOD_V8_FULL",
+  "sha256": "15bbac3c2423ff9599ac7ec5fc87141536b7d7e99b42bbee82c014d0bbc1b34b"
+}

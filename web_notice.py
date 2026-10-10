@@ -1,5 +1,7 @@
 """Editable welcome notice, isolated from bot and mod generation."""
 import json
+import hashlib
+from web_storage import read_json,update_json
 import re
 import io
 from notice_content import clean_html, plain_html
@@ -16,22 +18,20 @@ COOKIE = 'tdmod_notice_admin'
 
 def setup_notice(app, storage):
     target = Path(storage) / 'web_notice.json'
+    auth_path = Path(storage) / 'web_admin_auth.json'
+    def verify_password(password):
+        if not isinstance(password,str) or len(password)>128:return False
+        saved=read_json(auth_path)
+        if not saved:return secrets.compare_digest(password.encode(),os.getenv('WEB_ADMIN_PASSWORD','177207').encode())
+        digest=hashlib.scrypt(password.encode(),salt=bytes.fromhex(saved['salt']),n=16384,r=8,p=1,dklen=32).hex()
+        return secrets.compare_digest(digest,saved['hash'])
     sessions = {}
     attempts = {}
 
     def read():
         if not target.exists():
             return {**DEFAULT, 'html': clean_html(DEFAULT['html'])}
-        value = json.loads(target.read_text(encoding='utf-8'))
-        # Upgrade only the previous built-in notice; retain admin-written content.
-        previous = value.get('html')
-        legacy = (isinstance(previous, str) and clean_html(previous) == clean_html(LEGACY_DEFAULT['html'])) or (previous is None and value.get('content') == LEGACY_DEFAULT['content'])
-        if value.get('title') == LEGACY_DEFAULT['title'] and legacy:
-            value = {**value, 'html': DEFAULT['html']}
-            value.pop('content', None)
-            temporary = target.with_suffix('.tmp')
-            temporary.write_text(json.dumps(value, ensure_ascii=False), encoding='utf-8')
-            temporary.replace(target)
+        value = read_json(target)
         value['html'] = clean_html(value['html']) if isinstance(value.get('html'), str) else plain_html(value.get('content',''))
         return value
 
@@ -49,9 +49,6 @@ def setup_notice(app, storage):
         return web.FileResponse(Path(__file__).with_name('web_notice_admin.html'))
 
     async def login(request):
-        expected = os.getenv('WEB_ADMIN_PASSWORD', '177207')
-        if not expected:
-            return web.json_response({'error': 'Chưa cấu hình WEB_ADMIN_PASSWORD .'}, status=503)
         now = time.time()
         for key in list(attempts):
             if attempts[key][1] <= now:
@@ -65,7 +62,7 @@ def setup_notice(app, storage):
         except (ValueError, UnicodeDecodeError):
             data = None
         password = data.get('password') if isinstance(data, dict) else None
-        if not isinstance(password, str) or not secrets.compare_digest(password.encode(), expected.encode()):
+        if not verify_password(password):
             attempts[ip] = (count + 1, until)
             return web.json_response({'error': 'Mật khẩu không đúng.'}, status=401)
         attempts.pop(ip, None)
@@ -76,6 +73,18 @@ def setup_notice(app, storage):
         response = web.json_response({'ok': True})
         response.set_cookie(COOKIE, token, httponly=True, samesite='Strict', secure=request.secure or request.headers.get('X-Forwarded-Proto') == 'https', max_age=8 * 3600, path='/api/admin/notice')
         return response
+
+    async def change_password(request):
+        if not authorized(request):return web.json_response({'error':'Vui lòng đăng nhập admin.'},status=401)
+        data=await request.json()
+        if not isinstance(data,dict) or not verify_password(data.get('current_password')):return web.json_response({'error':'Mật khẩu hiện tại không đúng.'},status=400)
+        password=data.get('new_password')
+        if not isinstance(password,str) or not 6<=len(password)<=128:return web.json_response({'error':'Mật khẩu mới cần 6–128 ký tự.'},status=400)
+        salt=secrets.token_bytes(16)
+        digest=hashlib.scrypt(password.encode(),salt=salt,n=16384,r=8,p=1,dklen=32).hex()
+        update_json(auth_path,lambda value:value.update(salt=salt.hex(),hash=digest))
+        token=request.cookies.get(COOKIE,'');expiry=sessions.get(token,0);sessions.clear();sessions[token]=expiry
+        return web.json_response({'ok':True})
 
     async def logout(request):
         sessions.pop(request.cookies.get(COOKIE, ''), None)
@@ -100,9 +109,7 @@ def setup_notice(app, storage):
             return web.json_response({'error': 'Tiêu đề 1–120 ký tự; nội dung 1–20000 ký tự.'}, status=400)
         rich = clean_html(content) if 'html' in data else plain_html(content)
         result = {'enabled': data['enabled'], 'title': title, 'html': rich}
-        temporary = target.with_suffix('.tmp')
-        temporary.write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
-        temporary.replace(target)
+        update_json(target,lambda value:value.update(result))
         return web.json_response(result)
 
     media_folder = Path(storage) / 'notice_media'
@@ -172,6 +179,7 @@ def setup_notice(app, storage):
     app.router.add_get('/admin/music', admin_page)
     app.router.add_get('/admin/site', admin_page)
     app.router.add_get('/admin/jobs', admin_page)
+    app.router.add_post('/api/admin/notice/password', change_password)
     app.router.add_post('/api/admin/notice/login', login)
     app.router.add_post('/api/admin/notice/logout', logout)
     app.router.add_get('/api/admin/notice', settings)

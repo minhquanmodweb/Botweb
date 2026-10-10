@@ -9,9 +9,11 @@ from web_errors import public_failure
 from web_notice import setup_notice
 from web_admin_features import UsageStats, setup_admin_features
 from web_site import SiteSettings,setup_site,MANUAL_LIMIT,QUICK_LIMIT
+from web_storage import storage_path,migrate_legacy
 
 ROOT=Path(__file__).resolve().parent
-STORE=Path(os.getenv('WEB_STORAGE_DIR',str(Path(os.environ['RAILWAY_VOLUME_MOUNT_PATH'])/'jobs') if os.getenv('RAILWAY_VOLUME_MOUNT_PATH') else str(ROOT/'WebJobs'))).resolve()
+STORE=storage_path(ROOT)
+migrate_legacy(ROOT,STORE)
 STORE.mkdir(parents=True,exist_ok=True)
 CAT=json.loads((ROOT/'web_catalog.json').read_text())
 FEATURES=json.loads((ROOT/'skin_features.json').read_text())
@@ -134,7 +136,7 @@ async def index(request):
     return web.Response(text=(ROOT/'web_index.html').read_text(),content_type='text/html',headers={'Cache-Control':'no-store'})
 
 async def health(request):
-    return web.json_response({'ok':True,'service':'TD MOD SKIN AOV','build':'2026-10-06-30-quick50-admin-v8','features':{'cosmetics':True,'notice_admin':True,'create_choice_dialog':True,'admin_stats':True,'background_music':True,'manual_limit':MANUAL_LIMIT,'quick_limit':QUICK_LIMIT,'site_settings':True,'job_details':True}})
+    return web.json_response({'ok':True,'service':'TD MOD SKIN AOV','build':'2026-10-10-admin-config-v10','features':{'cosmetics':True,'notice_admin':True,'create_choice_dialog':True,'admin_stats':True,'background_music':True,'manual_limit':SITE.read()['manual_limit'],'quick_limit':len(CAT),'settings_v10':True,'site_settings':True,'job_details':True}})
 
 async def heroes(request):
     items=[summary(n) for n in sorted(CAT,key=normal) if CAT[n]]
@@ -171,13 +173,13 @@ async def create_job(request):
     platform=data.get('platform')
     if platform not in ('android','ios','both'):return fail('Thiết bị không hợp lệ.')
     mode=data.get('mode','manual')
-    if mode not in ('manual','random','hot'):return fail('Kiểu chọn skin không hợp lệ.')
+    if mode not in ('manual','random','hot','package'):return fail('Kiểu chọn skin không hợp lệ.')
     if mode!='manual':
         try:preview=SITE.resolve(data.get('quick_token'),mode,session)
         except ValueError as e:return fail(str(e))
         if selected!=preview:return fail('Danh sách gói đã thay đổi. Hãy chọn lại gói nhanh.')
-    limit=MANUAL_LIMIT if mode=='manual' else QUICK_LIMIT
-    if not isinstance(selected,list) or not 1<=len(selected)<=limit:return fail('Chọn từ 1 đến 30 skin, hoặc dùng gói chọn nhanh 50 skin.')
+    limit=SITE.read()['manual_limit'] if mode=='manual' else len(preview)
+    if not isinstance(selected,list) or not 1<=len(selected)<=limit:return fail(f'Chọn từ 1 đến {limit} skin; hoặc chọn một gói nhanh hợp lệ.')
     seen=set();clean=[]
     for x in selected:
         if not isinstance(x,dict):return fail('Skin không hợp lệ.')

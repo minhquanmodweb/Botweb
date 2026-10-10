@@ -2,13 +2,14 @@
 import hashlib,json,os,shutil,stat,sys,tempfile,zipfile
 from pathlib import Path,PurePosixPath
 ROOT=Path(__file__).resolve().parent
+from web_storage import storage_path,migrate_legacy
 
 
 def apply_root_updates(target):
     """Use current root-level application updates with the verified data bundle."""
     required = (
         'web_server.py', 'web_index.html', 'web_engine.py', 'web_worker.py',
-        'web_admin_features.py','web_site.py','web_atomic.py','web_notice.py', 'web_notice_admin.html', 'web_cosmetics.py',
+        'web_storage.py','web_admin_features.py','web_site.py','web_atomic.py','web_notice.py', 'web_notice_admin.html', 'web_cosmetics.py',
         'cosmetic_lua.py', 'ifix_codec.py', 'notice_content.py',
     )
     if not (ROOT / 'web_notice.py').is_file():
@@ -37,6 +38,7 @@ def apply_root_updates(target):
     return target
 
 def prepare():
+    migrate_legacy(ROOT/'app', storage_path(ROOT/'app'))
     meta=json.loads((ROOT/'bundle.json').read_text())
     digest=meta['sha256'];target=ROOT/'app'
     marker=target/'.bundle.sha256'

@@ -1,3 +1,4 @@
+from web_storage import read_json,update_json
 """Persistent usage counters and opt-in music for the standalone web app."""
 import hashlib,json,logging,re,secrets,sqlite3,time,wave,io
 from contextlib import contextmanager
@@ -126,11 +127,11 @@ def setup_admin_features(app,storage,authorized,stats,jobs):
     config=Path(storage)/'web_music.json'
     def read():
         if not config.exists():return {'enabled':False,'title':'Nhạc nền','file':None}
-        value=json.loads(config.read_text(encoding='utf-8'))
+        value=read_json(config)
         if not re.fullmatch(r'[a-f0-9]{32}\.(mp3|wav|ogg)',value.get('file') or '') or not (folder/value['file']).is_file():value.update(enabled=False,file=None)
         return value
     def save(value):
-        tmp=config.with_suffix('.tmp');tmp.write_text(json.dumps(value,ensure_ascii=False),encoding='utf-8');tmp.replace(config)
+        update_json(config,lambda current:current.update(value))
     def public_value(value):return {'enabled':value['enabled'],'title':value['title'],'url':'/api/music-media/'+value['file'] if value.get('file') else None}
     async def public(request):return web.json_response(public_value(read()),headers={'Cache-Control':'no-store'})
     async def media(request):
@@ -147,7 +148,7 @@ def setup_admin_features(app,storage,authorized,stats,jobs):
             data=await request.json()
             if not isinstance(data,dict) or type(data.get('enabled')) is not bool or not isinstance(data.get('title'),str) or not 1<=len(data['title'].strip())<=120:return web.json_response({'error':'Tiêu đề 1–120 ký tự và trạng thái hợp lệ.'},status=400)
             if data['enabled'] and not value.get('file'):return web.json_response({'error':'Tải nhạc lên trước khi bật.'},status=400)
-            value.update(enabled=data['enabled'],title=data['title'].strip());save(value)
+            save({'enabled':data['enabled'],'title':data['title'].strip()});value=read()
         return web.json_response(public_value(value))
     async def upload(request):
         if not authorized(request):return web.json_response({'error':'Vui lòng đăng nhập admin.'},status=401)
@@ -162,7 +163,7 @@ def setup_admin_features(app,storage,authorized,stats,jobs):
         if not valid_audio(bytes(data),suffix):return web.json_response({'error':'File nhạc không hợp lệ.'},status=400)
         value=read();old=value.get('file');name=secrets.token_hex(16)+suffix
         (folder/name).write_bytes(data)
-        value.update(file=name,title=Path(part.filename).stem[:120] or 'Nhạc nền',enabled=True);save(value)
+        save({'file':name,'title':Path(part.filename).stem[:120] or 'Nhạc nền','enabled':True});value=read()
         if old and old!=name:(folder/old).unlink(missing_ok=True)
         return web.json_response(public_value(value))
     async def job_list(request):

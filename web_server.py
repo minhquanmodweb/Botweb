@@ -10,12 +10,14 @@ from web_notice import setup_notice
 from web_admin_features import UsageStats, setup_admin_features
 from web_site import SiteSettings,setup_site,MANUAL_LIMIT,QUICK_LIMIT
 from web_storage import storage_path,migrate_legacy
+from web_catalog_admin import CatalogAdmin, setup_catalog_admin
 
 ROOT=Path(__file__).resolve().parent
 STORE=storage_path(ROOT)
 migrate_legacy(ROOT,STORE)
 STORE.mkdir(parents=True,exist_ok=True)
 CAT=json.loads((ROOT/'web_catalog.json').read_text())
+CATALOG_ADMIN=CatalogAdmin(ROOT,STORE,CAT)
 FEATURES=json.loads((ROOT/'skin_features.json').read_text())
 STATS=UsageStats(STORE/'web_usage.sqlite3')
 SITE=SiteSettings(STORE,CAT)
@@ -113,7 +115,7 @@ async def headers(request,handler):
     if request.path.startswith('/assets/') and response.status in (200,304):
         response.headers['Cache-Control']='private, max-age=31536000' if request.query.get('v') else 'private, max-age=86400'
     elif request.path in ('/api/heroes','/api/hero-skins','/api/skins') and response.status==200:
-        response.headers['Cache-Control']='private, max-age=60'
+        response.headers['Cache-Control']='no-store'
     else:
         response.headers['Cache-Control']='no-store'
     if isinstance(response,web.Response) and response.body and len(response.body)>1024:
@@ -333,6 +335,7 @@ def make_app():
     authorized=setup_notice(app, STORE)
     setup_admin_features(app,STORE,authorized,STATS,lambda:JOBS)
     setup_site(app,SITE,authorized)
+    setup_catalog_admin(app,CATALOG_ADMIN,authorized)
     app.router.add_post('/api/visit',visit)
     app.router.add_get('/',index)
     app.router.add_get('/health',health)
